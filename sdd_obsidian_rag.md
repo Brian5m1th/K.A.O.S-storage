@@ -4,7 +4,7 @@ Related: [[sdd_obsidian_memoria]] [[sdd_obsidian_watcher]] [[sdd_obsidian_tools]
 
 # SDD Componente — Vector Search & RAG Service
 
-Esta nota descreve o motor de busca semântica, as escolhas de modelos de embedding e a estratégia de Recuperação Aumentada de Geração (RAG) usada para fornecer contexto atualizado ao K.A.O.S.
+Esta nota descreve o motor de busca semântica, as escolhas de modelos de embedding e a estratégia de Recuperação Aumentada de Geração (RAG) usada para fornecer contexto atualizado ao Assistente de IA.
 
 ---
 

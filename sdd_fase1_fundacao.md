@@ -1,4 +1,4 @@
-	Source: Antigravity AI
+Source: Antigravity AI
 Tags: #sdd #python #fastapi #fundação #fase1
 Related: [[index]] [[backlog]] [[01_estrutura_pastas]] [[sdd_fase2_obsidian_service]]
 
@@ -31,7 +31,7 @@ Configurar a estrutura base do projeto Python seguindo os padrões corporativos 
 ## 1. Estrutura de Pastas Inicial
 
 ```text
-kaos-assistant/
+ai-assistant/
 ├── app/
 │   ├── api/
 │   │   └── health.py          # GET /health → 200 OK
@@ -55,7 +55,7 @@ Utilizar `uv` como gerenciador. O arquivo `pyproject.toml` define as dependênci
 
 ```toml
 [project]
-name = "kaos-assistant"
+name = "ai-assistant"
 version = "0.1.0"
 requires-python = ">=3.12,<3.14"
 

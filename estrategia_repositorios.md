@@ -140,13 +140,13 @@ kaos-infra/
 ```text
 Usuário
  ↓
-AI Assistant
+K.A.O.S
  ↓
 Spring Boot API
  ↓
 Banco de Dados
 
-AI Assistant
+K.A.O.S
  ↓
 N8N
  ↓

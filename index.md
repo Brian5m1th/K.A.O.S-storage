@@ -2,7 +2,7 @@ Source: Antigravity AI
 Tags: #ia-pessoal #arquitetura #index
 Related: [[00_visao_geral]] [[Arquitetura da IA Pessoal Offline]]
 
-# 🤖 K.A.O.S — Índice Central
+# 🤖 Assistente de IA Pessoal Offline — Índice Central
 
 > Hub de navegação do vault. Todos os nós do Graph View passam por aqui.
 
@@ -32,13 +32,12 @@ Related: [[00_visao_geral]] [[Arquitetura da IA Pessoal Offline]]
 
 | Nota | Componente |
 | :--- | :--- |
-| [[sdd_arquitetura_docker\|SDD — Arquitetura Docker/WSL2]] | Portabilidade da infraestrutura entre ambientes |
 | [[sdd_obsidian_memoria\|SDD — Sistema de Memória]] | Arquitetura geral da memória com Obsidian |
 | [[sdd_obsidian_watcher\|SDD — File Watcher & Indexer]] | Monitoramento do vault e pipeline de indexação |
 | [[sdd_obsidian_rag\|SDD — Vector Search & RAG]] | Embeddings, Qdrant e recuperação semântica |
 | [[sdd_obsidian_tools\|SDD — Schemas das Ferramentas]] | Tools do LangGraph para manipular notas |
-| [[sdd_roadmap\|SDD — Roadmap Atualizado]] | 10 fases de evolução da plataforma com critérios de sucesso |
-| [[estrategia_repositorios\|Estratégia de Repositórios]] | Monorepo → Multi-repo: kaos-assistant, kaos-backend, kaos-infra |
+| [[sdd_roadmap\|SDD — Roadmap Inicial]] | 8 fases de evolução da plataforma com critérios de sucesso |
+| [[estrategia_repositorios\|Estratégia de Repositórios]] | Monorepo → Multi-repo: ai-assistant, ai-backend, ai-infra |
 
 ---
 
@@ -90,12 +89,11 @@ graph TD
 
 ---
 
-## 📋 Backlog, Planejamento e Testes
+## 📋 Backlog & Planejamento
 
 | Nota | Conteúdo |
 | :--- | :--- |
 | [[backlog\|Backlog Completo]] | Todas as tarefas organizadas por fase com mapa de dependências |
-| [[guia_testes_uso\|Guia de Testes e Uso]] | Manual vivo de como executar e validar cada feature da plataforma |
 
 ---
 

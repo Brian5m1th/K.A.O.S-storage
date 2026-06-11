@@ -4,13 +4,13 @@ Related: [[index]] [[sdd_obsidian_watcher]] [[sdd_obsidian_rag]] [[sdd_obsidian_
 
 # SDD — Sistema de Memória Inteligente com Obsidian
 
-Este Documento de Design de Software (SDD) detalha a arquitetura do **Sistema de Memória Inteligente** que integra o K.A.O.S com um Vault do Obsidian. O objetivo principal é dar à IA uma memória de longo prazo persistente, semântica e editável diretamente por arquivos Markdown.
+Este Documento de Design de Software (SDD) detalha a arquitetura do **Sistema de Memória Inteligente** que integra o Assistente de IA local com um Vault do Obsidian. O objetivo principal é dar à IA uma memória de longo prazo persistente, semântica e editável diretamente por arquivos Markdown.
 
 ---
 
 ## 🎯 Caso de Uso (User Story)
 
-> "Como usuário do K.A.O.S, eu quero que a IA consiga criar, atualizar, pesquisar e organizar notas dentro do meu Vault Obsidian, para que todo conhecimento gerado durante conversas, estudos, projetos e documentações seja armazenado e reutilizado futuramente como memória de longo prazo."
+> "Como usuário do Assistente de IA Pessoal, eu quero que a IA consiga criar, atualizar, pesquisar e organizar notas dentro do meu Vault Obsidian, para que todo conhecimento gerado durante conversas, estudos, projetos e documentações seja armazenado e reutilizado futuramente como memória de longo prazo."
 
 ---
 

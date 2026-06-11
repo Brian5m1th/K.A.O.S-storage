@@ -7,7 +7,7 @@ Related: [[index]] [[00_visao_geral]] [[02_fluxo_dados]] [[03_infraestrutura_doc
 Esta nota descreve a organização do código-fonte do projeto. Seguindo a filosofia de desenvolvimento corporativo, dividimos a aplicação em camadas bem definidas para isolar responsabilidades e facilitar testes automatizados.
 
 ```
-kaos-assistant/
+ai-assistant/
 ├── app/
 │   ├── api/          # 1. Camada Controller (FastAPI Routers)
 │   ├── service/      # 2. Camada Service (Business Logic)

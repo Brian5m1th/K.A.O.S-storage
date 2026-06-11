@@ -119,7 +119,7 @@ from app.agent.state import AgentState
 from app.config.settings import settings
 
 # System Prompt com instruções de uso de ferramentas
-SYSTEM_PROMPT = """Você é o K.A.O.S, um assistente pessoal inteligente com acesso ao Vault Obsidian do usuário.
+SYSTEM_PROMPT = """Você é um assistente pessoal inteligente com acesso ao Vault Obsidian do usuário.
 
 Ferramentas disponíveis:
 - create_note(title, folder, content): Cria uma nova nota no Vault

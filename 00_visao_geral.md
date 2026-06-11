@@ -2,9 +2,9 @@ Source: Notas no ClickUp
 Tags: #ia-pessoal #arquitetura #stack
 Related: [[index]] [[01_estrutura_pastas]] [[02_fluxo_dados]]
 
-# Visão Geral do K.A.O.S
+# Visão Geral do Assistente de IA Local
 
-Esta é a documentação arquitetural do K.A.O.S, planejada para ser consumida diretamente no seu vault do Obsidian. O projeto visa estruturar um ecossistema de agentes inteligentes de alto desempenho rodando localmente.
+Esta é a documentação arquitetural do Assistente de IA Local, planejada para ser consumida diretamente no seu vault do Obsidian. O projeto visa estruturar um ecossistema de agentes inteligentes de alto desempenho rodando localmente.
 
 ## 🛠️ Stack Tecnológica
 
