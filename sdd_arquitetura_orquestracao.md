@@ -1,188 +1,192 @@
 Source: Antigravity AI
-Tags: #sdd #arquitetura #kaos #langgraph #orquestracao #agente
-Related: [[index]] [[backlog]] [[sdd_fase5_watcher_langgraph]] [[02_fluxo_dados]]
+Tags: #sdd #python #fastapi #proxy #openai #gateway
+Related: [[index]] [[00_visao_geral]] [[02_fluxo_dados]] [[sdd_fase2_ia_local]]
 
-# SDD — Arquitetura de Orquestração da KAOS
-
-## Nome do Projeto
-
-KAOS — Knowledge Automation & Orchestration System
-
----
+# SDD — Proxy OpenAI & Gateway de Orquestração
 
 ## Objetivo
 
-Definir a arquitetura oficial de processamento de mensagens da KAOS.
-Este documento deve ser considerado a fonte de verdade para qualquer implementação futura da plataforma.
+Documentar a arquitetura do proxy OpenAI-compatível que roteia requisições do Open WebUI através do FastAPI, injetando o system prompt do K.A.O.S. e garantindo que todo o tráfego passe pelo gateway antes de chegar ao Ollama.
 
 ---
 
-## Problema
+## Visão Geral
 
-Por padrão, o Open WebUI se conecta diretamente ao Ollama.
+O Open WebUI não se conecta diretamente ao Ollama. Em vez disso, é configurado no **modo OpenAI**, apontando para o FastAPI:
 
-**Fluxo padrão:**
-```text
-Usuário → Open WebUI → Ollama → Resposta
+```
+Open WebUI → FastAPI (Triple-Router) → FAST / MEMORY / SMART → Ollama / Tools
 ```
 
-**Limitações:**
-* Não utiliza memória do Obsidian
-* Não utiliza Qdrant
-* Não utiliza agentes
-* Não utiliza ferramentas
-* Não executa automações
-* Não acessa regras de negócio
-
-Neste cenário a IA funciona apenas como um chatbot local.
+Isso garante:
+- Injeção obrigatória do system prompt do K.A.O.S.
+- CORS habilitado para requisições cross-origin do container
+- Um ponto único de controle para logging, monitoramento e futuras transformações
+- Compatibilidade total com o formato OpenAI (qualquer cliente OpenAI pode usar)
+- **Roteamento inteligente**: FAST (ferramentas), MEMORY (RAG), SMART (LangGraph)
 
 ---
 
-## Solução
-
-A KAOS utilizará uma camada de orquestração entre o Open WebUI e o modelo LLM.
-
-**Fluxo oficial:**
-```text
-Usuário → Open WebUI → FastAPI Gateway → LangGraph Agent → Tools → Ollama → Resposta
-```
-
----
-
-## Arquitetura Oficial
+## Arquitetura
 
 ```mermaid
-graph TD
-    User([Usuário]) -->|Chat| WebUI[Open WebUI]
-    WebUI -->|API| Gateway[FastAPI Gateway]
-    Gateway -->|Orquestração| LangGraph[LangGraph Agent]
+graph LR
+    OWUI[Open WebUI] -->|OpenAI API| GW[FastAPI Gateway]
+    GW -->|Triple-Router| FAST[FAST Router]
+    GW -->|Triple-Router| MEMORY[Memory Router]
+    GW -->|Triple-Router| SMART[Smart Router / LangGraph]
+    FAST -->|Tools| TOOLS[Obsidian Tools]
+    MEMORY -->|RAG| QDRANT[Qdrant Vector DB]
+    MEMORY -->|Stream| OLLAMA[Ollama qwen3:4b]
+    SMART -->|Agent| LANGGRAPH[LangGraph]
+    LANGGRAPH -->|Tools| TOOLS
+    LANGGRAPH -->|RAG| QDRANT
+    LANGGRAPH -->|Stream| OLLAMA
     
-    subgraph Memória
-        LangGraph -->|Busca Semântica| Qdrant[(Qdrant)]
-        LangGraph -->|CRUD Arquivos| Obsidian[(Obsidian Vault)]
+    subgraph FastAPI["FastAPI (porta 8000)"]
+        OAI[/v1/chat/completions]
+        LEGACY[/chat/completions]
+        MODELS[/v1/models]
+        MODELS_LEG[/models]
+        CHAT[/api/chat/message]
+        INDEX[/indexing/full]
+        RAG[/rag/context]
+        HEALTH[/health]
     end
     
-    subgraph Integrações e Regras
-        LangGraph -->|API Rest| Backend[Backend Java/Spring]
-        Backend --> Postgres[(PostgreSQL)]
+    OWUI --> OAI
+    OWUI --> LEGACY
+    OAI -->|Intent Classifier| GW
+    GW -->|FAST| FAST
+    GW -->|MEMORY| MEMORY
+    GW -->|SMART| SMART
+```
+
+---
+
+## Endpoints do Gateway
+
+| Endpoint | Método | Router | Descrição | Streaming |
+| :------- | :----- | :----- | :-------- | :-------: |
+| `GET /` | GET | main | Root — informações do serviço | ❌ |
+| `GET /health` | GET | health | Health check (liveness) | ❌ |
+| `GET /health/readiness` | GET | health | Readiness check (inclui Ollama) | ❌ |
+| `POST /api/chat/message` | POST | chat | Chat interno (LangGraph) | ✅ |
+| `POST /v1/chat/completions` | POST | openai | Proxy OpenAI (usado pelo Open WebUI) | ✅ |
+| `POST /chat/completions` | POST | legacy | **Legacy** Open WebUI compat | ✅ |
+| `GET /v1/models` | GET | openai | Lista modelos (kaos, kaos-fast, kaos-rag) | ❌ |
+| `GET /models` | GET | legacy | **Legacy** lista modelos | ❌ |
+| `POST /indexing/full` | POST | indexing | Reindexação completa do vault | ❌ |
+| `POST /indexing/init-folders` | POST | indexing | Cria estrutura de pastas do vault | ❌ |
+| `POST /rag/context` | POST | rag | Busca contexto RAG (semântico) | ❌ |
+
+### Modelos Disponíveis
+
+| Model ID | Rota | Uso |
+| :------- | :--- | :-- |
+| `kaos` | DEFAULT | SMART (LangGraph completo) |
+| `kaos-fast` | FAST | FAST (ferramentas diretas, sem LLM/RAG) |
+| `kaos-rag` | MEMORY | MEMORY (RAG + Ollama, sem LangGraph) |
+
+---
+
+## Fluxo do Proxy OpenAI (Triple-Router)
+
+```mermaid
+sequenceDiagram
+    participant OWUI as Open WebUI
+    participant GW as FastAPI Gateway
+    participant IC as Intent Classifier
+    participant FR as Fast Router
+    participant MR as Memory Router
+    participant SR as Smart Router
+    participant OLLAMA as Ollama
+    participant QDRANT as Qdrant
+
+    OWUI->>GW: POST /v1/chat/completions (ou /chat/completions)
+    Note over GW: Verifica/insere System Prompt K.A.O.S.
+    GW->>IC: classify(user_message)
+    alt Keyword match (FAST/MEMORY)
+        IC-->>GW: IntentType (FAST/MEMORY)
+    else LLM fallback
+        IC->>OLLAMA: classify (OLLAMA_FAST_MODEL, temp=0)
+        OLLAMA-->>IC: IntentType
+        IC-->>GW: IntentType
     end
-    
-    LangGraph -->|Inferência| Ollama[Ollama Server]
-    Ollama -->|Stream| Gateway
+
+    alt FAST (tool call)
+        GW->>FR: fast_route(user_message)
+        FR->>GW: tool_result ou None
+        alt tool executada
+            GW-->>OWUI: Streaming SSE (resultado tool)
+        else sem tool (ex: saudação)
+            GW-->>OWUI: Streaming SSE (resposta simples)
+        end
+    else MEMORY (RAG + LLM)
+        GW->>MR: stream(user_message)
+        MR->>QDRANT: search(query)
+        QDRANT-->>MR: chunks + scores
+        MR->>OLLAMA: stream(context + messages)
+        OLLAMA-->>MR: tokens
+        MR-->>GW: tokens
+        GW-->>OWUI: Streaming SSE
+    else SMART (LangGraph)
+        GW->>SR: process_message()
+        SR->>SR: retrieve → planner → executor (loop)
+        SR->>OLLAMA: stream (com contexto + tools)
+        OLLAMA-->>SR: tokens
+        SR-->>GW: tokens
+        GW-->>OWUI: Streaming SSE
+    end
 ```
 
 ---
 
-## Papel dos Componentes
+## System Prompt do K.A.O.S.
 
-### Open WebUI
-**Responsabilidade:**
-* Interface do usuário
-* Histórico de conversas
-* Upload de arquivos
-* Gerenciamento de sessões
+Definido em `assistant/app/config/prompts.py`. Injetado automaticamente se o payload não contiver um `role: system`.
 
-**Não deve:** Executar lógica de negócio, RAG ou automações.
-
-### FastAPI
-**Responsabilidade:**
-* Porta de entrada oficial da KAOS
-* Receber mensagens do Open WebUI
-* Encaminhar para o agente
-
-### LangGraph
-**Responsabilidade:**
-* Orquestração e planejamento
-* Escolha de ferramentas
-* Execução de fluxos
-* É o **cérebro operacional** da KAOS.
-
-### Ollama
-**Responsabilidade:**
-* Inferência dos modelos e geração de respostas
-* Não possui memória própria.
-
-### Obsidian
-**Responsabilidade:**
-* Memória permanente, Conhecimento, Documentação, Preferências, Projetos e SDDs.
-
-### Qdrant
-**Responsabilidade:**
-* Busca semântica, Recuperação de contexto e Vetorização.
-
-### Backend
-**Responsabilidade:**
-* Regras de negócio, APIs e Persistência relacional.
-* **Tecnologia:** Java 21, Spring Boot.
-
-### N8N
-**Responsabilidade:**
-* Integrações externas, automações e workflows.
-* Deve ser considerado **opcional**.
-
----
-
-## Regra Fundamental
-
-> A KAOS deve continuar funcionando mesmo se o N8N estiver indisponível.
-
----
-
-## Ferramentas Oficiais
-
-### Obsidian
-* **ReadNoteTool**: Ler notas.
-* **CreateNoteTool**: Criar notas.
-* **UpdateNoteTool**: Atualizar notas.
-* **DeleteNoteTool**: Excluir notas.
-* **SearchNotesTool**: Buscar notas.
-
-### Memória
-* **QdrantSearchTool**: Recuperar contexto semântico.
-
-### Backend
-* **UserTool**: Gerenciar usuários.
-* **ProjectTool**: Gerenciar projetos.
-
-### Integrações
-* **N8NTool**: Executar workflows externos.
-
----
-
-## Estratégias
-
-### Estratégia de Recuperação de Contexto
-Quando uma pergunta depender de conhecimento armazenado:
-```text
-Pergunta → QdrantSearchTool → Contexto Recuperado → Prompt Enriquecido → Ollama → Resposta
+```python
+KAOS_SYSTEM_PROMPT = """Você é K.A.O.S. (Knowledge Assistant & Offline System)..."""
 ```
 
-### Estratégia de Escrita de Memória
-Quando uma ação modificar conhecimento:
-```text
-CreateNoteTool → Obsidian → Indexer → Qdrant
+---
+
+## Configuração do Open WebUI
+
+No `docker-compose.yml`, o Open WebUI é configurado para usar o FastAPI como backend OpenAI:
+
+```yaml
+environment:
+  - OPENAI_API_BASE_URL=http://host.docker.internal:8000
+  - OPENAI_API_KEY=kaos-local
+  - DEFAULT_MODEL=qwen3:4b
 ```
-*A memória deve permanecer sincronizada.*
+
+- `host.docker.internal:8000` → Resolve o host da máquina de dentro do container
+- `OPENAI_API_KEY` → Qualquer valor (o proxy não valida localmente)
+- `DEFAULT_MODEL` → Modelo padrão exibido na UI
 
 ---
 
-## O que NÃO é a Arquitetura Oficial
+## Contexto de Usuário
 
-### ❌ Não utilizar fluxo direto Open WebUI → Ollama
-**Motivo**: Ignora toda a camada de memória.
+A partir da Fase 8, o gateway propaga o `UserContext` (user_id, username, role) do Open WebUI para o AgentService. Consulte [[sdd_user_context_propagation]] para a arquitetura detalhada.
 
-### ❌ Não utilizar fluxo Open WebUI → Pipeline RAG → Ollama
-**Motivo**: Funciona apenas para recuperação de contexto. Não suporta agentes, ferramentas, automações e backend. A Pipeline RAG deve existir apenas como uma **ferramenta interna** acessada pelo LangGraph.
+## Considerações de Segurança
+
+- Atualmente sem autenticação (ambiente local)
+- O CORS permite todas as origens (`allow_origins=["*"]`)
+- Para produção, adicionar validação de API Key e restringir CORS
 
 ---
 
-## Critério de Sucesso
+## Dependências
 
-A KAOS deve ser capaz de:
-* Responder utilizando contexto do Obsidian.
-* Criar e atualizar notas.
-* Recuperar conhecimento semântico.
-* Executar ferramentas autonomamente.
-* Funcionar offline e sem internet.
-* Operar de forma independente do N8N.
-* Escalar para integrações futuras sem alterar a arquitetura principal.
+- [[sdd_fase2_ia_local]] — Implementação do LLMService e endpoint de chat
+
+## Desbloqueia
+
+- Integração com qualquer cliente compatível com OpenAI API
+- Futura camada de autenticação e rate limiting
+- Middleware de logging e tracing centralizado

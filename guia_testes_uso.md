@@ -1,10 +1,10 @@
 Source: Antigravity AI
 Tags: #qa #testes #uso #features
-Related: [[index]] [[backlog]]
+Related: [[index]] [[BackLog]]
 
 # 🧪 Guia de Testes e Uso das Features
 
-> Este documento é atualizado a cada nova funcionalidade desenvolvida. Ele centraliza os passos exatos para executar, testar e validar cada componente do sistema na ordem em que as Fases do [[backlog]] são concluídas.
+> Este documento é atualizado a cada nova funcionalidade desenvolvida. Ele centraliza os passos exatos para executar, testar e validar cada componente do sistema na ordem em que as Fases do [[BackLog]] são concluídas.
 
 ---
 

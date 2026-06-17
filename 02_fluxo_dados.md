@@ -1,90 +1,168 @@
 Source: Notas no ClickUp
-Tags: #langgraph #agente #fluxo #fastapi
-Related: [[index]] [[01_estrutura_pastas]] [[sdd_obsidian_memoria]] [[04_integracoes]]
+Tags: #langgraph #agente #fluxo #fastapi #proxy #openai
+Related: [[index]] [[01_estrutura_pastas]] [[sdd_obsidian_memoria]]
 
 # Fluxo de Dados e Ciclo de Vida do Agente
 
-Esta nota documenta o caminho que uma mensagem percorre desde o envio pelo usuário (no Open WebUI) até a geração da resposta enriquecida, passando pelo LangGraph, RAG e execução de ferramentas.
+Esta nota documenta os caminhos que uma mensagem percorre, incluindo o **roteamento inteligente** (FAST/MEMORY/SMART).
 
 ---
 
-## 🔄 Fluxo de Requisição de Chat
+## Visão Geral do Roteamento
+
+Toda mensagem passa pelo `IntentClassifier` antes de ser processada:
+
+1. **FAST** → execução direta de tools (sem LLM, sem RAG, sem LangGraph)
+2. **MEMORY** → RAG + LLM (sem LangGraph)
+3. **SMART** → LangGraph completo (planner + executor + tools)
+
+```
+                                 ┌─────────────┐
+                                 │  Mensagem    │
+                                 │  + user_id   │
+                                 └──────┬──────┘
+                                        │
+                                 ┌──────▼──────┐
+                                 │   Cache     │
+                                 │  (hit? retorna) │
+                                 └──────┬──────┘
+                                        │
+                                 ┌──────▼──────────┐
+                                 │ IntentClassifier │
+                                 │  keyword + LLM   │
+                                 └──────┬──────────┘
+                                        │
+                    ┌───────────────────┼───────────────────┐
+                    │                   │                   │
+              ┌─────▼─────┐     ┌──────▼──────┐     ┌─────▼──────┐
+              │   FAST     │     │   MEMORY    │     │   SMART     │
+              │ (tool sem  │     │ (RAG + LLM  │     │ (LangGraph  │
+              │  LLM/RAG)  │     │  sem tools) │     │  completo)  │
+              └─────┬─────┘     └──────┬──────┘     └─────┬──────┘
+                    │                  │                  │
+              ┌─────▼─────┐     ┌──────▼──────┐     ┌─────▼──────────┐
+              │  Tool      │     │  Qdrant     │     │  AgentService  │
+              │  Registry  │     │  + Ollama   │     │  (LangGraph)   │
+              └───────────┘     └─────────────┘     │  + user context │
+                                                     └────────────────┘
+```
+
+---
+
+## Fluxo FAST — Execução Direta de Tools
+
+Usado para comandos diretos que não precisam de conhecimento do vault nem raciocínio complexo.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as Usuário
+    participant API as FastAPI
+    participant CLASS as IntentClassifier
+    participant FAST as FastRouter
+    participant TOOL as Tool Registry
+
+    User->>API: "liste minhas notas"
+    API->>CLASS: classify("liste minhas notas")
+    CLASS-->>API: FAST
+    API->>FAST: fast_route("liste minhas notas")
+    FAST->>TOOL: list_notes()
+    TOOL-->>FAST: resultado
+    FAST-->>API: resposta
+    API-->>User: "3 notas encontradas"
+```
+
+---
+
+## Fluxo MEMORY — RAG + LLM sem LangGraph
+
+Usado para perguntas que precisam de contexto do Vault mas não exigem ferramentas ou raciocínio multi-passo.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as Usuário
+    participant API as FastAPI
+    participant CLASS as IntentClassifier
+    participant MEM as MemoryRouter
+    participant RAG as Qdrant
+    participant LLM as Ollama
+
+    User->>API: "o que existe no backlog?"
+    API->>CLASS: classify(...)
+    CLASS-->>API: MEMORY
+    API->>MEM: stream(query)
+    MEM->>RAG: search(query, limit=5)
+    RAG-->>MEM: chunks relevantes
+    MEM->>LLM: system + contexto + pergunta
+    LLM-->>MEM: stream de tokens
+    MEM-->>API: tokens
+    API-->>User: resposta fundamentada
+```
+
+---
+
+## Fluxo SMART — LangGraph Completo
+
+Usado para perguntas complexas que exigem planejamento, múltiplas ferramentas ou raciocínio encadeado.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as Usuário
+    participant API as FastAPI
+    participant SVC as SmartRouter (AgentService)
+    participant GRAPH as LangGraph
+    participant LLM as Ollama
+
+    User->>API: "compare projetos X e Y"
+    API->>CLASS: classify(...)
+    CLASS-->>API: SMART
+    API->>SVC: stream(session_id, mensagem, user_context)
+    SVC->>GRAPH: astream_events(initial_state)
+    
+    loop LangGraph Loop
+        GRAPH->>GRAPH: retrieve_context
+        GRAPH->>LLM: planner
+        LLM-->>GRAPH: decisão
+        alt tool call
+            GRAPH->>GRAPH: executor
+        end
+    end
+    
+    GRAPH-->>SVC: eventos
+    SVC-->>API: tokens
+    API-->>User: resposta
+```
+
+---
+
+## Fluxo Proxy OpenAI (/v1/chat/completions)
+
+Usado pelo Open WebUI. O FastAPI atua como proxy compatível com OpenAI, com o mesmo roteamento inteligente.
 
 ```mermaid
 sequenceDiagram
     autonumber
     actor User as Usuário (Open WebUI)
-    participant API as Controller (FastAPI)
-    participant SVC as AgentService (Service)
-    participant RAG as RagService (Service)
-    participant DB as PostgresRepo (Repository)
-    participant GRAPH as LangGraph Engine (Agent)
-    participant LLM as Ollama Server (Local)
+    participant OWUI as Open WebUI
+    participant PROXY as FastAPI (/v1/chat/completions)
+    participant CLASS as IntentClassifier
+    participant LLM as Ollama
 
-    User->>API: POST /api/chat/message (DTO)
-    API->>SVC: process_message(session_id, prompt)
-    SVC->>DB: Recuperar histórico de chat & estado anterior
-    SVC->>RAG: search_relevant_context(prompt)
-    RAG-->>SVC: Retorna Chunks Relevantes (Obsidian)
-    SVC->>GRAPH: Inicializar Grafo com (Estado + Contexto + Histórico)
-    
-    loop Ciclo do Grafo (LangGraph Loop)
-        GRAPH->>LLM: Analisar Estado + Decidir Ação (Tool Call ou Responder)
-        LLM-->>GRAPH: Decisão (Chamar ferramenta X ou gerar resposta final)
-        alt Chamar Ferramenta
-            GRAPH->>GRAPH: Executar Tool Interna (Ex: Docker/N8N)
-            GRAPH->>GRAPH: Atualizar Estado com Resultado da Tool
-        else Responder
-            GRAPH->>GRAPH: Gerar Mensagem Final
-        end
-    end
-    
-    GRAPH-->>SVC: Retorna Resposta Final e Novo Estado
-    SVC->>DB: Salvar nova mensagem & estado atualizado
-    SVC-->>API: Envia stream da resposta
-    API-->>User: Exibe resposta em tempo real
+    User->>OWUI: Digita mensagem
+    OWUI->>PROXY: POST /v1/chat/completions (com user context)
+    PROXY->>CLASS: classify(mensagem)
+    CLASS-->>PROXY: MEMORY/SMART
+    PROXY->>PROXY: roteia para router adequado (com user_id)
+    router->>LLM: processa
+    LLM-->>router: stream
+    router-->>PROXY: tokens
+    PROXY-->>OWUI: SSE stream (formato OpenAI)
+    OWUI-->>User: Exibe resposta
 ```
 
 ---
 
-## 🧠 Ciclo de Vida do Grafo do Agente (LangGraph)
-
-O Grafo do Agente é estruturado para tomar decisões dinâmicas baseadas em loops de feedback.
-
-```mermaid
-stateDiagram-v2
-    [*] --> START
-    START --> RETRIEVE_CONTEXT : Injetar contexto RAG do Obsidian
-    RETRIEVE_CONTEXT --> CALL_PLANNER : Invocar Planner (LLM)
-    
-    state CALL_PLANNER {
-        [*] --> AnalisarObjetivo
-        AnalisarObjetivo --> DecidirAcao
-    }
-    
-    CALL_PLANNER --> EXECUTE_TOOLS : Decidiu usar Ferramentas
-    CALL_PLANNER --> GENERATE_RESPONSE : Contexto suficiente para responder
-    
-    state EXECUTE_TOOLS {
-        [*] --> ExecutarTool
-        ExecutarTool --> GravarResultadoNoEstado
-    }
-    
-    EXECUTE_TOOLS --> CALL_PLANNER : Retornar resultado e planejar próximo passo
-    
-    GENERATE_RESPONSE --> WRITE_TO_HISTORY : Persistir interação
-    WRITE_TO_HISTORY --> [*]
-```
-
-### Nós do Grafo (Nodes)
-
-1. **`retrieve_context`**: Consulta o `VectorStoreRepository` no Qdrant para puxar notas recentes do Obsidian vinculadas ao tema da conversa.
-2. **`planner`**: O LLM local processa o input do usuário juntamente com o contexto recuperado. Avalia se precisa rodar alguma ferramenta (como pesquisar arquivos locais, disparar automação no N8N, ou executar comandos docker).
-3. **`execute_tools`**: Roda a ferramenta selecionada de forma isolada, coletando os retornos e armazenando de forma estruturada no `State`.
-4. **`generate`**: Finaliza o raciocínio montando a resposta final em formato amigável (markdown).
-
----
-
-## 🔗 Relação com outras Notas
-- Para entender as ferramentas disponíveis na execução do grafo, veja [[04_integracoes]].
-- Para ver os detalhes de persistência das tabelas do Postgres e Qdrant, acesse [[03_infraestrutura_docker]].
+## Relacao com outras Notas
+- [[sdd_arquitetura_orquestracao]] — SDD detalhada do proxy gateway

@@ -1,6 +1,6 @@
 Source: Antigravity AI
 Tags: #sdd #arquitetura #docker #wsl2 #infraestrutura
-Related: [[index]] [[backlog]] [[03_infraestrutura_docker]] [[sdd_fase1_fundacao]]
+Related: [[index]] [[BackLog]] [[03_infraestrutura_docker]] [[sdd_fase1_fundacao]]
 
 # SDD — Arquitetura Portável WSL2 + Docker para K.A.O.S
 
