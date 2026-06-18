@@ -1,3 +1,7 @@
+Source: K.A.O.S Architecture
+Tags: #arquitetura #testes #qualidade
+Related: [[index]] [[Arquitetura/patterns]] [[Arquitetura/anti-patterns]]
+
 # Estratégia de Testes — K.A.O.S
 
 ---

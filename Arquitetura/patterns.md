@@ -1,3 +1,7 @@
+Source: K.A.O.S Architecture
+Tags: #arquitetura #patterns #codigo
+Related: [[index]] [[Arquitetura/anti-patterns]] [[Arquitetura/testing-strategy]]
+
 # Padrões de Código — K.A.O.S
 
 > Padrões obrigatórios para todo código produzido no projeto.

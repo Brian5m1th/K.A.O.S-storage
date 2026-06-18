@@ -1,3 +1,7 @@
+Source: K.A.O.S Architecture
+Tags: #projeto #kaos #visao-geral
+Related: [[index]] [[Arquitetura/00_visao_geral]] [[Projetos/BackLog]]
+
 # Projeto — K.A.O.S
 
 > Knowledge AI Operating System — Assistente pessoal offline com IA local.

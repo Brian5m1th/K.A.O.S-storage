@@ -1,3 +1,7 @@
+Source: K.A.O.S Architecture
+Tags: #arquitetura #anti-patterns #codigo
+Related: [[index]] [[Arquitetura/patterns]] [[Arquitetura/testing-strategy]]
+
 # Anti-patterns — K.A.O.S
 
 > Práticas que NÃO devem ser usadas no projeto.
