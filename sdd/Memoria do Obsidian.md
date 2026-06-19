@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ---
+=======
+﻿---
+>>>>>>> dc53b1bb72c80e387acd61caa8aeaafa4aac4bb0
 type: knowledge
 domain: obsidian
 status: active
