@@ -85,6 +85,11 @@ graph LR
 
 ## Próximas Tarefas Prioritárias
 
+- [ ] **Nova Release v0.1.1**: Atualização de documentação + bugfixes + monitoramento
+  - [ ] Completar documentação (API_KEYS, COSIGN, MONITORING, PROVIDERS)
+  - [ ] Gerar changelog desde v0.1.0-alpha.4
+  - [ ] Tag release `v0.1.1`
+  - [ ] Validar desktop auto-update
 - [ ] **Auditoria RAG**: Executar `/indexing/full`, validar Qdrant, logs do retriever, teste "O que existe na nota Backlog?"
 - [ ] Implementar Intent Classifier (FAST/MEMORY/SMART)
 - [ ] Implementar FastRouter (execução direta de tools sem LLM)
