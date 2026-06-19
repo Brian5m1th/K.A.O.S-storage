@@ -1,3 +1,29 @@
+﻿---
+type: knowledge
+domain: obsidian
+status: active
+---
+
+# ConfiguraçÃes de Agente pt-BR
+*K.A.O.S Knowledge Wiki - Agent Schema pt-BR*
+
+> Versao em portugues do contrato de regras e diretrizes agentivas de escrita/leitura no vault.
+
+## Parent
+- [[MemÓria do Obsidian]]
+
+## Children
+
+
+## Related
+- [[Estrutura da Wiki]]
+
+## Tags
+#kaos #obsidian #agent #schema
+
+---
+
+## ConteÃºdo
 # K.A.O.S Knowledge Wiki — Schema do Agente
 
 Este arquivo define as convenções, fluxos de trabalho e regras que você deve seguir ao manter a wiki. Consulte-o antes de toda ingestão, consulta ou operação de manutenção.
@@ -29,7 +55,6 @@ Toda página wiki DEVE ter frontmatter YAML:
 ---
 title: Nome da Página
 type: entity | concept | source | synthesis
-tags:
   - tag1
   - tag2
 sources:
