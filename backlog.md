@@ -23,12 +23,8 @@ Related: [[index]] [[sdd_obsidian_memoria]] [[00_visao_geral]]
 | 9 | Integrações Online | 6 | ⬜ Aguardando |
 | 10 | Produção | 6 | ⬜ Aguardando |
 | 11 | Otimização e Roteamento | 8 | ✅ Completa |
-| 8B | User Context | 8 | ✅ Completa |
-| 9 | Integrações Online | 6 | ⬜ Aguardando |
-| 10 | Produção | 6 | ⬜ Aguardando |
-| 11 | Otimização e Roteamento | 8 | ✅ Completa |
-| 12 | Knowledge Wiki Layer | 23 | ✅ Completa |
-| 13 | Provedor Híbrido de LLM | 13 | ✅ Completa |
+| 12 | Knowledge Wiki Layer | 22 | 🟢 Parcial (21/22) |
+| 13 | Provedor Híbrido de LLM | 12 | 🟢 Parcial (11/12) |
 
 ---
 
@@ -74,13 +70,10 @@ graph LR
 
 ## Próximas Tarefas Prioritárias
 
-- [x] **Testar pipeline wiki completo**: draft mode, ingest, approve, lint (`tests/unit/agent/test_ingest.py`)
-- [x] **Testar fallback LLM**: fallback automático testado (`tests/unit/llm/test_factory.py`)
-- [x] **Auditoria RAG**: GET `/rag/diagnostics` + logs de score distribution
-- [x] **Dockerfile + vault mount**: volume persistente + init automático
-- [x] **User Context**: middleware headers + propagacão completa
-- [ ] **Setup guide**: Documentar modos de execução (Windows, WSL, Docker)
-- [ ] **Integrações**: N8N, webhooks, tools externas
+- [ ] **Testar pipeline wiki completo**: draft mode, ingest, approve, lint
+- [ ] **Testar fallback LLM**: derrubar Ollama → deve cair em OpenAI/Claude
+- [ ] **Auditoria RAG**: Executar `/indexing/full`, validar Qdrant, logs do retriever
+- [ ] Criar Dockerfile para o K.A.O.S (`assistant/`)
 
 ---
 
@@ -151,19 +144,19 @@ graph LR
 
 - [x] Criar estrutura padrão de pastas no Vault (endpoint `POST /indexing/init-folders`)
 
-Pastas criadas via `vault_init.py`:
+Pastas a criar:
 
-- [x] `Projetos/` — status e escopo de projetos ativos
-- [x] `Arquitetura/` — decisões e padrões arquiteturais
-- [x] `SDD/` — System Design Documents
-- [x] `Estudos/` — resumos de aprendizado
-- [x] `IA/` — prompts, modelos e experimentos
-- [x] `Python/` — padrões, libs e tutoriais Python
-- [x] `Java/` — ecossistema Java e Spring Boot
-- [x] `AWS/` — infraestrutura e comandos AWS
-- [x] `CI-CD/` — pipelines e automações de deploy
-- [x] `Diário/` — registros diários e resumos de reuniões
-- [x] `Inbox/` — ponto de entrada para notas sem categorização
+- [ ] `Projetos/` — status e escopo de projetos ativos
+- [ ] `Arquitetura/` — decisões e padrões arquiteturais
+- [ ] `SDD/` — System Design Documents
+- [ ] `Estudos/` — resumos de aprendizado
+- [ ] `IA/` — prompts, modelos e experimentos
+- [ ] `Python/` — padrões, libs e tutoriais Python
+- [ ] `Java/` — ecossistema Java e Spring Boot
+- [ ] `AWS/` — infraestrutura e comandos AWS
+- [ ] `CI-CD/` — pipelines e automações de deploy
+- [ ] `Diário/` — registros diários e resumos de reuniões
+- [ ] `Inbox/` — ponto de entrada para notas sem categorização
 
 ---
 
@@ -216,18 +209,18 @@ Pastas criadas via `vault_init.py`:
 
 ---
 
-## Fase 8B — User Context & Multiusuário ✅
+## Fase 8 — User Context & Multiusuário
 
 > Relacionado: [[sdd_user_context_propagation]] [[02_fluxo_dados]] [[sdd_obsidian_memoria]]
 
-- [x] Criar UserContext model (`app/domain/user.py`)
-- [x] Adicionar user_id ao ChatRequest e ChatCompletionRequest
-- [x] Adicionar user_id, username, role ao AgentState
-- [x] Escopar MemoryService por usuário (`Vault/users/{user_id}/`)
-- [x] Atualizar save_conversation tool com user_id
-- [x] Propagar UserContext nos endpoints e routers (middleware + headers)
-- [x] Adicionar user_id aos logs (auditoria)
-- [x] Criar MemoryRepository protocol para futura migração PostgreSQL
+- [ ] Criar UserContext model (`app/domain/user.py`)
+- [ ] Adicionar user_id ao ChatRequest e ChatCompletionRequest
+- [ ] Adicionar user_id, username, role ao AgentState
+- [ ] Escopar MemoryService por usuário (`Vault/users/{user_id}/`)
+- [ ] Atualizar save_conversation tool com user_id
+- [ ] Propagar UserContext nos endpoints e routers
+- [ ] Adicionar user_id aos logs (auditoria)
+- [ ] Criar MemoryRepository protocol para futura migração PostgreSQL
 
 ---
 
@@ -302,7 +295,7 @@ Pastas criadas via `vault_init.py`:
 
 ### Manutenção
 - [x] Implementar lint_wiki_tool (contradictions, orphans, broken links)
-- [x] Testar pipeline completo com draft mode (`tests/unit/agent/test_ingest.py`)
+- [ ] Testar pipeline completo com draft mode
 
 ---
 
@@ -332,7 +325,7 @@ Pastas criadas via `vault_init.py`:
 - [x] Implementar ProviderMetrics (provider, model, latency, tokens, cost)
 - [x] Implementar chat_with_fallback (fallback automático)
 - [x] Log estruturado de métricas por provider
-- [x] Testar fallback: fallback chain testado (`tests/unit/llm/test_factory.py`)
+- [ ] Testar fallback: derrubar provider A → deve cair em B
 
 ---
 
@@ -343,8 +336,8 @@ Pastas criadas via `vault_init.py`:
 - [x] Remover bypass do LangGraph no proxy OpenAI (`/v1/chat/completions` conecta direto no Ollama)
 - [x] Adicionar `ruff` como dependencia de dev para lint
 - [x] Adicionar `.env.example` ao repositorio
-- [x] **Auditoria RAG**: `GET /rag/diagnostics` + logs de score distribution no retrieve
-- [x] **Dockerfile**: Volume persistente `/vault` + init automático via startup lifespan
+- [ ] **Auditoria RAG**: Executar indexação inicial (`POST /indexing/full`), validar `points_count > 0`, adicionar logs de `retrieve_context` com query + contagem
+- [ ] **Dockerfile**: Criar `Dockerfile` para `assistant/` com volume mount do Vault (`/vault`) e `.env` configurável
 - [ ] **Setup guide**: Documentar modos de execução (Windows nativo, WSL, Docker) com `.env` próprio para cada ambiente
 
 ---
