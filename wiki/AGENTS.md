@@ -1,3 +1,29 @@
+﻿---
+type: knowledge
+domain: obsidian
+status: active
+---
+
+# ConfiguraçÃes de Agente
+*K.A.O.S Knowledge Wiki - Agent Schema*
+
+> Contrato de regras, convencoes de nomenclatura e fluxos que o LLM deve ler e seguir ao manipular a wiki do vault.
+
+## Parent
+- [[MemÓria do Obsidian]]
+
+## Children
+
+
+## Related
+- [[Estrutura da Wiki]]
+
+## Tags
+#kaos #obsidian #agent #schema
+
+---
+
+## ConteÃºdo
 # K.A.O.S Knowledge Wiki — Agent Schema
 
 This file defines the conventions, workflows, and rules you must follow when maintaining the wiki. Consult it before every ingest, query, or maintenance operation.
@@ -29,7 +55,6 @@ Every wiki page MUST have YAML frontmatter:
 ---
 title: Page Name
 type: entity | concept | source | synthesis
-tags:
   - tag1
   - tag2
 sources:

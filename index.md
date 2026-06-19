@@ -1,123 +1,100 @@
-Source: Antigravity AI
-Tags: #ia-pessoal #arquitetura #index
-Related: [[00_visao_geral]] [[Arquitetura da IA Pessoal Offline]]
+---
+type: knowledge
+domain: home
+status: active
+---
 
-# K.A.O.S — Índice Central
+# K.A.O.S — Portal Central
+*Knowledge Assistant & Offline System Hub*
 
-> Hub de navegação do vault. Todos os nós do Graph View passam por aqui.
+> Ponto de entrada central para toda a documentacao da arquitetura, backlog, fases e especificacoes de IA local do K.A.O.S.
+
+## Parent
+
+
+## Children
+- [[Visõ Geral Backlog do Projeto MemÓria do Obsidian Roadmap Geral]]
+
+## Related
+
+
+## Tags
+#kaos #index #home #hub
 
 ---
 
-## 🎯 Ponto de Partida
+## ConteÃºdo
+# K.A.O.S — Portal Central
+*Knowledge Assistant & Offline System Hub*
 
-- [[Objetivo  da IA Pessoal Offline|Objetivo do Projeto]]
-- [[Arquitetura da IA Pessoal Offline|Visão da Arquitetura (alto nível)]]
-- [[00_visao_geral|Visão Geral Técnica (Stack e Mapa)]]
-
----
-
-## 📐 Documentação Arquitetural
-
-| Nota | Conteúdo |
-| :--- | :--- |
-| [[00_visao_geral\|00 — Visão Geral]] | Stack tecnológica e mapa da documentação |
-| [[01_estrutura_pastas\|01 — Estrutura de Pastas]] | Camadas do projeto (Spring Boot Style) |
-| [[02_fluxo_dados\|02 — Fluxo de Dados]] | Ciclo de vida da requisição e grafo LangGraph |
-| [[03_infraestrutura_docker\|03 — Infraestrutura Docker]] | Docker Compose, serviços e variáveis de ambiente |
-| [[backlog\|Backlog]] | Planejamento e status das fases |
+> [!info]
+> Hub principal de navegacao da base de conhecimento do K.A.O.S. Navegue usando as categorias do dominio ou visualize o Graph View para uma representacao semantica das notas.
 
 ---
 
-## 🧠 SDDs — System Design Documents
+## áreas de Conhecimento
 
-| Nota | Componente | Status |
-| :--- | :--- | :--- |
-| [[sdd_obsidian_memoria\|SDD — Sistema de Memória]] | Arquitetura geral da memória com Obsidian | ✅ |
-| [[sdd_obsidian_watcher\|SDD — File Watcher & Indexer]] | Monitoramento do vault e pipeline de indexação | ✅ |
-| [[sdd_obsidian_rag\|SDD — Vector Search & RAG]] | Embeddings, Qdrant e recuperação semântica | ✅ |
-| [[sdd_obsidian_tools\|SDD — Schemas das Ferramentas]] | Tools do LangGraph para manipular notas | ✅ |
-| [[sdd_roadmap\|SDD — Roadmap Inicial]] | 9 fases de evolução da plataforma | ✅ |
-| [[sdd_arquitetura_orquestracao\|SDD — Proxy OpenAI & Gateway]] | Arquitetura do proxy /v1/chat/completions + Triple-Router | ✅ |
-| [[sdd_user_context_propagation\|SDD — User Context & Multiusuário]] | Propagação de contexto de usuário e memória isolada | ✅ |
-| [[estrategia_repositorios\|Estratégia de Repositórios]] | Monorepo → Multi-repo | 📝 |
-| [[sdd_knowledge_wiki_layer\|SDD — Knowledge Wiki Layer]] | LLM Wiki + RAG Híbrido, wiki persistente, draft mode | 📝 Novo |
-| [[sdd_llm_provider_hybrid\|SDD — Provedor Híbrido de LLM]] | Multi-provedor (Ollama, OpenAI, Claude, Gemini) | 📝 Novo |
+### 01 - Projetos & Roadmap
+- [[Projetos/Objetivos do Projeto|Objetivos do Projeto]]
+- [[Projetos/Backlog do Projeto|Backlog do Projeto]]
+- [[Projetos/Informacoes do Projeto|Informacoes do Projeto]]
+- [[sdd/Roadmap Geral|Roadmap Geral de Desenvolvimento]]
+- [[sdd/Fase 1 - Fundacao|Fase 1 - Fundacao]]
 
+### 02 - Arquitetura de Software
+- [[Arquitetura/Visao Geral|Visao Geral Tecnica]]
+- [[Arquitetura/Arquitetura Geral|Arquitetura de Alto Nivel]]
+- [[Arquitetura/Estrutura de Pastas|Estrutura de Pastas (Monorepo)]]
+- [[Arquitetura/Fluxo de Dados|Fluxo de Dados e Grafo]]
+- [[sdd/Arquitetura de Orquestracao|Arquitetura de Orquestracao do Proxy]]
+- [[sdd/Propagacao de Contexto de Usuario|Propagacao de Contexto de Usuario]]
+- [[Arquitetura/Estrategia de Repositorios|Estrategia de Repositorios]]
+- [[Arquitetura/Padroes de Projeto|Padroes de Projeto (Patterns)]]
+- [[Arquitetura/Anti-padroes de Projeto|Anti-padroes de Projeto (Anti-patterns)]]
+- [[sdd/Identidade Open Code|Identidade e Transparencia Open Code]]
+
+### 03 - Inteligencia Artificial & RAG
+- [[sdd/Fase 2 - IA Local|Fase 2 - Setup da IA Local]]
+- [[sdd/Busca Vetorial e RAG|Busca Vetorial e RAG no Qdrant]]
+- [[sdd/Ferramentas do LangGraph|Ferramentas do LangGraph (Tools)]]
+- [[sdd/Provedor Hibrido de LLM|Provedor Hibrido de LLM]]
+- [[sdd/Fases 4-5 - Pipeline RAG e Watcher|Orquestrador RAG e Sincronizacao]]
+  - [[sdd/Gerador de Embeddings|Gerador de Embeddings local]]
+  - [[sdd/Divisao de Texto (Chunking)|Divisao de Texto (Chunking)]]
+  - [[sdd/Indexador do Vault|Indexador do Vault]]
+  - [[sdd/Recuperador Semantico|Recuperador Semantico]]
+- [[sdd/Fases 6-7 - Watcher LangGraph e Memoria|Orquestrador LangGraph e Memoria de Longo Prazo]]
+  - [[sdd/Estado do Agente|Estado do Agente (AgentState)]]
+  - [[sdd/Orquestrador LangGraph|Orquestrador LangGraph (Nodes)]]
+  - [[sdd/Classificador de Intencoes|Classificador de Intencoes]]
+  - [[sdd/Roteamento de Memoria|Roteamento de Memoria]]
+
+### 04 - Backend & Automacoes
+- [[sdd/Fase 3 - Servico Obsidian|Fase 3 - Microservico Obsidian]]
+- [[Arquitetura/IntegraÃ§oes de ServiÃ§os|IntegraÃ§oes de ServiÃ§os (n8n, AWS, Webhooks)]]
+
+### 05 - DevOps, Infraestrutura & Tauri
+- [[Arquitetura/Infraestrutura Docker|Infraestrutura Docker e WSL2]]
+- [[sdd/Variaveis de Ambiente|Variaveis de Ambiente (.env)]]
+- [[sdd/Pipeline CI-CD Auto Update|Pipeline CI/CD e Auto-Update Tauri]]
+- [[sdd/OtimizaÃ§ao de Build Desktop|OtimizaÃ§ao de Build Desktop]]
+
+### 06 - Obsidian PKM
+- [[sdd/Memoria do Obsidian|Memoria de Longo Prazo baseada no Obsidian]]
+- [[sdd/Obsidian Watcher|Arquitetura do Obsidian Watcher]]
+  - [[sdd/Monitoramento do Vault (Watcher)|Monitor de eventos de arquivos (Watchdog)]]
+- [[wiki/AGENTS|ConfiguraÃ§oes de Agente (Schema Wiki)]]
+- [[wiki/AGENTS.pt-BR|ConfiguraÃ§oes de Agente pt-BR]]
+
+### 07 - Pesquisas e Conhecimento Incremental
+- [[sdd/Camada Wiki de Conhecimento|Camada Wiki de Conhecimento (LLM Wiki)]]
+  - [[sdd/Agente de Ingestao de Conhecimento|Agente de Ingestao de Conhecimento]]
+  - [[sdd/Estrutura da Wiki|Estrutura de Categorias Wiki]]
+  - [[sdd/Pipeline de Consulta da Wiki|Pipeline de Consulta Wiki-first]]
+
+### 08 - Qualidade e Testes
+- [[Arquitetura/Estrategia de Testes|Estrategia de Testes e Cobertura]]
+- [[Arquitetura/Guia de Testes e Uso|Guia de Testes e Uso (Comandos cURL)]]
 ---
 
-## 🐍 SDDs de Implementação Python (Por Fase)
-
-| Nota | Fase | Conteúdo | Status |
-| :--- | :---: | :--- | :--- |
-| [[sdd_fase1_fundacao\|SDD — Fase 1: Fundação]] | 1 ✅ | `pyproject.toml`, FastAPI, Settings, Logs, Docker Compose, Python 3.13 | ✅ |
-| [[sdd_fase2_ia_local\|SDD — Fase 2: IA Local]] | 2 ✅ | LLMService, Ollama, Proxy OpenAI, Qwen3:4b, Open WebUI | ✅ |
-| [[sdd_fase3_obsidian_service\|SDD — Fase 3: ObsidianService]] | 3 ✅ | CRUD de notas, 7 Tools LangGraph, Testes | ✅ |
-| [[sdd_fase4_rag_pipeline\|SDD — Fases 4-5: RAG + Watcher]] | 4-5 ✅ | Embedder, Chunking, Indexer, Retriever, Watchdog, **Singleton Embedder, score_threshold, diagnósticos** | ✅ |
-| [[sdd_fase5_watcher_langgraph\|SDD — Fases 6-7: LangGraph + Memória]] | 6-7 ✅ | AgentState, Grafo, Planner, Executor, Memória, **Fast Intent Classifier, MemoryRouter, observabilidade** | ✅ |
-| [[sdd_fase8_performance_routing\|SDD — Fase 8: Performance + Roteamento Inteligente]] | 8 🟡 | Fast/MEMORY/SMART routing, warmup, cache, métricas | 🟡 Em progresso |
-| [[sdd_fase9_integracoes\|SDD — Fase 9: Integrações]] | 9 ⬜ | N8N, GitHub, Email, AWS, Webhooks | ⬜ Planejado |
-
----
-
-## 🔗 Mapa de Dependências entre Componentes
-
-```mermaid
-graph TD
-    IDX([🗂️ index])
-
-    IDX --> OBJ[[Objetivo  da IA Pessoal Offline]]
-    IDX --> ARQ[[Arquitetura da IA Pessoal Offline]]
-    IDX --> VG[[00_visao_geral]]
-    IDX --> EP[[01_estrutura_pastas]]
-    IDX --> FD[[02_fluxo_dados]]
-    IDX --> INF[[03_infraestrutura_docker]]
-    IDX --> MEM[[sdd_obsidian_memoria]]
-
-    MEM --> WAT[[sdd_obsidian_watcher]]
-    MEM --> RAG[[sdd_obsidian_rag]]
-    MEM --> TOOLS[[sdd_obsidian_tools]]
-
-    WAT --> RAG
-    RAG --> TOOLS
-    TOOLS --> WAT
-
-    VG --> EP
-    VG --> FD
-    VG --> INF
-
-    EP --> FD
-    EP --> INF
-    FD --> INF
-
-    VG --> ORQ[[sdd_arquitetura_orquestracao]]
-    ORQ --> FD
-```
-
----
-
-## 📋 Backlog & Planejamento
-
-| Nota | Conteúdo |
-| :--- | :--- |
-| [[backlog\|Backlog Completo]] | Todas as tarefas organizadas por fase com mapa de dependências |
-
----
-
-## ✅ TODOs e Próximos Passos
-
-- [x] **Proxy OpenAI** — Endpoint `/v1/chat/completions` com streaming e system prompt
-- [x] **System Prompt K.A.O.S.** — Injeção automática em toda requisição do Open WebUI
-- [x] **CORS** — Configurado no FastAPI para aceitar requisições do container
-- [x] **Timeout 600s** — LLMService ajustado para modelos CPU lentos
-- [x] **app/agent/graph.py** — Grafo LangGraph com nós planner, executor, retrieve
-- [x] **app/obsidian/tools/** — Ferramentas CRUD de notas (create, read, update, delete, search)
-- [x] **app/rag/** — Pipeline RAG (embedder, chunking, indexer, retriever)
-- [x] **File Watcher** — Monitoramento do vault com watchdog
-- [x] **Conectar LangGraph ao endpoint de chat** — Rota completa com agente (`/api/chat/message` e `/v1/chat/completions`)
-- [x] **Configurar modelos de embedding** — `BAAI/bge-m3`
-- [ ] **SDD Knowledge Wiki Layer** — Criado, aguardando implementação
-- [ ] **SDD LLM Provider Hybrid** — Criado, aguardando implementação
-
----
-
-*Gerado automaticamente — navegue pelo Graph View (`Ctrl+G`) para visualizar as conexões.*
+*Gerado automaticamente — navegue pelo Graph View (Ctrl+G) para visualizar as conexoes reais de conhecimento.*
