@@ -13,17 +13,19 @@ status: active
 - [[EstratÉgia de Testes]]
 
 ## Children
-
+- [[index]]
+- [[Estrategia de Testes]]
+- [[Fase 3 - Servico Obsidian]]
 
 ## Related
-- [[IntegraçÃes de Services Fase 3 - Seviço Obsidian]]
+- [[IntegraçAes de Services Fase 3 - Seviço Obsidian]]
 
 ## Tags
 #kaos #arquitetura #qa #curl #testing
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # 🧪 Guia de Testes e Uso das Features
 
 > Este documento é atualizado a cada nova funcionalidade desenvolvida. Ele centraliza os passos exatos para executar, testar e validar cada componente do sistema na ordem em que as Fases do [[Backlog do Projeto]] são concluídas.
@@ -116,3 +118,6 @@ uv run pytest tests/unit/obsidian/
 
 ---
 *Este documento será incrementado com os scripts e prompts exatos à medida que o código for entregue.*
+
+
+

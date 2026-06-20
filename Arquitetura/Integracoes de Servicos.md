@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: backend
 status: active
@@ -95,6 +95,7 @@ async def handle_n8n_event(payload: dict):
 - [[Arquitetura Geral]]
 
 ## Children
+- [[index]]
 
 ## Related
 - [[Infraestrutura Docker]]
@@ -103,3 +104,5 @@ async def handle_n8n_event(payload: dict):
 
 ## Tags
 #kaos #backend #integracoes #n8n #aws #webhooks #automacao
+
+

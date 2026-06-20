@@ -1,29 +1,9 @@
-﻿---
-type: knowledge
-domain: roadmap
-status: active
----
+Source: K.A.O.S Project
+Tags: #sdd #roadmap #fases
+Related: [[index]] [[00_visao_geral]] [[backlog]]
 
-# Roadmap Geral
-*K.A.O.S System Roadmap*
+# SDD — Roadmap do K.A.O.S
 
-> Visao de fases detalhadas (do setup de fundacao as integracoes de API) para implantacao incremental do K.A.O.S.
-
-## Parent
-- [[index]]
-
-## Children
-- [[Fase 1 - FundaçAo Fase 2 - IA Local Fase 3 - Serviço Obsidian Fases 4-5 - Pipeline RAG e Watcher Fases 6-7 - Watcher LangGraph e MemÓria]]
-
-## Related
-- [[Backlog do Projeto]]
-
-## Tags
-#kaos #roadmap #planning #phases
-
----
-
-## Conteudo
 ## Objetivo
 
 Construir uma assistente de IA pessoal capaz de operar offline utilizando conhecimento armazenado em um Vault Obsidian e executar integrações externas através do N8N.
@@ -173,4 +153,3 @@ IA adapta respostas com base no historico e preferencias armazenadas.
 - [ ] Webhook tool para N8N
 - [ ] GitHub tool (issues, PRs)
 - [ ] Email tool (send/receive)
-

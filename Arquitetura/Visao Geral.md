@@ -15,10 +15,7 @@ status: active
 ## Children
 - [[Arquitetura Geral]]
 - [[Objetivos do Projeto]]
-- [[Guia de Configura]]
-- [[ç]]
-- [[Ã]]
-- [[o]]
+- [[Guia de Configuracao]]
 
 ## Related
 - [[Backlog do Projeto]]
@@ -29,7 +26,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Visão Geral do Assistente de IA Local
 
 Esta é a documentação arquitetural do K.A.O.S. (Knowledge Assistant & Offline System), um ecossistema de agentes inteligentes rodando localmente.
@@ -81,3 +78,5 @@ O FastAPI injeta o **system prompt do K.A.O.S.** em toda requisição e faz stre
 1. **Design Orientado a Domínio**: Camadas inspiradas em Spring Boot para facilitar manutenção.
 2. **Execução Local**: Tudo roda localmente, sem dependências externas obrigatórias.
 3. **Tipagem e Pydantic**: Pydantic v2 para validação e Type Hints obrigatórios.
+
+

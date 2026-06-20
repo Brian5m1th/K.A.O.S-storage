@@ -13,10 +13,11 @@ status: active
 - [[Camada Wiki de Conhecimento]]
 
 ## Children
-
+- [[index]]
+- [[Agente de Ingestao de Conhecimento]]
 
 ## Related
-- [[Agente de IngestÃ£o de Conhecimento]]
+- [[Agente de Ingestao de Conhecimento]]
 - [[Busca Vetorial e RAG]]
 
 ## Tags
@@ -24,5 +25,8 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## 
+
+
+

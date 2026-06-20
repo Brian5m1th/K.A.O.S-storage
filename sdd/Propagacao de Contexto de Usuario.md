@@ -10,10 +10,11 @@ status: active
 > Especifica como as chamadas HTTP propagam os dados do usuario atual (ID, permissoes) para isolamento de memoria.
 
 ## Parent
-- [[Arquitetura de OrquestraçÃo]]
+- [[Arquitetura de OrquestraçAo]]
 
 ## Children
-
+- [[index]]
+- [[Arquitetura de Orquestracao]]
 
 ## Related
 - [[MemÓria do Obsidian]]
@@ -23,11 +24,11 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 > Tipo: System Design Document
 > Status: **Implementado** ✅
 > Prioridade: Alta
-> Relacionado: [[Fluxo de Dados]] [[MemÓria do Obsidian]] [[Arquitetura de OrquestraçÃo]] [[Backlog do Projeto]]
+> Relacionado: [[Fluxo de Dados]] [[MemÓria do Obsidian]] [[Arquitetura de OrquestraçAo]] [[Backlog do Projeto]]
 
 ---
 
@@ -348,3 +349,6 @@ Após esta implementação:
 6. Integração com Open WebUI Groups
 7. Permissões por ferramenta LangGraph
 8. Auditoria completa de execução do agente
+
+
+

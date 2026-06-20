@@ -13,18 +13,20 @@ status: active
 - [[Fases 4-5 - Pipeline RAG e Watcher]]
 
 ## Children
-
+- [[index]]
+- [[Obsidian Watcher]]
 
 ## Related
 - [[Obsidian Watcher]]
-- [[Mem]]
-- [[Ó]]
-- [[ria do Obsidian]]
+- [[Memoria do Obsidian]]
 
 ## Tags
 #kaos #obsidian #watcher #watchdog #python
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## 
+
+
+

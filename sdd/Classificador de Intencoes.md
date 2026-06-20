@@ -13,15 +13,19 @@ status: active
 - [[Fases 6-7 - Watcher LangGraph e MemÓria]]
 
 ## Children
-
+- [[index]]
+- [[Fases 6-7 - Watcher LangGraph e Memoria]]
 
 ## Related
-- [[Roteamento de MemÓria Arquitetura de OrquestraçÃo]]
+- [[Roteamento de MemÓria Arquitetura de OrquestraçAo]]
 
 ## Tags
 #kaos #ia #nlp #intent #routing
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## 
+
+
+

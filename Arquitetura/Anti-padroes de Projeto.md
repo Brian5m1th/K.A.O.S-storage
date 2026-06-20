@@ -13,17 +13,17 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Identidade Open Code]]
 
 ## Related
-- [[Padrões de Projeto EstratÉgia de Testes]]
+- [[Padroes de Projeto EstratÉgia de Testes]]
 
 ## Tags
 #kaos #arquitetura #antipatterns #guidelines
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Anti-patterns — K.A.O.S
 
 > Práticas que NÃO devem ser usadas no projeto.
@@ -182,3 +182,6 @@ response = await client.post(url)  # faz a requisicao POST
 ```
 
 O código já deixa claro o que faz. Confie nas funções e nomes descritivos.
+
+
+

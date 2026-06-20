@@ -1,4 +1,4 @@
-﻿---
+---
 type: knowledge
 domain: pesquisa
 status: active
@@ -13,7 +13,7 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-- [[Agente de IngestÃ£o de Conhecimento]]
+- [[Agente de Ingestao de Conhecimento]]
 - [[Estrutura da Wiki]]
 - [[Pipeline de Consulta da Wiki]]
 
@@ -25,10 +25,10 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Source: LLM Wiki Pattern + K.A.O.S SDD-009
 Tags: #sdd #wiki #knowledge #llm-wiki #rag #synthesis
-Related: [[index]] [[Visõ Geral]] [[Provedor HÍbrido de LLM]] [[Fluxo de Dados]]
+Related: [[index]] [[Viso Geral]] [[Provedor HÍbrido de LLM]] [[Fluxo de Dados]]
 
 # SDD — Knowledge Wiki Layer (LLM Wiki + RAG Híbrido)
 
@@ -431,5 +431,8 @@ Permite `grep "^## \[" log.md` para últimas N entradas.
 ### Fase 5 — Manutenção
 - [ ] lint_wiki detecta contradictions, orphans, broken links
 - [ ] Draft Mode protegendo alterações estruturais
+
+
+
 
 

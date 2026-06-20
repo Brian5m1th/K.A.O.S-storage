@@ -13,14 +13,12 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Estrutura de Pastas]]
+- [[Infraestrutura Docker]]
 
 ## Related
 - [[Estrutura de Pastas]]
-- [[Arquitetura de Orquestra]]
-- [[ç]]
-- [[Ã]]
-- [[o]]
+- [[Arquitetura de Orquestracao]]
 - [[Infraestrutura Docker]]
 
 ## Tags
@@ -28,7 +26,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Fluxo de Dados e Ciclo de Vida do Agente
 
 Esta nota documenta os caminhos que uma mensagem percorre, incluindo o **roteamento inteligente** (FAST/MEMORY/SMART).
@@ -192,4 +190,8 @@ sequenceDiagram
 ---
 
 ## Relacao com outras Notas
-- [[Arquitetura de OrquestraçÃo]] — SDD detalhada do proxy gateway
+- [[Arquitetura de OrquestraçAo]] — SDD detalhada do proxy gateway
+
+
+
+

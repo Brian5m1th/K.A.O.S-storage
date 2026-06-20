@@ -13,17 +13,18 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Anti-padroes de Projeto]]
+- [[Estrategia de Repositorios]]
 
 ## Related
-- [[Anti-padrões de Projeto EstratÉgia de RepositÓrios EstratÉgia de Testes]]
+- [[Anti-padroes de Projeto EstratÉgia de RepositÓrios EstratÉgia de Testes]]
 
 ## Tags
 #kaos #arquitetura #patterns #best-practices
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Padrões de Código — K.A.O.S
 
 > Padrões obrigatórios para todo código produzido no projeto.
@@ -114,3 +115,6 @@ Execute antes de todo commit:
 ruff check .
 ruff format --check .
 ```
+
+
+

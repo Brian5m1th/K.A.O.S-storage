@@ -13,17 +13,17 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Integracoes de Servicos]]
 
 ## Related
-- [[Visõ Geral Variáveis de Ambiente Pipeline CI-CD Auto Update]]
+- [[Viso Geral Variáveis de Ambiente Pipeline CI-CD Auto Update]]
 
 ## Tags
 #kaos #docker #devops #wsl2 #compose
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ### Aspectos Conceituais e Requisitos
 ## User Story
 
@@ -311,3 +311,6 @@ docker compose -f infra/docker/docker-compose.yml down
 # Resetar volumes (perde dados)
 docker compose -f infra/docker/docker-compose.yml down -v
 ```
+
+
+

@@ -1,33 +1,12 @@
-﻿---
-type: knowledge
-domain: roadmap
-status: active
----
+Source: Antigravity AI
+Tags: #sdd #python #fastapi #fundação #fase1
+Related: [[index]] [[backlog]] [[01_estrutura_pastas]] [[sdd_fase2_ia_local]]
 
-# Fase 1 - Fundacao
-*Phase 1 - Foundation & Project Structure*
+# SDD — Fase 1: Fundação do Projeto Python
 
-> Documentacao tecnica dos requisitos e implementacoes da Fundacao: FastAPI, Pydantic, e empacotamento inicial.
-
-## Parent
-- [[Roadmap Geral]]
-
-## Children
-- [[Fase 2 - IA Local]]
-
-## Related
-- [[Estrutura de Pastas]]
-- [[Infraestrutura Docker]]
-
-## Tags
-#kaos #roadmap #fase1 #python #fastapi
-
----
-
-## Conteudo
 ## Objetivo
 
-Configurar a estrutura base do projeto Python seguindo os padrões corporativos definidos em [[Estrutura de Pastas]]. Ao final desta fase, o projeto deve ter ambiente, dependências, configuração e um endpoint de health check funcionando.
+Configurar a estrutura base do projeto Python seguindo os padrões corporativos definidos em [[01_estrutura_pastas]]. Ao final desta fase, o projeto deve ter ambiente, dependências, configuração e um endpoint de health check funcionando.
 
 ---
 
@@ -229,7 +208,6 @@ def configure_logging(log_level: str) -> None:
         format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>",
         colorize=True,
     )
-    # Intercepta loggers externos (uvicorn, fastapi)
     class InterceptHandler(logging.Handler):
         def emit(self, record: logging.LogRecord) -> None:
             logger.opt(depth=6, exception=record.exc_info).log(
@@ -244,19 +222,10 @@ def configure_logging(log_level: str) -> None:
 ## 8. Comandos de Setup
 
 ```bash
-# Instalar uv (se necessário)
 pip install uv
-
-# Criar projeto e instalar dependências
 uv sync
-
-# Subir infraestrutura
 docker compose -f infra/docker/docker-compose.yml up -d
-
-# Rodar a aplicação localmente
 cd assistant && uv run uvicorn app.main:app --reload --port 8000
-
-# Rodar os testes
 cd assistant && uv run pytest
 ```
 
@@ -268,6 +237,5 @@ Nenhuma — é a fase inicial.
 
 ## Desbloqueia
 
-- [[Fase 2 - IA Local]] — Integração com Ollama
-- [[Fase 3 - Serviço Obsidian]] — ObsidianService
-
+- [[sdd_fase2_ia_local]] — Integração com Ollama
+- [[sdd_fase3_obsidian_service]] — ObsidianService

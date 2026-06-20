@@ -13,15 +13,19 @@ status: active
 - [[Fases 6-7 - Watcher LangGraph e MemÓria]]
 
 ## Children
-
+- [[index]]
+- [[Fases 6-7 - Watcher LangGraph e Memoria]]
 
 ## Related
-- [[Classificador de Intenções MemÓria do Obsidian]]
+- [[Classificador de Intençoes MemÓria do Obsidian]]
 
 ## Tags
 #kaos #ia #memory #routing #rag
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## 
+
+
+

@@ -14,13 +14,9 @@ status: active
 
 ## Children
 - [[Gerador de Embeddings]]
-- [[Divis]]
-- [[Ã]]
-- [[o de Texto (Chunking)]]
+- [[Divisao de Texto (Chunking)]]
 - [[Indexador do Vault]]
-- [[Recuperador Sem]]
-- [[Ã]]
-- [[ntico]]
+- [[Recuperador Semantico]]
 - [[Monitoramento do Vault (Watcher)]]
 
 ## Related
@@ -32,7 +28,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Source: Antigravity AI
 Tags: #sdd #python #rag #qdrant #embeddings #watchdog #fase4 #fase5 #fase6
 Related: [[index]] [[Backlog do Projeto]] [[Fase 3 - Serviço Obsidian]] [[Busca Vetorial e RAG]] [[Obsidian Watcher]] [[Fases 6-7 - Watcher LangGraph e MemÓria]]
@@ -236,5 +232,8 @@ async def full_reindex(indexer: VaultIndexer = Depends()) -> dict:
 ## Desbloqueia
 
 - [[Fases 6-7 - Watcher LangGraph e MemÓria]] — O LangGraph usará o `SemanticRetriever` como primeira etapa do grafo
+
+
+
 
 

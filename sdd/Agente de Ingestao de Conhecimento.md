@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: ia
 status: active
@@ -13,7 +13,8 @@ status: active
 - [[Camada Wiki de Conhecimento]]
 
 ## Children
-
+- [[index]]
+- [[Pipeline de Consulta da Wiki]]
 
 ## Related
 - [[Pipeline de Consulta da Wiki]]
@@ -26,3 +27,4 @@ status: active
 
 ## Conteudo
 ## 
+

@@ -1,4 +1,4 @@
-﻿---
+---
 type: knowledge
 domain: arquitetura
 status: active
@@ -10,7 +10,7 @@ status: active
 > Especificacao de alto nivel da arquitetura geral do assistente de IA offline, detalhando os fluxos de integracao.
 
 ## Parent
-- [[Visõ Geral]]
+- [[Viso Geral]]
 
 ## Children
 - [[Estrutura de Pastas]]
@@ -18,14 +18,14 @@ status: active
 - [[Infraestrutura Docker]]
 
 ## Related
-- [[EstratÉgia de RepositÓrios Padrões de Projeto EstratÉgia de Testes]]
+- [[EstratÉgia de RepositÓrios Padroes de Projeto EstratÉgia de Testes]]
 
 ## Tags
 #kaos #arquitetura #system #offline
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Objetivo
 
 Criar uma IA pessoal capaz de:
@@ -191,3 +191,4 @@ Python pensa.
 Spring Boot aplica as regras.  
 N8N executa ações externas.  
 Obsidian armazena conhecimento.
+

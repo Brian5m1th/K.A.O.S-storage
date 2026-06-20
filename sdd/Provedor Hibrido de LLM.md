@@ -10,10 +10,12 @@ status: active
 > Arquitetura do gateway hibrido de inferencia, permitindo fallback suave entre instancias locais (Ollama) e APIs remotas em nuvem.
 
 ## Parent
-- [[Visõ Geral]]
+- [[Viso Geral]]
 
 ## Children
-
+- [[index]]
+- [[Configuração de Provedores]]
+- [[Gerador de Embeddings]]
 
 ## Related
 - [[Fase 2 - IA Local]]
@@ -24,7 +26,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Objetivo
 
 Desacoplar o K.A.O.S de qualquer provedor de LLM específico, permitindo alternar entre:
@@ -437,3 +439,6 @@ O `AGENTS.md`, `index.md`, `log.md` e as ferramentas wiki não dependem do prove
 - [ ] Roteamento dinâmico por custo
 - [ ] Roteamento dinâmico por latência
 - [ ] Roteamento dinâmico por tipo de request
+
+
+
