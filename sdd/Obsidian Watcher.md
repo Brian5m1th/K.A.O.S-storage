@@ -23,7 +23,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # SDD Componente — File Watcher & Indexer Service
 
 Este documento detalha o funcionamento interno do **File Watcher** (Monitor de Arquivos) e do **Indexer Service** (Serviço de Indexação). Juntos, eles garantem que o banco de dados de vetores (Qdrant) esteja sempre em sincronia com o estado físico das notas Markdown no Vault Obsidian.

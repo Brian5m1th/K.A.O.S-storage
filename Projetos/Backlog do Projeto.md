@@ -16,14 +16,14 @@ status: active
 - [[Roadmap Geral]]
 
 ## Related
-- [[Visõ Geral InformaçÃes do Projeto]]
+- [[Viso Geral InformaçAes do Projeto]]
 
 ## Tags
 #kaos #projetos #backlog #planning
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Backlog — IA Pessoal Offline com Obsidian
 
 > Rastreamento completo de todas as tarefas de desenvolvimento, organizadas por tipo e prioridade.
@@ -114,7 +114,7 @@ graph LR
 
 ## Fase 2 — IA Local ✅
 
-> Relacionado: [[Fase 2 - IA Local]] [[Arquitetura de OrquestraçÃo]]
+> Relacionado: [[Fase 2 - IA Local]] [[Arquitetura de OrquestraçAo]]
 
 - [x] Instalar Ollama
 - [x] Baixar modelo Qwen3 4B (`ollama pull qwen3:4b`)
@@ -232,7 +232,7 @@ Pastas a criar:
 
 ## Fase 8 — User Context & Multiusuário
 
-> Relacionado: [[PropagaçÃo de Contexto de Usuário]] [[Fluxo de Dados]] [[MemÓria do Obsidian]]
+> Relacionado: [[PropagaçAo de Contexto de Usuário]] [[Fluxo de Dados]] [[MemÓria do Obsidian]]
 
 - [ ] Criar UserContext model (`app/domain/user.py`)
 - [ ] Adicionar user_id ao ChatRequest e ChatCompletionRequest
@@ -306,3 +306,4 @@ Pastas a criar:
 ---
 
 *Atualizado em 2026-06-11.*
+

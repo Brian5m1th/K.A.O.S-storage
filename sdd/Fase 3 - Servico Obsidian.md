@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: backend
 status: active
@@ -13,7 +13,8 @@ status: active
 - [[Roadmap Geral]]
 
 ## Children
-
+- [[index]]
+- [[Ferramentas do LangGraph]]
 
 ## Related
 - [[Ferramentas do LangGraph]]
@@ -344,3 +345,4 @@ def test_search_finds_keyword(vault: Path) -> None:
 
 - [[Fases 4-5 - Pipeline RAG e Watcher]] — Indexação vetorial das notas no Qdrant
 - [[Fases 6-7 - Watcher LangGraph e Memoria]] — Agente usa as tools registradas
+

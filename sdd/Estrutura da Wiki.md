@@ -13,17 +13,21 @@ status: active
 - [[Camada Wiki de Conhecimento]]
 
 ## Children
-
+- [[index]]
+- [[Agente de Ingestao de Conhecimento]]
+- [[Memoria do Obsidian]]
+- [[AGENTS]]
+- [[AGENTS.pt-BR]]
 
 ## Related
-- [[ConfiguraçÃes de Agente MemÓria do Obsidian]]
+- [[ConfiguraçAes de Agente MemÓria do Obsidian]]
 
 ## Tags
 #kaos #obsidian #wiki #schema #vault
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Estrutura do Vault
 
 ```
@@ -58,4 +62,8 @@ status: active
 ```
 
 ---
+
+
+
+
 

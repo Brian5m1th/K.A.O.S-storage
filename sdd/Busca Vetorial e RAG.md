@@ -14,13 +14,9 @@ status: active
 
 ## Children
 - [[Gerador de Embeddings]]
-- [[Divis]]
-- [[Ã]]
-- [[o de Texto (Chunking)]]
+- [[Divisao de Texto (Chunking)]]
 - [[Indexador do Vault]]
-- [[Recuperador Sem]]
-- [[Ã]]
-- [[ntico]]
+- [[Recuperador Semantico]]
 
 ## Related
 - [[Provedor HÍbrido de LLM]]
@@ -30,7 +26,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # SDD Componente — Vector Search & RAG Service
 
 Esta nota descreve o motor de busca semântica, as escolhas de modelos de embedding e a estratégia de Recuperação Aumentada de Geração (RAG) usada para fornecer contexto atualizado ao Assistente de IA.
@@ -128,3 +124,5 @@ results = client.search(
 ## 🔗 Relação com outras Notas
 - O ciclo em que esses vetores são inseridos por eventos de escrita é visto em [[Obsidian Watcher]].
 - Para ver o mapeamento exato da ferramenta que a IA usa para consultar esse serviço, consulte [[Ferramentas do LangGraph]].
+
+

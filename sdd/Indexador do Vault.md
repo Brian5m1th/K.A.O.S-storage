@@ -13,20 +13,19 @@ status: active
 - [[Fases 4-5 - Pipeline RAG e Watcher]]
 
 ## Children
-
+- [[index]]
+- [[Busca Vetorial e RAG]]
 
 ## Related
 - [[Busca Vetorial e RAG]]
-- [[Mem]]
-- [[Ó]]
-- [[ria do Obsidian]]
+- [[Memoria do Obsidian]]
 
 ## Tags
 #kaos #ia #rag #indexing #qdrant
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## 4. Vault Indexer (`rag/indexer/vault_indexer.py`)
 
 Orquestra o pipeline completo: ler arquivo → chunk → embed → upsert no Qdrant.
@@ -128,4 +127,8 @@ class VaultIndexer:
 ```
 
 ---
+
+
+
+
 

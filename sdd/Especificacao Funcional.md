@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: arquitetura
 status: active
@@ -13,7 +13,7 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Especificacao Tecnica]]
 
 ## Related
 - [[Especificacao Tecnica]]
@@ -76,3 +76,4 @@ _Como o sistema se comporta em caso de falha._
 ## 6. Observações
 
 _Limitações conhecidas, decisões de design, referências a ADRs._
+

@@ -13,20 +13,18 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Guia de Testes e Uso]]
 
 ## Related
 - [[Guia de Testes e Uso]]
-- [[Padr]]
-- [[õ]]
-- [[es de Projeto]]
+- [[Padroes de Projeto]]
 
 ## Tags
 #kaos #arquitetura #testing #pytest #coverage
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Estratégia de Testes — K.A.O.S
 
 ---
@@ -80,3 +78,7 @@ pytest tests/unit/
 # Apenas integração
 pytest tests/integration/
 ```
+
+
+
+

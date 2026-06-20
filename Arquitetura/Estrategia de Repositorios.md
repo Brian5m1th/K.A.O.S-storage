@@ -13,17 +13,17 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Padroes de Projeto]]
 
 ## Related
-- [[Visõ Geral Padrões de Projeto]]
+- [[Visõ Geral Padroes de Projeto]]
 
 ## Tags
 #kaos #arquitetura #monorepo #git #multi-repo
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Estratégia de Repositórios da Plataforma de IA
 
 ## Objetivo
@@ -196,3 +196,6 @@ Separação clara entre:
 * Infraestrutura
 
 Permitindo evolução independente de cada componente.
+
+
+

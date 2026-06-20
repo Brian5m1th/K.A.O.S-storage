@@ -1,4 +1,4 @@
-﻿---
+---
 type: knowledge
 domain: ia
 status: active
@@ -15,23 +15,18 @@ status: active
 ## Children
 - [[Estado do Agente]]
 - [[Orquestrador LangGraph]]
-- [[Classificador de Inten]]
-- [[ç]]
-- [[õ]]
-- [[es]]
-- [[Roteamento de Mem]]
-- [[Ó]]
-- [[ria]]
+- [[Classificador de Intencoes]]
+- [[Roteamento de Memoria]]
 
 ## Related
-- [[Arquitetura de OrquestraçÃo MemÓria do Obsidian]]
+- [[Arquitetura de OrquestraçAo MemÓria do Obsidian]]
 
 ## Tags
 #kaos #ia #langgraph #memory #agent #roadmap
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Source: Antigravity AI
 Tags: #sdd #python #langgraph #agente #memoria #fase6 #fase7
 Related: [[index]] [[Backlog do Projeto]] [[Fases 4-5 - Pipeline RAG e Watcher]] [[Fase 3 - Serviço Obsidian]] [[Fluxo de Dados]] [[Ferramentas do LangGraph]]
@@ -368,5 +363,8 @@ sequenceDiagram
 ## Desbloqueia
 
 - Fase 8 (Integrações Online) — O agente já tem capacidade de invocar webhooks via tools adicionais (N8N, GitHub)
+
+
+
 
 

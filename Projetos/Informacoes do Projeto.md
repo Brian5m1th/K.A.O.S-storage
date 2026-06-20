@@ -13,7 +13,7 @@ status: active
 - [[index]]
 
 ## Children
-
+- [[Objetivos do Projeto]]
 
 ## Related
 - [[Backlog do Projeto]]
@@ -24,7 +24,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Projeto — K.A.O.S
 
 > Knowledge AI Operating System — Assistente pessoal offline com IA local.
@@ -86,3 +86,5 @@ main              → estável, releases
 | Embeddings | sentence-transformers (BGE-M3) |
 | Logs | loguru |
 | Watcher | watchdog |
+
+

@@ -10,23 +10,28 @@ status: active
 > Metadados e esquemas JSON-Schema expostos ao LangGraph para permitir que o LLM execute CRUD no Obsidian.
 
 ## Parent
-- [[Arquitetura de OrquestraçÃo]]
+- [[Arquitetura de OrquestraçAo]]
 
 ## Children
-
+- [[index]]
+- [[Backlog do Projeto]]
+- [[Arquitetura de Orquestracao]]
+- [[Configuração de Provedores]]
+- [[Fase 3 - Servico Obsidian]]
+- [[Memoria do Obsidian]]
+- [[Orquestrador LangGraph]]
+- [[Recuperador Semantico]]
 
 ## Related
 - [[Orquestrador LangGraph]]
-- [[Fase 3 - Servi]]
-- [[ç]]
-- [[o Obsidian]]
+- [[Fase 3 - Servico Obsidian]]
 
 ## Tags
 #kaos #ia #langgraph #tools #schemas
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # SDD Componente — Schemas das Ferramentas (Tools)
 
 Esta nota descreve as especificações técnicas das ferramentas (Tools) expostas pelo FastAPI para o motor de agentes do LangGraph. Elas são a ponte que permite à IA manipular arquivos markdown e realizar buscas semânticas.
@@ -174,3 +179,7 @@ Caso ocorra um problema durante a execução de alguma das ferramentas, o retorn
 ## 🔗 Relação com outras Notas
 - A forma como estas ferramentas interagem diretamente com o sistema de arquivos do Obsidian é descrita em [[Obsidian Watcher]].
 - A lógica de busca semântica chamada pela ferramenta de busca está em [[Busca Vetorial e RAG]].
+
+
+
+
