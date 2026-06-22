@@ -46,6 +46,7 @@ status: active
 - [[Projetos/Informacoes do Projeto|Informacoes do Projeto]]
 - [[sdd/Roadmap Geral|Roadmap Geral de Desenvolvimento]]
 - [[sdd/Fase 1 - Fundacao|Fase 1 - Fundacao]]
+- [[sdd/SDD-Desktop-Stabilization-F1|Fase 1 — Desktop Stabilization 🔜]]
 
 ### 02 - Arquitetura de Software
 - [[Arquitetura/Visao Geral|Visao Geral Tecnica]]
@@ -84,6 +85,8 @@ status: active
 - [[sdd/Variaveis de Ambiente|Variaveis de Ambiente (.env)]]
 - [[sdd/Pipeline CI-CD Auto Update|Pipeline CI/CD e Auto-Update Tauri]]
 - [[sdd/Otimizacao de Build Desktop|Otimizacao de Build Desktop]]
+- [[sdd/SDD-Desktop-Stabilization-F1|Desktop Stabilization (Fase 1) 🔜]]
+- [[sdd/SDD-Auth-Architecture-F2|Auth & First Run Wizard (Fase 2) 📅]]
 
 ### 06 - Obsidian PKM
 - [[sdd/Memoria do Obsidian|Memoria de Longo Prazo baseada no Obsidian]]
@@ -92,13 +95,54 @@ status: active
 - [[wiki/AGENTS|Configuracoes de Agente (Schema Wiki)]]
 - [[wiki/AGENTS.pt-BR|Configuracoes de Agente pt-BR]]
 
-### 07 - Pesquisas e Conhecimento Incremental
+### 07 - OpenCode Configuration
+- [[openCode/README|OpenCode Configuration Layer]]
+- [[openCode/agents/kaos-architect|kaos-architect]]
+- [[openCode/agents/kaos-auditor|kaos-auditor]]
+- [[openCode/agents/kaos-backend-engineer|kaos-backend-engineer]]
+- [[openCode/agents/kaos-devops-engineer|kaos-devops-engineer]]
+- [[openCode/agents/kaos-documentation-engineer|kaos-documentation-engineer]]
+- [[openCode/agents/kaos-frontend-engineer|kaos-frontend-engineer]]
+- [[openCode/agents/kaos-mcp-architect|kaos-mcp-architect]]
+- [[openCode/agents/kaos-security-auditor|kaos-security-auditor]]
+- [[openCode/references/architecture|Reference: Architecture]]
+- [[openCode/references/api-patterns|Reference: API Patterns]]
+- [[openCode/references/code-conventions|Reference: Code Conventions]]
+- [[openCode/references/directory-structure|Reference: Directory Structure]]
+- [[openCode/references/mcp-patterns|Reference: MCP Patterns]]
+- [[openCode/references/testing-patterns|Reference: Testing Patterns]]
+- [[openCode/rules/python|Rule: Python]]
+- [[openCode/rules/typescript|Rule: TypeScript]]
+- [[openCode/rules/react|Rule: React]]
+- [[openCode/rules/docker|Rule: Docker]]
+- [[openCode/rules/github-actions|Rule: GitHub Actions]]
+- [[openCode/rules/n8n|Rule: N8N]]
+- [[openCode/rules/mcp|Rule: MCP]]
+- [[openCode/rules/testing|Rule: Testing]]
+- [[openCode/rules/security|Rule: Security]]
+- [[openCode/skills/python-developer|Skill: Python Developer]]
+- [[openCode/skills/react-developer|Skill: React Developer]]
+- [[openCode/skills/docker-expert|Skill: Docker Expert]]
+- [[openCode/skills/n8n-architect|Skill: N8N Architect]]
+- [[openCode/skills/mcp-engineer|Skill: MCP Engineer]]
+- [[openCode/skills/observability-engineer|Skill: Observability Engineer]]
+- [[openCode/skills/rag-engineer|Skill: RAG Engineer]]
+- [[openCode/skills/ai-agent-engineer|Skill: AI Agent Engineer]]
+- [[openCode/skills/code-reviewer|Skill: Code Reviewer]]
+- [[openCode/skills/documentation-writer|Skill: Documentation Writer]]
+- [[openCode/tools/kaos-tools|Tool: KAOS Tools]]
+- [[openCode/tools/docker-tools|Tool: Docker Tools]]
+- [[openCode/tools/github-tools|Tool: GitHub Tools]]
+- [[openCode/tools/observability-tools|Tool: Observability Tools]]
+- [[openCode/plans/SDD-040-completo|Plan: SDD-040 Completo]]
+
+### 08 - Pesquisas e Conhecimento Incremental
 - [[sdd/Camada Wiki de Conhecimento|Camada Wiki de Conhecimento (LLM Wiki)]]
   - [[sdd/Agente de Ingestao de Conhecimento|Agente de Ingestao de Conhecimento]]
   - [[sdd/Estrutura da Wiki|Estrutura de Categorias Wiki]]
   - [[sdd/Pipeline de Consulta da Wiki|Pipeline de Consulta Wiki-first]]
 
-### 08 - Qualidade e Testes
+### 09 - Qualidade e Testes
 - [[Arquitetura/Estrategia de Testes|Estrategia de Testes e Cobertura]]
 - [[Arquitetura/Guia de Testes e Uso|Guia de Testes e Uso (Comandos cURL)]]
 
