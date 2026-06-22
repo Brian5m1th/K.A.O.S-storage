@@ -83,12 +83,12 @@ Acesse `http://localhost:1420` para o desktop ou `http://localhost:8000/docs` pa
 | [OBSIDIAN_GUIDE.md](guides/OBSIDIAN_GUIDE.md) | Integração com Obsidian |
 
 ### Arquitetura
-| Documento | Descrição |
-|-----------|-----------|
-| [SYSTEM_ARCHITECTURE.md](architecture/SYSTEM_ARCHITECTURE.md) | Visão completa da arquitetura |
-| [DESKTOP_ARCHITECTURE.md](architecture/DESKTOP_ARCHITECTURE.md) | Arquitetura do frontend desktop |
+| Documento                                                                 | Descrição                         |
+| ------------------------------------------------------------------------- | --------------------------------- |
+| [SYSTEM_ARCHITECTURE.md](architecture/SYSTEM_ARCHITECTURE.md)             | Visão completa da arquitetura     |
+| [DESKTOP_ARCHITECTURE.md](architecture/DESKTOP_ARCHITECTURE.md)           | Arquitetura do frontend desktop   |
 | [FRONTEND_FSD_ARCHITECTURE.md](architecture/FRONTEND_FSD_ARCHITECTURE.md) | Feature-Sliced Design no frontend |
-| [PROVIDER_ROUTING.md](architecture/PROVIDER_ROUTING.md) | Roteamento de providers |
+| [PROVIDER_ROUTING.md](architecture/PROVIDER_ROUTING.md)                   | Roteamento de providers           |
 
 ### APIs
 | Documento | Descrição |
