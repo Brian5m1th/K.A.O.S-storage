@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: roadmap
 status: active
@@ -13,7 +13,7 @@ status: active
 - [[Roadmap Geral]]
 
 ## Children
-
+- [[Fase 2 - IA Local]]
 
 ## Related
 - [[Estrutura de Pastas]]
@@ -270,3 +270,4 @@ Nenhuma — é a fase inicial.
 
 - [[Fase 2 - IA Local]] — Integração com Ollama
 - [[Fase 3 - Serviço Obsidian]] — ObsidianService
+

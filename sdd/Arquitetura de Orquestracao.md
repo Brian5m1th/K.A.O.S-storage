@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: arquitetura
 status: active
@@ -26,7 +26,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Objetivo
 
 Documentar a arquitetura do proxy OpenAI-compatível que roteia requisições do Open WebUI através do FastAPI, injetando o system prompt do K.A.O.S. e garantindo que todo o tráfego passe pelo gateway antes de chegar ao Ollama.

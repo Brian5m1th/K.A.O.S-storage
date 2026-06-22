@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: arquitetura
 status: active
@@ -13,7 +13,7 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Especificacao Funcional]]
 
 ## Related
 - [[Especificacao Funcional]]
@@ -97,3 +97,4 @@ class Exemplo:
 | `test_exemplo_basico` | Unit | Comportamento padrão |
 | `test_exemplo_erro` | Unit | Tratamento de erro |
 | `test_exemplo_integracao` | Integration | Interação com Qdrant |
+

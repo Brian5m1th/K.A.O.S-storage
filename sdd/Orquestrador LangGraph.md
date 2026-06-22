@@ -13,7 +13,11 @@ status: active
 - [[Fases 6-7 - Watcher LangGraph e MemÓria]]
 
 ## Children
-
+- [[index]]
+- [[Arquitetura de Orquestracao]]
+- [[Estado do Agente]]
+- [[Fases 6-7 - Watcher LangGraph e Memoria]]
+- [[Ferramentas do LangGraph]]
 
 ## Related
 - [[Estado do Agente]]
@@ -24,5 +28,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## 
+
+

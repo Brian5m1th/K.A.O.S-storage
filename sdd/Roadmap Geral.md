@@ -13,7 +13,7 @@ status: active
 - [[index]]
 
 ## Children
-- [[Fase 1 - FundaçÃo Fase 2 - IA Local Fase 3 - Serviço Obsidian Fases 4-5 - Pipeline RAG e Watcher Fases 6-7 - Watcher LangGraph e MemÓria]]
+- [[Fase 1 - FundaçAo Fase 2 - IA Local Fase 3 - Serviço Obsidian Fases 4-5 - Pipeline RAG e Watcher Fases 6-7 - Watcher LangGraph e MemÓria]]
 
 ## Related
 - [[Backlog do Projeto]]
@@ -23,7 +23,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Objetivo
 
 Construir uma assistente de IA pessoal capaz de operar offline utilizando conhecimento armazenado em um Vault Obsidian e executar integrações externas através do N8N.
@@ -173,3 +173,4 @@ IA adapta respostas com base no historico e preferencias armazenadas.
 - [ ] Webhook tool para N8N
 - [ ] GitHub tool (issues, PRs)
 - [ ] Email tool (send/receive)
+

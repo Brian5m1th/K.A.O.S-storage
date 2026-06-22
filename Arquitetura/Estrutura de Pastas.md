@@ -13,23 +13,19 @@ status: active
 - [[Arquitetura Geral]]
 
 ## Children
-
+- [[Anti-padroes de Projeto]]
 
 ## Related
 - [[Fluxo de Dados]]
-- [[Padr]]
-- [[õ]]
-- [[es de Projeto]]
-- [[Vis]]
-- [[õ]]
-- [[ Geral]]
+- [[Padroes de Projeto]]
+- [[Visao Geral]]
 
 ## Tags
 #kaos #arquitetura #monorepo #clean-code
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Estrutura de Diretórios e Camadas
 
 Esta nota descreve a organização do código-fonte do projeto K.A.O.S. Dividimos a aplicação em camadas bem definidas para isolar responsabilidades e facilitar testes automatizados.
@@ -123,3 +119,7 @@ Os arquivos em `app/config/` centralizam configurações.
 ## Relacao com outras Notas
 - Para ver como os dados passam por essas camadas, consulte [[Fluxo de Dados]].
 - Para detalhes sobre cada componente, veja os SDDs em [[index]].
+
+
+
+

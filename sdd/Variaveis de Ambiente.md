@@ -13,17 +13,17 @@ status: active
 - [[Infraestrutura Docker]]
 
 ## Children
-
+- [[index]]
 
 ## Related
-- [[Guia de ConfiguraçÃo]]
+- [[Guia de ConfiguraçAo]]
 
 ## Tags
 #kaos #devops #configuration #env
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ### [Hugging Face](https://huggingface.co/)
 Save your Access Token
 
@@ -31,3 +31,6 @@ Save your token value somewhere safe. **You will not be able to see it again af
 
 Rag FINEGRAINED
 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
+
+
+

@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: home
 status: active
@@ -13,17 +13,23 @@ status: active
 
 
 ## Children
-- [[Visõ Geral Backlog do Projeto MemÓria do Obsidian Roadmap Geral]]
+- [[Visao Geral]]
+- [[Backlog do Projeto]]
+- [[Memoria do Obsidian]]
+- [[Roadmap Geral]]
 
 ## Related
-
+- [[Arquitetura Geral]]
+- [[Fase 1 - Fundacao]]
+- [[Fase 2 - IA Local]]
+- [[Fase 3 - Servico Obsidian]]
 
 ## Tags
 #kaos #index #home #hub
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # K.A.O.S — Portal Central
 *Knowledge Assistant & Offline System Hub*
 
@@ -71,20 +77,20 @@ status: active
 
 ### 04 - Backend & Automacoes
 - [[sdd/Fase 3 - Servico Obsidian|Fase 3 - Microservico Obsidian]]
-- [[Arquitetura/IntegraÃ§oes de ServiÃ§os|IntegraÃ§oes de ServiÃ§os (n8n, AWS, Webhooks)]]
+- [[Arquitetura/Integracoes de Servicos|Integracoes de Servicos (n8n, AWS, Webhooks)]]
 
 ### 05 - DevOps, Infraestrutura & Tauri
 - [[Arquitetura/Infraestrutura Docker|Infraestrutura Docker e WSL2]]
 - [[sdd/Variaveis de Ambiente|Variaveis de Ambiente (.env)]]
 - [[sdd/Pipeline CI-CD Auto Update|Pipeline CI/CD e Auto-Update Tauri]]
-- [[sdd/OtimizaÃ§ao de Build Desktop|OtimizaÃ§ao de Build Desktop]]
+- [[sdd/Otimizacao de Build Desktop|Otimizacao de Build Desktop]]
 
 ### 06 - Obsidian PKM
 - [[sdd/Memoria do Obsidian|Memoria de Longo Prazo baseada no Obsidian]]
 - [[sdd/Obsidian Watcher|Arquitetura do Obsidian Watcher]]
   - [[sdd/Monitoramento do Vault (Watcher)|Monitor de eventos de arquivos (Watchdog)]]
-- [[wiki/AGENTS|ConfiguraÃ§oes de Agente (Schema Wiki)]]
-- [[wiki/AGENTS.pt-BR|ConfiguraÃ§oes de Agente pt-BR]]
+- [[wiki/AGENTS|Configuracoes de Agente (Schema Wiki)]]
+- [[wiki/AGENTS.pt-BR|Configuracoes de Agente pt-BR]]
 
 ### 07 - Pesquisas e Conhecimento Incremental
 - [[sdd/Camada Wiki de Conhecimento|Camada Wiki de Conhecimento (LLM Wiki)]]
@@ -95,6 +101,12 @@ status: active
 ### 08 - Qualidade e Testes
 - [[Arquitetura/Estrategia de Testes|Estrategia de Testes e Cobertura]]
 - [[Arquitetura/Guia de Testes e Uso|Guia de Testes e Uso (Comandos cURL)]]
+
 ---
 
 *Gerado automaticamente — navegue pelo Graph View (Ctrl+G) para visualizar as conexoes reais de conhecimento.*
+
+
+
+
+

@@ -16,14 +16,14 @@ status: active
 - [[Roadmap Geral]]
 
 ## Related
-- [[Visõ Geral InformaçÃes do Projeto]]
+- [[Viso Geral InformaçAes do Projeto]]
 
 ## Tags
 #kaos #projetos #backlog #planning
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # Backlog — IA Pessoal Offline com Obsidian
 
 > Rastreamento completo de todas as tarefas de desenvolvimento, organizadas por tipo e prioridade.
@@ -88,8 +88,8 @@ graph LR
 - [x] **Nova Release v0.1.1**: Atualização de documentação + bugfixes + monitoramento
   - [x] Completar documentação (API_KEYS, COSIGN, MONITORING, PROVIDERS, SETUP, GITHUB_ACTIONS, GRAFANA_DASHBOARDS, LOKI_QUERIES, DESKTOP_ARCHITECTURE, PROVIDER_ROUTING, VAULT_SUBMODULE, DOCUMENTATION_GOVERNANCE_SDD, TROUBLESHOOTING)
   - [x] Atualizar backlog (Fase 10 marcada como completa)
-  - [ ] Gerar changelog desde v0.1.0-alpha.4
-  - [ ] Tag release `v0.1.1`
+  - [x] Gerar changelog desde v0.1.0-alpha.4
+  - [ ] Tag release `v0.1.1` (bloqueado pelo PAT expirado)
   - [ ] Validar desktop auto-update
 - [ ] **Auditoria RAG**: Executar `/indexing/full`, validar Qdrant, logs do retriever, teste "O que existe na nota Backlog?"
 - [ ] Implementar Intent Classifier (FAST/MEMORY/SMART)
@@ -114,7 +114,7 @@ graph LR
 
 ## Fase 2 — IA Local ✅
 
-> Relacionado: [[Fase 2 - IA Local]] [[Arquitetura de OrquestraçÃo]]
+> Relacionado: [[Fase 2 - IA Local]] [[Arquitetura de OrquestraçAo]]
 
 - [x] Instalar Ollama
 - [x] Baixar modelo Qwen3 4B (`ollama pull qwen3:4b`)
@@ -232,7 +232,7 @@ Pastas a criar:
 
 ## Fase 8 — User Context & Multiusuário
 
-> Relacionado: [[PropagaçÃo de Contexto de Usuário]] [[Fluxo de Dados]] [[MemÓria do Obsidian]]
+> Relacionado: [[PropagaçAo de Contexto de Usuário]] [[Fluxo de Dados]] [[MemÓria do Obsidian]]
 
 - [ ] Criar UserContext model (`app/domain/user.py`)
 - [ ] Adicionar user_id ao ChatRequest e ChatCompletionRequest
@@ -290,6 +290,7 @@ Pastas a criar:
 - [ ] Adicionar `ruff` como dependencia de dev para lint
 - [ ] Adicionar `.env.example` ao repositorio
 - [ ] **Auditoria RAG**: Executar indexação inicial (`POST /indexing/full`), validar `points_count > 0`, adicionar logs de `retrieve_context` com query + contagem, teste manual "O que existe na nota Backlog?"
+- [ ] **PAT expirado**: Push do submodule K.A.O.S-storage bloqueado — gerar novo PAT (Settings → Developer settings → PAT → escopo `repo`) e configurar no remote `docs/vault`
 - [ ] **Dockerfile**: Criar `Dockerfile` para `assistant/` com volume mount do Vault (`/vault`) e `.env` configurável
 - [ ] **Setup guide**: Documentar modos de execução (Windows nativo, WSL, Docker) com `.env` próprio para cada ambiente
 
@@ -305,3 +306,4 @@ Pastas a criar:
 ---
 
 *Atualizado em 2026-06-11.*
+

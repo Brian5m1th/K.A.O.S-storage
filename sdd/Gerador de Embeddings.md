@@ -13,20 +13,19 @@ status: active
 - [[Fases 4-5 - Pipeline RAG e Watcher]]
 
 ## Children
-
+- [[index]]
+- [[Busca Vetorial e RAG]]
 
 ## Related
 - [[Busca Vetorial e RAG]]
-- [[Provedor H]]
-- [[Í]]
-- [[brido de LLM]]
+- [[Provedor Hibrido de LLM]]
 
 ## Tags
 #kaos #ia #embeddings #bge-m3 #python
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## 2. Embedder (`rag/embeddings/embedder.py`)
 
 ```python
@@ -81,4 +80,8 @@ def warmup_embedder(model_key: str = "bge-m3") -> None:
 ```
 
 ---
+
+
+
+
 

@@ -13,7 +13,7 @@ status: active
 - [[MemÓria do Obsidian]]
 
 ## Children
-
+- [[index]]
 
 ## Related
 - [[Estrutura da Wiki]]
@@ -23,7 +23,7 @@ status: active
 
 ---
 
-## ConteÃºdo
+## Conteudo
 # K.A.O.S Knowledge Wiki — Agent Schema
 
 This file defines the conventions, workflows, and rules you must follow when maintaining the wiki. Consult it before every ingest, query, or maintenance operation.
@@ -139,3 +139,5 @@ Periodically (or on demand) run `lint_wiki()` to check:
 - **Missing concepts**: concepts mentioned often but undocumented
 - **Broken links**: `[[links]]` to non-existent pages
 - **Stale pages**: `updated` date too old relative to last ingest
+
+

@@ -17,14 +17,14 @@ status: active
 - [[Estrutura da Wiki]]
 
 ## Related
-- [[Roteamento de MemÓria PropagaçÃo de Contexto de Usuário]]
+- [[Roteamento de MemÓria PropagaçAo de Contexto de Usuário]]
 
 ## Tags
 #kaos #obsidian #memory #storage #rag
 
 ---
 
-## ConteÃºdo
+## Conteudo
 Este Documento de Design de Software (SDD) detalha a arquitetura do **Sistema de Memória Inteligente** que integra o Assistente de IA local com um Vault do Obsidian. O objetivo principal é dar à IA uma memória de longo prazo persistente, semântica e editável diretamente por arquivos Markdown.
 
 ---
@@ -71,7 +71,7 @@ graph TD
 
 ---
 
-> **Nota:** A partir da Fase 8 (User Context & Multiusuário), a memória é escopada por `user_id`. Preferências e conversas são armazenadas em `Vault/users/{user_id}/` em vez de `Vault/IA/`. Consulte [[PropagaçÃo de Contexto de Usuário]] para detalhes.
+> **Nota:** A partir da Fase 8 (User Context & Multiusuário), a memória é escopada por `user_id`. Preferências e conversas são armazenadas em `Vault/users/{user_id}/` em vez de `Vault/IA/`. Consulte [[PropagaçAo de Contexto de Usuário]] para detalhes.
 
 ---
 
@@ -148,3 +148,4 @@ gantt
     section Fase 4: Inteligência
     Gestão de Preferências e Documentação   : 2026-07-04, 7d
 ```
+

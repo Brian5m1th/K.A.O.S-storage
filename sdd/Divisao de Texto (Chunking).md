@@ -1,4 +1,4 @@
----
+﻿---
 type: knowledge
 domain: ia
 status: active
@@ -13,7 +13,8 @@ status: active
 - [[Fases 4-5 - Pipeline RAG e Watcher]]
 
 ## Children
-
+- [[index]]
+- [[Busca Vetorial e RAG]]
 
 ## Related
 - [[Busca Vetorial e RAG]]
@@ -80,4 +81,6 @@ class MarkdownSplitter:
 ```
 
 ---
+
+
 

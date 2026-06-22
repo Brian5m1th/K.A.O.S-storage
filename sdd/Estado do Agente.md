@@ -13,21 +13,21 @@ status: active
 - [[Fases 6-7 - Watcher LangGraph e MemÓria]]
 
 ## Children
-
+- [[index]]
+- [[Arquitetura de Orquestracao]]
+- [[Fases 6-7 - Watcher LangGraph e Memoria]]
+- [[Orquestrador LangGraph]]
 
 ## Related
 - [[Orquestrador LangGraph]]
-- [[Arquitetura de Orquestra]]
-- [[ç]]
-- [[Ã]]
-- [[o]]
+- [[Arquitetura de Orquestracao]]
 
 ## Tags
 #kaos #ia #langgraph #state #python
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## 2. Estado do Agente (`agent/state.py`)
 
 O `AgentState` é o "contrato" de dados que circula entre todos os nós do grafo.
@@ -53,4 +53,9 @@ class AgentState(TypedDict):
 ```
 
 ---
+
+
+
+
+
 

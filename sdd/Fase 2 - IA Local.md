@@ -13,17 +13,20 @@ status: active
 - [[Roadmap Geral]]
 
 ## Children
-
+- [[index]]
+- [[Arquitetura de Orquestracao]]
+- [[Fase 1 - Fundacao]]
+- [[Provedor Hibrido de LLM]]
 
 ## Related
-- [[Provedor HÍbrido de LLM Arquitetura de OrquestraçÃo]]
+- [[Provedor HÍbrido de LLM Arquitetura de OrquestraçAo]]
 
 ## Tags
 #kaos #ia #ollama #qwen #local-llm
 
 ---
 
-## ConteÃºdo
+## Conteudo
 ## Objetivo
 
 Conectar o Open WebUI ao Ollama via FastAPI como proxy OpenAI-compatível. O usuário envia mensagens pelo Open WebUI e recebe respostas do modelo `qwen3:4b` via streaming, 100% offline, com o system prompt do K.A.O.S. injetado em toda requisição.
@@ -186,9 +189,12 @@ docker compose -f infra/docker/docker-compose.yml up -d
 
 ## Dependências
 
-- [[Fase 1 - FundaçÃo]] — Fundação deve estar completa
-- [[Arquitetura de OrquestraçÃo]] — SDD do proxy OpenAI
+- [[Fase 1 - FundaçAo]] — Fundação deve estar completa
+- [[Arquitetura de OrquestraçAo]] — SDD do proxy OpenAI
 
 ## Desbloqueia
 
 - [[Fase 3 - Serviço Obsidian]] — Chat passa a injetar contexto do Obsidian
+
+
+

@@ -10,20 +10,20 @@ status: active
 > Define os principios eticos de transparencia, controle de dados local e identidade aberta do ecossistema K.A.O.S.
 
 ## Parent
-- [[Visõ Geral]]
+- [[Viso Geral]]
 
 ## Children
-
+- [[index]]
 
 ## Related
-- [[Padrões de Projeto]]
+- [[Padroes de Projeto]]
 
 ## Tags
 #kaos #arquitetura #opencode #ethics #guidelines
 
 ---
 
-## ConteÃºdo
+## Conteudo
 **Atenção (Open Code Context)**: Este documento serve como declaração oficial da identidade do projeto e da estratégia estrutural do repositório. Ele deve ser utilizado como base de contexto para qualquer geração de código ou planejamento futuro.
 
 ---
@@ -67,3 +67,6 @@ kaos-platform/
 2.  **Inteligência e Orquestração**: LangGraph + Ollama (`qwen3:4b`).
 3.  **Execução Externa**: Toda automação e integrações com o mundo online (ex: GitHub, Email) serão passadas para o **N8N** via webhooks.
 4.  **Regras de Negócio**: Qualquer regra estrita e controle transacional persistente no PostgreSQL deverá ser alocado no módulo **Spring Boot**, evitando poluição no Python do K.A.O.S.
+
+
+
