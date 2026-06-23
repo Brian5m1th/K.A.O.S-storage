@@ -1,0 +1,320 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-06-23T03:35:19.125486+00:00",
+  "total_nodes": 12,
+  "total_edges": 0,
+  "nodes": [
+    {
+      "id": "feature:test",
+      "title": "Test",
+      "type": "feature",
+      "status": "done",
+      "phase": "p1",
+      "source": "drl",
+      "docs": [],
+      "code_refs": []
+    },
+    {
+      "id": "feature:kirl",
+      "title": "KIRL",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 0",
+      "source": "drl",
+      "docs": [
+        "sdd/SDD-KIRL.md"
+      ],
+      "code_refs": [
+        "app/audit/"
+      ]
+    },
+    {
+      "id": "feature:desktop-stabilization",
+      "title": "Desktop Stabilization",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 1",
+      "source": "drl",
+      "docs": [
+        "sdd/SDD-Desktop-Stabilization-F1.md"
+      ],
+      "code_refs": [
+        "desktop/src/pages/",
+        "desktop/src/shared/lib/stores/"
+      ]
+    },
+    {
+      "id": "feature:provider-ux",
+      "title": "Provider UX",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 1.5",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "desktop/src/features/ask-ai/ui/ModelSelector.tsx"
+      ]
+    },
+    {
+      "id": "feature:docs-source-refactor",
+      "title": "Docs Source Refactor",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 1.1",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/audit/runtime_resolver.py"
+      ]
+    },
+    {
+      "id": "feature:validation-audit",
+      "title": "Validation Audit",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 1.2",
+      "source": "drl",
+      "docs": [],
+      "code_refs": []
+    },
+    {
+      "id": "feature:auth-wizard",
+      "title": "Auth & First Run Wizard",
+      "type": "feature",
+      "status": "in_progress",
+      "phase": "Fase 2",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/api/auth.py",
+        "desktop/src/pages/setup/",
+        "desktop/src/pages/login/"
+      ]
+    },
+    {
+      "id": "feature:provider-catalog",
+      "title": "Provider Catalog",
+      "type": "feature",
+      "status": "in_progress",
+      "phase": "Fase 3",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/api/providers.py",
+        "desktop/src/pages/settings/"
+      ]
+    },
+    {
+      "id": "feature:observability-real",
+      "title": "Observability Real",
+      "type": "feature",
+      "status": "planned",
+      "phase": "Fase 4",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/api/observability.py"
+      ]
+    },
+    {
+      "id": "feature:opencode-layer",
+      "title": "OpenCode Layer",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 5",
+      "source": "drl",
+      "docs": [
+        "openCode/"
+      ],
+      "code_refs": [
+        "app/api/opencode.py"
+      ]
+    },
+    {
+      "id": "feature:multi-user-rbac",
+      "title": "Multi User + RBAC",
+      "type": "feature",
+      "status": "in_progress",
+      "phase": "Fase 6",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/api/admin.py",
+        "desktop/src/pages/users/"
+      ]
+    },
+    {
+      "id": "feature:f2-readiness-engine",
+      "title": "F2 Readiness Engine",
+      "type": "feature",
+      "status": "in_progress",
+      "phase": "Fase 1.3",
+      "source": "drl",
+      "docs": [
+        "sdd/SDD-F2-Readiness-Engine.md"
+      ],
+      "code_refs": [
+        "app/audit/readiness_engine.py"
+      ]
+    }
+  ],
+  "edges": [],
+  "features": [
+    {
+      "id": "feature:test",
+      "title": "Test",
+      "type": "feature",
+      "status": "done",
+      "phase": "p1",
+      "source": "drl",
+      "docs": [],
+      "code_refs": []
+    },
+    {
+      "id": "feature:kirl",
+      "title": "KIRL",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 0",
+      "source": "drl",
+      "docs": [
+        "sdd/SDD-KIRL.md"
+      ],
+      "code_refs": [
+        "app/audit/"
+      ]
+    },
+    {
+      "id": "feature:desktop-stabilization",
+      "title": "Desktop Stabilization",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 1",
+      "source": "drl",
+      "docs": [
+        "sdd/SDD-Desktop-Stabilization-F1.md"
+      ],
+      "code_refs": [
+        "desktop/src/pages/",
+        "desktop/src/shared/lib/stores/"
+      ]
+    },
+    {
+      "id": "feature:provider-ux",
+      "title": "Provider UX",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 1.5",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "desktop/src/features/ask-ai/ui/ModelSelector.tsx"
+      ]
+    },
+    {
+      "id": "feature:docs-source-refactor",
+      "title": "Docs Source Refactor",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 1.1",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/audit/runtime_resolver.py"
+      ]
+    },
+    {
+      "id": "feature:validation-audit",
+      "title": "Validation Audit",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 1.2",
+      "source": "drl",
+      "docs": [],
+      "code_refs": []
+    },
+    {
+      "id": "feature:auth-wizard",
+      "title": "Auth & First Run Wizard",
+      "type": "feature",
+      "status": "in_progress",
+      "phase": "Fase 2",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/api/auth.py",
+        "desktop/src/pages/setup/",
+        "desktop/src/pages/login/"
+      ]
+    },
+    {
+      "id": "feature:provider-catalog",
+      "title": "Provider Catalog",
+      "type": "feature",
+      "status": "in_progress",
+      "phase": "Fase 3",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/api/providers.py",
+        "desktop/src/pages/settings/"
+      ]
+    },
+    {
+      "id": "feature:observability-real",
+      "title": "Observability Real",
+      "type": "feature",
+      "status": "planned",
+      "phase": "Fase 4",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/api/observability.py"
+      ]
+    },
+    {
+      "id": "feature:opencode-layer",
+      "title": "OpenCode Layer",
+      "type": "feature",
+      "status": "done",
+      "phase": "Fase 5",
+      "source": "drl",
+      "docs": [
+        "openCode/"
+      ],
+      "code_refs": [
+        "app/api/opencode.py"
+      ]
+    },
+    {
+      "id": "feature:multi-user-rbac",
+      "title": "Multi User + RBAC",
+      "type": "feature",
+      "status": "in_progress",
+      "phase": "Fase 6",
+      "source": "drl",
+      "docs": [],
+      "code_refs": [
+        "app/api/admin.py",
+        "desktop/src/pages/users/"
+      ]
+    },
+    {
+      "id": "feature:f2-readiness-engine",
+      "title": "F2 Readiness Engine",
+      "type": "feature",
+      "status": "in_progress",
+      "phase": "Fase 1.3",
+      "source": "drl",
+      "docs": [
+        "sdd/SDD-F2-Readiness-Engine.md"
+      ],
+      "code_refs": [
+        "app/audit/readiness_engine.py"
+      ]
+    }
+  ],
+  "sdds": [],
+  "workflows": [],
+  "agents": []
+}

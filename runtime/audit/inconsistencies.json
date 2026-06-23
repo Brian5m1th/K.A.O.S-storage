@@ -1,7 +1,11 @@
 {
   "outdatedDocs": [],
   "inconsistentPhases": [
-    "test: status=done but no docs"
+    "test: status=done but no docs",
+    "provider-ux: status=done but no docs",
+    "docs-source-refactor: status=done but no docs",
+    "validation-audit: status=done but no docs",
+    "observability-real: status=planned but has code refs"
   ],
   "orphanedSDDs": [],
   "undocumentedCode": []

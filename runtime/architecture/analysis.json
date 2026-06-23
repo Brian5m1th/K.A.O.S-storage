@@ -1,0 +1,112 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-06-23T03:36:20.407417+00:00",
+  "coverage_score": 33.3,
+  "drift_level": "high",
+  "total_issues": 10,
+  "issues": [
+    {
+      "rule": "missing_documentation",
+      "severity": "high",
+      "source_files": [],
+      "source_sdds": [],
+      "explanation": "Feature 'Test' (test) detected in code but not linked to any SDD.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "orphan_feature",
+      "severity": "medium",
+      "source_files": [],
+      "source_sdds": [],
+      "explanation": "Feature 'Test' (test) registered but no code references found.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "missing_documentation",
+      "severity": "high",
+      "source_files": [
+        "desktop/src/features/ask-ai/ui/ModelSelector.tsx"
+      ],
+      "source_sdds": [],
+      "explanation": "Feature 'Provider UX' (provider-ux) detected in code but not linked to any SDD.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "missing_documentation",
+      "severity": "high",
+      "source_files": [
+        "app/audit/runtime_resolver.py"
+      ],
+      "source_sdds": [],
+      "explanation": "Feature 'Docs Source Refactor' (docs-source-refactor) detected in code but not linked to any SDD.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "missing_documentation",
+      "severity": "high",
+      "source_files": [],
+      "source_sdds": [],
+      "explanation": "Feature 'Validation Audit' (validation-audit) detected in code but not linked to any SDD.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "orphan_feature",
+      "severity": "medium",
+      "source_files": [],
+      "source_sdds": [],
+      "explanation": "Feature 'Validation Audit' (validation-audit) registered but no code references found.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "missing_documentation",
+      "severity": "high",
+      "source_files": [
+        "app/api/auth.py",
+        "desktop/src/pages/setup/",
+        "desktop/src/pages/login/"
+      ],
+      "source_sdds": [],
+      "explanation": "Feature 'Auth & First Run Wizard' (auth-wizard) detected in code but not linked to any SDD.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "missing_documentation",
+      "severity": "high",
+      "source_files": [
+        "app/api/providers.py",
+        "desktop/src/pages/settings/"
+      ],
+      "source_sdds": [],
+      "explanation": "Feature 'Provider Catalog' (provider-catalog) detected in code but not linked to any SDD.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "missing_documentation",
+      "severity": "high",
+      "source_files": [
+        "app/api/observability.py"
+      ],
+      "source_sdds": [],
+      "explanation": "Feature 'Observability Real' (observability-real) detected in code but not linked to any SDD.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "missing_documentation",
+      "severity": "high",
+      "source_files": [
+        "app/api/admin.py",
+        "desktop/src/pages/users/"
+      ],
+      "source_sdds": [],
+      "explanation": "Feature 'Multi User + RBAC' (multi-user-rbac) detected in code but not linked to any SDD.",
+      "confidence": 0.95
+    }
+  ],
+  "suggestions": [
+    "Criar SDDs para as features sem documentacao (95% confianca).",
+    "Revisar features orfas: sem codigo referenciado, possivelmente removidas."
+  ],
+  "warnings": [
+    "12 features registradas mas ausentes no vault."
+  ]
+}

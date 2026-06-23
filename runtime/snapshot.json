@@ -1,7 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-06-23T03:35:09.891198+00:00",
-  "total_features": 12,
+  "generated_at": "2026-06-23T03:49:55.375714+00:00",
   "features": [
     {
       "id": "test",
@@ -168,5 +167,19 @@
       "createdAt": "2026-06-23T03:35:09.890291+00:00",
       "updatedAt": "2026-06-23T03:35:09.890311+00:00"
     }
-  ]
+  ],
+  "coverage": 33.3,
+  "driftLevel": "high",
+  "lastCommit": "e990590e",
+  "missingCount": 8,
+  "outdatedCount": 0,
+  "graphSummary": {
+    "totalNodes": 0,
+    "totalEdges": 0,
+    "nodeTypes": {},
+    "edgeTypes": {},
+    "sourceHash": "",
+    "graphVersion": "1.0",
+    "generatedAt": "2026-06-23T03:49:55.375691+00:00"
+  }
 }

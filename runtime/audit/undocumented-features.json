@@ -1,3 +1,10 @@
 [
-  "test"
+  "test",
+  "provider-ux",
+  "docs-source-refactor",
+  "validation-audit",
+  "auth-wizard",
+  "provider-catalog",
+  "observability-real",
+  "multi-user-rbac"
 ]

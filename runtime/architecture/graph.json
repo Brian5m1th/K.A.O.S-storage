@@ -1,0 +1,211 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-06-23T03:49:44.116518+00:00",
+  "nodes": [
+    {
+      "id": "feature:test",
+      "label": "Test",
+      "type": "feature",
+      "owner": "shared",
+      "status": "done",
+      "source": "drl",
+      "phase": "p1"
+    },
+    {
+      "id": "feature:kirl",
+      "label": "KIRL",
+      "type": "feature",
+      "owner": "shared",
+      "status": "done",
+      "source": "drl",
+      "phase": "Fase 0"
+    },
+    {
+      "id": "feature:desktop-stabilization",
+      "label": "Desktop Stabilization",
+      "type": "feature",
+      "owner": "shared",
+      "status": "done",
+      "source": "drl",
+      "phase": "Fase 1"
+    },
+    {
+      "id": "feature:provider-ux",
+      "label": "Provider UX",
+      "type": "feature",
+      "owner": "shared",
+      "status": "done",
+      "source": "drl",
+      "phase": "Fase 1.5"
+    },
+    {
+      "id": "feature:docs-source-refactor",
+      "label": "Docs Source Refactor",
+      "type": "feature",
+      "owner": "shared",
+      "status": "done",
+      "source": "drl",
+      "phase": "Fase 1.1"
+    },
+    {
+      "id": "feature:validation-audit",
+      "label": "Validation Audit",
+      "type": "feature",
+      "owner": "shared",
+      "status": "done",
+      "source": "drl",
+      "phase": "Fase 1.2"
+    },
+    {
+      "id": "feature:auth-wizard",
+      "label": "Auth & First Run Wizard",
+      "type": "feature",
+      "owner": "shared",
+      "status": "in_progress",
+      "source": "drl",
+      "phase": "Fase 2"
+    },
+    {
+      "id": "feature:provider-catalog",
+      "label": "Provider Catalog",
+      "type": "feature",
+      "owner": "shared",
+      "status": "in_progress",
+      "source": "drl",
+      "phase": "Fase 3"
+    },
+    {
+      "id": "feature:observability-real",
+      "label": "Observability Real",
+      "type": "feature",
+      "owner": "shared",
+      "status": "planned",
+      "source": "drl",
+      "phase": "Fase 4"
+    },
+    {
+      "id": "feature:opencode-layer",
+      "label": "OpenCode Layer",
+      "type": "feature",
+      "owner": "shared",
+      "status": "done",
+      "source": "drl",
+      "phase": "Fase 5"
+    },
+    {
+      "id": "feature:multi-user-rbac",
+      "label": "Multi User + RBAC",
+      "type": "feature",
+      "owner": "shared",
+      "status": "in_progress",
+      "source": "drl",
+      "phase": "Fase 6"
+    },
+    {
+      "id": "feature:f2-readiness-engine",
+      "label": "F2 Readiness Engine",
+      "type": "feature",
+      "owner": "shared",
+      "status": "in_progress",
+      "source": "drl",
+      "phase": "Fase 1.3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "feature:kirl",
+      "target": "sdd/SDD-KIRL.md",
+      "relation": "documents"
+    },
+    {
+      "source": "feature:kirl",
+      "target": "app/audit/",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:desktop-stabilization",
+      "target": "sdd/SDD-Desktop-Stabilization-F1.md",
+      "relation": "documents"
+    },
+    {
+      "source": "feature:desktop-stabilization",
+      "target": "desktop/src/pages/",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:desktop-stabilization",
+      "target": "desktop/src/shared/lib/stores/",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:provider-ux",
+      "target": "desktop/src/features/ask-ai/ui/ModelSelector.tsx",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:docs-source-refactor",
+      "target": "app/audit/runtime_resolver.py",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:auth-wizard",
+      "target": "app/api/auth.py",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:auth-wizard",
+      "target": "desktop/src/pages/setup/",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:auth-wizard",
+      "target": "desktop/src/pages/login/",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:provider-catalog",
+      "target": "app/api/providers.py",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:provider-catalog",
+      "target": "desktop/src/pages/settings/",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:observability-real",
+      "target": "app/api/observability.py",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:opencode-layer",
+      "target": "openCode/",
+      "relation": "documents"
+    },
+    {
+      "source": "feature:opencode-layer",
+      "target": "app/api/opencode.py",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:multi-user-rbac",
+      "target": "app/api/admin.py",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:multi-user-rbac",
+      "target": "desktop/src/pages/users/",
+      "relation": "implements"
+    },
+    {
+      "source": "feature:f2-readiness-engine",
+      "target": "sdd/SDD-F2-Readiness-Engine.md",
+      "relation": "documents"
+    },
+    {
+      "source": "feature:f2-readiness-engine",
+      "target": "app/audit/readiness_engine.py",
+      "relation": "implements"
+    }
+  ]
+}

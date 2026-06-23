@@ -1,8 +1,228 @@
 {
   "version": "1.0",
-  "generated_at": "2026-06-22T21:37:42.188201+00:00",
-  "total_commits": 166,
+  "generated_at": "2026-06-23T03:49:55.345840+00:00",
+  "total_commits": 192,
   "commits": [
+    {
+      "hash": "e990590e",
+      "message": "fix: graph builder fallback to FeatureRegistry + heatmap schema compat",
+      "type": "fix",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "service-registry",
+        "database-schema",
+        "circuit-breaker"
+      ],
+      "timestamp": "2026-06-23T00:48:50-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "0422f6c6",
+      "message": "fix: add drift_level property to DriftReport dataclass",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-23T00:37:38-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "42b113a9",
+      "message": "chore: gitignore generated files, revert runtime artifacts from wrong location",
+      "type": "chore",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-23T00:22:18-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "73feaf32",
+      "message": "style: fix lint and format for readiness_engine.py and graph_builder.py",
+      "type": "style",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-23T00:22:04-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "bb37ad88",
+      "message": "style: remove unused import in readiness_engine.py",
+      "type": "style",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T23:54:42-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "31475e92",
+      "message": "feat: Fase 1.3 - Readiness Engine with 12 normalized checks",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T23:54:15-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "2b47d386",
+      "message": "feat: Desktop Stabilization F1-F6 - Honest Dashboard + Settings + Provider Catalog + RBAC (#79)",
+      "type": "feat",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "desktop-apis",
+        "provider-adapters"
+      ],
+      "timestamp": "2026-06-22T23:24:56-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "2347278c",
+      "message": "fix: restore system-store with fetchAll + extended services type",
+      "type": "fix",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T23:18:38-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "519808e2",
+      "message": "ci: replace auto-format with format check to avoid checkout conflicts",
+      "type": "ci",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T23:13:52-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "89ced6c2",
+      "message": "style: auto-format with ruff [skip ci]",
+      "type": "style",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-23T02:07:50Z",
+      "author": "Brian5m1th"
+    },
+    {
+      "hash": "0d8eb1a9",
+      "message": "fix: add missing dependencies + remove unused imports",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T23:07:05-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "41ca26c5",
+      "message": "fix: lint errors + restore missing auth module files",
+      "type": "fix",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T23:02:58-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "a32e2f01",
+      "message": "fix: Fase 1.2 - eliminate all remaining mock data generators",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T22:57:33-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "0e21196d",
+      "message": "docs: update submodule with runtime artifacts + SDD updates",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T22:33:10-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "b99b0159",
+      "message": "feat: Dashboard Honesto (4-state protocol) + Theme Engine",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T22:32:50-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "012ec498",
+      "message": "feat: settings, integrations, provider catalog, admin APIs",
+      "type": "feat",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "provider-adapters"
+      ],
+      "timestamp": "2026-06-22T22:32:41-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "a891a3a0",
+      "message": "fix: migrate DRL runtime to docs submodule via RuntimePathResolver",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T22:32:31-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "c5c8263a",
+      "message": "docs: update submodule reference + add grafana dashboard",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "observability"
+      ],
+      "timestamp": "2026-06-22T21:59:17-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "a3cf7f18",
+      "message": "Dev (#75)",
+      "type": "unknown",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T15:28:56-03:00",
+      "author": "Brian Smith Dev"
+    },
     {
       "hash": "bfbca453",
       "message": "feat: OpenCode Configuration Layer - Skills (10) + Tools (4) + Agents (8)",
@@ -11,8 +231,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "tool-layer",
-        "agent-runtime"
+        "agent-runtime",
+        "tool-layer"
       ],
       "timestamp": "2026-06-22T15:21:26-03:00",
       "author": "Brian"
@@ -91,10 +311,10 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "tool-layer",
-        "provider-adapters",
         "agent-runtime",
-        "database-schema"
+        "tool-layer",
+        "database-schema",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-22T00:11:39-03:00",
       "author": "Brian"
@@ -107,11 +327,11 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "tool-layer",
-        "event-bus",
         "database-schema",
-        "agent-runtime"
+        "provider-adapters",
+        "agent-runtime",
+        "tool-layer",
+        "event-bus"
       ],
       "timestamp": "2026-06-22T00:08:09-03:00",
       "author": "Brian"
@@ -146,9 +366,9 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "n8n-integration",
+        "service-registry",
         "desktop-apis",
-        "service-registry"
+        "n8n-integration"
       ],
       "timestamp": "2026-06-21T23:13:09-03:00",
       "author": "Brian Smith Dev"
@@ -161,8 +381,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "sse-layer",
-        "observability-production"
+        "observability-production",
+        "sse-layer"
       ],
       "timestamp": "2026-06-21T22:48:42-03:00",
       "author": "Brian Smith Dev"
@@ -175,11 +395,47 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "workflow-engine",
         "memory-system",
+        "workflow-engine",
         "provider-adapters"
       ],
       "timestamp": "2026-06-21T22:43:25-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "53c536d2",
+      "message": "fix: auto-update workflow - add missing tag output and checkout step",
+      "type": "fix",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "auto-update",
+        "workflow-engine"
+      ],
+      "timestamp": "2026-06-21T21:10:18-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "76f497fe",
+      "message": "style: auto-format with ruff [skip ci]",
+      "type": "style",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-22T00:06:54Z",
+      "author": "Brian5m1th"
+    },
+    {
+      "hash": "e3d691de",
+      "message": "Dev (#68)",
+      "type": "unknown",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-21T21:01:40-03:00",
       "author": "Brian Smith Dev"
     },
     {
@@ -201,11 +457,22 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "observability",
-        "observability-production"
+        "observability-production",
+        "observability"
       ],
       "timestamp": "2026-06-21T20:56:41-03:00",
       "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "810e4928",
+      "message": "style: auto-format with ruff [skip ci]",
+      "type": "style",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-21T23:50:24Z",
+      "author": "Brian5m1th"
     },
     {
       "hash": "1cb67cc5",
@@ -261,9 +528,9 @@
       "scope": null,
       "breaking": false,
       "features": [
+        "observability-production",
         "observability",
-        "event-bus",
-        "observability-production"
+        "event-bus"
       ],
       "timestamp": "2026-06-21T19:45:30-03:00",
       "author": "Brian Smith Dev"
@@ -289,8 +556,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "workflow-engine",
-        "dead-letter-queue"
+        "dead-letter-queue",
+        "workflow-engine"
       ],
       "timestamp": "2026-06-21T18:29:15-03:00",
       "author": "Brian Smith Dev"
@@ -303,8 +570,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "workflow-engine",
-        "service-registry"
+        "service-registry",
+        "workflow-engine"
       ],
       "timestamp": "2026-06-21T18:14:20-03:00",
       "author": "Brian Smith Dev"
@@ -341,8 +608,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "circuit-breaker",
-        "model-router"
+        "model-router",
+        "circuit-breaker"
       ],
       "timestamp": "2026-06-21T18:01:10-03:00",
       "author": "Brian Smith Dev"
@@ -371,6 +638,43 @@
         "service-registry"
       ],
       "timestamp": "2026-06-21T17:48:33-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "7c13b34c",
+      "message": "fix: bind mount vault instead of empty named volume",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-21T14:41:48-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "c8d47da2",
+      "message": "fix: add workflow_dispatch trigger to Release workflow",
+      "type": "fix",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "workflow-engine"
+      ],
+      "timestamp": "2026-06-20T14:51:46-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "612f2a17",
+      "message": "feat: dynamic provider switching + phase 2 refactoring + Open WebUI compatibility (#56) (#57)",
+      "type": "feat",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "provider-adapters"
+      ],
+      "timestamp": "2026-06-20T14:39:02-03:00",
       "author": "Brian Smith Dev"
     },
     {
@@ -549,8 +853,8 @@
       "scope": "desktop",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "desktop-apis"
+        "desktop-apis",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-19T13:56:17-03:00",
       "author": "Brian Smith Dev"
@@ -1002,8 +1306,8 @@
       "scope": "integrations",
       "breaking": false,
       "features": [
-        "n8n-integration",
-        "tool-layer"
+        "tool-layer",
+        "n8n-integration"
       ],
       "timestamp": "2026-06-18T16:25:23-03:00",
       "author": "Brian"
@@ -1133,8 +1437,8 @@
       "scope": "wiki",
       "breaking": false,
       "features": [
-        "tool-layer",
-        "service-registry"
+        "service-registry",
+        "tool-layer"
       ],
       "timestamp": "2026-06-18T13:45:29-03:00",
       "author": "Brian"
@@ -1361,8 +1665,8 @@
       "scope": "memory",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T23:31:28-03:00",
       "author": "Brian5m1th"
@@ -1408,8 +1712,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T19:07:14-03:00",
       "author": "Brian5m1th"
@@ -1534,8 +1838,8 @@
       "scope": "memory",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T12:22:58-03:00",
       "author": "Brian5m1th"
@@ -1574,8 +1878,8 @@
       "scope": "domain",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T12:22:44-03:00",
       "author": "Brian5m1th"
@@ -1643,8 +1947,8 @@
       "scope": "tools",
       "breaking": false,
       "features": [
-        "tool-layer",
-        "service-registry"
+        "service-registry",
+        "tool-layer"
       ],
       "timestamp": "2026-06-11T10:36:21-03:00",
       "author": "Brian5m1th"
@@ -1657,8 +1961,8 @@
       "scope": "api",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T10:35:26-03:00",
       "author": "Brian5m1th"
@@ -1671,8 +1975,8 @@
       "scope": "router",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T10:34:07-03:00",
       "author": "Brian5m1th"
@@ -1698,8 +2002,8 @@
       "scope": "cache",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T10:31:55-03:00",
       "author": "Brian5m1th"
@@ -1746,8 +2050,8 @@
       "breaking": false,
       "features": [
         "agent-runtime",
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T01:31:40-03:00",
       "author": "Brian5m1th"
@@ -1808,8 +2112,8 @@
       "scope": "proxy",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "agent-runtime"
+        "agent-runtime",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T01:25:45-03:00",
       "author": "Brian5m1th"
@@ -1903,8 +2207,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "agent-runtime"
+        "agent-runtime",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-10T19:55:46-03:00",
       "author": "Brian5m1th"
