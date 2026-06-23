@@ -1,0 +1,68 @@
+{
+  "coverage": {
+    "score": 100.0,
+    "total": 12,
+    "documented": 12
+  },
+  "missing_docs": [],
+  "orphan_docs": [
+    "index",
+    "GITHUB_ACTIONS",
+    "CHANGELOG",
+    "README"
+  ],
+  "undocumented_code": [
+    "desktop/src/shared/lib/tool-schema.ts",
+    "desktop/src/shared/lib/event-bus.ts",
+    "desktop/src/shared/lib/event-bus.ts",
+    "desktop/src/shared/lib/command-registry.ts"
+  ],
+  "broken_links": [
+    {
+      "source": "index",
+      "target": "sdd/Pipeline CI-CD Auto Update",
+      "file_path": "docs/index.md"
+    },
+    {
+      "source": "index",
+      "target": "sdd/Otimizacao de Build Desktop",
+      "file_path": "docs/index.md"
+    },
+    {
+      "source": "sdd/SDD-F2-Readiness-Engine",
+      "target": "SDD-Graphify",
+      "file_path": "docs/sdd/SDD-F2-Readiness-Engine.md"
+    },
+    {
+      "source": "sdd/SDD-F2-Readiness-Engine",
+      "target": "SDD-AI-Vault-Analyzer",
+      "file_path": "docs/sdd/SDD-F2-Readiness-Engine.md"
+    },
+    {
+      "source": "sdd/SDD-F2-Readiness-Engine",
+      "target": "Feature Registry",
+      "file_path": "docs/sdd/SDD-F2-Readiness-Engine.md"
+    }
+  ],
+  "graph_metrics": {
+    "connectivity": 97.35099337748345,
+    "orphan_notes": [
+      "index",
+      "GITHUB_ACTIONS",
+      "CHANGELOG",
+      "README"
+    ]
+  },
+  "health_metrics": {
+    "coverage_score": 100.0,
+    "completeness_score": 88.0,
+    "consistency_score": 91.7,
+    "link_health_score": 97.4,
+    "kirl_integrity_score": 100.0,
+    "arch_alignment_score": 100.0,
+    "drift_score": 3.3,
+    "drift_penalty": 3.3,
+    "documentation_health": 95.6,
+    "passed": true
+  }
+}

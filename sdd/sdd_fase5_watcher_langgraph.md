@@ -1,6 +1,17 @@
+---
+id: sdd_fase5_watcher_langgraph
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Antigravity AI
 Tags: #sdd #python #langgraph #agente #memoria #fase6 #fase7
-Related: [[index]] [[backlog]] [[sdd_fase4_rag_pipeline]] [[sdd_fase3_obsidian_service]] [[02_fluxo_dados]] [[sdd_obsidian_tools]]
+Related: [[index]] [[Backlog do Projeto]] [[sdd_fase4_rag_pipeline]] [[sdd_fase3_obsidian_service]] [[Fluxo de Dados]] [[sdd_obsidian_tools]]
 
 # SDD — Fases 6 e 7: LangGraph Agent + Memória de Longo Prazo
 
@@ -147,3 +158,27 @@ class AgentService:
 
 - [[sdd_fase3_obsidian_service]] — Tools do Obsidian registradas no Tool Registry
 - [[sdd_fase4_rag_pipeline]] — SemanticRetriever usado no nó de recuperação
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

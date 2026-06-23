@@ -10,7 +10,7 @@ status: active
 > Define a missao conceitual do K.A.O.S: privacidade local absoluta e utilidade continua offline.
 
 ## Parent
-- [[Viso Geral]]
+- [[Visao Geral]]
 
 ## Children
 - [[index]]
@@ -18,7 +18,7 @@ status: active
 - [[Informacoes do Projeto]]
 
 ## Related
-- [[InformaçAes do Projeto Backlog do Projeto]]
+- [[Informacoes do Projeto]] [[Backlog do Projeto]]
 
 ## Tags
 #kaos #projetos #mission #offline #privacy
@@ -46,5 +46,29 @@ Criar uma IA pessoal capaz de:
 
 ---
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
 
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

@@ -1,3 +1,14 @@
+---
+id: kirl_guide
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Guia KIRL — K.A.O.S Intelligence Runtime Layer
 
 ## O que é o KIRL?

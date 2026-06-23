@@ -1,6 +1,17 @@
+---
+id: sdd_roadmap
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: K.A.O.S Project
 Tags: #sdd #roadmap #fases
-Related: [[index]] [[00_visao_geral]] [[backlog]]
+Related: [[index]] [[Visao Geral]] [[Backlog do Projeto]]
 
 # SDD — Roadmap do K.A.O.S
 
@@ -153,3 +164,33 @@ IA adapta respostas com base no historico e preferencias armazenadas.
 - [ ] Webhook tool para N8N
 - [ ] GitHub tool (issues, PRs)
 - [ ] Email tool (send/receive)
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

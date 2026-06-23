@@ -17,11 +17,11 @@ phase: Fase 1
 - [[Roadmap Geral]]
 
 ## Children
-- [[SDD-Auth-Architecture-F2]] (proxima fase)
+- [[architecture]] (proxima fase)
 
 ## Related
 - [[SDD-KIRL]]
-- [[Configuracao de Provedores]]
+- [[Configuração de Provedores]]
 - [[Arquitetura de Orquestracao]]
 - [[sdd_desktop_build_optimization]]
 
@@ -755,7 +755,7 @@ Fase 1                    Fase 2
 
 - [[Roadmap Geral]] — Roadmap macro do K.A.O.S
 - [[SDD-KIRL]] — Documentation Runtime Layer
-- [[Configuracao de Provedores]] — Provider configuration via Desktop
+- [[Configuração de Provedores]] — Provider configuration via Desktop
 - [[Arquitetura de Orquestracao]] — Workflow orchestration
 - [[sdd_desktop_build_optimization]] — Desktop build optimization
 - [[FIRST_RUN]] — Guia de primeira execucao
@@ -764,3 +764,33 @@ Fase 1                    Fase 2
 ---
 
 *Esta SDD define o plano de estabilizacao do desktop K.A.O.S como fase 1 do roadmap, priorizando a remocao de mocks e conexao com o backend real antes de qualquer feature nova.*
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

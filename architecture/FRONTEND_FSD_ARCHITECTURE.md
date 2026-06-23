@@ -1,3 +1,14 @@
+---
+id: frontend_fsd_architecture
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Arquitetura Frontend FSD — K.A.O.S
 
 ## Stack

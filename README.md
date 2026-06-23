@@ -1,3 +1,14 @@
+---
+id: readme
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # K.A.O.S — Knowledge Assistant & Offline System
 
 **Plataforma universal de orquestração de IA, agentes e automações baseada em capacidades.**

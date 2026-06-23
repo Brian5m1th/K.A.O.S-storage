@@ -1,3 +1,14 @@
+---
+id: agents.pt-br
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: obsidian
@@ -10,7 +21,7 @@ status: active
 > Versao em portugues do contrato de regras e diretrizes agentivas de escrita/leitura no vault.
 
 ## Parent
-- [[MemÓria do Obsidian]]
+- [[Memoria do Obsidian]]
 
 ## Children
 - [[index]]
@@ -114,7 +125,7 @@ updated: 2026-06-18
 
 ## Regras de Cross-Reference
 
-- Toda entidade ou conceito mencionado em uma página deve usar o formato `[[wiki/entities/slug|Nome]]`
+- Toda entidade ou conceito mencionado em uma página deve usar o formato `[[AGENTS|Nome]]`
 - Ao criar uma página, verifique se páginas relacionadas precisam de atualização (backlinks)
 - Se um conceito for mencionado 3+ vezes na wiki mas não tiver página, sinalize
 - Se duas páginas se contradizerem, anote a contradição explicitamente
@@ -137,7 +148,32 @@ Periodicamente (ou sob demanda) execute `lint_wiki()` para verificar:
 - **Contradições**: páginas com afirmações conflitantes
 - **Órfãos**: páginas sem links de entrada
 - **Conceitos ausentes**: conceitos mencionados frequentemente mas sem documentação
-- **Links quebrados**: `[[links]]` para páginas inexistentes
+- **Links quebrados**: `[[index]]` para páginas inexistentes
 - **Páginas desatualizadas**: data `updated` muito antiga relativa à última ingestão
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

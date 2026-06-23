@@ -1,3 +1,14 @@
+---
+id: provider_routing
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Provider Routing — K.A.O.S
 
 ## Fluxo de Decisão

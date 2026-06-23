@@ -1,6 +1,17 @@
+---
+id: sdd_knowledge_wiki_layer
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: LLM Wiki Pattern + K.A.O.S SDD-009
 Tags: #sdd #wiki #knowledge #llm-wiki #rag #synthesis
-Related: [[index]] [[00_visao_geral]] [[sdd_llm_provider_hybrid]] [[02_fluxo_dados]]
+Related: [[index]] [[Visao Geral]] [[sdd_llm_provider_hybrid]] [[Fluxo de Dados]]
 
 # SDD — Knowledge Wiki Layer (LLM Wiki + RAG Híbrido)
 
@@ -64,3 +75,30 @@ Pergunta → index.md → Entities → Concepts → Synthesis → Qdrant (fallba
 | LangGraph | Novo nó `ingest_source` + entry point condicional |
 | Triple Router | Novo intent type INGEST |
 | LLM Provider | Wiki layer é independente do provider |
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

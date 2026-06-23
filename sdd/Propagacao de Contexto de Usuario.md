@@ -1,3 +1,14 @@
+---
+id: propagacao-de-contexto-de-usuario
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: arquitetura
@@ -10,14 +21,14 @@ status: active
 > Especifica como as chamadas HTTP propagam os dados do usuario atual (ID, permissoes) para isolamento de memoria.
 
 ## Parent
-- [[Arquitetura de OrquestraçAo]]
+- [[Arquitetura de Orquestracao]]
 
 ## Children
 - [[index]]
 - [[Arquitetura de Orquestracao]]
 
 ## Related
-- [[MemÓria do Obsidian]]
+- [[Memoria do Obsidian]]
 
 ## Tags
 #kaos #arquitetura #user-context #session #multiusuario
@@ -28,7 +39,7 @@ status: active
 > Tipo: System Design Document
 > Status: **Implementado** ✅
 > Prioridade: Alta
-> Relacionado: [[Fluxo de Dados]] [[MemÓria do Obsidian]] [[Arquitetura de OrquestraçAo]] [[Backlog do Projeto]]
+> Relacionado: [[Fluxo de Dados]] [[Memoria do Obsidian]] [[Arquitetura de Orquestracao]] [[Backlog do Projeto]]
 
 ---
 
@@ -350,5 +361,29 @@ Após esta implementação:
 7. Permissões por ferramenta LangGraph
 8. Auditoria completa de execução do agente
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
 
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

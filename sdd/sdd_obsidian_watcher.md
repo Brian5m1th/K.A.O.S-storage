@@ -1,3 +1,14 @@
+---
+id: sdd_obsidian_watcher
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Notas no ClickUp
 Tags: #sdd #obsidian #watcher #indexer #watchdog
 Related: [[sdd_obsidian_memoria]] [[sdd_obsidian_rag]] [[sdd_obsidian_tools]]
@@ -56,3 +67,33 @@ class ObsidianVaultHandler(FileSystemEventHandler):
 - **Fila com Debounce**: 1-2s antes de executar indexação física.
 - **Processamento Assíncrono**: Leitura do disco e chamadas Qdrant sem bloquear a thread principal.
 - **Transações no Qdrant**: Remoção em massa de vetores antigos antes de inserir novos chunks.
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

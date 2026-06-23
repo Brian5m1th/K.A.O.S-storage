@@ -10,13 +10,13 @@ status: implemented
 > SDD completo da refatoracao do frontend desktop K.A.O.S
 
 ## Parent
-- [[Documentation/architecture/DESKTOP_ARCHITECTURE]]
+- [[DESKTOP_ARCHITECTURE]] [[architecture]]
 
 ## Children
 
 ## Related
-- [[Documentation/architecture/FRONTEND_FSD_ARCHITECTURE]]
-- [[Documentation/governance/DOCUMENTATION_GOVERNANCE_SDD]]
+- [[FRONTEND_FSD_ARCHITECTURE]] [[architecture]]
+- [[DOCUMENTATION_GOVERNANCE_SDD]]
 
 ## Tags
 #kaos #frontend #fsd #react #tauri #refactoring
@@ -134,3 +134,33 @@ cd desktop && npx tsc --noEmit
   }
 }
 ```
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

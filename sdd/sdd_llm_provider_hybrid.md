@@ -1,6 +1,17 @@
+---
+id: sdd_llm_provider_hybrid
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: K.A.O.S Architecture
 Tags: #sdd #llm #provider #openai #claude #gemini #ollama #hybrid
-Related: [[index]] [[00_visao_geral]] [[02_fluxo_dados]] [[sdd_knowledge_wiki_layer]] [[sdd_arquitetura_orquestracao]]
+Related: [[index]] [[Visao Geral]] [[Fluxo de Dados]] [[sdd_knowledge_wiki_layer]] [[sdd_arquitetura_orquestracao]]
 
 # SDD — Provedor Híbrido de LLM (Local + Cloud)
 
@@ -86,3 +97,30 @@ class ProviderMetrics:
     fallback_used: bool
     fallback_chain: list[str] | None = None
 ```
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

@@ -1,3 +1,14 @@
+---
+id: backlog-do-projeto
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: projetos
@@ -16,7 +27,7 @@ status: active
 - [[Roadmap Geral]]
 
 ## Related
-- [[Viso Geral InformaçAes do Projeto]]
+- [[Informacoes do Projeto]] [[Visao Geral]]
 
 ## Tags
 #kaos #projetos #backlog #planning
@@ -114,7 +125,7 @@ graph LR
 
 ## Fase 2 — IA Local ✅
 
-> Relacionado: [[Fase 2 - IA Local]] [[Arquitetura de OrquestraçAo]]
+> Relacionado: [[Fase 2 - IA Local]] [[Arquitetura de Orquestracao]]
 
 - [x] Instalar Ollama
 - [x] Baixar modelo Qwen3 4B (`ollama pull qwen3:4b`)
@@ -131,7 +142,7 @@ graph LR
 
 ## Fase 3 — Integração com Obsidian
 
-> Relacionado: [[Ferramentas do LangGraph]] [[MemÓria do Obsidian]]
+> Relacionado: [[Ferramentas do LangGraph]] [[Memoria do Obsidian]]
 
 ### ⚙️ Configuração
 
@@ -232,7 +243,7 @@ Pastas a criar:
 
 ## Fase 8 — User Context & Multiusuário
 
-> Relacionado: [[PropagaçAo de Contexto de Usuário]] [[Fluxo de Dados]] [[MemÓria do Obsidian]]
+> Relacionado: [[Propagacao de Contexto de Usuario]] [[Fluxo de Dados]] [[Memoria do Obsidian]]
 
 - [ ] Criar UserContext model (`app/domain/user.py`)
 - [ ] Adicionar user_id ao ChatRequest e ChatCompletionRequest
@@ -307,3 +318,32 @@ Pastas a criar:
 
 *Atualizado em 2026-06-11.*
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

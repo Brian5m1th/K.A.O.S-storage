@@ -1,3 +1,14 @@
+---
+id: padroes-de-projeto
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: arquitetura
@@ -17,7 +28,7 @@ status: active
 - [[Estrategia de Repositorios]]
 
 ## Related
-- [[Anti-padroes de Projeto EstratÉgia de RepositÓrios EstratÉgia de Testes]]
+- [[Estrategia de Repositorios]] [[Anti-padroes de Projeto]] [[Estrategia de Testes]]
 
 ## Tags
 #kaos #arquitetura #patterns #best-practices

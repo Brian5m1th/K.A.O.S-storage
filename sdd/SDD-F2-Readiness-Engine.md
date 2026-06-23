@@ -310,3 +310,33 @@ Nenhuma nova dependencia externa. O motor usa `json`, `hashlib`, `pathlib`, `htt
 ---
 
 *Este SDD define o motor de readiness para Fase 2 como um sistema de validacao deterministica, eliminando decisoes subjetivas sobre quando comecar a implementacao do Graphify Explorer e AI Vault Analyzer.*
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

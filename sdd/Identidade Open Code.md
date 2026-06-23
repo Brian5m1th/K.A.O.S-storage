@@ -1,3 +1,14 @@
+---
+id: identidade-open-code
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: arquitetura
@@ -10,7 +21,7 @@ status: active
 > Define os principios eticos de transparencia, controle de dados local e identidade aberta do ecossistema K.A.O.S.
 
 ## Parent
-- [[Viso Geral]]
+- [[Visao Geral]]
 
 ## Children
 - [[index]]
@@ -68,5 +79,32 @@ kaos-platform/
 3.  **Execução Externa**: Toda automação e integrações com o mundo online (ex: GitHub, Email) serão passadas para o **N8N** via webhooks.
 4.  **Regras de Negócio**: Qualquer regra estrita e controle transacional persistente no PostgreSQL deverá ser alocado no módulo **Spring Boot**, evitando poluição no Python do K.A.O.S.
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

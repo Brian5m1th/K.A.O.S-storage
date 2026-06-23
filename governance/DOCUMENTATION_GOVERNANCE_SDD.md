@@ -1,3 +1,14 @@
+---
+id: documentation_governance_sdd
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Governance de Documentação — K.A.O.S
 
 ## Pipeline de Documentação
@@ -60,3 +71,33 @@ O PR só é merged quando:
 Os arquivos `docs/sdd_*.md` que eventualmente existam no repositório principal devem ser migrados para `docs/vault/sdd/` e removidos do principal.
 
 Após migração, atualizar `docs/index.md` para refletir a nova localização.
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

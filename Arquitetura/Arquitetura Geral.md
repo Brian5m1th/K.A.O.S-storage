@@ -10,7 +10,7 @@ status: active
 > Especificacao de alto nivel da arquitetura geral do assistente de IA offline, detalhando os fluxos de integracao.
 
 ## Parent
-- [[Viso Geral]]
+- [[Visao Geral]]
 
 ## Children
 - [[Estrutura de Pastas]]
@@ -18,7 +18,7 @@ status: active
 - [[Infraestrutura Docker]]
 
 ## Related
-- [[EstratÉgia de RepositÓrios Padroes de Projeto EstratÉgia de Testes]]
+- [[Estrategia de Repositorios]] [[Estrategia de Testes]] [[Padroes de Projeto]]
 
 ## Tags
 #kaos #arquitetura #system #offline

@@ -1,6 +1,17 @@
+---
+id: sdd_arquitetura_orquestracao
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Antigravity AI
 Tags: #sdd #python #fastapi #proxy #openai #gateway
-Related: [[index]] [[00_visao_geral]] [[02_fluxo_dados]] [[sdd_fase2_ia_local]]
+Related: [[index]] [[Visao Geral]] [[Fluxo de Dados]] [[sdd_fase2_ia_local]]
 
 # SDD — Proxy OpenAI & Gateway de Orquestração
 
@@ -66,3 +77,30 @@ environment:
 ## Contexto de Usuário
 
 A partir da Fase 8, o gateway propaga `UserContext` (user_id, username, role) do Open WebUI para o AgentService. Consulte [[sdd_user_context_propagation]].
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

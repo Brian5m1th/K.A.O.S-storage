@@ -1,0 +1,27 @@
+[
+  {
+    "source": "index",
+    "target": "sdd/Pipeline CI-CD Auto Update",
+    "file_path": "docs/index.md"
+  },
+  {
+    "source": "index",
+    "target": "sdd/Otimizacao de Build Desktop",
+    "file_path": "docs/index.md"
+  },
+  {
+    "source": "sdd/SDD-F2-Readiness-Engine",
+    "target": "SDD-Graphify",
+    "file_path": "docs/sdd/SDD-F2-Readiness-Engine.md"
+  },
+  {
+    "source": "sdd/SDD-F2-Readiness-Engine",
+    "target": "SDD-AI-Vault-Analyzer",
+    "file_path": "docs/sdd/SDD-F2-Readiness-Engine.md"
+  },
+  {
+    "source": "sdd/SDD-F2-Readiness-Engine",
+    "target": "Feature Registry",
+    "file_path": "docs/sdd/SDD-F2-Readiness-Engine.md"
+  }
+]

@@ -1,3 +1,14 @@
+---
+id: estrategia-de-repositorios
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: arquitetura
@@ -16,7 +27,7 @@ status: active
 - [[Padroes de Projeto]]
 
 ## Related
-- [[Visõ Geral Padroes de Projeto]]
+- [[Padroes de Projeto]] [[Visao Geral]]
 
 ## Tags
 #kaos #arquitetura #monorepo #git #multi-repo

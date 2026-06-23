@@ -1,3 +1,14 @@
+---
+id: grafana_dashboards
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Grafana Dashboards — K.A.O.S
 
 ## Acesso
@@ -54,3 +65,33 @@ Sugestões de alerta:
 - **API Down:** `up{job="kaos-api"} == 0` por > 30s
 - **Alta latência:** `http_request_duration_seconds{quantile="0.95"} > 5` por > 5min
 - **Erros altos:** `rate(http_request_count_total{status=~"5.."}[5m]) > 0.1` por > 5min
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

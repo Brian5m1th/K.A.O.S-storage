@@ -19,7 +19,7 @@ status: active
 - [[Roteamento de Memoria]]
 
 ## Related
-- [[Arquitetura de OrquestraçAo MemÓria do Obsidian]]
+- [[Arquitetura de Orquestracao]] [[Memoria do Obsidian]]
 
 ## Tags
 #kaos #ia #langgraph #memory #agent #roadmap
@@ -29,7 +29,7 @@ status: active
 ## Conteudo
 ## Source: Antigravity AI
 Tags: #sdd #python #langgraph #agente #memoria #fase6 #fase7
-Related: [[index]] [[Backlog do Projeto]] [[Fases 4-5 - Pipeline RAG e Watcher]] [[Fase 3 - Serviço Obsidian]] [[Fluxo de Dados]] [[Ferramentas do LangGraph]]
+Related: [[index]] [[Backlog do Projeto]] [[Fases 4-5 - Pipeline RAG e Watcher]] [[Fase 3 - Servico Obsidian]] [[Fluxo de Dados]] [[Ferramentas do LangGraph]]
 
 # SDD — Fases 6 e 7: LangGraph Agent + Memória de Longo Prazo
 
@@ -355,7 +355,7 @@ sequenceDiagram
 
 ## Dependências Desta Fase
 
-- [[Fase 3 - Serviço Obsidian]] — Tools do Obsidian registradas no Tool Registry
+- [[Fase 3 - Servico Obsidian]] — Tools do Obsidian registradas no Tool Registry
 - [[Fases 4-5 - Pipeline RAG e Watcher]] — SemanticRetriever usado no nó de recuperação
 
 
@@ -364,7 +364,26 @@ sequenceDiagram
 
 - Fase 8 (Integrações Online) — O agente já tem capacidade de invocar webhooks via tools adicionais (N8N, GitHub)
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
 
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
 
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
 
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

@@ -1,3 +1,14 @@
+---
+id: obsidian-watcher
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: obsidian
@@ -10,7 +21,7 @@ status: active
 > Descricao arquitetural do servico de background que detecta alteracoes nas notas do vault Obsidian e atualiza o banco vetorial.
 
 ## Parent
-- [[MemÓria do Obsidian]]
+- [[Memoria do Obsidian]]
 
 ## Children
 - [[Monitoramento do Vault (Watcher)]]
@@ -121,3 +132,33 @@ Para atender ao **RNF-002** (suportar mais de 100.000 documentos) e **RNF-003** 
 - **Fila com Debounce**: Evitar disparar múltiplas indexações quando o usuário salva o arquivo continuamente (debounce de 1 a 2 segundos antes de executar a indexação física).
 - **Processamento Assíncrono (`asyncio`)**: A leitura do disco e as chamadas de API do Qdrant ocorrem sem bloquear a thread principal da API FastAPI.
 - **Transações no Qdrant**: Utilização do campo `path` como chave de identificação única no payload, garantindo a remoção em massa de todos os vetores antigos pertencentes a uma nota antes de inserir os novos chunks atualizados (evitando duplicação de informações).
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

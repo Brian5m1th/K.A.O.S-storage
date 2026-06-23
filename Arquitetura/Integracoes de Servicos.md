@@ -1,3 +1,14 @@
+---
+id: integracoes-de-servicos
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: backend

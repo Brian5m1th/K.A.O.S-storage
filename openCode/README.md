@@ -1,3 +1,14 @@
+---
+id: readme
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # OpenCode Configuration — K.A.O.S
 
 Esta pasta contem a configuracao OpenCode para o projeto K.A.O.S, permitindo que o agente de codigo entenda a arquitetura, convencoes e ferramentas do projeto.

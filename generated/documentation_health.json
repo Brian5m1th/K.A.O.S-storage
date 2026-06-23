@@ -1,0 +1,12 @@
+{
+  "coverage_score": 100.0,
+  "completeness_score": 88.0,
+  "consistency_score": 91.7,
+  "link_health_score": 97.4,
+  "kirl_integrity_score": 100.0,
+  "arch_alignment_score": 100.0,
+  "drift_score": 3.3,
+  "drift_penalty": 3.3,
+  "documentation_health": 95.6,
+  "passed": true
+}

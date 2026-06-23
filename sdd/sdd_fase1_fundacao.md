@@ -1,12 +1,23 @@
+---
+id: sdd_fase1_fundacao
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Antigravity AI
 Tags: #sdd #python #fastapi #fundação #fase1
-Related: [[index]] [[backlog]] [[01_estrutura_pastas]] [[sdd_fase2_ia_local]]
+Related: [[index]] [[Backlog do Projeto]] [[Estrutura de Pastas]] [[sdd_fase2_ia_local]]
 
 # SDD — Fase 1: Fundação do Projeto Python
 
 ## Objetivo
 
-Configurar a estrutura base do projeto Python seguindo os padrões corporativos definidos em [[01_estrutura_pastas]]. Ao final desta fase, o projeto deve ter ambiente, dependências, configuração e um endpoint de health check funcionando.
+Configurar a estrutura base do projeto Python seguindo os padrões corporativos definidos em [[Estrutura de Pastas]]. Ao final desta fase, o projeto deve ter ambiente, dependências, configuração e um endpoint de health check funcionando.
 
 ---
 
@@ -239,3 +250,30 @@ Nenhuma — é a fase inicial.
 
 - [[sdd_fase2_ia_local]] — Integração com Ollama
 - [[sdd_fase3_obsidian_service]] — ObsidianService
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

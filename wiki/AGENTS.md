@@ -1,3 +1,14 @@
+---
+id: agents
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: obsidian
@@ -10,7 +21,7 @@ status: active
 > Contrato de regras, convencoes de nomenclatura e fluxos que o LLM deve ler e seguir ao manipular a wiki do vault.
 
 ## Parent
-- [[MemÓria do Obsidian]]
+- [[Memoria do Obsidian]]
 
 ## Children
 - [[index]]
@@ -114,7 +125,7 @@ updated: 2026-06-18
 
 ## Cross-Reference Rules
 
-- Every entity or concept mentioned in a page should use `[[wiki/entities/slug|Name]]` format
+- Every entity or concept mentioned in a page should use `[[AGENTS|Name]]` format
 - When creating a page, check if related pages need updating (backlinks)
 - If a concept is mentioned 3+ times across the wiki but has no page, flag it
 - If two pages contradict each other, note the contradiction explicitly
@@ -137,7 +148,35 @@ Periodically (or on demand) run `lint_wiki()` to check:
 - **Contradictions**: pages making conflicting claims
 - **Orphans**: pages with no inbound links
 - **Missing concepts**: concepts mentioned often but undocumented
-- **Broken links**: `[[links]]` to non-existent pages
+- **Broken links**: `[[index]]` to non-existent pages
 - **Stale pages**: `updated` date too old relative to last ingest
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

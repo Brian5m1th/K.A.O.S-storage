@@ -1,3 +1,14 @@
+---
+id: desktop_architecture
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Arquitetura Desktop — K.A.O.S
 
 ## Stack

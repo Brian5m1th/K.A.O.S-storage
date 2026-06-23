@@ -1,3 +1,14 @@
+---
+id: anti-padroes-de-projeto
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: arquitetura
@@ -16,7 +27,7 @@ status: active
 - [[Identidade Open Code]]
 
 ## Related
-- [[Padroes de Projeto EstratÉgia de Testes]]
+- [[Estrategia de Testes]] [[Padroes de Projeto]]
 
 ## Tags
 #kaos #arquitetura #antipatterns #guidelines

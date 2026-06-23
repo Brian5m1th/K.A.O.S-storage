@@ -1,3 +1,14 @@
+---
+id: fases-4-5---pipeline-rag-e-watcher
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: ia
@@ -31,7 +42,7 @@ status: active
 ## Conteudo
 ## Source: Antigravity AI
 Tags: #sdd #python #rag #qdrant #embeddings #watchdog #fase4 #fase5 #fase6
-Related: [[index]] [[Backlog do Projeto]] [[Fase 3 - Serviço Obsidian]] [[Busca Vetorial e RAG]] [[Obsidian Watcher]] [[Fases 6-7 - Watcher LangGraph e MemÓria]]
+Related: [[index]] [[Backlog do Projeto]] [[Fase 3 - Servico Obsidian]] [[Busca Vetorial e RAG]] [[Obsidian Watcher]] [[Fases 6-7 - Watcher LangGraph e Memoria]]
 
 # SDD — Fases 4 e 5: RAG Pipeline + Atualização Automática
 
@@ -225,15 +236,34 @@ async def full_reindex(indexer: VaultIndexer = Depends()) -> dict:
 
 ## Dependências Desta Fase
 
-- [[Fase 3 - Serviço Obsidian]] — ObsidianService para leitura de arquivos
+- [[Fase 3 - Servico Obsidian]] — ObsidianService para leitura de arquivos
 
 
 
 ## Desbloqueia
 
-- [[Fases 6-7 - Watcher LangGraph e MemÓria]] — O LangGraph usará o `SemanticRetriever` como primeira etapa do grafo
+- [[Fases 6-7 - Watcher LangGraph e Memoria]] — O LangGraph usará o `SemanticRetriever` como primeira etapa do grafo
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
 
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
 
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
 
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

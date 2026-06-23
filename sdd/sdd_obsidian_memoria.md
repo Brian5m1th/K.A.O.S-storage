@@ -1,3 +1,14 @@
+---
+id: sdd_obsidian_memoria
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Notas no ClickUp
 Tags: #sdd #obsidian #memoria #rag #langgraph
 Related: [[index]] [[sdd_obsidian_watcher]] [[sdd_obsidian_rag]] [[sdd_obsidian_tools]]
@@ -62,3 +73,33 @@ User → Open WebUI → FastAPI → LangGraph (Agent Orchestrator)
 1. [[sdd_obsidian_watcher]] — File Watcher & Indexer Service
 2. [[sdd_obsidian_rag]] — Vector Search & RAG Service
 3. [[sdd_obsidian_tools]] — Schemas das Ferramentas (Tools)
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

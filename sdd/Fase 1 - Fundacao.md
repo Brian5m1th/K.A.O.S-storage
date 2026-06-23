@@ -1,3 +1,14 @@
+---
+id: fase-1---fundacao
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: roadmap
@@ -269,5 +280,31 @@ Nenhuma — é a fase inicial.
 ## Desbloqueia
 
 - [[Fase 2 - IA Local]] — Integração com Ollama
-- [[Fase 3 - Serviço Obsidian]] — ObsidianService
+- [[Fase 3 - Servico Obsidian]] — ObsidianService
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.
