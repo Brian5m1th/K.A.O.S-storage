@@ -1,8 +1,22 @@
 {
   "version": "1.0",
-  "generated_at": "2026-06-23T17:56:03.962588+00:00",
+  "generated_at": "2026-06-23T18:07:38.874579+00:00",
   "total_commits": 200,
   "commits": [
+    {
+      "hash": "48495b43",
+      "message": "feat: P1+P2 - unified path resolution, registry sync, doc recovery engine, and desktop audit",
+      "type": "feat",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "service-registry",
+        "desktop-apis"
+      ],
+      "timestamp": "2026-06-23T14:57:36-03:00",
+      "author": "Brian"
+    },
     {
       "hash": "9a384bf2",
       "message": "checkpoint before docs recovery",
@@ -110,9 +124,9 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "circuit-breaker",
         "service-registry",
-        "database-schema"
+        "database-schema",
+        "circuit-breaker"
       ],
       "timestamp": "2026-06-23T00:48:50-03:00",
       "author": "Brian"
@@ -180,8 +194,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "desktop-apis"
+        "desktop-apis",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-22T23:24:56-03:00",
       "author": "Brian Smith Dev"
@@ -410,10 +424,10 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "tool-layer",
+        "agent-runtime",
         "database-schema",
-        "agent-runtime"
+        "provider-adapters",
+        "tool-layer"
       ],
       "timestamp": "2026-06-22T00:11:39-03:00",
       "author": "Brian"
@@ -426,11 +440,11 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "database-schema",
         "provider-adapters",
         "agent-runtime",
+        "tool-layer",
         "event-bus",
-        "tool-layer"
+        "database-schema"
       ],
       "timestamp": "2026-06-22T00:08:09-03:00",
       "author": "Brian"
@@ -494,9 +508,9 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
+        "workflow-engine",
         "memory-system",
-        "workflow-engine"
+        "provider-adapters"
       ],
       "timestamp": "2026-06-21T22:43:25-03:00",
       "author": "Brian Smith Dev"
@@ -509,8 +523,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "auto-update",
-        "workflow-engine"
+        "workflow-engine",
+        "auto-update"
       ],
       "timestamp": "2026-06-21T21:10:18-03:00",
       "author": "Brian"
@@ -556,8 +570,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "observability-production",
-        "observability"
+        "observability",
+        "observability-production"
       ],
       "timestamp": "2026-06-21T20:56:41-03:00",
       "author": "Brian Smith Dev"
@@ -627,9 +641,9 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "observability-production",
+        "event-bus",
         "observability",
-        "event-bus"
+        "observability-production"
       ],
       "timestamp": "2026-06-21T19:45:30-03:00",
       "author": "Brian Smith Dev"
@@ -669,8 +683,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "service-registry",
-        "workflow-engine"
+        "workflow-engine",
+        "service-registry"
       ],
       "timestamp": "2026-06-21T18:14:20-03:00",
       "author": "Brian Smith Dev"
@@ -707,8 +721,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "circuit-breaker",
-        "model-router"
+        "model-router",
+        "circuit-breaker"
       ],
       "timestamp": "2026-06-21T18:01:10-03:00",
       "author": "Brian Smith Dev"
@@ -952,8 +966,8 @@
       "scope": "desktop",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "desktop-apis"
+        "desktop-apis",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-19T13:56:17-03:00",
       "author": "Brian Smith Dev"
@@ -1405,8 +1419,8 @@
       "scope": "integrations",
       "breaking": false,
       "features": [
-        "tool-layer",
-        "n8n-integration"
+        "n8n-integration",
+        "tool-layer"
       ],
       "timestamp": "2026-06-18T16:25:23-03:00",
       "author": "Brian"
@@ -1536,8 +1550,8 @@
       "scope": "wiki",
       "breaking": false,
       "features": [
-        "tool-layer",
-        "service-registry"
+        "service-registry",
+        "tool-layer"
       ],
       "timestamp": "2026-06-18T13:45:29-03:00",
       "author": "Brian"
@@ -1764,8 +1778,8 @@
       "scope": "memory",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T23:31:28-03:00",
       "author": "Brian5m1th"
@@ -1811,8 +1825,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T19:07:14-03:00",
       "author": "Brian5m1th"
@@ -1937,8 +1951,8 @@
       "scope": "memory",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T12:22:58-03:00",
       "author": "Brian5m1th"
@@ -1977,8 +1991,8 @@
       "scope": "domain",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T12:22:44-03:00",
       "author": "Brian5m1th"
@@ -2046,8 +2060,8 @@
       "scope": "tools",
       "breaking": false,
       "features": [
-        "tool-layer",
-        "service-registry"
+        "service-registry",
+        "tool-layer"
       ],
       "timestamp": "2026-06-11T10:36:21-03:00",
       "author": "Brian5m1th"
@@ -2060,8 +2074,8 @@
       "scope": "api",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T10:35:26-03:00",
       "author": "Brian5m1th"
@@ -2074,8 +2088,8 @@
       "scope": "router",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T10:34:07-03:00",
       "author": "Brian5m1th"
@@ -2101,8 +2115,8 @@
       "scope": "cache",
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "memory-system"
+        "memory-system",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-11T10:31:55-03:00",
       "author": "Brian5m1th"
@@ -2148,8 +2162,8 @@
       "scope": "memory",
       "breaking": false,
       "features": [
-        "provider-adapters",
         "memory-system",
+        "provider-adapters",
         "agent-runtime"
       ],
       "timestamp": "2026-06-11T01:31:40-03:00",
@@ -2380,17 +2394,6 @@
       "breaking": false,
       "features": [],
       "timestamp": "2026-06-10T15:13:05-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "df7f9043",
-      "message": "feat: fase 1 - fundacao do projeto Python (FastAPI + uv + health check)",
-      "type": "feat",
-      "impact": "medium",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-10T14:36:43-03:00",
       "author": "Brian5m1th"
     }
   ]
