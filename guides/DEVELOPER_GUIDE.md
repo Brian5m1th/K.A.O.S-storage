@@ -558,23 +558,126 @@ style: formatação
 ## Responsabilidades
 - Informações pendentes de validação ou auto-geração.
 
+## Padrão de Commits
+
+Todo commit deve seguir **Conventional Commits** conforme definido em
+[SDD-Commit-Governance.md](../sdd/SDD-Commit-Governance.md).
+
+### Formato
+
+```
+<tipo>(<escopo>): <descrição em minúsculas>
+
+[body opcional]
+SDD: SDD-Nome | RF-XXX
+```
+
+### Tipos Válidos
+
+| Tipo | Uso |
+|------|-----|
+| `feat` | Nova funcionalidade |
+| `fix` | Correção de bug |
+| `refactor` | Refatoração sem mudança funcional |
+| `test` | Testes |
+| `docs` | Documentação |
+| `ci` | CI/CD |
+| `chore` | Manutenção (deps, config) |
+| `style` | Formatting |
+| `perf` | Performance |
+
+### Exemplos
+
+```
+feat(api): add POST /api/conversations endpoint
+fix(cors): replace wildcard origin with CORS_ORIGINS env var
+docs(governance): add commitlint config and PR template
+```
+
+### ⛔ Proibido
+
+- `feat/fix:` — barra separadora
+- `feat+fix:` — tipos compostos
+- Commits sem tipo (`atualiza`, `wip`)
+
+## Stores Existentes (Zustand)
+
+| Store | Função | Arquivo |
+|-------|--------|---------|
+| `useAppStore` | Tema (dark/light) | `shared/lib/stores/app-store.ts` |
+| `useAuthStore` | Autenticação JWT + API Key | `shared/lib/stores/auth-store.ts` |
+| `useChatStore` | Mensagens do chat + streaming | `shared/lib/stores/chat-store.ts` |
+| `useAgentStore` | Agentes LangGraph | `shared/lib/stores/agent-store.ts` |
+| `useConversationStore` | Histórico de sessões | `shared/lib/stores/conversation-store.ts` |
+| `useUIStore` | UI state (sidebar, modals) | `shared/lib/stores/ui-store.ts` |
+| `useThemeStore` | Tema (synced with app-store) | `shared/lib/stores/theme-store.ts` |
+| `useSystemStore` | System info + health | `shared/lib/stores/system-store.ts` |
+| `useUpdateStore` | Auto-update Tauri | `shared/lib/stores/update-store.ts` |
+
+## Governança de PR
+
+### Checklist de Abertura de PR
+
+- [ ] Testes passando (`pytest tests/ -v`)
+- [ ] Ruff lint/format passando (`ruff check . && ruff format --check .`)
+- [ ] Documentação atualizada em `docs/` (se aplicável)
+- [ ] SDD atualizado se houve mudança de contrato
+- [ ] Variáveis de ambiente documentadas em `.env.example` (se aplicável)
+- [ ] `desktop/` — `npm run build` passa sem erros (se aplicável)
+
+### Documentação Obrigatória por Tipo de PR
+
+| Tipo de mudança | Ação obrigatória |
+|----------------|-----------------|
+| Novo endpoint | Atualizar `docs/api/API_REFERENCE.md` |
+| Nova variável de ambiente | Atualizar `assistant/.env.example` + `docs/setup/SETUP.md` |
+| Nova tabela DB | Atualizar `docs/architecture/SYSTEM_ARCHITECTURE.md` |
+| Novo workflow agent | Criar SDD em `docs/sdd/` |
+| Breaking change | Atualizar `docs/CHANGELOG.md` + bump version |
+
 ## Dependencias
-- Informações pendentes de validação ou auto-geração.
+
+- Python 3.13 (via `uv`)
+- Node.js 20+ (para desktop)
+- PostgreSQL 16
+- Qdrant
+- Docker + Docker Compose (para infra completa)
+- Rust + Tauri CLI (para build desktop)
 
 ## Fluxos
-- Informações pendentes de validação ou auto-geração.
 
-## Integracoes
-- Informações pendentes de validação ou auto-geração.
+### Desenvolvimento Local
+
+1. `cd assistant && uv sync`
+2. `uv run uvicorn app.main:app --reload --port 8000`
+3. Em outro terminal: `cd desktop && npm run dev`
+
+### Testes
+
+```bash
+cd assistant
+uv run pytest tests/ -v --asyncio-mode=auto
+```
+
+### Build Desktop
+
+```bash
+cd desktop
+npm run build
+npx tauri build
+```
 
 ## Arquivos Relacionados
-- Informações pendentes de validação ou auto-geração.
 
-## Referencias KIRL
-- Informações pendentes de validação ou auto-geração.
+- `docs/sdd/SDD-Commit-Governance.md` — Padronização de commits e PRs
+- `.commitlintrc.json` — Regras de commitlint
+- `.github/PULL_REQUEST_TEMPLATE.md` — Template de PR
+- `docs/governance/DOCUMENTATION_GOVERNANCE_SDD.md` — Governança de documentação
 
 ## Status
-- Informações pendentes de validação ou auto-geração.
+
+**Vigente** — atualizado em 2026-06-24.
 
 ## Ultima Atualizacao
-- Informações pendentes de validação ou auto-geração.
+
+2026-06-24 — Adicionado Padrão de Commits, Stores Existentes, Governança de PR, seções de dependências preenchidas.
