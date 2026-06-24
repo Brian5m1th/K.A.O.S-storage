@@ -4,8 +4,8 @@
   "documented": 0,
   "missingDocs": 0,
   "staleDocs": 0,
-  "orphanedSDDs": 35,
+  "orphanedSDDs": 40,
   "inconsistentPhases": 1,
-  "undocumentedCode": 102,
-  "generatedAt": "2026-06-23T18:07:39.025832+00:00"
+  "undocumentedCode": 108,
+  "generatedAt": "2026-06-24T16:03:58.112953+00:00"
 }
