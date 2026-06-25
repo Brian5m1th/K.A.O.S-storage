@@ -1,8 +1,96 @@
 {
   "version": "1.0",
-  "generated_at": "2026-06-24T16:47:11.856825+00:00",
+  "generated_at": "2026-06-25T01:09:51.184452+00:00",
   "total_commits": 200,
   "commits": [
+    {
+      "hash": "9f3cf22a",
+      "message": "chore: bump version to 2.0.1 for new release",
+      "type": "chore",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-24T22:03:43-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "4a259037",
+      "message": "feat: integrate tools and registry page for mcp and opencode features",
+      "type": "feat",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "tool-layer",
+        "service-registry"
+      ],
+      "timestamp": "2026-06-24T22:02:39-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "557831d7",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-24T16:58:03Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "cd818fab",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-24T16:49:03Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "f5fef3b8",
+      "message": "fix(middleware): reorder middleware registration to run CORSMiddleware first and handle OPTIONS preflight properly",
+      "type": "fix",
+      "impact": "low",
+      "scope": "middleware",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-24T13:48:13-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "90c15d58",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-24T16:46:04Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "39736c81",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-24T16:45:40Z",
+      "author": "kaos-bot"
+    },
     {
       "hash": "f2d1491a",
       "message": "chore(registry): update docs submodule pointer to latest commit",
@@ -61,8 +149,8 @@
       "scope": "ci",
       "breaking": false,
       "features": [
-        "service-registry",
-        "workflow-engine"
+        "workflow-engine",
+        "service-registry"
       ],
       "timestamp": "2026-06-24T13:41:30-03:00",
       "author": "Brian"
@@ -112,8 +200,8 @@
       "scope": "ci",
       "breaking": false,
       "features": [
-        "service-registry",
-        "workflow-engine"
+        "workflow-engine",
+        "service-registry"
       ],
       "timestamp": "2026-06-24T13:04:49-03:00",
       "author": "Brian"
@@ -218,10 +306,10 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "auto-update",
-        "provider-adapters",
         "desktop-apis",
-        "circuit-breaker"
+        "provider-adapters",
+        "circuit-breaker",
+        "auto-update"
       ],
       "timestamp": "2026-06-23T19:21:12-03:00",
       "author": "Brian"
@@ -624,8 +712,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "tool-layer",
-        "agent-runtime"
+        "agent-runtime",
+        "tool-layer"
       ],
       "timestamp": "2026-06-22T15:21:26-03:00",
       "author": "Brian"
@@ -704,9 +792,9 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "tool-layer",
         "agent-runtime",
+        "tool-layer",
+        "provider-adapters",
         "database-schema"
       ],
       "timestamp": "2026-06-22T00:11:39-03:00",
@@ -722,9 +810,9 @@
       "features": [
         "tool-layer",
         "agent-runtime",
+        "provider-adapters",
         "event-bus",
-        "database-schema",
-        "provider-adapters"
+        "database-schema"
       ],
       "timestamp": "2026-06-22T00:08:09-03:00",
       "author": "Brian"
@@ -759,9 +847,9 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "n8n-integration",
+        "desktop-apis",
         "service-registry",
-        "desktop-apis"
+        "n8n-integration"
       ],
       "timestamp": "2026-06-21T23:13:09-03:00",
       "author": "Brian Smith Dev"
@@ -774,8 +862,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "sse-layer",
-        "observability-production"
+        "observability-production",
+        "sse-layer"
       ],
       "timestamp": "2026-06-21T22:48:42-03:00",
       "author": "Brian Smith Dev"
@@ -788,9 +876,9 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "memory-system",
         "workflow-engine",
-        "provider-adapters"
+        "provider-adapters",
+        "memory-system"
       ],
       "timestamp": "2026-06-21T22:43:25-03:00",
       "author": "Brian Smith Dev"
@@ -803,8 +891,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "auto-update",
-        "workflow-engine"
+        "workflow-engine",
+        "auto-update"
       ],
       "timestamp": "2026-06-21T21:10:18-03:00",
       "author": "Brian"
@@ -850,8 +938,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "observability",
-        "observability-production"
+        "observability-production",
+        "observability"
       ],
       "timestamp": "2026-06-21T20:56:41-03:00",
       "author": "Brian Smith Dev"
@@ -921,9 +1009,9 @@
       "scope": null,
       "breaking": false,
       "features": [
+        "observability-production",
         "observability",
-        "event-bus",
-        "observability-production"
+        "event-bus"
       ],
       "timestamp": "2026-06-21T19:45:30-03:00",
       "author": "Brian Smith Dev"
@@ -949,8 +1037,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "dead-letter-queue",
-        "workflow-engine"
+        "workflow-engine",
+        "dead-letter-queue"
       ],
       "timestamp": "2026-06-21T18:29:15-03:00",
       "author": "Brian Smith Dev"
@@ -963,8 +1051,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "service-registry",
-        "workflow-engine"
+        "workflow-engine",
+        "service-registry"
       ],
       "timestamp": "2026-06-21T18:14:20-03:00",
       "author": "Brian Smith Dev"
@@ -1699,8 +1787,8 @@
       "scope": "integrations",
       "breaking": false,
       "features": [
-        "n8n-integration",
-        "tool-layer"
+        "tool-layer",
+        "n8n-integration"
       ],
       "timestamp": "2026-06-18T16:25:23-03:00",
       "author": "Brian"
@@ -1830,8 +1918,8 @@
       "scope": "wiki",
       "breaking": false,
       "features": [
-        "service-registry",
-        "tool-layer"
+        "tool-layer",
+        "service-registry"
       ],
       "timestamp": "2026-06-18T13:45:29-03:00",
       "author": "Brian"
@@ -2308,97 +2396,6 @@
       "breaking": false,
       "features": [],
       "timestamp": "2026-06-11T12:22:32-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "9ee8d6c1",
-      "message": "docs(sdd): cria SDD de User Context Propagation",
-      "type": "docs",
-      "impact": "low",
-      "scope": "sdd",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:22:27-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "a9f5328f",
-      "message": "chore: adiciona ruff como dev dep, atualiza .env.example e documenta fluxo de roteamento",
-      "type": "chore",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T10:37:34-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "d0fb5705",
-      "message": "feat(tools): implementa ListProjectsTool e registra no TOOL_REGISTRY",
-      "type": "feat",
-      "impact": "medium",
-      "scope": "tools",
-      "breaking": false,
-      "features": [
-        "service-registry",
-        "tool-layer"
-      ],
-      "timestamp": "2026-06-11T10:36:21-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "021b96e5",
-      "message": "feat(api): integra roteamento inteligente (FAST/MEMORY/SMART) no chat.py e openai.py",
-      "type": "feat",
-      "impact": "high",
-      "scope": "api",
-      "breaking": false,
-      "features": [
-        "memory-system",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T10:35:26-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "11bd97f1",
-      "message": "feat(router): implementa FastRouter, MemoryRouter e SmartRouter",
-      "type": "feat",
-      "impact": "high",
-      "scope": "router",
-      "breaking": false,
-      "features": [
-        "memory-system",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T10:34:07-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "882bfe42",
-      "message": "feat(intent): implementa IntentClassifier com keyword fast-path + LLM fallback",
-      "type": "feat",
-      "impact": "low",
-      "scope": "intent",
-      "breaking": false,
-      "features": [
-        "circuit-breaker"
-      ],
-      "timestamp": "2026-06-11T10:32:54-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "39ab72b8",
-      "message": "feat(cache): implementa ResponseCache TTL in-memory com maxsize e evict LRU",
-      "type": "feat",
-      "impact": "high",
-      "scope": "cache",
-      "breaking": false,
-      "features": [
-        "memory-system",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T10:31:55-03:00",
       "author": "Brian5m1th"
     }
   ]

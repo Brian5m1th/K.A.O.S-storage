@@ -11,6 +11,9 @@ reconstruction_confidence: medium
 
 # Guia de Instalação — K.A.O.S
 
+> [!TIP]
+> **Instalação Automática no Windows:** Para facilitar o setup do ambiente completo de desenvolvimento, execute o script `.\setup.ps1` no PowerShell como Administrador na raiz do projeto. Ele fará o download automático de todas as ferramentas e dependências descritas abaixo de forma automatizada.
+
 ## Requisitos Mínimos
 
 | Componente | Versão | Obrigatório |

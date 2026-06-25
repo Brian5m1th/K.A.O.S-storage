@@ -11,6 +11,9 @@ reconstruction_confidence: medium
 
 # Setup — K.A.O.S
 
+> [!TIP]
+> No Windows, você pode automatizar toda a instalação das ferramentas e dependências executando o script `.\setup.ps1` em um terminal PowerShell como Administrador. O script baixa e configura automaticamente o **Rustup** (configurando a toolchain MSVC estável), **Node.js**, **Python**, **UV** e instala todos os pacotes npm e uv do repositório.
+
 ## Pré-requisitos
 
 | Ferramenta | Versão Mínima | Instalação |
