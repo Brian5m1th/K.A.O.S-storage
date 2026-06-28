@@ -1,0 +1,11 @@
+{
+  "coverage": 0.0,
+  "totalFeatures": 1,
+  "documented": 0,
+  "missingDocs": 0,
+  "staleDocs": 0,
+  "orphanedSDDs": 41,
+  "inconsistentPhases": 1,
+  "undocumentedCode": 123,
+  "generatedAt": "2026-06-28T16:36:43.710444+00:00"
+}
