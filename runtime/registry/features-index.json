@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "generated_at": "2026-06-25T16:53:39.886359+00:00",
+  "generated_at": "2026-06-28T22:09:31.791912+00:00",
   "generated_by": "bootstrap_feature_registry.py (git-history strategy)",
   "source": "git-log + filesystem-sdds",
-  "total_features": 130,
+  "total_features": 134,
   "features": [
     {
       "id": "kirl-documentation-runtime-layer",
@@ -130,8 +130,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.830575+00:00",
-      "updatedAt": "2026-06-25T16:53:39.830589+00:00"
+      "createdAt": "2026-06-28T22:09:31.769229+00:00",
+      "updatedAt": "2026-06-28T22:09:31.769233+00:00"
     },
     {
       "id": "audit",
@@ -197,8 +197,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.833178+00:00",
-      "updatedAt": "2026-06-25T16:53:39.833205+00:00"
+      "createdAt": "2026-06-28T22:09:31.768285+00:00",
+      "updatedAt": "2026-06-28T22:09:31.768291+00:00"
     },
     {
       "id": "config",
@@ -241,8 +241,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.876208+00:00",
-      "updatedAt": "2026-06-25T16:53:39.876217+00:00"
+      "createdAt": "2026-06-28T22:09:31.787568+00:00",
+      "updatedAt": "2026-06-28T22:09:31.787573+00:00"
     },
     {
       "id": "dashboard-honesto-4-state-protocol",
@@ -269,8 +269,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.868585+00:00",
-      "updatedAt": "2026-06-25T16:53:39.868592+00:00"
+      "createdAt": "2026-06-28T22:09:31.785534+00:00",
+      "updatedAt": "2026-06-28T22:09:31.785537+00:00"
     },
     {
       "id": "developer-guide",
@@ -282,8 +282,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.878358+00:00",
-      "updatedAt": "2026-06-25T16:53:39.878365+00:00"
+      "createdAt": "2026-06-28T22:09:31.791446+00:00",
+      "updatedAt": "2026-06-28T22:09:31.791450+00:00"
     },
     {
       "id": "divisao-de-texto-chunking",
@@ -295,8 +295,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.834868+00:00",
-      "updatedAt": "2026-06-25T16:53:39.834879+00:00"
+      "createdAt": "2026-06-28T22:09:31.783442+00:00",
+      "updatedAt": "2026-06-28T22:09:31.783446+00:00"
     },
     {
       "id": "docker",
@@ -314,17 +314,22 @@
       "updatedAt": "2026-06-24T13:42:31-03:00"
     },
     {
-      "id": "docs-source-refactor",
-      "name": "Docs Source Refactor",
+      "id": "docs",
+      "name": "— auto-documentation from conversation history",
       "phase": "Fase 1",
       "status": "done",
       "docs": [
+        "desktop/src/features/generate-docs/ui/DocGeneratorModal.tsx",
         "docs/sdd/docs-source-refactor.md"
       ],
-      "codeRefs": [],
-      "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.835738+00:00",
-      "updatedAt": "2026-06-25T16:53:39.835749+00:00"
+      "codeRefs": [
+        "assistant/app/api/docs.py",
+        "assistant/app/main.py",
+        "desktop/src/pages/chat/index.tsx"
+      ],
+      "lastCommit": "50fc6b959b86",
+      "createdAt": "2026-06-25T18:17:24-03:00",
+      "updatedAt": "2026-06-25T18:17:24-03:00"
     },
     {
       "id": "domain",
@@ -408,8 +413,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.837220+00:00",
-      "updatedAt": "2026-06-25T16:53:39.837234+00:00"
+      "createdAt": "2026-06-28T22:09:31.768770+00:00",
+      "updatedAt": "2026-06-28T22:09:31.768775+00:00"
     },
     {
       "id": "especificacao-tecnica",
@@ -421,8 +426,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.838220+00:00",
-      "updatedAt": "2026-06-25T16:53:39.838232+00:00"
+      "createdAt": "2026-06-28T22:09:31.780238+00:00",
+      "updatedAt": "2026-06-28T22:09:31.780243+00:00"
     },
     {
       "id": "fase-3",
@@ -434,8 +439,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.840553+00:00",
-      "updatedAt": "2026-06-25T16:53:39.840562+00:00"
+      "createdAt": "2026-06-28T22:09:31.774873+00:00",
+      "updatedAt": "2026-06-28T22:09:31.774880+00:00"
     },
     {
       "id": "fase1-desktop-stabilization-honest",
@@ -557,8 +562,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.840894+00:00",
-      "updatedAt": "2026-06-25T16:53:39.840899+00:00"
+      "createdAt": "2026-06-28T22:09:31.764513+00:00",
+      "updatedAt": "2026-06-28T22:09:31.764518+00:00"
     },
     {
       "id": "fases-6-7-watcher-langgraph-e-memoria",
@@ -570,8 +575,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.841418+00:00",
-      "updatedAt": "2026-06-25T16:53:39.841424+00:00"
+      "createdAt": "2026-06-28T22:09:31.763168+00:00",
+      "updatedAt": "2026-06-28T22:09:31.763173+00:00"
     },
     {
       "id": "ferramentas-do-langgraph",
@@ -583,8 +588,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.841952+00:00",
-      "updatedAt": "2026-06-25T16:53:39.841957+00:00"
+      "createdAt": "2026-06-28T22:09:31.761223+00:00",
+      "updatedAt": "2026-06-28T22:09:31.761228+00:00"
     },
     {
       "id": "first-run",
@@ -596,8 +601,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.879090+00:00",
-      "updatedAt": "2026-06-25T16:53:39.879095+00:00"
+      "createdAt": "2026-06-28T22:09:31.790507+00:00",
+      "updatedAt": "2026-06-28T22:09:31.790510+00:00"
     },
     {
       "id": "frontend-fsd-architecture",
@@ -609,8 +614,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.869091+00:00",
-      "updatedAt": "2026-06-25T16:53:39.869096+00:00"
+      "createdAt": "2026-06-28T22:09:31.784116+00:00",
+      "updatedAt": "2026-06-28T22:09:31.784120+00:00"
     },
     {
       "id": "functional-spec",
@@ -622,8 +627,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.842514+00:00",
-      "updatedAt": "2026-06-25T16:53:39.842522+00:00"
+      "createdAt": "2026-06-28T22:09:31.773543+00:00",
+      "updatedAt": "2026-06-28T22:09:31.773547+00:00"
     },
     {
       "id": "generate-icon-assets-skip",
@@ -646,8 +651,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.873568+00:00",
-      "updatedAt": "2026-06-25T16:53:39.873593+00:00"
+      "createdAt": "2026-06-28T22:09:31.786599+00:00",
+      "updatedAt": "2026-06-28T22:09:31.786631+00:00"
     },
     {
       "id": "identidade-open-code",
@@ -659,12 +664,12 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.843558+00:00",
-      "updatedAt": "2026-06-25T16:53:39.843567+00:00"
+      "createdAt": "2026-06-28T22:09:31.765990+00:00",
+      "updatedAt": "2026-06-28T22:09:31.765995+00:00"
     },
     {
       "id": "infra",
-      "name": "Otimiza Desktop CI com Vite cache + negation patterns + mÃ©tricas",
+      "name": "Otimiza Desktop CI com Vite cache + negation patterns + métricas",
       "phase": "Fase 1",
       "status": "done",
       "docs": [
@@ -711,8 +716,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.880215+00:00",
-      "updatedAt": "2026-06-25T16:53:39.880224+00:00"
+      "createdAt": "2026-06-28T22:09:31.789108+00:00",
+      "updatedAt": "2026-06-28T22:09:31.789111+00:00"
     },
     {
       "id": "integra-agente-langgraph-nas",
@@ -803,12 +808,12 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.881374+00:00",
-      "updatedAt": "2026-06-25T16:53:39.881381+00:00"
+      "createdAt": "2026-06-28T22:09:31.790041+00:00",
+      "updatedAt": "2026-06-28T22:09:31.790045+00:00"
     },
     {
       "id": "llm",
-      "name": "Provedor hibrido com LLMFactory + fallback + metricas",
+      "name": "Implement active provider synchronization and smart dynamic fallback resolution",
       "phase": "Fase 1",
       "status": "done",
       "docs": [
@@ -831,11 +836,13 @@
         "assistant/app/llm/providers/ollama_provider.py",
         "assistant/app/llm/providers/openai_provider.py",
         "assistant/app/router/intent_classifier.py",
-        "assistant/app/router/memory_router.py"
+        "assistant/app/router/memory_router.py",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/settings/index.tsx"
       ],
-      "lastCommit": "f3cfdc9b6aae",
+      "lastCommit": "494ad3a04831",
       "createdAt": "2026-06-18T14:44:12-03:00",
-      "updatedAt": "2026-06-18T14:44:12-03:00"
+      "updatedAt": "2026-06-25T16:05:26-03:00"
     },
     {
       "id": "logs",
@@ -905,8 +912,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.844585+00:00",
-      "updatedAt": "2026-06-25T16:53:39.844592+00:00"
+      "createdAt": "2026-06-28T22:09:31.777529+00:00",
+      "updatedAt": "2026-06-28T22:09:31.777534+00:00"
     },
     {
       "id": "memory",
@@ -1084,8 +1091,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.845577+00:00",
-      "updatedAt": "2026-06-25T16:53:39.845583+00:00"
+      "createdAt": "2026-06-28T22:09:31.782979+00:00",
+      "updatedAt": "2026-06-28T22:09:31.782984+00:00"
     },
     {
       "id": "observability-real",
@@ -1097,8 +1104,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.846158+00:00",
-      "updatedAt": "2026-06-25T16:53:39.846163+00:00"
+      "createdAt": "2026-06-28T22:09:31.758430+00:00",
+      "updatedAt": "2026-06-28T22:09:31.758434+00:00"
     },
     {
       "id": "obsidian-guide",
@@ -1110,8 +1117,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.882393+00:00",
-      "updatedAt": "2026-06-25T16:53:39.882400+00:00"
+      "createdAt": "2026-06-28T22:09:31.788648+00:00",
+      "updatedAt": "2026-06-28T22:09:31.788654+00:00"
     },
     {
       "id": "obsidian-watcher",
@@ -1123,8 +1130,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.846658+00:00",
-      "updatedAt": "2026-06-25T16:53:39.846663+00:00"
+      "createdAt": "2026-06-28T22:09:31.765498+00:00",
+      "updatedAt": "2026-06-28T22:09:31.765504+00:00"
     },
     {
       "id": "obsidianservice-tools-leitura-escrita-busca-vault",
@@ -1163,8 +1170,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.883366+00:00",
-      "updatedAt": "2026-06-25T16:53:39.883372+00:00"
+      "createdAt": "2026-06-28T22:09:31.789559+00:00",
+      "updatedAt": "2026-06-28T22:09:31.789563+00:00"
     },
     {
       "id": "orquestrador-langgraph",
@@ -1176,8 +1183,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.847127+00:00",
-      "updatedAt": "2026-06-25T16:53:39.847131+00:00"
+      "createdAt": "2026-06-28T22:09:31.759378+00:00",
+      "updatedAt": "2026-06-28T22:09:31.759383+00:00"
     },
     {
       "id": "otimiza-dockerfile-com-torch",
@@ -1267,8 +1274,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.848913+00:00",
-      "updatedAt": "2026-06-25T16:53:39.848925+00:00"
+      "createdAt": "2026-06-28T22:09:31.757159+00:00",
+      "updatedAt": "2026-06-28T22:09:31.757170+00:00"
     },
     {
       "id": "provider-routing",
@@ -1280,21 +1287,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.869655+00:00",
-      "updatedAt": "2026-06-25T16:53:39.869663+00:00"
-    },
-    {
-      "id": "provider-ux",
-      "name": "Provider UX",
-      "phase": "Fase 1",
-      "status": "done",
-      "docs": [
-        "docs/sdd/provider-ux.md"
-      ],
-      "codeRefs": [],
-      "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.850741+00:00",
-      "updatedAt": "2026-06-25T16:53:39.850749+00:00"
+      "createdAt": "2026-06-28T22:09:31.785078+00:00",
+      "updatedAt": "2026-06-28T22:09:31.785082+00:00"
     },
     {
       "id": "proxy",
@@ -1364,8 +1358,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.851279+00:00",
-      "updatedAt": "2026-06-25T16:53:39.851284+00:00"
+      "createdAt": "2026-06-28T22:09:31.769700+00:00",
+      "updatedAt": "2026-06-28T22:09:31.769705+00:00"
     },
     {
       "id": "refatoracao-frontend-fsd",
@@ -1377,19 +1371,19 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.851689+00:00",
-      "updatedAt": "2026-06-25T16:53:39.851693+00:00"
+      "createdAt": "2026-06-28T22:09:31.757857+00:00",
+      "updatedAt": "2026-06-28T22:09:31.757863+00:00"
     },
     {
       "id": "registry",
-      "name": "Update docs submodule pointer [skip ci]",
+      "name": "Fix broken submodule pointer to ca866de",
       "phase": "Fase 1",
       "status": "done",
       "docs": [],
       "codeRefs": [],
-      "lastCommit": "e66db7d3af3c",
+      "lastCommit": "e093185bc099",
       "createdAt": "2026-06-24T16:42:05Z",
-      "updatedAt": "2026-06-25T01:10:57Z"
+      "updatedAt": "2026-06-25T15:18:49-03:00"
     },
     {
       "id": "release",
@@ -1415,8 +1409,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.852214+00:00",
-      "updatedAt": "2026-06-25T16:53:39.852219+00:00"
+      "createdAt": "2026-06-28T22:09:31.773100+00:00",
+      "updatedAt": "2026-06-28T22:09:31.773105+00:00"
     },
     {
       "id": "roteamento-de-memoria",
@@ -1428,8 +1422,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.852798+00:00",
-      "updatedAt": "2026-06-25T16:53:39.852807+00:00"
+      "createdAt": "2026-06-28T22:09:31.780991+00:00",
+      "updatedAt": "2026-06-28T22:09:31.780995+00:00"
     },
     {
       "id": "router",
@@ -1580,6 +1574,19 @@
       "updatedAt": "2026-06-23T17:55:10-03:00"
     },
     {
+      "id": "sdd-kaos-uxui-001",
+      "name": "Update docs submodule reference with",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/SDD-KAOS-UXUI-001.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "64edbb524dfc",
+      "createdAt": "2026-06-25T18:43:06-03:00",
+      "updatedAt": "2026-06-25T18:43:06-03:00"
+    },
+    {
       "id": "sdd-s",
       "name": "Add SDDs for Knowledge Wiki Layer and LLM Provider Hybrid",
       "phase": "Fase 1",
@@ -1595,6 +1602,96 @@
       "lastCommit": "66a9b3d24f95",
       "createdAt": "2026-06-18T13:41:22-03:00",
       "updatedAt": "2026-06-18T13:41:22-03:00"
+    },
+    {
+      "id": "stabilization-real-backend-integrations",
+      "name": "Stabilization, real backend integrations, SSE streams, IpcBridge, and code cleaning",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/admin.py",
+        "assistant/app/api/agents_api.py",
+        "assistant/app/api/automation.py",
+        "assistant/app/api/integrations.py",
+        "assistant/app/api/mcp.py",
+        "assistant/app/api/observability.py",
+        "assistant/app/api/prompts.py",
+        "assistant/app/api/rag.py",
+        "assistant/app/api/settings_api.py",
+        "assistant/app/api/system.py",
+        "assistant/app/api/users.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/core/mcp_manager.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/app/main.py",
+        "assistant/app/memory/models.py",
+        "assistant/app/memory/postgres_repository.py",
+        "assistant/app/middleware/user_context.py",
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/prompt.py",
+        "assistant/app/repositories/conversation_repository.py",
+        "assistant/migrations/env.py",
+        "assistant/pyproject.toml",
+        "desktop/public/workflows/cost_tracker_workflow.json",
+        "desktop/public/workflows/devops_backup_workflow.json",
+        "desktop/public/workflows/github_review_workflow.json",
+        "desktop/public/workflows/mcp_health_workflow.json",
+        "desktop/public/workflows/vault_sync_workflow.json",
+        "desktop/public/workflows/whatsapp_chatbot_workflow.json",
+        "desktop/src-tauri/src/lib.rs",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/agents.tsx",
+        "desktop/src/app/routes/pages/architecture/index.tsx",
+        "desktop/src/app/routes/pages/automation-studio.tsx",
+        "desktop/src/app/routes/pages/chat.tsx",
+        "desktop/src/app/routes/pages/costs.tsx",
+        "desktop/src/app/routes/pages/dashboard.tsx",
+        "desktop/src/app/routes/pages/documentation/index.tsx",
+        "desktop/src/app/routes/pages/events.tsx",
+        "desktop/src/app/routes/pages/graphify.tsx",
+        "desktop/src/app/routes/pages/knowledge-graph.tsx",
+        "desktop/src/app/routes/pages/login.tsx",
+        "desktop/src/app/routes/pages/marketplace.tsx",
+        "desktop/src/app/routes/pages/observability.tsx",
+        "desktop/src/app/routes/pages/orchestration.tsx",
+        "desktop/src/app/routes/pages/pipelines.tsx",
+        "desktop/src/app/routes/pages/prompts.tsx",
+        "desktop/src/app/routes/pages/settings.tsx",
+        "desktop/src/app/routes/pages/setup.tsx",
+        "desktop/src/app/routes/pages/tools.tsx",
+        "desktop/src/app/routes/pages/users.tsx",
+        "desktop/src/app/routes/pages/vault.tsx",
+        "desktop/src/app/routes/pages/welcome.tsx",
+        "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/events/index.tsx",
+        "desktop/src/pages/graphify/index.tsx",
+        "desktop/src/pages/knowledge-graph/index.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/orchestration/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/prompts/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/tools/index.tsx",
+        "desktop/src/pages/users/index.tsx",
+        "desktop/src/shared/api/ipc-bridge.ts",
+        "desktop/src/shared/api/tauri-store-service.ts",
+        "desktop/src/shared/lib/stores/agent-store.ts",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/chat-store.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/lib/use-init.ts",
+        "desktop/src/widgets/sidebar/index.tsx"
+      ],
+      "lastCommit": "4a3d7d020665",
+      "createdAt": "2026-06-28T18:57:15-03:00",
+      "updatedAt": "2026-06-28T18:57:15-03:00"
     },
     {
       "id": "streaming",
@@ -1619,8 +1716,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.870262+00:00",
-      "updatedAt": "2026-06-25T16:53:39.870268+00:00"
+      "createdAt": "2026-06-28T22:09:31.784600+00:00",
+      "updatedAt": "2026-06-28T22:09:31.784623+00:00"
     },
     {
       "id": "technical-spec",
@@ -1632,8 +1729,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.866349+00:00",
-      "updatedAt": "2026-06-25T16:53:39.866358+00:00"
+      "createdAt": "2026-06-28T22:09:31.771130+00:00",
+      "updatedAt": "2026-06-28T22:09:31.771135+00:00"
     },
     {
       "id": "tests",
@@ -1682,6 +1779,22 @@
       "updatedAt": "2026-06-23T00:50:20-03:00"
     },
     {
+      "id": "updater",
+      "name": "Fix Windows msi artifact URL pattern in update-proxy generator",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/package.json",
+        "desktop/src-tauri/src/updater.rs",
+        "desktop/src-tauri/tauri.conf.json",
+        "scripts/gen_update_proxy.py"
+      ],
+      "lastCommit": "31582d45d9b6",
+      "createdAt": "2026-06-25T15:34:54-03:00",
+      "updatedAt": "2026-06-25T16:25:34-03:00"
+    },
+    {
       "id": "user-guide",
       "name": "Guia do Usuário — K.A.O.S",
       "phase": "Fase 1",
@@ -1691,8 +1804,41 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.884407+00:00",
-      "updatedAt": "2026-06-25T16:53:39.884414+00:00"
+      "createdAt": "2026-06-28T22:09:31.790988+00:00",
+      "updatedAt": "2026-06-28T22:09:31.790992+00:00"
+    },
+    {
+      "id": "ux",
+      "name": "Frontend modernization",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "desktop/src/features/generate-docs/ui/DocGeneratorModal.tsx",
+        "docs/sdd/provider-ux.md"
+      ],
+      "codeRefs": [
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/costs.tsx",
+        "desktop/src/app/routes/pages/events.tsx",
+        "desktop/src/app/routes/pages/prompts.tsx",
+        "desktop/src/app/routes/pages/welcome.tsx",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/costs/index.tsx",
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/events/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/prompts/index.tsx",
+        "desktop/src/pages/welcome/index.tsx",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/ui/empty-state.tsx",
+        "desktop/src/shared/ui/index.ts",
+        "desktop/src/shared/ui/tooltip.tsx",
+        "desktop/src/widgets/command-palette/index.tsx",
+        "desktop/src/widgets/sidebar/index.tsx"
+      ],
+      "lastCommit": "53ec294a2a1b",
+      "createdAt": "2026-06-25T18:40:46-03:00",
+      "updatedAt": "2026-06-25T18:40:46-03:00"
     },
     {
       "id": "variaveis-de-ambiente",
@@ -1704,8 +1850,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-06-25T16:53:39.867732+00:00",
-      "updatedAt": "2026-06-25T16:53:39.867740+00:00"
+      "createdAt": "2026-06-28T22:09:31.780527+00:00",
+      "updatedAt": "2026-06-28T22:09:31.780531+00:00"
     },
     {
       "id": "vault",
@@ -1963,7 +2109,7 @@
     },
     {
       "id": "fase4-implementa-rag-pipeline",
-      "name": "Implementa RAG pipeline (Fase 4) e watcher automÃ¡tico (Fase 5)",
+      "name": "Implementa RAG pipeline (Fase 4) e watcher automático (Fase 5)",
       "phase": "Fase 4",
       "status": "done",
       "docs": [],
@@ -2323,6 +2469,39 @@
       "updatedAt": "2026-06-21T19:45:30-03:00"
     },
     {
+      "id": "integrate-enterprise-automation-orchestrator",
+      "name": "Integrate enterprise automation orchestrator with n8n and tauri studio",
+      "phase": "Fase 8",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/automation.py",
+        "assistant/app/api/webhooks.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/core/automation_bus.py",
+        "assistant/app/core/automation_sdk.py",
+        "assistant/app/core/secret_manager.py",
+        "assistant/app/main.py",
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/automation_registry.py",
+        "assistant/app/providers/automation/base_workflow_provider.py",
+        "assistant/app/providers/automation/n8n_workflow_provider.py",
+        "assistant/tests/test_automation.py",
+        "assistant/tests/unit/test_automation_bus.py",
+        "assistant/tests/unit/test_automation_providers.py",
+        "assistant/tests/unit/test_automation_sdk.py",
+        "assistant/tests/unit/test_secret_manager.py",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/automation-studio.tsx",
+        "desktop/src/app/routes/pages/marketplace.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/automation/marketplace.tsx"
+      ],
+      "lastCommit": "367106a5bb36",
+      "createdAt": "2026-06-25T19:14:03-03:00",
+      "updatedAt": "2026-06-25T19:14:03-03:00"
+    },
+    {
       "id": "sdd-040-03",
       "name": "SDD040-03 model router and circuit breaker",
       "phase": "Fase 8",
@@ -2513,8 +2692,8 @@
       "updatedAt": "2026-06-22T15:13:44-03:00"
     },
     {
-      "id": "k-a-o-s-roadmap-expansion",
-      "name": "K.A.O.S Roadmap Expansion v2 â€” 28 tasks completas",
+      "id": "k-a-o-s-roadmap-expansion-tasks",
+      "name": "K.A.O.S Roadmap Expansion v2 — 28 tasks completas",
       "phase": "Fase 9+",
       "status": "done",
       "docs": [
