@@ -1,4 +1,4 @@
-﻿---
+---
 type: knowledge
 domain: projetos
 status: active

@@ -1,4 +1,4 @@
-﻿---
+---
 type: knowledge
 domain: home
 status: active
