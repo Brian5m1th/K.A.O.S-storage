@@ -1,3 +1,14 @@
+---
+id: loki_queries
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Loki Queries — K.A.O.S
 
 ## Formato dos Logs
@@ -74,3 +85,33 @@ sum by (provider) (count_over_time({job="kaos-api"} | json | provider != "" [1m]
 - Use `| json` para parsear logs JSONL
 - Campos aninhados não são suportados diretamente; use `| json` + `| line_format` se necessário
 - Para debug detalhado, use `level = "DEBUG"` (não habilitado em produção por padrão)
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

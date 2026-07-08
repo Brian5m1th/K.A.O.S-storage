@@ -1,3 +1,14 @@
+---
+id: visao-geral
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: visao-geral
@@ -15,7 +26,7 @@ status: active
 ## Children
 - [[Arquitetura Geral]]
 - [[Objetivos do Projeto]]
-- [[Guia de Configuracao]]
+- [[SETUP]]
 
 ## Related
 - [[Backlog do Projeto]]

@@ -1,3 +1,14 @@
+---
+id: guia-de-testes-e-uso
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: arquitetura
@@ -10,7 +21,7 @@ status: active
 > Manual tecnico contendo comandos cURL e scripts para testar manualmente as APIs do assistente.
 
 ## Parent
-- [[EstratÉgia de Testes]]
+- [[Estrategia de Testes]]
 
 ## Children
 - [[index]]
@@ -18,7 +29,7 @@ status: active
 - [[Fase 3 - Servico Obsidian]]
 
 ## Related
-- [[IntegraçAes de Services Fase 3 - Seviço Obsidian]]
+- [[Fase 3 - Servico Obsidian]]
 
 ## Tags
 #kaos #arquitetura #qa #curl #testing

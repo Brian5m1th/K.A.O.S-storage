@@ -16,7 +16,7 @@ created_by: OpenCode
 ## Children
 
 ## Related
-- [[Variáveis de Ambiente]]
+- [[Variaveis de Ambiente]]
 - [[Arquitetura de Orquestracao]]
 - [[Ferramentas do LangGraph]]
 
@@ -289,3 +289,33 @@ A camada desktop (plugin-store) garante que:
 - [ ] Reescrever ProviderScreen (multi-provider + api keys)
 - [ ] Atualizar App.tsx (callback simplificado)
 - [ ] Testar fluxo completo offline-first
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

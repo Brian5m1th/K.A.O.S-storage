@@ -1,3 +1,14 @@
+---
+id: sdd-040-completo
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # SDD-040 — Universal Orchestration Platform
 
 **Status:** Approved
@@ -128,3 +139,33 @@ Tables: `models`, `capability_policies`, `provider_configs`, `user_profiles`, `u
 | **8.5** | Production Observability | CostTracker, OpenTelemetry, Prometheus, Grafana |
 | **9** | Launcher Design | Architecture document |
 | **10** | Refactor + Tests + Docs | Ruff, coverage, docs |
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

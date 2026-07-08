@@ -1,0 +1,200 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-06-23T03:49:55.375714+00:00",
+  "features": [
+    {
+      "id": "test",
+      "name": "Test",
+      "phase": "p1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-06-22T17:31:21.508975+00:00",
+      "updatedAt": "2026-06-22T17:31:21.508989+00:00"
+    },
+    {
+      "id": "kirl",
+      "name": "KIRL",
+      "phase": "Fase 0",
+      "status": "done",
+      "docs": [
+        "sdd/SDD-KIRL.md"
+      ],
+      "codeRefs": [
+        "app/audit/"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.593910+00:00",
+      "updatedAt": "2026-06-23T03:35:09.594001+00:00"
+    },
+    {
+      "id": "desktop-stabilization",
+      "name": "Desktop Stabilization",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "sdd/SDD-Desktop-Stabilization-F1.md"
+      ],
+      "codeRefs": [
+        "desktop/src/pages/",
+        "desktop/src/shared/lib/stores/"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.672110+00:00",
+      "updatedAt": "2026-06-23T03:35:09.672160+00:00"
+    },
+    {
+      "id": "provider-ux",
+      "name": "Provider UX",
+      "phase": "Fase 1.5",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/features/ask-ai/ui/ModelSelector.tsx"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.693453+00:00",
+      "updatedAt": "2026-06-23T03:35:09.693473+00:00"
+    },
+    {
+      "id": "docs-source-refactor",
+      "name": "Docs Source Refactor",
+      "phase": "Fase 1.1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "app/audit/runtime_resolver.py"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.717062+00:00",
+      "updatedAt": "2026-06-23T03:35:09.717450+00:00"
+    },
+    {
+      "id": "validation-audit",
+      "name": "Validation Audit",
+      "phase": "Fase 1.2",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.741329+00:00",
+      "updatedAt": "2026-06-23T03:35:09.741344+00:00"
+    },
+    {
+      "id": "auth-wizard",
+      "name": "Auth & First Run Wizard",
+      "phase": "Fase 2",
+      "status": "in_progress",
+      "docs": [],
+      "codeRefs": [
+        "app/api/auth.py",
+        "desktop/src/pages/setup/",
+        "desktop/src/pages/login/"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.761985+00:00",
+      "updatedAt": "2026-06-23T03:35:09.761997+00:00"
+    },
+    {
+      "id": "provider-catalog",
+      "name": "Provider Catalog",
+      "phase": "Fase 3",
+      "status": "in_progress",
+      "docs": [],
+      "codeRefs": [
+        "app/api/providers.py",
+        "desktop/src/pages/settings/"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.781380+00:00",
+      "updatedAt": "2026-06-23T03:35:09.781408+00:00"
+    },
+    {
+      "id": "observability-real",
+      "name": "Observability Real",
+      "phase": "Fase 4",
+      "status": "planned",
+      "docs": [],
+      "codeRefs": [
+        "app/api/observability.py"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.812795+00:00",
+      "updatedAt": "2026-06-23T03:35:09.812810+00:00"
+    },
+    {
+      "id": "opencode-layer",
+      "name": "OpenCode Layer",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [
+        "openCode/"
+      ],
+      "codeRefs": [
+        "app/api/opencode.py"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.837619+00:00",
+      "updatedAt": "2026-06-23T03:35:09.837673+00:00"
+    },
+    {
+      "id": "multi-user-rbac",
+      "name": "Multi User + RBAC",
+      "phase": "Fase 6",
+      "status": "in_progress",
+      "docs": [],
+      "codeRefs": [
+        "app/api/admin.py",
+        "desktop/src/pages/users/"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.862781+00:00",
+      "updatedAt": "2026-06-23T03:35:09.862795+00:00"
+    },
+    {
+      "id": "f2-readiness-engine",
+      "name": "F2 Readiness Engine",
+      "phase": "Fase 1.3",
+      "status": "in_progress",
+      "docs": [
+        "sdd/SDD-F2-Readiness-Engine.md"
+      ],
+      "codeRefs": [
+        "app/audit/readiness_engine.py"
+      ],
+      "lastCommit": "",
+      "createdAt": "2026-06-23T03:35:09.890291+00:00",
+      "updatedAt": "2026-06-23T03:35:09.890311+00:00"
+    }
+  ],
+  "coverage": 33.3,
+  "driftLevel": "high",
+  "lastCommit": "e990590e",
+  "missingCount": 8,
+  "outdatedCount": 0,
+  "graphSummary": {
+    "totalNodes": 163,
+    "totalEdges": 288,
+    "nodeTypes": {
+      "sdd": 47,
+      "stub": 8,
+      "knowledge": 22,
+      "feature": 12,
+      "unknown": 12,
+      "store": 7,
+      "page": 29,
+      "tool": 1,
+      "event": 2,
+      "agent": 14,
+      "provider": 9
+    },
+    "edgeTypes": {
+      "documents": 273,
+      "implements": 15
+    },
+    "sourceHash": "6a22430ed395cac1012297bafd3cf780ac46b3126ed1d15ee9333b76165a0451",
+    "graphVersion": "1.0",
+    "generatedAt": "2026-06-23T17:55:36.976641+00:00"
+  }
+}

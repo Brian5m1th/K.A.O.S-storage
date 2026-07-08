@@ -1,6 +1,17 @@
+---
+id: sdd_fase3_obsidian_service
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Antigravity AI
 Tags: #sdd #python #obsidian #fastapi #fase3 #tools
-Related: [[index]] [[backlog]] [[sdd_fase2_ia_local]] [[sdd_obsidian_tools]] [[sdd_obsidian_memoria]] [[sdd_fase4_rag_pipeline]]
+Related: [[index]] [[Backlog do Projeto]] [[sdd_fase2_ia_local]] [[sdd_obsidian_tools]] [[sdd_obsidian_memoria]] [[sdd_fase4_rag_pipeline]]
 
 # SDD — Fase 3: ObsidianService e Ferramentas de Nota
 
@@ -259,3 +270,30 @@ def test_create_and_read_note(vault: Path) -> None:
 
 - [[sdd_fase4_rag_pipeline]] — Indexação vetorial das notas no Qdrant
 - [[sdd_fase5_watcher_langgraph]] — Agente usa as tools registradas
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

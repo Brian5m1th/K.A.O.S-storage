@@ -18,7 +18,7 @@ status: active
 - [[Pipeline de Consulta da Wiki]]
 
 ## Related
-- [[Provedor HÍbrido de LLM MemÓria do Obsidian]]
+- [[Provedor Hibrido de LLM]] [[Memoria do Obsidian]]
 
 ## Tags
 #kaos #ia #wiki #knowledge #research
@@ -28,7 +28,7 @@ status: active
 ## Conteudo
 ## Source: LLM Wiki Pattern + K.A.O.S SDD-009
 Tags: #sdd #wiki #knowledge #llm-wiki #rag #synthesis
-Related: [[index]] [[Viso Geral]] [[Provedor HÍbrido de LLM]] [[Fluxo de Dados]]
+Related: [[index]] [[Visao Geral]] [[Provedor Hibrido de LLM]] [[Fluxo de Dados]]
 
 # SDD — Knowledge Wiki Layer (LLM Wiki + RAG Híbrido)
 
@@ -317,26 +317,26 @@ Prioridade: **wiki > Qdrant > modelo**.
 
 
 ## Entities
-- [[entities/brian|Brian Smith]]
-- [[entities/kaos|K.A.O.S]]
-- [[entities/qdrant|Qdrant]]
+- [[index|Brian Smith]]
+- [[index|K.A.O.S]]
+- [[index|Qdrant]]
 
 
 
 ## Concepts
-- [[concepts/rag|Retrieval Augmented Generation]]
-- [[concepts/embeddings|Embeddings]]
-- [[concepts/langgraph|LangGraph]]
+- [[Busca Vetorial e RAG|Retrieval Augmented Generation]]
+- [[Gerador de Embeddings|Embeddings]]
+- [[Orquestrador LangGraph|LangGraph]]
 
 
 
 ## Sources
-- [[sources/2026-06-18_llm_wiki|LLM Wiki — 2026-06-18]]
+- [[index|LLM Wiki — 2026-06-18]]
 
 
 
 ## Synthesis
-- [[synthesis/comparacao_mamba_rwkv|Mamba vs RWKV]]
+- [[index|Mamba vs RWKV]]
 ```
 
 ---
@@ -374,9 +374,9 @@ Permite `grep "^## \[" log.md` para últimas N entradas.
 | Check | Descrição | Como detecta |
 |-------|-----------|--------------|
 | Contradictions | Página A diz X, página B diz Y | LLM compara pares de páginas |
-| Orphans | Páginas sem inbound links | Conta `[[links]]` para cada página |
-| Missing concepts | Conceito mencionado 3+ vezes sem página | Grep por menções sem `[[link]]` |
-| Broken links | `[[pagina_inexistente]]` | Verifica se arquivo existe |
+| Orphans | Páginas sem inbound links | Conta `[[index]]` para cada página |
+| Missing concepts | Conceito mencionado 3+ vezes sem página | Grep por menções sem `[[index]]` |
+| Broken links | `[[index]]` | Verifica se arquivo existe |
 | Stale pages | `updated` muito antigo | Compara com última ingestão no log.md |
 
 ### Periodicidade
@@ -432,7 +432,29 @@ Permite `grep "^## \[" log.md` para últimas N entradas.
 - [ ] lint_wiki detecta contradictions, orphans, broken links
 - [ ] Draft Mode protegendo alterações estruturais
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
 
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
 
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
 
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

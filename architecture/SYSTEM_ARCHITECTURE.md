@@ -1,3 +1,14 @@
+---
+id: system_architecture
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Arquitetura do Sistema — K.A.O.S
 
 ## Visão Geral

@@ -1,6 +1,17 @@
+---
+id: sdd_fase4_rag_pipeline
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Antigravity AI
 Tags: #sdd #python #rag #qdrant #embeddings #watchdog #fase4 #fase5 #fase6
-Related: [[index]] [[backlog]] [[sdd_fase3_obsidian_service]] [[sdd_obsidian_rag]] [[sdd_obsidian_watcher]] [[sdd_fase5_watcher_langgraph]]
+Related: [[index]] [[Backlog do Projeto]] [[sdd_fase3_obsidian_service]] [[sdd_obsidian_rag]] [[sdd_obsidian_watcher]] [[sdd_fase5_watcher_langgraph]]
 
 # SDD — Fases 4 e 5: RAG Pipeline + Atualização Automática
 
@@ -183,3 +194,27 @@ class SemanticRetriever:
 ## Desbloqueia
 
 - [[sdd_fase5_watcher_langgraph]] — O LangGraph usará o `SemanticRetriever` como primeira etapa do grafo
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

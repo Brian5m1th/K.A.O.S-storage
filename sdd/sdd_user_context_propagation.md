@@ -1,6 +1,17 @@
+---
+id: sdd_user_context_propagation
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: K.A.O.S Project
 Tags: #sdd #user-context #multiusuario #memoria
-Related: [[index]] [[02_fluxo_dados]] [[sdd_obsidian_memoria]] [[sdd_arquitetura_orquestracao]] [[backlog]]
+Related: [[index]] [[Fluxo de Dados]] [[sdd_obsidian_memoria]] [[sdd_arquitetura_orquestracao]] [[Backlog do Projeto]]
 
 # SDD — User Context Propagation & Multiusuário
 
@@ -86,3 +97,30 @@ class PostgresMemoryRepository: ...    # Futuro
 - [x] Conversas salvas separadamente por usuário
 - [x] Compatível com futura migração para PostgreSQL
 - [x] Logs registram usuário responsável pela ação
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

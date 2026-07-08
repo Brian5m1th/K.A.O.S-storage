@@ -1,3 +1,14 @@
+---
+id: provedor-hibrido-de-llm
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: ia
@@ -10,7 +21,7 @@ status: active
 > Arquitetura do gateway hibrido de inferencia, permitindo fallback suave entre instancias locais (Ollama) e APIs remotas em nuvem.
 
 ## Parent
-- [[Viso Geral]]
+- [[Visao Geral]]
 
 ## Children
 - [[index]]
@@ -440,5 +451,29 @@ O `AGENTS.md`, `index.md`, `log.md` e as ferramentas wiki não dependem do prove
 - [ ] Roteamento dinâmico por latência
 - [ ] Roteamento dinâmico por tipo de request
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
 
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

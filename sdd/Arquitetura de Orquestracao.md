@@ -1,4 +1,18 @@
 ---
+<<<<<<< HEAD
+=======
+id: arquitetura-de-orquestracao
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
+﻿---
+>>>>>>> 4fd98071173c8ac29511af56b95057c14d455a04
 type: knowledge
 domain: arquitetura
 status: active
@@ -213,3 +227,30 @@ A partir da Fase 8, o gateway propaga o `UserContext` (user_id, username, role) 
 - Integração com qualquer cliente compatível com OpenAI API
 - Futura camada de autenticação e rate limiting
 - Middleware de logging e tracing centralizado
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

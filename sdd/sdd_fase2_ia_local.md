@@ -1,6 +1,17 @@
+---
+id: sdd_fase2_ia_local
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Antigravity AI
 Tags: #sdd #python #ollama #fastapi #fase2 #proxy #openai
-Related: [[index]] [[backlog]] [[sdd_fase1_fundacao]] [[sdd_arquitetura_orquestracao]]
+Related: [[index]] [[Backlog do Projeto]] [[sdd_fase1_fundacao]] [[sdd_arquitetura_orquestracao]]
 
 # SDD — Fase 2: IA Local com Ollama
 
@@ -148,3 +159,30 @@ docker compose -f infra/docker/docker-compose.yml up -d
 ## Desbloqueia
 
 - [[sdd_fase3_obsidian_service]] — Chat passa a injetar contexto do Obsidian
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

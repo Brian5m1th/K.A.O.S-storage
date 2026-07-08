@@ -1,4 +1,18 @@
+---
+id: installation
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Guia de Instalação — K.A.O.S
+
+> [!TIP]
+> **Instalação Automática no Windows:** Para facilitar o setup do ambiente completo de desenvolvimento, execute o script `.\setup.ps1` no PowerShell como Administrador na raiz do projeto. Ele fará o download automático de todas as ferramentas e dependências descritas abaixo de forma automatizada.
 
 ## Requisitos Mínimos
 
@@ -397,3 +411,33 @@ uv run pytest
 ## Próximos Passos
 
 Após a instalação, siga o [Guia de Primeira Execução](FIRST_RUN.md) para validar que tudo está funcionando.
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

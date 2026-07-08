@@ -1,3 +1,14 @@
+---
+id: infraestrutura-docker
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: devops
@@ -16,7 +27,7 @@ status: active
 - [[Integracoes de Servicos]]
 
 ## Related
-- [[Viso Geral Variáveis de Ambiente Pipeline CI-CD Auto Update]]
+- [[Variaveis de Ambiente]] [[Visao Geral]]
 
 ## Tags
 #kaos #docker #devops #wsl2 #compose

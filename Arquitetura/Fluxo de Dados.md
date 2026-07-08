@@ -1,4 +1,18 @@
 ---
+<<<<<<< HEAD
+=======
+id: fluxo-de-dados
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
+﻿---
+>>>>>>> 4fd98071173c8ac29511af56b95057c14d455a04
 type: knowledge
 domain: arquitetura
 status: active
@@ -190,7 +204,7 @@ sequenceDiagram
 ---
 
 ## Relacao com outras Notas
-- [[Arquitetura de OrquestraçAo]] — SDD detalhada do proxy gateway
+- [[Arquitetura de Orquestracao]] — SDD detalhada do proxy gateway
 
 
 

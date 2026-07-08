@@ -1,3 +1,14 @@
+---
+id: sdd_desktop_build_optimization
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # SDD — Otimização de Tempo de Build do KAOS Desktop (Tauri)
 
 **Status:** Implementado ✅
@@ -37,3 +48,33 @@ Build executado apenas quando há alteração em `src/**`, `Cargo.toml`, `packag
 ## 4. Fora do Escopo
 
 Auto Update, Docker Runtime, Multi Provider, Ollama/OpenAI/Claude Integration serão tratados em SDDs futuros.
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

@@ -1,3 +1,14 @@
+---
+id: vault_submodule
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Vault Submodule — K.A.O.S-storage
 
 ## Visão Geral
@@ -68,3 +79,33 @@ O arquivo `data/provider_config.json` está em `.gitignore` para evitar vazar AP
 - **Nunca** crie documentação no repositório principal — sempre em `docs/vault/`
 - O submodule é **privado**: builds de terceiros ou forks não terão acesso
 - Sempre use `git submodule update --init --recursive` em novos ambientes
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

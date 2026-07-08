@@ -20,3 +20,30 @@ Desenvolvimento frontend com React 18, TypeScript 5.5, Zustand 5, Tailwind 3 e T
 - Componentes < 200 linhas
 - Hooks customizados para logica reutilizavel
 - FSD layers respeitadas (shared < entities < features < widgets < pages < app)
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

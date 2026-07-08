@@ -1,3 +1,14 @@
+---
+id: ferramentas-do-langgraph
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: ia
@@ -10,7 +21,7 @@ status: active
 > Metadados e esquemas JSON-Schema expostos ao LangGraph para permitir que o LLM execute CRUD no Obsidian.
 
 ## Parent
-- [[Arquitetura de OrquestraçAo]]
+- [[Arquitetura de Orquestracao]]
 
 ## Children
 - [[index]]
@@ -180,6 +191,32 @@ Caso ocorra um problema durante a execução de alguma das ferramentas, o retorn
 - A forma como estas ferramentas interagem diretamente com o sistema de arquivos do Obsidian é descrita em [[Obsidian Watcher]].
 - A lógica de busca semântica chamada pela ferramenta de busca está em [[Busca Vetorial e RAG]].
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
 
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

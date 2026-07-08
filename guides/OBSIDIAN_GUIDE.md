@@ -1,3 +1,14 @@
+---
+id: obsidian_guide
+type: knowledge
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 # Guia Obsidian — K.A.O.S
 
 ## Visão Geral
@@ -86,10 +97,10 @@ drift: low                 # Opcional (preenchido pelo KIRL)
 
 ## Wikilinks
 
-Use `[[id-da-nota]]` para criar links entre notas:
+Use `[[index]]` para criar links entre notas:
 
 ```markdown
-O [[chat-streaming]] depende do [[event-bus]] e do [[tool-schema]].
+O [[SDD-Desktop-Stabilization-F1]] depende do [[SDD-KIRL]] e do [[Ferramentas do LangGraph]].
 ```
 
 Isso alimenta tanto o Graph View do Obsidian quanto o Graphify do K.A.O.S.
@@ -306,3 +317,33 @@ links: []
 | Wikilink quebrado | ID não encontrado | Verifique se o ID existe em outra nota |
 | Drift vermelho inesperado | Feature sem SDD | Crie SDD ou registre no FeatureRegistry |
 | Sincronização não funciona | VaultWatcher não iniciado | Verifique logs do backend |
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

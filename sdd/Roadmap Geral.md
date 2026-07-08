@@ -1,3 +1,14 @@
+---
+id: roadmap-geral
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: roadmap
@@ -13,7 +24,7 @@ status: active
 - [[index]]
 
 ## Children
-- [[Fase 1 - FundaçAo Fase 2 - IA Local Fase 3 - Serviço Obsidian Fases 4-5 - Pipeline RAG e Watcher Fases 6-7 - Watcher LangGraph e MemÓria]]
+- [[Fases 6-7 - Watcher LangGraph e Memoria]] [[Fases 4-5 - Pipeline RAG e Watcher]] [[Fase 3 - Servico Obsidian]] [[Fase 2 - IA Local]] [[Fase 1 - Fundacao]]
 
 ## Related
 - [[Backlog do Projeto]]
@@ -173,4 +184,34 @@ IA adapta respostas com base no historico e preferencias armazenadas.
 - [ ] Webhook tool para N8N
 - [ ] GitHub tool (issues, PRs)
 - [ ] Email tool (send/receive)
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.
 

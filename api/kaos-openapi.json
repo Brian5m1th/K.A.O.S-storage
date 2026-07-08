@@ -1,0 +1,1025 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "K.A.O.S API",
+    "description": "Knowledge Assistant & Offline System — Plataforma universal de orquestracao de IA, agentes e automacoes baseada em capacidades.",
+    "version": "0.1.0",
+    "contact": {
+      "name": "K.A.O.S Team",
+      "url": "https://github.com/Brian5m1th/K.A.O.S"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000",
+      "description": "Desenvolvimento local"
+    }
+  ],
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key",
+        "description": "Chave de API gerada automaticamente em data/api_key.txt"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "detail": { "type": "string", "description": "Mensagem de erro" }
+        }
+      },
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "ok" },
+          "version": { "type": "string", "example": "0.1.0" },
+          "embedder_ready": { "type": "boolean", "example": true }
+        }
+      },
+      "ChatRequest": {
+        "type": "object",
+        "required": ["message"],
+        "properties": {
+          "message": { "type": "string", "description": "Mensagem do usuario" },
+          "model": { "type": "string", "description": "Modelo a ser usado", "default": "llama3.2:3b" },
+          "session_id": { "type": "string", "description": "ID da sessao para continuidade" },
+          "stream": { "type": "boolean", "description": "Habilitar streaming SSE", "default": true },
+          "workflow": { "type": "string", "description": "Workflow a ser executado" }
+        }
+      },
+      "DriftReport": {
+        "type": "object",
+        "properties": {
+          "coverage": { "type": "number", "description": "Percentual de cobertura documental" },
+          "driftLevel": { "type": "string", "enum": ["low", "medium", "high"] },
+          "missingFeatures": { "type": "array", "items": { "type": "string" } },
+          "outdatedDocs": { "type": "array", "items": { "type": "string" } },
+          "inconsistentPhases": { "type": "array", "items": { "type": "string" } },
+          "orphanedSDDs": { "type": "array", "items": { "type": "string" } },
+          "undocumentedCode": { "type": "array", "items": { "type": "string" } },
+          "timestamp": { "type": "string", "format": "date-time" }
+        }
+      },
+      "DRLSnapshot": {
+        "type": "object",
+        "properties": {
+          "features": { "type": "array", "items": { "$ref": "#/components/schemas/FeatureEntry" } },
+          "coverage": { "type": "number" },
+          "driftLevel": { "type": "string" },
+          "lastCommit": { "type": "string" },
+          "missingCount": { "type": "integer" },
+          "outdatedCount": { "type": "integer" },
+          "graphSummary": {
+            "type": "object",
+            "properties": {
+              "totalNodes": { "type": "integer" },
+              "totalEdges": { "type": "integer" }
+            }
+          }
+        }
+      },
+      "FeatureEntry": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "phase": { "type": "string" },
+          "status": { "type": "string", "enum": ["planned", "in-progress", "done"] },
+          "docs": { "type": "array", "items": { "type": "string" } },
+          "codeRefs": { "type": "array", "items": { "type": "string" } },
+          "lastCommit": { "type": "string" },
+          "createdAt": { "type": "string", "format": "date-time" },
+          "updatedAt": { "type": "string", "format": "date-time" }
+        }
+      },
+      "ArchitectureAnalysis": {
+        "type": "object",
+        "properties": {
+          "coverage_score": { "type": "number" },
+          "drift_level": { "type": "string" },
+          "total_issues": { "type": "integer" },
+          "issues": { "type": "array", "items": { "$ref": "#/components/schemas/Evidence" } },
+          "suggestions": { "type": "array", "items": { "type": "string" } },
+          "warnings": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "Evidence": {
+        "type": "object",
+        "properties": {
+          "rule": { "type": "string" },
+          "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+          "source_files": { "type": "array", "items": { "type": "string" } },
+          "source_sdds": { "type": "array", "items": { "type": "string" } },
+          "explanation": { "type": "string" },
+          "confidence": { "type": "number" }
+        }
+      },
+      "KnowledgeGraph": {
+        "type": "object",
+        "properties": {
+          "version": { "type": "string" },
+          "generated_at": { "type": "string" },
+          "total_nodes": { "type": "integer" },
+          "total_edges": { "type": "integer" },
+          "nodes": { "type": "array", "items": { "type": "object" } },
+          "edges": { "type": "array", "items": { "type": "object" } },
+          "features": { "type": "array", "items": { "type": "object" } },
+          "sdds": { "type": "array", "items": { "type": "object" } },
+          "workflows": { "type": "array", "items": { "type": "object" } },
+          "agents": { "type": "array", "items": { "type": "object" } }
+        }
+      },
+      "RAGContextRequest": {
+        "type": "object",
+        "required": ["query"],
+        "properties": {
+          "query": { "type": "string" },
+          "limit": { "type": "integer", "default": 5 }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Verificacao de saude do servico",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Servico saudavel",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/HealthResponse" } } }
+          }
+        }
+      }
+    },
+    "/health/readiness": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Verifica readiness (Ollama)",
+        "security": [],
+        "responses": {
+          "200": { "description": "Pronto para receber requisicoes" },
+          "503": { "description": "Ollama indisponivel" }
+        }
+      }
+    },
+    "/auth/key": {
+      "get": {
+        "tags": ["Auth"],
+        "summary": "Retorna a chave de API (mascarada)",
+        "responses": {
+          "200": { "description": "Chave de API" }
+        }
+      }
+    },
+    "/auth/regenerate": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Regenera a chave de API",
+        "responses": {
+          "200": { "description": "Chave regenerada" }
+        }
+      }
+    },
+    "/api/capabilities": {
+      "get": {
+        "tags": ["Capabilities"],
+        "summary": "Lista todas as politicas de capacidade",
+        "responses": {
+          "200": { "description": "Lista de capacidades" }
+        }
+      }
+    },
+    "/api/capabilities/{capability}": {
+      "get": {
+        "tags": ["Capabilities"],
+        "summary": "Lista politicas por capacidade",
+        "parameters": [
+          { "name": "capability", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Politicas da capacidade" }
+        }
+      },
+      "post": {
+        "tags": ["Capabilities"],
+        "summary": "Cria uma politica de capacidade",
+        "parameters": [
+          { "name": "capability", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "priority_order", "in": "query", "schema": { "type": "integer" } },
+          { "name": "model_id", "in": "query", "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": { "description": "Politica criada" }
+        }
+      },
+      "delete": {
+        "tags": ["Capabilities"],
+        "summary": "Exclui uma politica de capacidade",
+        "parameters": [
+          { "name": "policy_id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": { "description": "Politica excluida" }
+        }
+      }
+    },
+    "/api/chat/message": {
+      "post": {
+        "tags": ["Chat"],
+        "summary": "Envia mensagem e retorna resposta em streaming SSE",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/ChatRequest" } }
+          }
+        },
+        "responses": {
+          "200": { "description": "Streaming de tokens SSE ou resposta JSON" }
+        }
+      }
+    },
+    "/api/feature-flags": {
+      "get": {
+        "tags": ["Feature Flags"],
+        "summary": "Lista todas as feature flags",
+        "responses": {
+          "200": { "description": "Lista de feature flags" }
+        }
+      }
+    },
+    "/api/feature-flags/{flag}": {
+      "get": {
+        "tags": ["Feature Flags"],
+        "summary": "Obtem estado de uma feature flag",
+        "parameters": [
+          { "name": "flag", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Estado da flag" }
+        }
+      },
+      "put": {
+        "tags": ["Feature Flags"],
+        "summary": "Ativa/desativa uma feature flag",
+        "parameters": [
+          { "name": "flag", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "enabled", "in": "query", "schema": { "type": "boolean" }, "default": true }
+        ],
+        "responses": {
+          "200": { "description": "Flag atualizada" }
+        }
+      }
+    },
+    "/api/models": {
+      "get": {
+        "tags": ["Models"],
+        "summary": "Lista modelos (com filtro opcional por capability)",
+        "parameters": [
+          { "name": "capability", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Lista de modelos" }
+        }
+      }
+    },
+    "/api/models/{model_name}": {
+      "get": {
+        "tags": ["Models"],
+        "summary": "Obtem detalhes de um modelo",
+        "parameters": [
+          { "name": "model_name", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Detalhes do modelo" }
+        }
+      }
+    },
+    "/v1/models": {
+      "get": {
+        "tags": ["OpenAI Compatible"],
+        "summary": "Lista modelos (compativel OpenAI)",
+        "security": [],
+        "responses": {
+          "200": { "description": "Lista de modelos no formato OpenAI" }
+        }
+      }
+    },
+    "/v1/chat/completions": {
+      "post": {
+        "tags": ["OpenAI Compatible"],
+        "summary": "Chat completions (compativel OpenAI)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": { "type": "string" },
+                  "messages": { "type": "array", "items": { "type": "object" } },
+                  "stream": { "type": "boolean" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Resposta no formato OpenAI" }
+        }
+      }
+    },
+    "/api/orchestrator/execute": {
+      "post": {
+        "tags": ["Orchestrator"],
+        "summary": "Executa um workflow",
+        "parameters": [
+          { "name": "workflow", "in": "query", "schema": { "type": "string" }, "default": "chat" },
+          { "name": "capabilities", "in": "query", "schema": { "type": "string" } }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/ChatRequest" } }
+          }
+        },
+        "responses": {
+          "200": { "description": "Resultado da execucao do workflow" }
+        }
+      }
+    },
+    "/api/orchestrator/dlq": {
+      "get": {
+        "tags": ["Orchestrator"],
+        "summary": "Lista itens na Dead Letter Queue",
+        "responses": {
+          "200": { "description": "Lista de execucoes falhas" }
+        }
+      },
+      "delete": {
+        "tags": ["Orchestrator"],
+        "summary": "Limpa a Dead Letter Queue",
+        "responses": {
+          "200": { "description": "DLQ limpa" }
+        }
+      }
+    },
+    "/api/provider-configs": {
+      "get": {
+        "tags": ["Provider Configs"],
+        "summary": "Lista configuracoes de provider",
+        "responses": {
+          "200": { "description": "Lista de configuracoes" }
+        }
+      },
+      "post": {
+        "tags": ["Provider Configs"],
+        "summary": "Cria/atualiza configuracao de provider",
+        "parameters": [
+          { "name": "provider_type", "in": "query", "schema": { "type": "string" } },
+          { "name": "provider_name", "in": "query", "schema": { "type": "string" } },
+          { "name": "api_key", "in": "query", "schema": { "type": "string" } },
+          { "name": "base_url", "in": "query", "schema": { "type": "string" } },
+          { "name": "is_active", "in": "query", "schema": { "type": "boolean" }, "default": true }
+        ],
+        "responses": {
+          "200": { "description": "Provider configurado" }
+        }
+      }
+    },
+    "/api/provider-configs/{provider_name}": {
+      "get": {
+        "tags": ["Provider Configs"],
+        "summary": "Obtem config de provider pelo nome",
+        "parameters": [
+          { "name": "provider_name", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Configuracao do provider" }
+        }
+      }
+    },
+    "/api/provider-configs/{config_id}": {
+      "delete": {
+        "tags": ["Provider Configs"],
+        "summary": "Exclui configuracao de provider",
+        "parameters": [
+          { "name": "config_id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": { "description": "Configuracao excluida" }
+        }
+      }
+    },
+    "/rag/context": {
+      "post": {
+        "tags": ["RAG"],
+        "summary": "Obtem contexto RAG para uma query",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/RAGContextRequest" } }
+          }
+        },
+        "responses": {
+          "200": { "description": "Contexto RAG" }
+        }
+      }
+    },
+    "/rag/diagnostics": {
+      "get": {
+        "tags": ["RAG"],
+        "summary": "Diagnostico do Qdrant e colecao",
+        "responses": {
+          "200": { "description": "Diagnostico do RAG" }
+        }
+      }
+    },
+    "/indexing/full": {
+      "post": {
+        "tags": ["Indexing"],
+        "summary": "Reindexacao completa do vault no Qdrant",
+        "responses": {
+          "200": { "description": "Indexacao iniciada" }
+        }
+      }
+    },
+    "/indexing/init-folders": {
+      "post": {
+        "tags": ["Indexing"],
+        "summary": "Cria estrutura de pastas do vault",
+        "responses": {
+          "200": { "description": "Pastas criadas" }
+        }
+      }
+    },
+    "/api/setup/provider": {
+      "get": {
+        "tags": ["Setup"],
+        "summary": "Obtem configuracao atual do provider",
+        "responses": {
+          "200": { "description": "Configuracao atual" }
+        }
+      },
+      "post": {
+        "tags": ["Setup"],
+        "summary": "Salva configuracao do provider",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "provider": { "type": "string" },
+                  "base_url": { "type": "string" },
+                  "api_key": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Provider configurado" }
+        }
+      }
+    },
+    "/api/setup/provider/active": {
+      "get": {
+        "tags": ["Setup"],
+        "summary": "Obtem provider ativo",
+        "responses": {
+          "200": { "description": "Provider ativo" }
+        }
+      },
+      "post": {
+        "tags": ["Setup"],
+        "summary": "Define provider ativo",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "provider": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Provider ativo definido" }
+        }
+      }
+    },
+    "/api/setup/provider/test": {
+      "post": {
+        "tags": ["Setup"],
+        "summary": "Testa conexao com provedor",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "provider": { "type": "string" },
+                  "url": { "type": "string" },
+                  "apiKey": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Resultado do teste" }
+        }
+      }
+    },
+    "/api/users/{user_id}": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Obtem perfil do usuario",
+        "parameters": [
+          { "name": "user_id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Perfil do usuario" }
+        }
+      },
+      "put": {
+        "tags": ["Users"],
+        "summary": "Cria/atualiza perfil do usuario",
+        "parameters": [
+          { "name": "user_id", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "theme", "in": "query", "schema": { "type": "string" } },
+          { "name": "language", "in": "query", "schema": { "type": "string" } },
+          { "name": "vault_path", "in": "query", "schema": { "type": "string" } },
+          { "name": "auto_update", "in": "query", "schema": { "type": "boolean" } },
+          { "name": "telemetry_enabled", "in": "query", "schema": { "type": "boolean" } }
+        ],
+        "responses": {
+          "200": { "description": "Perfil atualizado" }
+        }
+      }
+    },
+    "/api/user-model-profiles/{user_id}": {
+      "get": {
+        "tags": ["User Model Profiles"],
+        "summary": "Lista perfis de modelo do usuario",
+        "parameters": [
+          { "name": "user_id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Lista de perfis" }
+        }
+      }
+    },
+    "/api/user-model-profiles/{user_id}/{workflow_type}": {
+      "get": {
+        "tags": ["User Model Profiles"],
+        "summary": "Obtem perfil de modelo especifico",
+        "parameters": [
+          { "name": "user_id", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "workflow_type", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Perfil do modelo" }
+        }
+      },
+      "put": {
+        "tags": ["User Model Profiles"],
+        "summary": "Cria/atualiza perfil de modelo do usuario",
+        "parameters": [
+          { "name": "user_id", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "workflow_type", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "model_name", "in": "query", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Perfil atualizado" }
+        }
+      },
+      "delete": {
+        "tags": ["User Model Profiles"],
+        "summary": "Exclui um perfil de modelo",
+        "parameters": [
+          { "name": "profile_id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Perfil excluido" }
+        }
+      }
+    },
+    "/api/webhooks/n8n": {
+      "get": {
+        "tags": ["Webhooks"],
+        "summary": "Lista endpoints disponiveis do n8n",
+        "responses": {
+          "200": { "description": "Lista de endpoints" }
+        }
+      },
+      "post": {
+        "tags": ["Webhooks"],
+        "summary": "Webhook generico n8n",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "event": { "type": "string" },
+                  "data": { "type": "object" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Webhook processado" }
+        }
+      }
+    },
+    "/api/webhooks/n8n/chat": {
+      "post": {
+        "tags": ["Webhooks"],
+        "summary": "Webhook de chat n8n",
+        "responses": {
+          "200": { "description": "Webhook processado" }
+        }
+      }
+    },
+    "/api/webhooks/n8n/memory": {
+      "post": {
+        "tags": ["Webhooks"],
+        "summary": "Webhook de memoria n8n",
+        "responses": {
+          "200": { "description": "Webhook processado" }
+        }
+      }
+    },
+    "/api/webhooks/n8n/agent": {
+      "post": {
+        "tags": ["Webhooks"],
+        "summary": "Webhook de agente n8n",
+        "responses": {
+          "200": { "description": "Webhook processado" }
+        }
+      }
+    },
+    "/api/webhooks/n8n/webhook-register": {
+      "post": {
+        "tags": ["Webhooks"],
+        "summary": "Registro de webhook n8n",
+        "responses": {
+          "200": { "description": "Webhook registrado" }
+        }
+      }
+    },
+    "/api/apps/": {
+      "get": {
+        "tags": ["Apps"],
+        "summary": "Lista todos os aplicativos registrados",
+        "responses": {
+          "200": { "description": "Lista de apps" }
+        }
+      }
+    },
+    "/api/apps/{name}": {
+      "get": {
+        "tags": ["Apps"],
+        "summary": "Obtem detalhes de um app pelo nome",
+        "parameters": [
+          { "name": "name", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Detalhes do app" }
+        }
+      }
+    },
+    "/api/notifications/": {
+      "get": {
+        "tags": ["Notifications"],
+        "summary": "Lista notificacoes",
+        "parameters": [
+          { "name": "unread_only", "in": "query", "schema": { "type": "boolean" } },
+          { "name": "limit", "in": "query", "schema": { "type": "integer" }, "default": 50 }
+        ],
+        "responses": {
+          "200": { "description": "Lista de notificacoes" }
+        }
+      }
+    },
+    "/api/notifications/{notification_id}/read": {
+      "post": {
+        "tags": ["Notifications"],
+        "summary": "Marca notificacao como lida",
+        "parameters": [
+          { "name": "notification_id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Notificacao marcada como lida" }
+        }
+      }
+    },
+    "/api/notifications/read-all": {
+      "post": {
+        "tags": ["Notifications"],
+        "summary": "Marca todas as notificacoes como lidas",
+        "responses": {
+          "200": { "description": "Todas marcadas como lidas" }
+        }
+      }
+    },
+    "/api/audit/run": {
+      "post": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Executa auditoria completa de documentacao",
+        "responses": {
+          "200": {
+            "description": "Relatorio de auditoria",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/DriftReport" } }
+            }
+          }
+        }
+      }
+    },
+    "/api/audit/snapshot": {
+      "get": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Obtem snapshot DRL mais recente",
+        "responses": {
+          "200": {
+            "description": "Snapshot do DRL",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/DRLSnapshot" } }
+            }
+          }
+        }
+      }
+    },
+    "/api/audit/coverage": {
+      "get": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Percentual de cobertura e nivel de drift",
+        "responses": {
+          "200": {
+            "description": "Cobertura e drift",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "coverage": { "type": "number" },
+                    "driftLevel": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/audit/scan-commits": {
+      "post": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Mapeia commits a partir do git log",
+        "parameters": [
+          { "name": "limit", "in": "query", "schema": { "type": "integer" }, "default": 200 }
+        ],
+        "responses": {
+          "200": { "description": "Mapa de commits" }
+        }
+      }
+    },
+    "/api/audit/commit-map": {
+      "get": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Obtem mapa de commits existente",
+        "responses": {
+          "200": { "description": "Mapa de commits" }
+        }
+      }
+    },
+    "/api/audit/scan-code": {
+      "post": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Escaneia codebase por features",
+        "responses": {
+          "200": { "description": "Features encontradas no codigo" }
+        }
+      }
+    },
+    "/api/audit/register-feature": {
+      "post": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Registra nova feature no registry",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/FeatureEntry" } }
+          }
+        },
+        "responses": {
+          "200": { "description": "Feature registrada" }
+        }
+      }
+    },
+    "/api/audit/features": {
+      "get": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Lista todas as features registradas",
+        "responses": {
+          "200": { "description": "Lista de features" }
+        }
+      }
+    },
+    "/api/audit/features/{feature_id}": {
+      "get": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Obtem uma feature especifica",
+        "parameters": [
+          { "name": "feature_id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Detalhes da feature" }
+        }
+      }
+    },
+    "/api/audit/generate-sdd": {
+      "post": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Gera um SDD a partir de template",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "featureId": { "type": "string" },
+                  "featureName": { "type": "string" },
+                  "commitHash": { "type": "string" },
+                  "commitMessage": { "type": "string" },
+                  "phase": { "type": "string" },
+                  "detectedCodeRefs": { "type": "array", "items": { "type": "string" } },
+                  "impactType": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "SDD gerado" }
+        }
+      }
+    },
+    "/api/audit/generate-feature-node": {
+      "post": {
+        "tags": ["Audit (KIRL)"],
+        "summary": "Gera feature node SDD (formato Obsidian)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "featureId": { "type": "string" },
+                  "featureName": { "type": "string" },
+                  "featureType": { "type": "string" },
+                  "phase": { "type": "string" },
+                  "tags": { "type": "array", "items": { "type": "string" } },
+                  "links": { "type": "array", "items": { "type": "string" } },
+                  "description": { "type": "string" },
+                  "responsibilities": { "type": "array", "items": { "type": "string" } },
+                  "emits": { "type": "array", "items": { "type": "string" } },
+                  "usedBy": { "type": "array", "items": { "type": "string" } }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Feature node gerado" }
+        }
+      }
+    },
+    "/api/architecture/analyze": {
+      "post": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Executa analise arquitetural completa",
+        "responses": {
+          "200": {
+            "description": "Analise arquitetural",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/ArchitectureAnalysis" } }
+            }
+          }
+        }
+      }
+    },
+    "/api/architecture/analysis": {
+      "get": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Obtem ultima analise arquitetural",
+        "responses": {
+          "200": { "description": "Ultima analise" }
+        }
+      }
+    },
+    "/api/architecture/graph": {
+      "get": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Obtem o grafo de arquitetura",
+        "responses": {
+          "200": { "description": "Grafo de arquitetura" }
+        }
+      },
+      "post": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Constroi o grafo de arquitetura",
+        "responses": {
+          "200": { "description": "Grafo construido" }
+        }
+      }
+    },
+    "/api/architecture/issues": {
+      "get": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Lista evidencias/issues arquiteturais",
+        "responses": {
+          "200": { "description": "Lista de issues" }
+        }
+      }
+    },
+    "/api/architecture/suggestions": {
+      "get": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Lista sugestoes arquiteturais",
+        "responses": {
+          "200": { "description": "Lista de sugestoes" }
+        }
+      }
+    },
+    "/api/architecture/heatmap": {
+      "get": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Obtem dados para heatmap de drift",
+        "responses": {
+          "200": { "description": "Dados do heatmap" }
+        }
+      }
+    },
+    "/api/architecture/scan-vault": {
+      "post": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Escaneia vault e retorna estatisticas",
+        "responses": {
+          "200": { "description": "Estatisticas do vault" }
+        }
+      }
+    },
+    "/api/architecture/knowledge-graph": {
+      "get": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Obtem grafo de conhecimento",
+        "responses": {
+          "200": {
+            "description": "Grafo de conhecimento",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/KnowledgeGraph" } }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Constroi grafo de conhecimento consolidado",
+        "responses": {
+          "200": { "description": "Grafo construido" }
+        }
+      }
+    },
+    "/api/architecture/history": {
+      "get": {
+        "tags": ["Architecture (AI Vault Analyzer)"],
+        "summary": "Lista historico temporal de drift",
+        "responses": {
+          "200": { "description": "Historico temporal de drift" }
+        }
+      }
+    }
+  }
+}

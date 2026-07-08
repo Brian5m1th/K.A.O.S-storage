@@ -1,3 +1,14 @@
+---
+id: memoria-do-obsidian
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: obsidian
@@ -17,7 +28,7 @@ status: active
 - [[Estrutura da Wiki]]
 
 ## Related
-- [[Roteamento de MemÓria PropagaçAo de Contexto de Usuário]]
+- [[Propagacao de Contexto de Usuario]] [[Roteamento de Memoria]]
 
 ## Tags
 #kaos #obsidian #memory #storage #rag
@@ -71,7 +82,7 @@ graph TD
 
 ---
 
-> **Nota:** A partir da Fase 8 (User Context & Multiusuário), a memória é escopada por `user_id`. Preferências e conversas são armazenadas em `Vault/users/{user_id}/` em vez de `Vault/IA/`. Consulte [[PropagaçAo de Contexto de Usuário]] para detalhes.
+> **Nota:** A partir da Fase 8 (User Context & Multiusuário), a memória é escopada por `user_id`. Preferências e conversas são armazenadas em `Vault/users/{user_id}/` em vez de `Vault/IA/`. Consulte [[Propagacao de Contexto de Usuario]] para detalhes.
 
 ---
 
@@ -149,3 +160,32 @@ gantt
     Gestão de Preferências e Documentação   : 2026-07-04, 7d
 ```
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

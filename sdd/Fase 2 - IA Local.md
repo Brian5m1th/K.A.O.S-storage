@@ -1,3 +1,14 @@
+---
+id: fase-2---ia-local
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 ﻿---
 type: knowledge
 domain: ia
@@ -19,7 +30,7 @@ status: active
 - [[Provedor Hibrido de LLM]]
 
 ## Related
-- [[Provedor HÍbrido de LLM Arquitetura de OrquestraçAo]]
+- [[Arquitetura de Orquestracao]] [[Provedor Hibrido de LLM]]
 
 ## Tags
 #kaos #ia #ollama #qwen #local-llm
@@ -189,12 +200,36 @@ docker compose -f infra/docker/docker-compose.yml up -d
 
 ## Dependências
 
-- [[Fase 1 - FundaçAo]] — Fundação deve estar completa
-- [[Arquitetura de OrquestraçAo]] — SDD do proxy OpenAI
+- [[Fase 1 - Fundacao]] — Fundação deve estar completa
+- [[Arquitetura de Orquestracao]] — SDD do proxy OpenAI
 
 ## Desbloqueia
 
-- [[Fase 3 - Serviço Obsidian]] — Chat passa a injetar contexto do Obsidian
+- [[Fase 3 - Servico Obsidian]] — Chat passa a injetar contexto do Obsidian
 
+## Resumo
+- Informações pendentes de validação ou auto-geração.
 
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
 
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.

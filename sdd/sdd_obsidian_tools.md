@@ -1,6 +1,17 @@
+---
+id: sdd_obsidian_tools
+type: sdd
+phase: Fase 1
+status: in-progress
+tags:
+- kaos
+- normalized
+reconstruction_confidence: medium
+---
+
 Source: Notas no ClickUp
 Tags: #sdd #langgraph #tools #json-schema #fastapi
-Related: [[sdd_obsidian_memoria]] [[sdd_obsidian_rag]] [[sdd_obsidian_watcher]] [[02_fluxo_dados]]
+Related: [[sdd_obsidian_memoria]] [[sdd_obsidian_rag]] [[sdd_obsidian_watcher]] [[Fluxo de Dados]]
 
 # SDD Componente — Schemas das Ferramentas (Tools)
 
@@ -77,3 +88,33 @@ Retorno:
 
 - [[sdd_obsidian_watcher]] — Como as tools interagem com o filesystem
 - [[sdd_obsidian_rag]] — Lógica de busca semântica
+
+## Resumo
+- Informações pendentes de validação ou auto-geração.
+
+## Objetivo
+- Informações pendentes de validação ou auto-geração.
+
+## Responsabilidades
+- Informações pendentes de validação ou auto-geração.
+
+## Dependencias
+- Informações pendentes de validação ou auto-geração.
+
+## Fluxos
+- Informações pendentes de validação ou auto-geração.
+
+## Integracoes
+- Informações pendentes de validação ou auto-geração.
+
+## Arquivos Relacionados
+- Informações pendentes de validação ou auto-geração.
+
+## Referencias KIRL
+- Informações pendentes de validação ou auto-geração.
+
+## Status
+- Informações pendentes de validação ou auto-geração.
+
+## Ultima Atualizacao
+- Informações pendentes de validação ou auto-geração.
