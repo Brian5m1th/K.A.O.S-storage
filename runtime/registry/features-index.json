@@ -1,10 +1,31 @@
 {
   "version": "2.0",
-  "generated_at": "2026-07-08T19:52:29.297833+00:00",
+  "generated_at": "2026-07-09T03:43:47.539152+00:00",
   "generated_by": "bootstrap_feature_registry.py (git-history strategy)",
   "source": "git-log + filesystem-sdds",
-  "total_features": 135,
+  "total_features": 149,
   "features": [
+    {
+      "id": "env",
+      "name": "Implement EnvironmentService with multi-strategy path resolution and KIRL integration",
+      "phase": "Fase 0",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/auto-release.yml",
+        ".github/workflows/release.yml",
+        "assistant/app/ai/vault_analyzer/vault_reader.py",
+        "assistant/app/api/system.py",
+        "assistant/app/audit/code_scanner.py",
+        "assistant/app/core/__init__.py",
+        "assistant/app/core/environment_service.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/tests/unit/test_environment_service.py"
+      ],
+      "lastCommit": "5c8eb85ed3de",
+      "createdAt": "2026-07-08T20:41:58-03:00",
+      "updatedAt": "2026-07-08T20:41:58-03:00"
+    },
     {
       "id": "kirl-documentation-runtime-layer",
       "name": "KIRL - Documentation Runtime Layer + Audit System + Graphify",
@@ -130,8 +151,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.275742+00:00",
-      "updatedAt": "2026-07-08T19:52:29.275745+00:00"
+      "createdAt": "2026-07-09T03:43:47.199175+00:00",
+      "updatedAt": "2026-07-09T03:43:47.199178+00:00"
     },
     {
       "id": "audit",
@@ -174,6 +195,35 @@
       "updatedAt": "2026-06-19T15:53:23-03:00"
     },
     {
+      "id": "automation",
+      "name": "Add template listing tests using real workflow files",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/tests/test_automation.py"
+      ],
+      "lastCommit": "35ed37c13272",
+      "createdAt": "2026-07-08T20:43:00-03:00",
+      "updatedAt": "2026-07-08T20:43:00-03:00"
+    },
+    {
+      "id": "bootstrap",
+      "name": "Implement BootstrapManager with 8-stage async startup pipeline",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/core/bootstrap_manager.py",
+        "assistant/app/main.py",
+        "assistant/tests/integration/test_bootstrap_flow.py",
+        "assistant/tests/unit/test_bootstrap_manager.py"
+      ],
+      "lastCommit": "0943c9ec903e",
+      "createdAt": "2026-07-08T20:42:06-03:00",
+      "updatedAt": "2026-07-08T20:42:06-03:00"
+    },
+    {
       "id": "cache",
       "name": "Implementa ResponseCache TTL in-memory com maxsize e evict LRU",
       "phase": "Fase 1",
@@ -197,8 +247,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.274838+00:00",
-      "updatedAt": "2026-07-08T19:52:29.274844+00:00"
+      "createdAt": "2026-07-09T03:43:47.198506+00:00",
+      "updatedAt": "2026-07-09T03:43:47.198513+00:00"
     },
     {
       "id": "config",
@@ -241,8 +291,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.293397+00:00",
-      "updatedAt": "2026-07-08T19:52:29.293403+00:00"
+      "createdAt": "2026-07-09T03:43:47.217380+00:00",
+      "updatedAt": "2026-07-09T03:43:47.217385+00:00"
     },
     {
       "id": "dashboard-honesto-4-state-protocol",
@@ -269,8 +319,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.291310+00:00",
-      "updatedAt": "2026-07-08T19:52:29.291314+00:00"
+      "createdAt": "2026-07-09T03:43:47.215301+00:00",
+      "updatedAt": "2026-07-09T03:43:47.215305+00:00"
     },
     {
       "id": "developer-guide",
@@ -282,8 +332,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.297347+00:00",
-      "updatedAt": "2026-07-08T19:52:29.297351+00:00"
+      "createdAt": "2026-07-09T03:43:47.221335+00:00",
+      "updatedAt": "2026-07-09T03:43:47.221338+00:00"
     },
     {
       "id": "divisao-de-texto-chunking",
@@ -295,12 +345,12 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.289199+00:00",
-      "updatedAt": "2026-07-08T19:52:29.289203+00:00"
+      "createdAt": "2026-07-09T03:43:47.213156+00:00",
+      "updatedAt": "2026-07-09T03:43:47.213160+00:00"
     },
     {
       "id": "docker",
-      "name": "Support audit scanning with mounted .git volume and fix SDD paths",
+      "name": "Add code source volumes and healthcheck for dev reliability",
       "phase": "Fase 1",
       "status": "done",
       "docs": [],
@@ -309,9 +359,9 @@
         "assistant/app/main.py",
         "infra/docker/docker-compose.yml"
       ],
-      "lastCommit": "78cffaf552f8",
+      "lastCommit": "c9c44b565953",
       "createdAt": "2026-06-11T10:31:13-03:00",
-      "updatedAt": "2026-06-24T13:42:31-03:00"
+      "updatedAt": "2026-07-08T20:42:12-03:00"
     },
     {
       "id": "docs",
@@ -413,8 +463,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.275299+00:00",
-      "updatedAt": "2026-07-08T19:52:29.275302+00:00"
+      "createdAt": "2026-07-09T03:43:47.198991+00:00",
+      "updatedAt": "2026-07-09T03:43:47.198994+00:00"
     },
     {
       "id": "especificacao-tecnica",
@@ -426,8 +476,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.286111+00:00",
-      "updatedAt": "2026-07-08T19:52:29.286116+00:00"
+      "createdAt": "2026-07-09T03:43:47.209854+00:00",
+      "updatedAt": "2026-07-09T03:43:47.209859+00:00"
     },
     {
       "id": "fase-3",
@@ -439,8 +489,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.281062+00:00",
-      "updatedAt": "2026-07-08T19:52:29.281066+00:00"
+      "createdAt": "2026-07-09T03:43:47.204739+00:00",
+      "updatedAt": "2026-07-09T03:43:47.204744+00:00"
     },
     {
       "id": "fase1-desktop-stabilization-honest",
@@ -562,8 +612,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.271263+00:00",
-      "updatedAt": "2026-07-08T19:52:29.271268+00:00"
+      "createdAt": "2026-07-09T03:43:47.194816+00:00",
+      "updatedAt": "2026-07-09T03:43:47.194821+00:00"
     },
     {
       "id": "fases-6-7-watcher-langgraph-e-memoria",
@@ -575,8 +625,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.269983+00:00",
-      "updatedAt": "2026-07-08T19:52:29.269989+00:00"
+      "createdAt": "2026-07-09T03:43:47.193491+00:00",
+      "updatedAt": "2026-07-09T03:43:47.193497+00:00"
     },
     {
       "id": "ferramentas-do-langgraph",
@@ -588,8 +638,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.268004+00:00",
-      "updatedAt": "2026-07-08T19:52:29.268010+00:00"
+      "createdAt": "2026-07-09T03:43:47.191585+00:00",
+      "updatedAt": "2026-07-09T03:43:47.191591+00:00"
     },
     {
       "id": "first-run",
@@ -601,8 +651,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.296386+00:00",
-      "updatedAt": "2026-07-08T19:52:29.296390+00:00"
+      "createdAt": "2026-07-09T03:43:47.220377+00:00",
+      "updatedAt": "2026-07-09T03:43:47.220381+00:00"
     },
     {
       "id": "frontend-fsd-architecture",
@@ -614,8 +664,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.289871+00:00",
-      "updatedAt": "2026-07-08T19:52:29.289875+00:00"
+      "createdAt": "2026-07-09T03:43:47.213825+00:00",
+      "updatedAt": "2026-07-09T03:43:47.213830+00:00"
     },
     {
       "id": "functional-spec",
@@ -627,8 +677,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.280014+00:00",
-      "updatedAt": "2026-07-08T19:52:29.280019+00:00"
+      "createdAt": "2026-07-09T03:43:47.203631+00:00",
+      "updatedAt": "2026-07-09T03:43:47.203636+00:00"
     },
     {
       "id": "generate-icon-assets-skip",
@@ -651,8 +701,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.292380+00:00",
-      "updatedAt": "2026-07-08T19:52:29.292385+00:00"
+      "createdAt": "2026-07-09T03:43:47.216395+00:00",
+      "updatedAt": "2026-07-09T03:43:47.216400+00:00"
     },
     {
       "id": "identidade-open-code",
@@ -664,8 +714,74 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.272655+00:00",
-      "updatedAt": "2026-07-08T19:52:29.272658+00:00"
+      "createdAt": "2026-07-09T03:43:47.196214+00:00",
+      "updatedAt": "2026-07-09T03:43:47.196217+00:00"
+    },
+    {
+      "id": "implementa-deteccao-contradicoes-logicas",
+      "name": "Implementa deteccao de contradicoes logicas e cronologicas no analisador do vault",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/ai/vault_analyzer/evidence_engine.py",
+        "assistant/app/ai/vault_analyzer/vault_reader.py",
+        "assistant/tests/unit/test_evidence_engine.py"
+      ],
+      "lastCommit": "2dbbe4ac949f",
+      "createdAt": "2026-07-09T00:12:51-03:00",
+      "updatedAt": "2026-07-09T00:12:51-03:00"
+    },
+    {
+      "id": "implementa-handshake-criptografia-efemera",
+      "name": "Implementa handshake de criptografia efemera PyNaCl e setup seguro",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/auth.py",
+        "assistant/app/api/setup.py",
+        "assistant/app/auth/handshake.py",
+        "assistant/app/middleware/auth.py",
+        "assistant/pyproject.toml",
+        "assistant/tests/unit/test_handshake.py"
+      ],
+      "lastCommit": "0fa7c8902a51",
+      "createdAt": "2026-07-09T00:09:03-03:00",
+      "updatedAt": "2026-07-09T00:09:03-03:00"
+    },
+    {
+      "id": "implementa-interface-agnostica-airuntime",
+      "name": "Implementa interface agnostica AIRuntime e RuntimeSelector",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/runtime/runtime_layer.py",
+        "assistant/app/runtime/runtime_selector.py",
+        "assistant/tests/unit/test_runtime_selector.py"
+      ],
+      "lastCommit": "87d643357c99",
+      "createdAt": "2026-07-09T00:05:13-03:00",
+      "updatedAt": "2026-07-09T00:05:13-03:00"
+    },
+    {
+      "id": "implementa-segregacao-usuario-por",
+      "name": "Implementa segregacao de usuario por contextvars e cache sqlite de embeddings",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/main.py",
+        "assistant/app/memory/memory_service.py",
+        "assistant/app/middleware/user_context.py",
+        "assistant/app/rag/embeddings/cache.py",
+        "assistant/app/rag/embeddings/embedder.py",
+        "assistant/tests/unit/rag/test_embeddings_cache.py"
+      ],
+      "lastCommit": "fc01f9cdc208",
+      "createdAt": "2026-07-09T00:03:37-03:00",
+      "updatedAt": "2026-07-09T00:03:37-03:00"
     },
     {
       "id": "infra",
@@ -716,8 +832,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.294984+00:00",
-      "updatedAt": "2026-07-08T19:52:29.294988+00:00"
+      "createdAt": "2026-07-09T03:43:47.218971+00:00",
+      "updatedAt": "2026-07-09T03:43:47.218975+00:00"
     },
     {
       "id": "integra-agente-langgraph-nas",
@@ -799,6 +915,102 @@
       "updatedAt": "2026-06-12T18:21:47-03:00"
     },
     {
+      "id": "k-a-o-s-stabilization-and-real",
+      "name": "K.A.O.S stabilization and real backend integrations",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/drift-check.yml",
+        ".github/workflows/registry-sync.yml",
+        "assistant/app/ai/vault_analyzer/knowledge_graph.py",
+        "assistant/app/api/admin.py",
+        "assistant/app/api/agents_api.py",
+        "assistant/app/api/automation.py",
+        "assistant/app/api/integrations.py",
+        "assistant/app/api/mcp.py",
+        "assistant/app/api/observability.py",
+        "assistant/app/api/prompts.py",
+        "assistant/app/api/rag.py",
+        "assistant/app/api/settings_api.py",
+        "assistant/app/api/system.py",
+        "assistant/app/api/users.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/core/knowledge_graph_watcher.py",
+        "assistant/app/core/mcp_manager.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/app/main.py",
+        "assistant/app/memory/models.py",
+        "assistant/app/memory/postgres_repository.py",
+        "assistant/app/middleware/user_context.py",
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/prompt.py",
+        "assistant/app/repositories/conversation_repository.py",
+        "assistant/migrations/env.py",
+        "assistant/pyproject.toml",
+        "assistant/scripts/bootstrap_feature_registry.py",
+        "assistant/tests/unit/test_knowledge_graph.py",
+        "desktop/public/workflows/cost_tracker_workflow.json",
+        "desktop/public/workflows/devops_backup_workflow.json",
+        "desktop/public/workflows/github_review_workflow.json",
+        "desktop/public/workflows/mcp_health_workflow.json",
+        "desktop/public/workflows/vault_sync_workflow.json",
+        "desktop/public/workflows/whatsapp_chatbot_workflow.json",
+        "desktop/src-tauri/src/lib.rs",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/agents.tsx",
+        "desktop/src/app/routes/pages/architecture/index.tsx",
+        "desktop/src/app/routes/pages/automation-studio.tsx",
+        "desktop/src/app/routes/pages/chat.tsx",
+        "desktop/src/app/routes/pages/costs.tsx",
+        "desktop/src/app/routes/pages/dashboard.tsx",
+        "desktop/src/app/routes/pages/documentation/index.tsx",
+        "desktop/src/app/routes/pages/events.tsx",
+        "desktop/src/app/routes/pages/graphify.tsx",
+        "desktop/src/app/routes/pages/knowledge-graph.tsx",
+        "desktop/src/app/routes/pages/login.tsx",
+        "desktop/src/app/routes/pages/marketplace.tsx",
+        "desktop/src/app/routes/pages/observability.tsx",
+        "desktop/src/app/routes/pages/orchestration.tsx",
+        "desktop/src/app/routes/pages/pipelines.tsx",
+        "desktop/src/app/routes/pages/prompts.tsx",
+        "desktop/src/app/routes/pages/settings.tsx",
+        "desktop/src/app/routes/pages/setup.tsx",
+        "desktop/src/app/routes/pages/tools.tsx",
+        "desktop/src/app/routes/pages/users.tsx",
+        "desktop/src/app/routes/pages/vault.tsx",
+        "desktop/src/app/routes/pages/welcome.tsx",
+        "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/events/index.tsx",
+        "desktop/src/pages/graphify/index.tsx",
+        "desktop/src/pages/knowledge-graph/index.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/orchestration/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/prompts/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/tools/index.tsx",
+        "desktop/src/pages/users/index.tsx",
+        "desktop/src/shared/api/ipc-bridge.ts",
+        "desktop/src/shared/api/tauri-store-service.ts",
+        "desktop/src/shared/lib/stores/agent-store.ts",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/chat-store.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/lib/use-init.ts",
+        "desktop/src/widgets/sidebar/index.tsx"
+      ],
+      "lastCommit": "32ba21a5a2c3",
+      "createdAt": "2026-06-28T19:54:24-03:00",
+      "updatedAt": "2026-06-28T19:54:24-03:00"
+    },
+    {
       "id": "kirl-guide",
       "name": "Guia KIRL — K.A.O.S Intelligence Runtime Layer",
       "phase": "Fase 1",
@@ -808,8 +1020,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.295915+00:00",
-      "updatedAt": "2026-07-08T19:52:29.295918+00:00"
+      "createdAt": "2026-07-09T03:43:47.219924+00:00",
+      "updatedAt": "2026-07-09T03:43:47.219928+00:00"
     },
     {
       "id": "knowledge-graph",
@@ -921,6 +1133,21 @@
       "updatedAt": "2026-06-23T12:23:11-03:00"
     },
     {
+      "id": "marketplace",
+      "name": "Add workflow templates API and dynamic frontend integration",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/automation.py",
+        "desktop/src/pages/automation/marketplace.tsx",
+        "desktop/src/widgets/sidebar/index.tsx"
+      ],
+      "lastCommit": "fece02e93eb4",
+      "createdAt": "2026-07-08T20:42:23-03:00",
+      "updatedAt": "2026-07-08T20:42:23-03:00"
+    },
+    {
       "id": "memoria-do-obsidian",
       "name": "MemÓria do Obsidian",
       "phase": "Fase 1",
@@ -930,8 +1157,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.283574+00:00",
-      "updatedAt": "2026-07-08T19:52:29.283579+00:00"
+      "createdAt": "2026-07-09T03:43:47.207169+00:00",
+      "updatedAt": "2026-07-09T03:43:47.207174+00:00"
     },
     {
       "id": "memory",
@@ -1109,8 +1336,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.288743+00:00",
-      "updatedAt": "2026-07-08T19:52:29.288747+00:00"
+      "createdAt": "2026-07-09T03:43:47.212691+00:00",
+      "updatedAt": "2026-07-09T03:43:47.212696+00:00"
     },
     {
       "id": "observability-real",
@@ -1122,8 +1349,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.265282+00:00",
-      "updatedAt": "2026-07-08T19:52:29.265287+00:00"
+      "createdAt": "2026-07-09T03:43:47.189051+00:00",
+      "updatedAt": "2026-07-09T03:43:47.189056+00:00"
     },
     {
       "id": "obsidian-guide",
@@ -1135,8 +1362,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.294495+00:00",
-      "updatedAt": "2026-07-08T19:52:29.294500+00:00"
+      "createdAt": "2026-07-09T03:43:47.218495+00:00",
+      "updatedAt": "2026-07-09T03:43:47.218500+00:00"
     },
     {
       "id": "obsidian-watcher",
@@ -1148,8 +1375,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.272189+00:00",
-      "updatedAt": "2026-07-08T19:52:29.272196+00:00"
+      "createdAt": "2026-07-09T03:43:47.195743+00:00",
+      "updatedAt": "2026-07-09T03:43:47.195747+00:00"
     },
     {
       "id": "obsidianservice-tools-leitura-escrita-busca-vault",
@@ -1188,8 +1415,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.295460+00:00",
-      "updatedAt": "2026-07-08T19:52:29.295463+00:00"
+      "createdAt": "2026-07-09T03:43:47.219431+00:00",
+      "updatedAt": "2026-07-09T03:43:47.219435+00:00"
     },
     {
       "id": "orquestrador-langgraph",
@@ -1201,8 +1428,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.266189+00:00",
-      "updatedAt": "2026-07-08T19:52:29.266194+00:00"
+      "createdAt": "2026-07-09T03:43:47.189697+00:00",
+      "updatedAt": "2026-07-09T03:43:47.189702+00:00"
     },
     {
       "id": "otimiza-dockerfile-com-torch",
@@ -1292,8 +1519,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.263960+00:00",
-      "updatedAt": "2026-07-08T19:52:29.263975+00:00"
+      "createdAt": "2026-07-09T03:43:47.187797+00:00",
+      "updatedAt": "2026-07-09T03:43:47.187808+00:00"
     },
     {
       "id": "provider-routing",
@@ -1305,8 +1532,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.290844+00:00",
-      "updatedAt": "2026-07-08T19:52:29.290847+00:00"
+      "createdAt": "2026-07-09T03:43:47.214834+00:00",
+      "updatedAt": "2026-07-09T03:43:47.214839+00:00"
     },
     {
       "id": "proxy",
@@ -1376,8 +1603,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.276220+00:00",
-      "updatedAt": "2026-07-08T19:52:29.276225+00:00"
+      "createdAt": "2026-07-09T03:43:47.199664+00:00",
+      "updatedAt": "2026-07-09T03:43:47.199668+00:00"
     },
     {
       "id": "refatoracao-frontend-fsd",
@@ -1389,33 +1616,40 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.264700+00:00",
-      "updatedAt": "2026-07-08T19:52:29.264706+00:00"
+      "createdAt": "2026-07-09T03:43:47.188490+00:00",
+      "updatedAt": "2026-07-09T03:43:47.188496+00:00"
     },
     {
       "id": "registry",
-      "name": "Sync docs submodule pointer",
+      "name": "Update docs submodule pointer [skip ci]",
       "phase": "Fase 1",
       "status": "done",
       "docs": [],
       "codeRefs": [],
-      "lastCommit": "15a5df59d6f2",
+      "lastCommit": "7a2742b9dbbe",
       "createdAt": "2026-06-24T16:42:05Z",
-      "updatedAt": "2026-07-08T16:51:37-03:00"
+      "updatedAt": "2026-07-08T19:52:31Z"
     },
     {
       "id": "release",
-      "name": "Bump version to 2.0.0 for new release",
+      "name": "2.2.1 [skip ci]",
       "phase": "Fase 1",
       "status": "done",
-      "docs": [],
-      "codeRefs": [
-        "desktop/package.json",
-        "desktop/src-tauri/tauri.conf.json"
+      "docs": [
+        "CHANGELOG.md"
       ],
-      "lastCommit": "2e57a74ccc76",
+      "codeRefs": [
+        ".github/workflows/auto-release.yml",
+        ".github/workflows/desktop-ci.yml",
+        ".releaserc.json",
+        "desktop/package.json",
+        "desktop/src-tauri/Cargo.toml",
+        "desktop/src-tauri/tauri.conf.json",
+        "package.json"
+      ],
+      "lastCommit": "d369d9459fe8",
       "createdAt": "2026-06-24T13:06:19-03:00",
-      "updatedAt": "2026-06-24T13:06:19-03:00"
+      "updatedAt": "2026-07-08T20:43:59Z"
     },
     {
       "id": "roadmap-geral",
@@ -1427,8 +1661,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.279539+00:00",
-      "updatedAt": "2026-07-08T19:52:29.279544+00:00"
+      "createdAt": "2026-07-09T03:43:47.203154+00:00",
+      "updatedAt": "2026-07-09T03:43:47.203159+00:00"
     },
     {
       "id": "roteamento-de-memoria",
@@ -1440,8 +1674,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.286835+00:00",
-      "updatedAt": "2026-07-08T19:52:29.286839+00:00"
+      "createdAt": "2026-07-09T03:43:47.210641+00:00",
+      "updatedAt": "2026-07-09T03:43:47.210645+00:00"
     },
     {
       "id": "router",
@@ -1734,8 +1968,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.290387+00:00",
-      "updatedAt": "2026-07-08T19:52:29.290391+00:00"
+      "createdAt": "2026-07-09T03:43:47.214318+00:00",
+      "updatedAt": "2026-07-09T03:43:47.214322+00:00"
     },
     {
       "id": "technical-spec",
@@ -1747,8 +1981,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.277635+00:00",
-      "updatedAt": "2026-07-08T19:52:29.277640+00:00"
+      "createdAt": "2026-07-09T03:43:47.201171+00:00",
+      "updatedAt": "2026-07-09T03:43:47.201176+00:00"
     },
     {
       "id": "tests",
@@ -1756,6 +1990,7 @@
       "phase": "Fase 1",
       "status": "done",
       "docs": [
+        ".opencode/plans/SDD-Estrategia-Testes-F6.md",
         "assistant/tests/fixtures/raw/test-source.md"
       ],
       "codeRefs": [
@@ -1822,8 +2057,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.296849+00:00",
-      "updatedAt": "2026-07-08T19:52:29.296853+00:00"
+      "createdAt": "2026-07-09T03:43:47.220864+00:00",
+      "updatedAt": "2026-07-09T03:43:47.220868+00:00"
     },
     {
       "id": "ux",
@@ -1868,8 +2103,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-08T19:52:29.286402+00:00",
-      "updatedAt": "2026-07-08T19:52:29.286405+00:00"
+      "createdAt": "2026-07-09T03:43:47.210161+00:00",
+      "updatedAt": "2026-07-09T03:43:47.210164+00:00"
     },
     {
       "id": "vault",
@@ -1974,9 +2209,7 @@
       "name": "Fase 10 - Refactor + Tests + Docs",
       "phase": "Fase 10",
       "status": "done",
-      "docs": [
-        "docs/sdd/test.md"
-      ],
+      "docs": [],
       "codeRefs": [
         "assistant/pyproject.toml",
         "assistant/tests/unit/test_domain_user.py",
@@ -2226,6 +2459,225 @@
       "updatedAt": "2026-06-19T16:25:01-03:00"
     },
     {
+      "id": "fase401-corrige-lint-python",
+      "name": "Corrige lint Python (E402/F401), coverage thresholds e templates de teste",
+      "phase": "Fase 401",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/desktop-ci.yml",
+        "assistant/app/api/opencode.py",
+        "assistant/app/api/setup.py",
+        "assistant/app/core/opencode_executor.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/app/main.py",
+        "assistant/app/runtime/runtime_selector.py",
+        "assistant/tests/test_automation.py",
+        "assistant/tests/unit/rag/test_embeddings_cache.py",
+        "assistant/tests/unit/test_bootstrap_manager.py",
+        "assistant/tests/unit/test_evidence_engine.py",
+        "assistant/tests/unit/test_github_mcp.py",
+        "assistant/tests/unit/test_opencode_executor.py",
+        "assistant/tests/unit/test_runtime_selector.py",
+        "desktop/vitest.config.ts"
+      ],
+      "lastCommit": "415725b4ff51",
+      "createdAt": "2026-07-09T00:43:12-03:00",
+      "updatedAt": "2026-07-09T00:43:12-03:00"
+    },
+    {
+      "id": "fase5-refatoracao-arquitetural-estrategia",
+      "name": "Fase 5 (Refatoracao Arquitetural) + Fase 6 (Estrategia de Testes)",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [
+        ".opencode/plans/SDD-Estrategia-Testes-F6.md",
+        "desktop/src/features/generate-docs/ui/DocGeneratorModal.tsx"
+      ],
+      "codeRefs": [
+        ".github/workflows/desktop-ci.yml",
+        "assistant/pyproject.toml",
+        "desktop/package.json",
+        "desktop/playwright.config.ts",
+        "desktop/src/__tests__/e2e/navigation.spec.ts",
+        "desktop/src/__tests__/features/ask-ai.test.ts",
+        "desktop/src/__tests__/features/code-introspector.test.ts",
+        "desktop/src/__tests__/features/doc-generator.test.ts",
+        "desktop/src/__tests__/features/drift-engine.test.ts",
+        "desktop/src/__tests__/features/drift-store.test.ts",
+        "desktop/src/__tests__/features/feature-extractor.test.ts",
+        "desktop/src/__tests__/features/feature-scanner.test.ts",
+        "desktop/src/__tests__/features/graph-builder.test.ts",
+        "desktop/src/__tests__/features/graph-export.test.ts",
+        "desktop/src/__tests__/features/heatmap-store.test.ts",
+        "desktop/src/__tests__/features/layout-engine.test.ts",
+        "desktop/src/__tests__/features/useSettings.test.ts",
+        "desktop/src/__tests__/integration/audit-graph-flow.test.ts",
+        "desktop/src/__tests__/integration/auth-chat-flow.test.ts",
+        "desktop/src/__tests__/setup.ts",
+        "desktop/src/__tests__/shared/api/ipc-bridge.test.ts",
+        "desktop/src/__tests__/shared/api/kaos-client.test.ts",
+        "desktop/src/__tests__/shared/api/tauri-store-service.test.ts",
+        "desktop/src/__tests__/shared/lib/command-registry.test.ts",
+        "desktop/src/__tests__/shared/lib/event-bus.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/agent-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/auth-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/chat-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/conversation-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/system-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/theme-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/ui-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/update-store.test.ts",
+        "desktop/src/__tests__/shared/ui/badge.test.tsx",
+        "desktop/src/__tests__/shared/ui/button.test.tsx",
+        "desktop/src/__tests__/shared/ui/card.test.tsx",
+        "desktop/src/__tests__/shared/ui/dropdown.test.tsx",
+        "desktop/src/__tests__/shared/ui/input.test.tsx",
+        "desktop/src/__tests__/shared/ui/tabs.test.tsx",
+        "desktop/src/app/layouts/AppLayout.tsx",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/application/hooks/index.ts",
+        "desktop/src/application/hooks/useSettings.ts",
+        "desktop/src/application/hooks/useSystemMetrics.ts",
+        "desktop/src/application/hooks/useUpdateCheck.ts",
+        "desktop/src/application/hooks/useUpdateScheduler.ts",
+        "desktop/src/application/hooks/useUpdaterService.ts",
+        "desktop/src/application/hooks/useVaultInit.ts",
+        "desktop/src/application/index.ts",
+        "desktop/src/application/stores/agent-store.ts",
+        "desktop/src/application/stores/auth-store.ts",
+        "desktop/src/application/stores/chat-store.ts",
+        "desktop/src/application/stores/conversation-store.ts",
+        "desktop/src/application/stores/index.ts",
+        "desktop/src/application/stores/system-store.ts",
+        "desktop/src/application/stores/theme-store.ts",
+        "desktop/src/application/stores/ui-store.ts",
+        "desktop/src/application/stores/update-store.ts",
+        "desktop/src/features/auto-update/hooks/useUpdateScheduler.ts",
+        "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
+        "desktop/src/features/auto-update/ui/UpdateCard.tsx",
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/features/documentation-audit/auto-doc/code-introspector.ts",
+        "desktop/src/features/documentation-audit/auto-doc/doc-sync-engine.ts",
+        "desktop/src/features/documentation-audit/engine/commit-mapper.ts",
+        "desktop/src/features/documentation-audit/engine/feature-scanner.ts",
+        "desktop/src/features/documentation-audit/graph/graph-updater.ts",
+        "desktop/src/features/documentation-audit/heatmap/heatmap-store.ts",
+        "desktop/src/features/documentation-audit/store/drift-store.ts",
+        "desktop/src/features/index-vault/hooks/useVaultInit.ts",
+        "desktop/src/features/manage-settings/hooks/useSettings.ts",
+        "desktop/src/infrastructure/commands/command-registry.ts",
+        "desktop/src/infrastructure/commands/index.ts",
+        "desktop/src/infrastructure/event-bus/event-bus.ts",
+        "desktop/src/infrastructure/event-bus/index.ts",
+        "desktop/src/infrastructure/http/index.ts",
+        "desktop/src/infrastructure/http/kaos-client.ts",
+        "desktop/src/infrastructure/index.ts",
+        "desktop/src/infrastructure/ipc/index.ts",
+        "desktop/src/infrastructure/ipc/ipc-bridge.ts",
+        "desktop/src/infrastructure/storage/index.ts",
+        "desktop/src/infrastructure/storage/tauri-store-service.ts",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/automation/marketplace.tsx",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/costs/index.tsx",
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/documentation/index.tsx",
+        "desktop/src/pages/events/index.tsx",
+        "desktop/src/pages/graphify/index.tsx",
+        "desktop/src/pages/knowledge-graph/index.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/prompts/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/setup/index.tsx",
+        "desktop/src/pages/tools/index.tsx",
+        "desktop/src/pages/users/index.tsx",
+        "desktop/src/pages/vault/index.tsx",
+        "desktop/src/pages/welcome/index.tsx",
+        "desktop/src/presentation/components/index.ts",
+        "desktop/src/presentation/components/model-selector/CustomModelInput.tsx",
+        "desktop/src/presentation/components/model-selector/ModelDropdown.tsx",
+        "desktop/src/presentation/components/model-selector/ModelSelector.tsx",
+        "desktop/src/presentation/components/model-selector/ModelShortcuts.tsx",
+        "desktop/src/presentation/components/model-selector/ProviderDropdown.tsx",
+        "desktop/src/presentation/components/model-selector/index.ts",
+        "desktop/src/presentation/index.ts",
+        "desktop/src/shared/api/index.ts",
+        "desktop/src/shared/lib/command-registry.ts",
+        "desktop/src/shared/lib/event-bus.ts",
+        "desktop/src/shared/lib/stores/agent-store.ts",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/chat-store.ts",
+        "desktop/src/shared/lib/stores/conversation-store.ts",
+        "desktop/src/shared/lib/stores/index.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/lib/use-init.ts",
+        "desktop/src/widgets/command-palette/index.tsx",
+        "desktop/src/widgets/sidebar/index.tsx",
+        "desktop/src/widgets/topbar/index.tsx",
+        "desktop/tsconfig.json",
+        "desktop/vitest.config.ts"
+      ],
+      "lastCommit": "00a80d93972b",
+      "createdAt": "2026-07-08T22:57:51-03:00",
+      "updatedAt": "2026-07-08T22:57:51-03:00"
+    },
+    {
+      "id": "fase5-test-corrige-imports",
+      "name": "Corrige imports e mocks apos refatoracao Fase 5",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [
+        "docs/sdd/test.md",
+        "wiki/index.md",
+        "wiki/log.md"
+      ],
+      "codeRefs": [
+        "desktop/src/__tests__/features/code-introspector.test.ts",
+        "desktop/src/__tests__/features/drift-engine.test.ts",
+        "desktop/src/__tests__/features/drift-store.test.ts",
+        "desktop/src/__tests__/features/feature-extractor.test.ts",
+        "desktop/src/__tests__/features/feature-scanner.test.ts",
+        "desktop/src/__tests__/features/graph-builder.test.ts",
+        "desktop/src/__tests__/features/graph-export.test.ts",
+        "desktop/src/__tests__/features/heatmap-store.test.ts",
+        "desktop/src/__tests__/features/layout-engine.test.ts",
+        "desktop/src/__tests__/features/useSettings.test.ts",
+        "desktop/src/__tests__/integration/audit-graph-flow.test.ts",
+        "desktop/src/__tests__/integration/auth-chat-flow.test.ts",
+        "desktop/src/__tests__/setup.ts",
+        "desktop/src/__tests__/shared/api/ipc-bridge.test.ts",
+        "desktop/src/__tests__/shared/api/kaos-client.test.ts",
+        "desktop/src/__tests__/shared/api/tauri-store-service.test.ts",
+        "desktop/src/__tests__/shared/lib/command-registry.test.ts",
+        "desktop/src/__tests__/shared/lib/event-bus.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/agent-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/auth-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/chat-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/conversation-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/system-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/theme-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/update-store.test.ts",
+        "desktop/src/__tests__/shared/ui/badge.test.tsx",
+        "desktop/src/__tests__/shared/ui/dropdown.test.tsx",
+        "desktop/src/__tests__/shared/ui/tabs.test.tsx",
+        "desktop/src/infrastructure/commands/command-registry.ts",
+        "desktop/src/infrastructure/commands/index.ts",
+        "desktop/src/infrastructure/event-bus/event-bus.ts",
+        "desktop/src/infrastructure/event-bus/index.ts",
+        "desktop/src/infrastructure/storage/tauri-store-service.ts",
+        "desktop/src/shared/lib/event-bus.ts",
+        "desktop/tsconfig.json"
+      ],
+      "lastCommit": "5edc4ff250b6",
+      "createdAt": "2026-07-09T00:27:34-03:00",
+      "updatedAt": "2026-07-09T00:27:34-03:00"
+    },
+    {
       "id": "fase5-workflow-registry",
       "name": "Fase 5: Workflow Registry",
       "phase": "Fase 5",
@@ -2265,6 +2717,21 @@
       "lastCommit": "df96ea0886df",
       "createdAt": "2026-06-25T13:45:52-03:00",
       "updatedAt": "2026-06-25T13:45:52-03:00"
+    },
+    {
+      "id": "implementa-executor-opencodeexecutor-com",
+      "name": "Implementa executor OpenCodeExecutor com whitelist/blacklist e sandbox Docker",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/opencode.py",
+        "assistant/app/core/opencode_executor.py",
+        "assistant/tests/unit/test_opencode_executor.py"
+      ],
+      "lastCommit": "6a0fe4c2bb79",
+      "createdAt": "2026-07-09T00:17:02-03:00",
+      "updatedAt": "2026-07-09T00:17:02-03:00"
     },
     {
       "id": "integrate-tools-and-registry",
@@ -2436,6 +2903,19 @@
       "lastCommit": "8af0ab0de10c",
       "createdAt": "2026-06-21T19:40:39-03:00",
       "updatedAt": "2026-06-21T19:40:39-03:00"
+    },
+    {
+      "id": "implementa-adaptador-github-tool-py-sob",
+      "name": "Implementa adaptador github_tool.py sob o protocolo mcp",
+      "phase": "Fase 7",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/tools/github_tool.py"
+      ],
+      "lastCommit": "2a08d9318238",
+      "createdAt": "2026-07-09T00:21:25-03:00",
+      "updatedAt": "2026-07-09T00:21:25-03:00"
     },
     {
       "id": "sdd-kaos-mcp-001",
