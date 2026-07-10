@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "generated_at": "2026-07-09T03:51:50.199429+00:00",
+  "generated_at": "2026-07-10T01:04:41.477911+00:00",
   "generated_by": "bootstrap_feature_registry.py (git-history strategy)",
   "source": "git-log + filesystem-sdds",
-  "total_features": 150,
+  "total_features": 155,
   "features": [
     {
       "id": "env",
@@ -151,8 +151,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.868974+00:00",
-      "updatedAt": "2026-07-09T03:51:49.868977+00:00"
+      "createdAt": "2026-07-10T01:04:41.151795+00:00",
+      "updatedAt": "2026-07-10T01:04:41.151799+00:00"
     },
     {
       "id": "audit",
@@ -160,6 +160,7 @@
       "phase": "Fase 1",
       "status": "done",
       "docs": [
+        "docs/guides/WORKFLOWS_AUDIT.md",
         "docs/sdd/validation-audit.md"
       ],
       "codeRefs": [
@@ -238,6 +239,19 @@
       "updatedAt": "2026-06-11T10:31:55-03:00"
     },
     {
+      "id": "cicd-architecture",
+      "name": "Arquitetura de CI/CD — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/CICD_ARCHITECTURE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-10T01:04:41.173047+00:00",
+      "updatedAt": "2026-07-10T01:04:41.173051+00:00"
+    },
+    {
       "id": "classificador-de-intencoes",
       "name": "Classificador de Intenções",
       "phase": "Fase 1",
@@ -247,8 +261,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.868316+00:00",
-      "updatedAt": "2026-07-09T03:51:49.868321+00:00"
+      "createdAt": "2026-07-10T01:04:41.151173+00:00",
+      "updatedAt": "2026-07-10T01:04:41.151178+00:00"
     },
     {
       "id": "config",
@@ -291,8 +305,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.886586+00:00",
-      "updatedAt": "2026-07-09T03:51:49.886591+00:00"
+      "createdAt": "2026-07-10T01:04:41.170051+00:00",
+      "updatedAt": "2026-07-10T01:04:41.170057+00:00"
     },
     {
       "id": "dashboard-honesto-4-state-protocol",
@@ -310,6 +324,19 @@
       "updatedAt": "2026-06-22T22:32:50-03:00"
     },
     {
+      "id": "deployment-guide",
+      "name": "K.A.O.S — Guia Oficial de Implantação e Produção",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/DEPLOYMENT_GUIDE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-10T01:04:41.173334+00:00",
+      "updatedAt": "2026-07-10T01:04:41.173337+00:00"
+    },
+    {
       "id": "desktop-architecture",
       "name": "Arquitetura Desktop — K.A.O.S",
       "phase": "Fase 1",
@@ -319,8 +346,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.884583+00:00",
-      "updatedAt": "2026-07-09T03:51:49.884587+00:00"
+      "createdAt": "2026-07-10T01:04:41.167964+00:00",
+      "updatedAt": "2026-07-10T01:04:41.167968+00:00"
     },
     {
       "id": "developer-guide",
@@ -332,8 +359,32 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.890404+00:00",
-      "updatedAt": "2026-07-09T03:51:49.890408+00:00"
+      "createdAt": "2026-07-10T01:04:41.174727+00:00",
+      "updatedAt": "2026-07-10T01:04:41.174731+00:00"
+    },
+    {
+      "id": "devops",
+      "name": "Consolidate CI/CD pipelines, integrate cloudflared, enforce healthchecks & update desktop API default url",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/deploy.yml",
+        ".github/workflows/desktop-ci.yml",
+        ".github/workflows/drift-check.yml",
+        ".github/workflows/release.yml",
+        "desktop/src/application/stores/auth-store.ts",
+        "desktop/src/main.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/setup/index.tsx",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "infra/docker/docker-compose.local.yml",
+        "infra/docker/docker-compose.prod.yml"
+      ],
+      "lastCommit": "5f52e787eff5",
+      "createdAt": "2026-07-09T21:56:02-03:00",
+      "updatedAt": "2026-07-09T21:56:02-03:00"
     },
     {
       "id": "divisao-de-texto-chunking",
@@ -345,8 +396,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.882522+00:00",
-      "updatedAt": "2026-07-09T03:51:49.882527+00:00"
+      "createdAt": "2026-07-10T01:04:41.165637+00:00",
+      "updatedAt": "2026-07-10T01:04:41.165641+00:00"
     },
     {
       "id": "docker",
@@ -463,8 +514,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.868797+00:00",
-      "updatedAt": "2026-07-09T03:51:49.868801+00:00"
+      "createdAt": "2026-07-10T01:04:41.151622+00:00",
+      "updatedAt": "2026-07-10T01:04:41.151626+00:00"
     },
     {
       "id": "especificacao-tecnica",
@@ -476,8 +527,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.879308+00:00",
-      "updatedAt": "2026-07-09T03:51:49.879313+00:00"
+      "createdAt": "2026-07-10T01:04:41.162381+00:00",
+      "updatedAt": "2026-07-10T01:04:41.162387+00:00"
     },
     {
       "id": "fase-3",
@@ -489,8 +540,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.874407+00:00",
-      "updatedAt": "2026-07-09T03:51:49.874412+00:00"
+      "createdAt": "2026-07-10T01:04:41.157249+00:00",
+      "updatedAt": "2026-07-10T01:04:41.157254+00:00"
     },
     {
       "id": "fase1-desktop-stabilization-honest",
@@ -612,8 +663,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.864730+00:00",
-      "updatedAt": "2026-07-09T03:51:49.864735+00:00"
+      "createdAt": "2026-07-10T01:04:41.147517+00:00",
+      "updatedAt": "2026-07-10T01:04:41.147522+00:00"
     },
     {
       "id": "fases-6-7-watcher-langgraph-e-memoria",
@@ -625,8 +676,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.863443+00:00",
-      "updatedAt": "2026-07-09T03:51:49.863448+00:00"
+      "createdAt": "2026-07-10T01:04:41.146233+00:00",
+      "updatedAt": "2026-07-10T01:04:41.146238+00:00"
     },
     {
       "id": "ferramentas-do-langgraph",
@@ -638,8 +689,50 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.861567+00:00",
-      "updatedAt": "2026-07-09T03:51:49.861572+00:00"
+      "createdAt": "2026-07-10T01:04:41.144333+00:00",
+      "updatedAt": "2026-07-10T01:04:41.144339+00:00"
+    },
+    {
+      "id": "finaliza-implementacoes-pendentes-rag",
+      "name": "Finaliza implementacoes pendentes de RAG, sandbox Wasm, Wiki-First, integracoes (email/whatsapp/aws) e correcoes de heatmap",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/api/plugins.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/core/plugin_registry.py",
+        "assistant/app/core/plugin_sandbox.py",
+        "assistant/app/main.py",
+        "assistant/app/obsidian/wiki_pipeline.py",
+        "assistant/app/providers/aws/__init__.py",
+        "assistant/app/providers/aws/aws_tool.py",
+        "assistant/app/providers/email/__init__.py",
+        "assistant/app/providers/email/email_reader.py",
+        "assistant/app/providers/email/email_sender.py",
+        "assistant/app/providers/email/email_tool.py",
+        "assistant/app/providers/vector/qdrant.py",
+        "assistant/app/providers/whatsapp/__init__.py",
+        "assistant/app/providers/whatsapp/whatsapp_provider.py",
+        "assistant/app/providers/whatsapp/whatsapp_tool.py",
+        "assistant/app/rag/indexer/vault_indexer.py",
+        "assistant/app/router/memory_router.py",
+        "assistant/pyproject.toml",
+        "assistant/tests/integration/test_obsidian_e2e.py",
+        "assistant/tests/unit/test_aws_tools.py",
+        "assistant/tests/unit/test_email_provider.py",
+        "assistant/tests/unit/test_plugin_sandbox.py",
+        "assistant/tests/unit/test_qdrant_hnsw.py",
+        "assistant/tests/unit/test_whatsapp_provider.py",
+        "assistant/tests/unit/test_wiki_pipeline.py",
+        "desktop/src/__tests__/features/heatmap-store.test.ts",
+        "desktop/src/features/documentation-audit/heatmap/heatmap-chart.tsx",
+        "desktop/src/features/documentation-audit/heatmap/heatmap-store.ts"
+      ],
+      "lastCommit": "a2763cce2cba",
+      "createdAt": "2026-07-09T14:23:22-03:00",
+      "updatedAt": "2026-07-09T14:23:22-03:00"
     },
     {
       "id": "first-run",
@@ -651,8 +744,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.889482+00:00",
-      "updatedAt": "2026-07-09T03:51:49.889487+00:00"
+      "createdAt": "2026-07-10T01:04:41.173785+00:00",
+      "updatedAt": "2026-07-10T01:04:41.173788+00:00"
     },
     {
       "id": "frontend-fsd-architecture",
@@ -664,8 +757,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.883157+00:00",
-      "updatedAt": "2026-07-09T03:51:49.883162+00:00"
+      "createdAt": "2026-07-10T01:04:41.166426+00:00",
+      "updatedAt": "2026-07-10T01:04:41.166433+00:00"
     },
     {
       "id": "functional-spec",
@@ -677,8 +770,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.873361+00:00",
-      "updatedAt": "2026-07-09T03:51:49.873384+00:00"
+      "createdAt": "2026-07-10T01:04:41.156205+00:00",
+      "updatedAt": "2026-07-10T01:04:41.156209+00:00"
     },
     {
       "id": "generate-icon-assets-skip",
@@ -701,8 +794,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.885631+00:00",
-      "updatedAt": "2026-07-09T03:51:49.885636+00:00"
+      "createdAt": "2026-07-10T01:04:41.169060+00:00",
+      "updatedAt": "2026-07-10T01:04:41.169065+00:00"
     },
     {
       "id": "identidade-open-code",
@@ -714,8 +807,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.866080+00:00",
-      "updatedAt": "2026-07-09T03:51:49.866084+00:00"
+      "createdAt": "2026-07-10T01:04:41.148902+00:00",
+      "updatedAt": "2026-07-10T01:04:41.148906+00:00"
     },
     {
       "id": "implementa-deteccao-contradicoes-logicas",
@@ -764,6 +857,35 @@
       "lastCommit": "87d643357c99",
       "createdAt": "2026-07-09T00:05:13-03:00",
       "updatedAt": "2026-07-09T00:05:13-03:00"
+    },
+    {
+      "id": "implementa-nova-arquitetura-desacoplada",
+      "name": "Implementa nova arquitetura desacoplada do K.A.O.S (runtimes, capability registry, workspace intelligence e credentials)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/workspace_intelligence.py",
+        "assistant/app/capabilities/communication/manifest.yaml",
+        "assistant/app/capabilities/workspace_intelligence/manifest.yaml",
+        "assistant/app/capability/registry.py",
+        "assistant/app/capability/workspace_intelligence/service.py",
+        "assistant/app/core/credential_service.py",
+        "assistant/app/main.py",
+        "assistant/app/runtime/communication/base.py",
+        "assistant/app/runtime/communication/manager.py",
+        "assistant/app/runtime/communication/whatsapp_evolution.py",
+        "assistant/app/runtime/registry.py",
+        "assistant/tests/unit/test_capability_registry.py",
+        "assistant/tests/unit/test_communication_runtime.py",
+        "assistant/tests/unit/test_credential_service.py",
+        "assistant/tests/unit/test_workspace_intelligence.py",
+        "desktop/src/pages/dashboard/index.tsx",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "f0d37f9f326d",
+      "createdAt": "2026-07-09T18:51:20-03:00",
+      "updatedAt": "2026-07-09T18:51:20-03:00"
     },
     {
       "id": "implementa-segregacao-usuario-por",
@@ -832,8 +954,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.888088+00:00",
-      "updatedAt": "2026-07-09T03:51:49.888092+00:00"
+      "createdAt": "2026-07-10T01:04:41.171832+00:00",
+      "updatedAt": "2026-07-10T01:04:41.171836+00:00"
     },
     {
       "id": "integra-agente-langgraph-nas",
@@ -1020,8 +1142,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.889017+00:00",
-      "updatedAt": "2026-07-09T03:51:49.889020+00:00"
+      "createdAt": "2026-07-10T01:04:41.172754+00:00",
+      "updatedAt": "2026-07-10T01:04:41.172759+00:00"
     },
     {
       "id": "knowledge-graph",
@@ -1157,8 +1279,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.876754+00:00",
-      "updatedAt": "2026-07-09T03:51:49.876759+00:00"
+      "createdAt": "2026-07-10T01:04:41.159709+00:00",
+      "updatedAt": "2026-07-10T01:04:41.159715+00:00"
     },
     {
       "id": "memory",
@@ -1336,8 +1458,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.882051+00:00",
-      "updatedAt": "2026-07-09T03:51:49.882056+00:00"
+      "createdAt": "2026-07-10T01:04:41.165189+00:00",
+      "updatedAt": "2026-07-10T01:04:41.165194+00:00"
     },
     {
       "id": "observability-real",
@@ -1349,8 +1471,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.859014+00:00",
-      "updatedAt": "2026-07-09T03:51:49.859018+00:00"
+      "createdAt": "2026-07-10T01:04:41.141756+00:00",
+      "updatedAt": "2026-07-10T01:04:41.141760+00:00"
     },
     {
       "id": "obsidian-guide",
@@ -1362,8 +1484,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.887635+00:00",
-      "updatedAt": "2026-07-09T03:51:49.887640+00:00"
+      "createdAt": "2026-07-10T01:04:41.171142+00:00",
+      "updatedAt": "2026-07-10T01:04:41.171147+00:00"
     },
     {
       "id": "obsidian-watcher",
@@ -1375,8 +1497,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.865634+00:00",
-      "updatedAt": "2026-07-09T03:51:49.865638+00:00"
+      "createdAt": "2026-07-10T01:04:41.148448+00:00",
+      "updatedAt": "2026-07-10T01:04:41.148453+00:00"
     },
     {
       "id": "obsidianservice-tools-leitura-escrita-busca-vault",
@@ -1406,17 +1528,18 @@
       "updatedAt": "2026-06-10T16:00:55-03:00"
     },
     {
-      "id": "operations",
-      "name": "Guia de Operações — K.A.O.S",
+      "id": "operations-runbook",
+      "name": "K.A.O.S — Manual de Operações (Runbook)",
       "phase": "Fase 1",
       "status": "in-progress",
       "docs": [
-        "docs/guides/OPERATIONS.md"
+        "docs/guides/OPERATIONS.md",
+        "docs/guides/OPERATIONS_RUNBOOK.md"
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.888565+00:00",
-      "updatedAt": "2026-07-09T03:51:49.888570+00:00"
+      "createdAt": "2026-07-10T01:04:41.171368+00:00",
+      "updatedAt": "2026-07-10T01:04:41.171371+00:00"
     },
     {
       "id": "orquestrador-langgraph",
@@ -1428,8 +1551,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.859752+00:00",
-      "updatedAt": "2026-07-09T03:51:49.859757+00:00"
+      "createdAt": "2026-07-10T01:04:41.142426+00:00",
+      "updatedAt": "2026-07-10T01:04:41.142431+00:00"
     },
     {
       "id": "otimiza-dockerfile-com-torch",
@@ -1519,8 +1642,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.857810+00:00",
-      "updatedAt": "2026-07-09T03:51:49.857821+00:00"
+      "createdAt": "2026-07-10T01:04:41.140515+00:00",
+      "updatedAt": "2026-07-10T01:04:41.140525+00:00"
     },
     {
       "id": "provider-routing",
@@ -1532,8 +1655,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.884110+00:00",
-      "updatedAt": "2026-07-09T03:51:49.884114+00:00"
+      "createdAt": "2026-07-10T01:04:41.167504+00:00",
+      "updatedAt": "2026-07-10T01:04:41.167509+00:00"
     },
     {
       "id": "proxy",
@@ -1603,8 +1726,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.869477+00:00",
-      "updatedAt": "2026-07-09T03:51:49.869483+00:00"
+      "createdAt": "2026-07-10T01:04:41.152281+00:00",
+      "updatedAt": "2026-07-10T01:04:41.152286+00:00"
     },
     {
       "id": "refatoracao-frontend-fsd",
@@ -1616,8 +1739,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.858473+00:00",
-      "updatedAt": "2026-07-09T03:51:49.858479+00:00"
+      "createdAt": "2026-07-10T01:04:41.141196+00:00",
+      "updatedAt": "2026-07-10T01:04:41.141201+00:00"
     },
     {
       "id": "registry",
@@ -1626,9 +1749,9 @@
       "status": "done",
       "docs": [],
       "codeRefs": [],
-      "lastCommit": "d84f11db6038",
+      "lastCommit": "f311ef697419",
       "createdAt": "2026-06-24T16:42:05Z",
-      "updatedAt": "2026-07-09T03:47:01Z"
+      "updatedAt": "2026-07-09T03:51:52Z"
     },
     {
       "id": "release",
@@ -1661,8 +1784,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.872919+00:00",
-      "updatedAt": "2026-07-09T03:51:49.872924+00:00"
+      "createdAt": "2026-07-10T01:04:41.155714+00:00",
+      "updatedAt": "2026-07-10T01:04:41.155719+00:00"
     },
     {
       "id": "roteamento-de-memoria",
@@ -1674,8 +1797,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.880074+00:00",
-      "updatedAt": "2026-07-09T03:51:49.880078+00:00"
+      "createdAt": "2026-07-10T01:04:41.163164+00:00",
+      "updatedAt": "2026-07-10T01:04:41.163168+00:00"
     },
     {
       "id": "router",
@@ -1743,6 +1866,7 @@
         "docs/sdd/SDD-Desktop-Stabilization-F1.md",
         "docs/sdd/SDD-F2-Readiness-Engine.md",
         "docs/sdd/SDD-Implementation-Plan-v2.md",
+        "docs/sdd/SDD-KAOS-EVOLUTION-001.md",
         "docs/sdd/SDD-MCP-Bridge.md",
         "docs/sdd/SDD-Roadmap-Expansion-v2-opencode-review.md",
         "docs/sdd/SDD-Roadmap-Expansion-v2.md",
@@ -1968,8 +2092,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.883658+00:00",
-      "updatedAt": "2026-07-09T03:51:49.883662+00:00"
+      "createdAt": "2026-07-10T01:04:41.166978+00:00",
+      "updatedAt": "2026-07-10T01:04:41.166983+00:00"
     },
     {
       "id": "technical-spec",
@@ -1981,8 +2105,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.870956+00:00",
-      "updatedAt": "2026-07-09T03:51:49.870961+00:00"
+      "createdAt": "2026-07-10T01:04:41.153739+00:00",
+      "updatedAt": "2026-07-10T01:04:41.153743+00:00"
     },
     {
       "id": "tests",
@@ -2057,8 +2181,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.889931+00:00",
-      "updatedAt": "2026-07-09T03:51:49.889935+00:00"
+      "createdAt": "2026-07-10T01:04:41.174268+00:00",
+      "updatedAt": "2026-07-10T01:04:41.174273+00:00"
     },
     {
       "id": "ux",
@@ -2103,8 +2227,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-09T03:51:49.879629+00:00",
-      "updatedAt": "2026-07-09T03:51:49.879634+00:00"
+      "createdAt": "2026-07-10T01:04:41.162688+00:00",
+      "updatedAt": "2026-07-10T01:04:41.162692+00:00"
     },
     {
       "id": "vault",
