@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated_at": "2026-07-10T10:43:04.042380+00:00",
+  "generated_at": "2026-07-10T21:18:46.918704+00:00",
   "generated_by": "bootstrap_feature_registry.py (git-history strategy)",
   "source": "git-log + filesystem-sdds",
   "total_features": 159,
@@ -151,8 +151,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.717928+00:00",
-      "updatedAt": "2026-07-10T10:43:03.717932+00:00"
+      "createdAt": "2026-07-10T21:18:46.593198+00:00",
+      "updatedAt": "2026-07-10T21:18:46.593201+00:00"
     },
     {
       "id": "audit",
@@ -264,8 +264,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.717262+00:00",
-      "updatedAt": "2026-07-10T10:43:03.717268+00:00"
+      "createdAt": "2026-07-10T21:18:46.592545+00:00",
+      "updatedAt": "2026-07-10T21:18:46.592550+00:00"
     },
     {
       "id": "config",
@@ -321,8 +321,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.735953+00:00",
-      "updatedAt": "2026-07-10T10:43:03.735958+00:00"
+      "createdAt": "2026-07-10T21:18:46.610991+00:00",
+      "updatedAt": "2026-07-10T21:18:46.610995+00:00"
     },
     {
       "id": "dashboard-honesto-4-state-protocol",
@@ -341,18 +341,20 @@
     },
     {
       "id": "deploy",
-      "name": "Prepare environment file by copying persistent .env.prod from host to runner workspace",
+      "name": "Implement runtime version endpoint and add --build with tag interpolation to CD",
       "phase": "Fase 1",
       "status": "done",
       "docs": [
         "docs/guides/DEPLOYMENT_GUIDE.md"
       ],
       "codeRefs": [
-        ".github/workflows/deploy.yml"
+        ".github/workflows/deploy.yml",
+        "assistant/app/api/system.py",
+        "infra/docker/docker-compose.prod.yml"
       ],
-      "lastCommit": "857142e9abf1",
+      "lastCommit": "5d2498cf4155",
       "createdAt": "2026-07-09T22:41:24-03:00",
-      "updatedAt": "2026-07-09T22:41:24-03:00"
+      "updatedAt": "2026-07-10T18:18:06-03:00"
     },
     {
       "id": "desktop-architecture",
@@ -364,8 +366,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.733910+00:00",
-      "updatedAt": "2026-07-10T10:43:03.733914+00:00"
+      "createdAt": "2026-07-10T21:18:46.608970+00:00",
+      "updatedAt": "2026-07-10T21:18:46.608974+00:00"
     },
     {
       "id": "developer-guide",
@@ -377,8 +379,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.740308+00:00",
-      "updatedAt": "2026-07-10T10:43:03.740312+00:00"
+      "createdAt": "2026-07-10T21:18:46.615253+00:00",
+      "updatedAt": "2026-07-10T21:18:46.615257+00:00"
     },
     {
       "id": "devops",
@@ -414,8 +416,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.731759+00:00",
-      "updatedAt": "2026-07-10T10:43:03.731763+00:00"
+      "createdAt": "2026-07-10T21:18:46.606921+00:00",
+      "updatedAt": "2026-07-10T21:18:46.606929+00:00"
     },
     {
       "id": "docker",
@@ -532,8 +534,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.717748+00:00",
-      "updatedAt": "2026-07-10T10:43:03.717752+00:00"
+      "createdAt": "2026-07-10T21:18:46.593015+00:00",
+      "updatedAt": "2026-07-10T21:18:46.593019+00:00"
     },
     {
       "id": "especificacao-tecnica",
@@ -545,8 +547,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.728536+00:00",
-      "updatedAt": "2026-07-10T10:43:03.728541+00:00"
+      "createdAt": "2026-07-10T21:18:46.603719+00:00",
+      "updatedAt": "2026-07-10T21:18:46.603724+00:00"
     },
     {
       "id": "fase-3",
@@ -558,8 +560,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.723444+00:00",
-      "updatedAt": "2026-07-10T10:43:03.723448+00:00"
+      "createdAt": "2026-07-10T21:18:46.598701+00:00",
+      "updatedAt": "2026-07-10T21:18:46.598705+00:00"
     },
     {
       "id": "fase1-desktop-stabilization-honest",
@@ -681,8 +683,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.713575+00:00",
-      "updatedAt": "2026-07-10T10:43:03.713580+00:00"
+      "createdAt": "2026-07-10T21:18:46.588852+00:00",
+      "updatedAt": "2026-07-10T21:18:46.588857+00:00"
     },
     {
       "id": "fases-6-7-watcher-langgraph-e-memoria",
@@ -694,8 +696,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.712238+00:00",
-      "updatedAt": "2026-07-10T10:43:03.712244+00:00"
+      "createdAt": "2026-07-10T21:18:46.587449+00:00",
+      "updatedAt": "2026-07-10T21:18:46.587454+00:00"
     },
     {
       "id": "ferramentas-do-langgraph",
@@ -707,8 +709,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.710355+00:00",
-      "updatedAt": "2026-07-10T10:43:03.710361+00:00"
+      "createdAt": "2026-07-10T21:18:46.585566+00:00",
+      "updatedAt": "2026-07-10T21:18:46.585571+00:00"
     },
     {
       "id": "finaliza-implementacoes-pendentes-rag",
@@ -762,8 +764,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.739370+00:00",
-      "updatedAt": "2026-07-10T10:43:03.739375+00:00"
+      "createdAt": "2026-07-10T21:18:46.614316+00:00",
+      "updatedAt": "2026-07-10T21:18:46.614320+00:00"
     },
     {
       "id": "formatting",
@@ -821,8 +823,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.732445+00:00",
-      "updatedAt": "2026-07-10T10:43:03.732450+00:00"
+      "createdAt": "2026-07-10T21:18:46.607566+00:00",
+      "updatedAt": "2026-07-10T21:18:46.607571+00:00"
     },
     {
       "id": "functional-spec",
@@ -834,8 +836,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.722377+00:00",
-      "updatedAt": "2026-07-10T10:43:03.722382+00:00"
+      "createdAt": "2026-07-10T21:18:46.597648+00:00",
+      "updatedAt": "2026-07-10T21:18:46.597652+00:00"
     },
     {
       "id": "generate-icon-assets-skip",
@@ -858,8 +860,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.734994+00:00",
-      "updatedAt": "2026-07-10T10:43:03.734999+00:00"
+      "createdAt": "2026-07-10T21:18:46.610027+00:00",
+      "updatedAt": "2026-07-10T21:18:46.610032+00:00"
     },
     {
       "id": "identidade-open-code",
@@ -871,8 +873,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.714960+00:00",
-      "updatedAt": "2026-07-10T10:43:03.714964+00:00"
+      "createdAt": "2026-07-10T21:18:46.590236+00:00",
+      "updatedAt": "2026-07-10T21:18:46.590240+00:00"
     },
     {
       "id": "implementa-deteccao-contradicoes-logicas",
@@ -1019,8 +1021,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.737749+00:00",
-      "updatedAt": "2026-07-10T10:43:03.737753+00:00"
+      "createdAt": "2026-07-10T21:18:46.612747+00:00",
+      "updatedAt": "2026-07-10T21:18:46.612751+00:00"
     },
     {
       "id": "integra-agente-langgraph-nas",
@@ -1222,8 +1224,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.738667+00:00",
-      "updatedAt": "2026-07-10T10:43:03.738672+00:00"
+      "createdAt": "2026-07-10T21:18:46.613657+00:00",
+      "updatedAt": "2026-07-10T21:18:46.613661+00:00"
     },
     {
       "id": "knowledge-graph",
@@ -1389,8 +1391,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.725884+00:00",
-      "updatedAt": "2026-07-10T10:43:03.725889+00:00"
+      "createdAt": "2026-07-10T21:18:46.601105+00:00",
+      "updatedAt": "2026-07-10T21:18:46.601110+00:00"
     },
     {
       "id": "memory",
@@ -1568,8 +1570,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.731309+00:00",
-      "updatedAt": "2026-07-10T10:43:03.731314+00:00"
+      "createdAt": "2026-07-10T21:18:46.606437+00:00",
+      "updatedAt": "2026-07-10T21:18:46.606441+00:00"
     },
     {
       "id": "observability-real",
@@ -1581,8 +1583,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.707864+00:00",
-      "updatedAt": "2026-07-10T10:43:03.707867+00:00"
+      "createdAt": "2026-07-10T21:18:46.583068+00:00",
+      "updatedAt": "2026-07-10T21:18:46.583072+00:00"
     },
     {
       "id": "obsidian-guide",
@@ -1594,8 +1596,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.737042+00:00",
-      "updatedAt": "2026-07-10T10:43:03.737047+00:00"
+      "createdAt": "2026-07-10T21:18:46.612042+00:00",
+      "updatedAt": "2026-07-10T21:18:46.612047+00:00"
     },
     {
       "id": "obsidian-watcher",
@@ -1607,8 +1609,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.714501+00:00",
-      "updatedAt": "2026-07-10T10:43:03.714506+00:00"
+      "createdAt": "2026-07-10T21:18:46.589783+00:00",
+      "updatedAt": "2026-07-10T21:18:46.589787+00:00"
     },
     {
       "id": "obsidianservice-tools-leitura-escrita-busca-vault",
@@ -1648,8 +1650,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.737284+00:00",
-      "updatedAt": "2026-07-10T10:43:03.737288+00:00"
+      "createdAt": "2026-07-10T21:18:46.612263+00:00",
+      "updatedAt": "2026-07-10T21:18:46.612266+00:00"
     },
     {
       "id": "orquestrador-langgraph",
@@ -1661,8 +1663,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.708500+00:00",
-      "updatedAt": "2026-07-10T10:43:03.708505+00:00"
+      "createdAt": "2026-07-10T21:18:46.583746+00:00",
+      "updatedAt": "2026-07-10T21:18:46.583751+00:00"
     },
     {
       "id": "otimiza-dockerfile-com-torch",
@@ -1752,8 +1754,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.706620+00:00",
-      "updatedAt": "2026-07-10T10:43:03.706630+00:00"
+      "createdAt": "2026-07-10T21:18:46.581823+00:00",
+      "updatedAt": "2026-07-10T21:18:46.581833+00:00"
     },
     {
       "id": "provider-routing",
@@ -1765,8 +1767,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.733453+00:00",
-      "updatedAt": "2026-07-10T10:43:03.733458+00:00"
+      "createdAt": "2026-07-10T21:18:46.608509+00:00",
+      "updatedAt": "2026-07-10T21:18:46.608513+00:00"
     },
     {
       "id": "proxy",
@@ -1836,8 +1838,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.718406+00:00",
-      "updatedAt": "2026-07-10T10:43:03.718410+00:00"
+      "createdAt": "2026-07-10T21:18:46.593691+00:00",
+      "updatedAt": "2026-07-10T21:18:46.593695+00:00"
     },
     {
       "id": "refatoracao-frontend-fsd",
@@ -1849,8 +1851,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.707311+00:00",
-      "updatedAt": "2026-07-10T10:43:03.707317+00:00"
+      "createdAt": "2026-07-10T21:18:46.582481+00:00",
+      "updatedAt": "2026-07-10T21:18:46.582486+00:00"
     },
     {
       "id": "registry",
@@ -1859,9 +1861,9 @@
       "status": "done",
       "docs": [],
       "codeRefs": [],
-      "lastCommit": "7ef72c47170a",
+      "lastCommit": "53fefe51a2ec",
       "createdAt": "2026-06-24T16:42:05Z",
-      "updatedAt": "2026-07-10T03:08:53Z"
+      "updatedAt": "2026-07-10T10:43:06Z"
     },
     {
       "id": "release",
@@ -1894,8 +1896,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.721892+00:00",
-      "updatedAt": "2026-07-10T10:43:03.721897+00:00"
+      "createdAt": "2026-07-10T21:18:46.597175+00:00",
+      "updatedAt": "2026-07-10T21:18:46.597180+00:00"
     },
     {
       "id": "roteamento-de-memoria",
@@ -1907,8 +1909,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.729329+00:00",
-      "updatedAt": "2026-07-10T10:43:03.729333+00:00"
+      "createdAt": "2026-07-10T21:18:46.604460+00:00",
+      "updatedAt": "2026-07-10T21:18:46.604463+00:00"
     },
     {
       "id": "router",
@@ -2202,8 +2204,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.732966+00:00",
-      "updatedAt": "2026-07-10T10:43:03.732971+00:00"
+      "createdAt": "2026-07-10T21:18:46.608048+00:00",
+      "updatedAt": "2026-07-10T21:18:46.608052+00:00"
     },
     {
       "id": "technical-spec",
@@ -2215,8 +2217,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.719886+00:00",
-      "updatedAt": "2026-07-10T10:43:03.719890+00:00"
+      "createdAt": "2026-07-10T21:18:46.595167+00:00",
+      "updatedAt": "2026-07-10T21:18:46.595171+00:00"
     },
     {
       "id": "tests",
@@ -2291,8 +2293,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.739828+00:00",
-      "updatedAt": "2026-07-10T10:43:03.739832+00:00"
+      "createdAt": "2026-07-10T21:18:46.614798+00:00",
+      "updatedAt": "2026-07-10T21:18:46.614802+00:00"
     },
     {
       "id": "ux",
@@ -2337,8 +2339,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-10T10:43:03.728837+00:00",
-      "updatedAt": "2026-07-10T10:43:03.728840+00:00"
+      "createdAt": "2026-07-10T21:18:46.604017+00:00",
+      "updatedAt": "2026-07-10T21:18:46.604021+00:00"
     },
     {
       "id": "vault",
