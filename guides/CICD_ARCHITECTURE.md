@@ -86,3 +86,33 @@ Ao utilizar o **Self-Hosted Runner**, o deploy ocorre de forma interna, dispensa
    * Executa `docker compose -f docker-compose.prod.yml up -d` para atualizar os containers afetados com zero downtime.
    * Realiza a limpeza de imagens antigas via `docker image prune -f` para conservar armazenamento.
 4. **Verificação de Saúde (Health Check):** O runner consome a API local `/health` para garantir que o serviço responde adequadamente.
+
+---
+
+## 5. Como Gerar e Configurar os GitHub Secrets
+
+Para que os pipelines tenham as permissões corretas para clonar submódulos e compilar os binários do K.A.O.S Desktop, configure as chaves na aba **Settings ➔ Secrets and variables ➔ Actions ➔ Repository secrets** no seu repositório do GitHub.
+
+### 5.1. Token de Acesso Pessoal (`PAT`)
+1. No seu perfil do GitHub, vá em **Settings** ➔ **Developer Settings** ➔ **Personal Access Tokens (Classic)**.
+2. Clique em **Generate new token (classic)**.
+3. Defina um nome (ex: `kaos-token`), validade (sem expiração ou 90 dias) e marque os escopos:
+   * **`repo`** (para checkout de submódulos privados)
+   * **`workflow`** (para atualizar e rodar os pipelines)
+4. Gere o token e copie o valor exibido (`ghp_...`). Salve-o no segredo **`PAT`** do repositório.
+
+### 5.2. Chave de Assinatura do Tauri (`TAURI_SIGNING_PRIVATE_KEY` e `TAURI_SIGNING_PASSWORD`)
+Para gerar uma nova assinatura digital criptografada para o instalador do K.A.O.S Desktop:
+1. Abra um terminal na pasta do desktop:
+   ```bash
+   cd desktop
+   npx @tauri-apps/cli signer generate
+   ```
+2. Defina uma senha de sua escolha (ex: `kaos-master-key-password`). Salve essa senha no segredo **`TAURI_SIGNING_PASSWORD`**.
+3. O comando gerará no terminal um bloco de texto com a chave privada:
+   ```text
+   Private: (Keep it secret!)
+   dW50cnVzdGVkIGNvbW1lbnQ6IHJzaWdu...
+   ```
+4. Copie todo o bloco gerado (todas as linhas correspondentes à chave privada criptografada) e salve-o no segredo **`TAURI_SIGNING_PRIVATE_KEY`**.
+
