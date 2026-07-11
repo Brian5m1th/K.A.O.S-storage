@@ -58,6 +58,15 @@ This document presents the diagnostic findings for the K.A.O.S Desktop (Tauri) a
   3. **Validação de Configuração**: O endpoint `/auth/setup-status` agora retorna com sucesso `{"configured":true}`.
   4. **Login (Real Login)**: Executamos um `POST` para `/auth/login` validando as credenciais criadas e recebendo um novo token de acesso JWT válido.
 
+### Q7: Structural module state fix (Duplicate kaos-client.ts)
+* **Status**: **PASS**
+* **Verification**: During investigation, we discovered two identical files:
+  1. `desktop/src/shared/api/kaos-client.ts`
+  2. `desktop/src/infrastructure/http/kaos-client.ts`
+  * **The Bug**: `main.tsx` registered the server URL and JWT token providers in `shared/api/kaos-client.ts`. However, the React application store `auth-store.ts` imported `kaosFetch` from `infrastructure/http/kaos-client.ts` (via the `@/infrastructure` alias).
+  * **The Consequence**: Because they were two distinct files, they had separate module scopes and internal states. The providers in `infrastructure/http/kaos-client.ts` remained `null`, causing `kaosFetch` requests to always fall back to `"http://localhost:8000"`, bypassing the user's settings.
+  * **The Fix**: Replaced the contents of [kaos-client.ts](file:///c:/workspace/Freelancer/K.A.O.S/desktop/src/shared/api/kaos-client.ts) to re-export directly from [kaos-client.ts](file:///c:/workspace/Freelancer/K.A.O.S/desktop/src/infrastructure/http/kaos-client.ts). This ensures only a single instance of the client state exists, aligning all requests to use the same configured server URL.
+
 ---
 
 ## 2. Hypothesis Evaluation Matrix
@@ -69,17 +78,18 @@ This document presents the diagnostic findings for the K.A.O.S Desktop (Tauri) a
 | **H3 — Installed Desktop is outdated (Build Drift)** | **REJECTED** | The current executable uses the correct config. No build drift detected. |
 | **H4 — Authentication Issue** | **REJECTED** | Handshake and API validation headers are validated successfully (confirmed via API Key system check). |
 | **H5 — Cloudflare Tunnel Conflict (Split-Brain)** | **CONFIRMED** | Two active tunnels were connected under the same token. The rogue `kaos-backend-tunnel` on the `bridge` network intercepted requests and returned 502 Bad Gateway. |
+| **H6 — Duplicate Client State Bug** | **CONFIRMED** | Duplicate `kaos-client` files caused the app store to fall back to `localhost` even when the settings URL was configured correctly. |
 
 ---
 
 ## 3. Impact Classification
-* **Category**: **Infrastructure / Routing**
-* **Type**: Split-Tunnel Network Conflict
+* **Category**: **Application Bug / Routing**
+* **Type**: Duplicate Client State Conflict
 * **Severity**: High (P0)
 
 ---
 
 ## 4. Root Cause Summary
-The desktop application was completely healthy. The error `Cannot reach backend server` occurred because the public gateway `api.kaostech.com.br` returned **502 Bad Gateway** during the handshake phase. This was caused by the split-brain routing conflict of two Cloudflare Tunnel clients (`kaos-backend-tunnel` and `kaos-platform-cloudflared-1`). 
+The desktop application had a structural code bug. While the "Testar" connection button directly pinged the server using standard `fetch` (which succeeded), actual login submissions routed through `kaosFetch` from a separate unconfigured client instance. This caused all API requests to route to the fallback `http://localhost:8000`. 
 
-Following the removal of `kaos-backend-tunnel` from the host, the API gateway is fully restored, and the desktop application connectivity has been successfully reestablished.
+Following the re-export fix, the client correctly routes all API calls to the user's configured server URL (`https://api.kaostech.com.br`).
