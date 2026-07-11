@@ -1,18 +1,3567 @@
 {
-  "version": "1.0",
-  "generated_at": "2026-07-11T11:54:03.493028+00:00",
-  "total_features": 1,
+  "version": "2.0",
+  "generated_at": "2026-07-11T12:55:29.139106+00:00",
+  "generated_by": "bootstrap_feature_registry.py (git-history strategy)",
+  "source": "git-log + filesystem-sdds",
+  "total_features": 162,
   "features": [
     {
-      "id": "test",
-      "name": "Test",
-      "phase": "p1",
+      "id": "env",
+      "name": "Implement EnvironmentService with multi-strategy path resolution and KIRL integration",
+      "phase": "Fase 0",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/auto-release.yml",
+        ".github/workflows/release.yml",
+        "assistant/app/ai/vault_analyzer/vault_reader.py",
+        "assistant/app/api/system.py",
+        "assistant/app/audit/code_scanner.py",
+        "assistant/app/core/__init__.py",
+        "assistant/app/core/environment_service.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/tests/unit/test_environment_service.py"
+      ],
+      "lastCommit": "5c8eb85ed3de",
+      "createdAt": "2026-07-08T20:41:58-03:00",
+      "updatedAt": "2026-07-08T20:41:58-03:00"
+    },
+    {
+      "id": "kirl-documentation-runtime-layer",
+      "name": "KIRL - Documentation Runtime Layer + Audit System + Graphify",
+      "phase": "Fase 0",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/audit.py",
+        "assistant/app/audit/audit_engine.py",
+        "assistant/app/audit/code_scanner.py",
+        "assistant/app/audit/commit_classifier.py",
+        "assistant/app/audit/commit_mapper.py",
+        "assistant/app/audit/drift_subscriber.py",
+        "assistant/app/audit/drl_snapshot.py",
+        "assistant/app/audit/feature_registry.py",
+        "assistant/app/audit/frontmatter_parser.py",
+        "assistant/app/audit/sdd_generator.py",
+        "assistant/app/audit/sdd_resolver.py",
+        "assistant/app/audit/sdd_watcher.py",
+        "assistant/app/audit/vault_sync.py",
+        "assistant/app/main.py",
+        "assistant/scripts/audit_pr_docs.py",
+        "assistant/scripts/generate_feature_catalog.py",
+        "assistant/scripts/validate_documentation.py",
+        "assistant/tests/unit/test_audit_code_scanner.py",
+        "assistant/tests/unit/test_audit_commit_classifier.py",
+        "assistant/tests/unit/test_audit_engine.py",
+        "assistant/tests/unit/test_audit_feature_registry.py",
+        "assistant/tests/unit/test_audit_sdd_generator.py",
+        "desktop/src/app/providers/index.tsx",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/architecture/index.tsx",
+        "desktop/src/app/routes/pages/documentation/index.tsx",
+        "desktop/src/features/documentation-audit/auto-doc/code-introspector.ts",
+        "desktop/src/features/documentation-audit/auto-doc/doc-sync-engine.ts",
+        "desktop/src/features/documentation-audit/auto-doc/feature-extractor.ts",
+        "desktop/src/features/documentation-audit/engine/commit-mapper.ts",
+        "desktop/src/features/documentation-audit/engine/drift-engine.ts",
+        "desktop/src/features/documentation-audit/engine/feature-scanner.ts",
+        "desktop/src/features/documentation-audit/graph/graph-builder.ts",
+        "desktop/src/features/documentation-audit/graph/graph-export.ts",
+        "desktop/src/features/documentation-audit/graph/graph-store.ts",
+        "desktop/src/features/documentation-audit/graph/graph-updater.ts",
+        "desktop/src/features/documentation-audit/graph/layout-engine.ts",
+        "desktop/src/features/documentation-audit/store/drift-store.ts",
+        "desktop/src/features/documentation-audit/ui/CoverageChart.tsx",
+        "desktop/src/features/documentation-audit/ui/DriftTimeline.tsx",
+        "desktop/src/features/documentation-audit/ui/MissingFeaturesList.tsx",
+        "desktop/src/features/documentation-audit/ui/OutdatedDocsList.tsx",
+        "desktop/src/pages/architecture/index.tsx",
+        "desktop/src/pages/documentation/index.tsx",
+        "desktop/src/shared/lib/commands-init.ts",
+        "desktop/src/shared/lib/event-bus.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/widgets/sidebar/index.tsx",
+        "desktop/vite.config.ts"
+      ],
+      "lastCommit": "7b7f8f28298d",
+      "createdAt": "2026-06-22T15:03:21-03:00",
+      "updatedAt": "2026-06-22T15:03:21-03:00"
+    },
+    {
+      "id": "adiciona-proxy-openai-compativel-integra",
+      "name": "Adiciona proxy OpenAI-compativel e integra Open WebUI com FastAPI",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/openai.py",
+        "assistant/app/config/prompts.py",
+        "assistant/app/main.py",
+        "assistant/app/service/llm_service.py",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "89572f79b56a",
+      "createdAt": "2026-06-11T00:21:47-03:00",
+      "updatedAt": "2026-06-11T00:21:47-03:00"
+    },
+    {
+      "id": "agent",
+      "name": "Adiciona user context ao AgentState, planner e executor",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Agente de Ingestao de Conhecimento.md",
+        "docs/sdd/Estado do Agente.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/agent/state.py"
+      ],
+      "lastCommit": "01f098271985",
+      "createdAt": "2026-06-11T12:22:54-03:00",
+      "updatedAt": "2026-06-11T12:22:54-03:00"
+    },
+    {
+      "id": "api",
+      "name": "Propaga UserContext nos endpoints, routers e agent service",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/security/API_KEYS.md"
+      ],
+      "codeRefs": [
+        "assistant/app/api/chat.py",
+        "assistant/app/api/openai.py",
+        "assistant/app/router/memory_router.py",
+        "assistant/app/router/smart_router.py",
+        "assistant/app/service/agent_service.py"
+      ],
+      "lastCommit": "2a8f16c1f217",
+      "createdAt": "2026-06-11T10:35:26-03:00",
+      "updatedAt": "2026-06-11T12:23:02-03:00"
+    },
+    {
+      "id": "arquitetura-de-orquestracao",
+      "name": "Arquitetura de Orquestracao",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Arquitetura de Orquestracao.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.784189+00:00",
+      "updatedAt": "2026-07-11T12:55:28.784193+00:00"
+    },
+    {
+      "id": "audit",
+      "name": "Add structured audit logs for retrieve, planner, generation",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/guides/WORKFLOWS_AUDIT.md",
+        "docs/sdd/validation-audit.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/agent/nodes/retrieve.py",
+        "assistant/app/api/openai.py",
+        "assistant/app/router/memory_router.py",
+        "assistant/app/service/agent_service.py"
+      ],
+      "lastCommit": "2c4a88787238",
+      "createdAt": "2026-06-12T00:13:05-03:00",
+      "updatedAt": "2026-06-12T00:13:05-03:00"
+    },
+    {
+      "id": "auth",
+      "name": "API Key authentication via X-API-Key header",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/auth-wizard.md"
+      ],
+      "codeRefs": [
+        "assistant/app/api/auth.py",
+        "assistant/app/main.py",
+        "assistant/app/middleware/auth.py",
+        "assistant/tests/test_chat.py",
+        "assistant/tests/test_health.py",
+        "assistant/tests/test_indexing.py",
+        "assistant/tests/test_openai.py"
+      ],
+      "lastCommit": "3b347bc4525f",
+      "createdAt": "2026-06-19T15:53:23-03:00",
+      "updatedAt": "2026-06-19T15:53:23-03:00"
+    },
+    {
+      "id": "automation",
+      "name": "Add template listing tests using real workflow files",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/tests/test_automation.py"
+      ],
+      "lastCommit": "35ed37c13272",
+      "createdAt": "2026-07-08T20:43:00-03:00",
+      "updatedAt": "2026-07-08T20:43:00-03:00"
+    },
+    {
+      "id": "bootstrap",
+      "name": "Implement BootstrapManager with 8-stage async startup pipeline",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/core/bootstrap_manager.py",
+        "assistant/app/main.py",
+        "assistant/tests/integration/test_bootstrap_flow.py",
+        "assistant/tests/unit/test_bootstrap_manager.py"
+      ],
+      "lastCommit": "0943c9ec903e",
+      "createdAt": "2026-07-08T20:42:06-03:00",
+      "updatedAt": "2026-07-08T20:42:06-03:00"
+    },
+    {
+      "id": "cache",
+      "name": "Implementa ResponseCache TTL in-memory com maxsize e evict LRU",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/router/__init__.py",
+        "assistant/app/router/cache.py"
+      ],
+      "lastCommit": "39ab72b8ce54",
+      "createdAt": "2026-06-11T10:31:55-03:00",
+      "updatedAt": "2026-06-11T10:31:55-03:00"
+    },
+    {
+      "id": "cargo",
+      "name": "Remove unused net.timeout key and update docs submodule",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".cargo/config.toml"
+      ],
+      "lastCommit": "a17619cb7269",
+      "createdAt": "2026-07-10T23:41:26-03:00",
+      "updatedAt": "2026-07-10T23:41:26-03:00"
+    },
+    {
+      "id": "cd",
+      "name": "Remover --build do deploy e ampliar janela de health do kaos-api",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/guides/CICD_ARCHITECTURE.md"
+      ],
+      "codeRefs": [
+        ".github/workflows/deploy.yml",
+        "infra/docker/docker-compose.prod.yml"
+      ],
+      "lastCommit": "d4d355db8b47",
+      "createdAt": "2026-07-09T23:23:01-03:00",
+      "updatedAt": "2026-07-10T07:36:14-03:00"
+    },
+    {
+      "id": "classificador-de-intencoes",
+      "name": "Classificador de Intenções",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Classificador de Intencoes.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.783634+00:00",
+      "updatedAt": "2026-07-11T12:55:28.783640+00:00"
+    },
+    {
+      "id": "config",
+      "name": "Update model config - qwen3:14b for main, qwen3:4b for fast",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Configuração de Provedores.md"
+      ],
+      "codeRefs": [
+        "assistant/app/config/settings.py",
+        "assistant/app/rag/embeddings/embedder.py",
+        "assistant/scripts/final_check.py",
+        "assistant/scripts/validate.py"
+      ],
+      "lastCommit": "40cbab2811f4",
+      "createdAt": "2026-06-11T23:35:18-03:00",
+      "updatedAt": "2026-06-12T01:28:44-03:00"
+    },
+    {
+      "id": "corrige-docker-compose-yml",
+      "name": "Corrige docker-compose.yml",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "docker/docker-compose.yml"
+      ],
+      "lastCommit": "e6406dc4cef6",
+      "createdAt": "2026-06-10T15:24:48-03:00",
+      "updatedAt": "2026-06-10T15:24:48-03:00"
+    },
+    {
+      "id": "cors",
+      "name": "Include tauri v2 origins (http/https://tauri.localhost) in default CORS_ORIGINS",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/config/settings.py"
+      ],
+      "lastCommit": "e0d1d3d89759",
+      "createdAt": "2026-07-09T23:11:45-03:00",
+      "updatedAt": "2026-07-09T23:11:45-03:00"
+    },
+    {
+      "id": "cosign",
+      "name": "Assinatura de Imagens Docker com Cosign",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/security/COSIGN.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.799432+00:00",
+      "updatedAt": "2026-07-11T12:55:28.799438+00:00"
+    },
+    {
+      "id": "dashboard-honesto-4-state-protocol",
+      "name": "Dashboard Honesto (4-state protocol) + Theme Engine",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/shared/lib/stores/index.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts"
+      ],
+      "lastCommit": "b99b0159ada6",
+      "createdAt": "2026-06-22T22:32:50-03:00",
+      "updatedAt": "2026-06-22T22:32:50-03:00"
+    },
+    {
+      "id": "deploy",
+      "name": "Use --ignore-buildable flag on docker compose pull",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/guides/DEPLOYMENT_GUIDE.md"
+      ],
+      "codeRefs": [
+        ".github/workflows/deploy.yml",
+        "assistant/app/api/system.py",
+        "infra/docker/docker-compose.prod.yml"
+      ],
+      "lastCommit": "df0d98f3c3db",
+      "createdAt": "2026-07-09T22:41:24-03:00",
+      "updatedAt": "2026-07-11T00:02:19-03:00"
+    },
+    {
+      "id": "desktop-architecture",
+      "name": "Arquitetura Desktop — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/architecture/DESKTOP_ARCHITECTURE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.797671+00:00",
+      "updatedAt": "2026-07-11T12:55:28.797674+00:00"
+    },
+    {
+      "id": "developer-guide",
+      "name": "Guia do Desenvolvedor — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/DEVELOPER_GUIDE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.803228+00:00",
+      "updatedAt": "2026-07-11T12:55:28.803232+00:00"
+    },
+    {
+      "id": "devops",
+      "name": "Consolidate CI/CD pipelines, integrate cloudflared, enforce healthchecks & update desktop API default url",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/deploy.yml",
+        ".github/workflows/desktop-ci.yml",
+        ".github/workflows/drift-check.yml",
+        ".github/workflows/release.yml",
+        "desktop/src/application/stores/auth-store.ts",
+        "desktop/src/main.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/setup/index.tsx",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "infra/docker/docker-compose.local.yml",
+        "infra/docker/docker-compose.prod.yml"
+      ],
+      "lastCommit": "5f52e787eff5",
+      "createdAt": "2026-07-09T21:56:02-03:00",
+      "updatedAt": "2026-07-09T21:56:02-03:00"
+    },
+    {
+      "id": "divisao-de-texto-chunking",
+      "name": "Divisao de Texto (Chunking)",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Divisao de Texto (Chunking).md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.795824+00:00",
+      "updatedAt": "2026-07-11T12:55:28.795827+00:00"
+    },
+    {
+      "id": "docker",
+      "name": "Add code source volumes and healthcheck for dev reliability",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/audit/sdd_resolver.py",
+        "assistant/app/main.py",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "c9c44b565953",
+      "createdAt": "2026-06-11T10:31:13-03:00",
+      "updatedAt": "2026-07-08T20:42:12-03:00"
+    },
+    {
+      "id": "docs",
+      "name": "— auto-documentation from conversation history",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "desktop/src/features/generate-docs/ui/DocGeneratorModal.tsx",
+        "docs/sdd/docs-source-refactor.md"
+      ],
+      "codeRefs": [
+        "assistant/app/api/docs.py",
+        "assistant/app/main.py",
+        "desktop/src/pages/chat/index.tsx"
+      ],
+      "lastCommit": "50fc6b959b86",
+      "createdAt": "2026-06-25T18:17:24-03:00",
+      "updatedAt": "2026-06-25T18:17:24-03:00"
+    },
+    {
+      "id": "domain",
+      "name": "Adiciona user_id aos request models (ChatRequest e ChatCompletionRequest)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/openai.py",
+        "assistant/app/domain/chat.py",
+        "assistant/app/domain/user.py",
+        "assistant/app/memory/repository.py"
+      ],
+      "lastCommit": "04f8e14e62a3",
+      "createdAt": "2026-06-11T12:22:44-03:00",
+      "updatedAt": "2026-06-11T12:22:49-03:00"
+    },
+    {
+      "id": "dynamic-provider-switching-phase",
+      "name": "Dynamic provider switching + phase 2 refactoring + Open WebUI compatibility",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/api/chat.py",
+        "assistant/app/api/openai.py",
+        "assistant/app/api/setup.py",
+        "assistant/app/llm/factory.py",
+        "assistant/app/main.py",
+        "assistant/app/middleware/auth.py",
+        "assistant/app/rag/embeddings/embedder.py",
+        "assistant/app/router/intent_classifier.py",
+        "assistant/app/service/agent_service.py",
+        "assistant/app/setup/provider_config.py",
+        "assistant/app/tools/github_tools.py",
+        "assistant/pyproject.toml",
+        "assistant/tests/test_chat.py",
+        "desktop/src/App.tsx",
+        "desktop/src/entities/provider/constants.ts",
+        "desktop/src/entities/provider/index.ts",
+        "desktop/src/entities/provider/types.ts",
+        "desktop/src/features/ask-ai/hooks/useChatStream.ts",
+        "desktop/src/features/ask-ai/ui/ModelSelector.tsx",
+        "desktop/src/features/configure-providers/hooks/useProviderConfig.ts",
+        "desktop/src/features/configure-providers/ui/ProviderForm.tsx",
+        "desktop/src/features/manage-settings/hooks/useSettings.ts",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/providers/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "infra/docker/docker-compose.yml",
+        "infra/docker/loki.yml"
+      ],
+      "lastCommit": "612f2a173447",
+      "createdAt": "2026-06-20T14:38:31-03:00",
+      "updatedAt": "2026-06-20T14:39:02-03:00"
+    },
+    {
+      "id": "embeddings",
+      "name": "Add batch embeddings + document embedding cache",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Gerador de Embeddings.md"
+      ],
+      "codeRefs": [
+        "assistant/app/rag/embeddings/document_cache.py",
+        "assistant/app/rag/indexer/vault_indexer.py"
+      ],
+      "lastCommit": "bcfae86773af",
+      "createdAt": "2026-06-12T00:03:52-03:00",
+      "updatedAt": "2026-06-12T00:03:52-03:00"
+    },
+    {
+      "id": "especificacao-funcional",
+      "name": "Especificacao Funcional",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Especificacao Funcional.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.784023+00:00",
+      "updatedAt": "2026-07-11T12:55:28.784026+00:00"
+    },
+    {
+      "id": "especificacao-tecnica",
+      "name": "Especificacao Tecnica",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Especificacao Tecnica.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.793126+00:00",
+      "updatedAt": "2026-07-11T12:55:28.793133+00:00"
+    },
+    {
+      "id": "fase-3",
+      "name": "Fase 3 - Serviço Obsidian",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Fase 3 - Servico Obsidian.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.788747+00:00",
+      "updatedAt": "2026-07-11T12:55:28.788752+00:00"
+    },
+    {
+      "id": "fase1-desktop-stabilization-honest",
+      "name": "Desktop Stabilization F1-F6 - Honest Dashboard + Settings + Provider Catalog + RBAC",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/ci.yml",
+        "assistant/app/ai/vault_analyzer/analyzer_engine.py",
+        "assistant/app/ai/vault_analyzer/drift_engine.py",
+        "assistant/app/ai/vault_analyzer/evidence_engine.py",
+        "assistant/app/ai/vault_analyzer/graph_builder.py",
+        "assistant/app/ai/vault_analyzer/knowledge_graph.py",
+        "assistant/app/ai/vault_analyzer/suggestion_engine.py",
+        "assistant/app/api/admin.py",
+        "assistant/app/api/architecture.py",
+        "assistant/app/api/integrations.py",
+        "assistant/app/api/observability.py",
+        "assistant/app/api/opencode.py",
+        "assistant/app/api/providers.py",
+        "assistant/app/api/settings_api.py",
+        "assistant/app/api/system.py",
+        "assistant/app/audit/audit_engine.py",
+        "assistant/app/audit/commit_mapper.py",
+        "assistant/app/audit/drl_snapshot.py",
+        "assistant/app/audit/feature_registry.py",
+        "assistant/app/audit/runtime_resolver.py",
+        "assistant/app/audit/sdd_generator.py",
+        "assistant/app/audit/sdd_watcher.py",
+        "assistant/app/audit/vault_sync.py",
+        "assistant/app/auth/__init__.py",
+        "assistant/app/auth/hash.py",
+        "assistant/app/auth/jwt.py",
+        "assistant/app/database.py",
+        "assistant/app/main.py",
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/user.py",
+        "assistant/pyproject.toml",
+        "assistant/scripts/audit_pr_docs.py",
+        "assistant/scripts/generate_feature_catalog.py",
+        "assistant/scripts/validate_documentation.py",
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/vault/index.tsx",
+        "desktop/src/shared/lib/stores/index.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "infra/grafana/dashboards/kaos.yaml"
+      ],
+      "lastCommit": "2b47d386a074",
+      "createdAt": "2026-06-22T23:24:56-03:00",
+      "updatedAt": "2026-06-22T23:24:56-03:00"
+    },
+    {
+      "id": "fase1-fundacao-projeto-python",
+      "name": "Fase 1 - fundacao do projeto Python (FastAPI + uv + health check)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md",
+        "docs/estrategia_repositorios.md",
+        "docs/index.md",
+        "docs/sdd_fase1_fundacao.md",
+        "docs/sdd_fase2_ia_local.md",
+        "docs/sdd_fase3_obsidian_service.md",
+        "docs/sdd_fase4_rag_pipeline.md",
+        "docs/sdd_fase5_watcher_langgraph.md",
+        "docs/sdd_roadmap.md"
+      ],
+      "codeRefs": [
+        "app/__init__.py",
+        "app/api/__init__.py",
+        "app/api/chat.py",
+        "app/api/health.py",
+        "app/config/__init__.py",
+        "app/config/settings.py",
+        "app/domain/__init__.py",
+        "app/domain/chat.py",
+        "app/main.py",
+        "app/service/__init__.py",
+        "app/service/llm_service.py",
+        "docker/docker-compose.yml",
+        "pyproject.toml",
+        "tests/__init__.py",
+        "tests/test_chat.py",
+        "tests/test_health.py"
+      ],
+      "lastCommit": "df7f904347d3",
+      "createdAt": "2026-06-10T14:36:43-03:00",
+      "updatedAt": "2026-06-10T14:36:43-03:00"
+    },
+    {
+      "id": "fase1-hardening-tool-schema",
+      "name": "Hardening Fase 1 - Tool Schema + Event Bus + chatStore + agentStore",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/shared/lib/event-bus.ts",
+        "desktop/src/shared/lib/stores/agent-store.ts",
+        "desktop/src/shared/lib/stores/chat-store.ts",
+        "desktop/src/shared/lib/stores/index.ts",
+        "desktop/src/shared/lib/tool-schema.ts"
+      ],
+      "lastCommit": "1cf3a02c5308",
+      "createdAt": "2026-06-22T00:08:09-03:00",
+      "updatedAt": "2026-06-22T00:08:09-03:00"
+    },
+    {
+      "id": "fases-4-5",
+      "name": "Fases 4-5 - Pipeline RAG e Watcher",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Fases 4-5 - Pipeline RAG e Watcher.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.780532+00:00",
+      "updatedAt": "2026-07-11T12:55:28.780538+00:00"
+    },
+    {
+      "id": "fases-6-7-watcher-langgraph-e-memoria",
+      "name": "Fases 6-7 - Watcher LangGraph e MemÓria",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Fases 6-7 - Watcher LangGraph e Memoria.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.779416+00:00",
+      "updatedAt": "2026-07-11T12:55:28.779423+00:00"
+    },
+    {
+      "id": "ferramentas-do-langgraph",
+      "name": "Ferramentas do LangGraph",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Ferramentas do LangGraph.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.777704+00:00",
+      "updatedAt": "2026-07-11T12:55:28.777710+00:00"
+    },
+    {
+      "id": "finaliza-implementacoes-pendentes-rag",
+      "name": "Finaliza implementacoes pendentes de RAG, sandbox Wasm, Wiki-First, integracoes (email/whatsapp/aws) e correcoes de heatmap",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/api/plugins.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/core/plugin_registry.py",
+        "assistant/app/core/plugin_sandbox.py",
+        "assistant/app/main.py",
+        "assistant/app/obsidian/wiki_pipeline.py",
+        "assistant/app/providers/aws/__init__.py",
+        "assistant/app/providers/aws/aws_tool.py",
+        "assistant/app/providers/email/__init__.py",
+        "assistant/app/providers/email/email_reader.py",
+        "assistant/app/providers/email/email_sender.py",
+        "assistant/app/providers/email/email_tool.py",
+        "assistant/app/providers/vector/qdrant.py",
+        "assistant/app/providers/whatsapp/__init__.py",
+        "assistant/app/providers/whatsapp/whatsapp_provider.py",
+        "assistant/app/providers/whatsapp/whatsapp_tool.py",
+        "assistant/app/rag/indexer/vault_indexer.py",
+        "assistant/app/router/memory_router.py",
+        "assistant/pyproject.toml",
+        "assistant/tests/integration/test_obsidian_e2e.py",
+        "assistant/tests/unit/test_aws_tools.py",
+        "assistant/tests/unit/test_email_provider.py",
+        "assistant/tests/unit/test_plugin_sandbox.py",
+        "assistant/tests/unit/test_qdrant_hnsw.py",
+        "assistant/tests/unit/test_whatsapp_provider.py",
+        "assistant/tests/unit/test_wiki_pipeline.py",
+        "desktop/src/__tests__/features/heatmap-store.test.ts",
+        "desktop/src/features/documentation-audit/heatmap/heatmap-chart.tsx",
+        "desktop/src/features/documentation-audit/heatmap/heatmap-store.ts"
+      ],
+      "lastCommit": "a2763cce2cba",
+      "createdAt": "2026-07-09T14:23:22-03:00",
+      "updatedAt": "2026-07-09T14:23:22-03:00"
+    },
+    {
+      "id": "first-run",
+      "name": "Guia de Primeira Execução — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/FIRST_RUN.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.802398+00:00",
+      "updatedAt": "2026-07-11T12:55:28.802403+00:00"
+    },
+    {
+      "id": "formatting",
+      "name": "Apply ruff formatting across assistant backend and test files",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/api/plugins.py",
+        "assistant/app/api/workspace_intelligence.py",
+        "assistant/app/capability/registry.py",
+        "assistant/app/capability/workspace_intelligence/service.py",
+        "assistant/app/core/credential_service.py",
+        "assistant/app/core/plugin_registry.py",
+        "assistant/app/core/plugin_sandbox.py",
+        "assistant/app/main.py",
+        "assistant/app/obsidian/wiki_pipeline.py",
+        "assistant/app/providers/aws/__init__.py",
+        "assistant/app/providers/aws/aws_tool.py",
+        "assistant/app/providers/email/__init__.py",
+        "assistant/app/providers/email/email_reader.py",
+        "assistant/app/providers/email/email_sender.py",
+        "assistant/app/providers/email/email_tool.py",
+        "assistant/app/providers/whatsapp/__init__.py",
+        "assistant/app/providers/whatsapp/whatsapp_provider.py",
+        "assistant/app/providers/whatsapp/whatsapp_tool.py",
+        "assistant/app/router/memory_router.py",
+        "assistant/app/runtime/communication/base.py",
+        "assistant/app/runtime/communication/manager.py",
+        "assistant/app/runtime/communication/whatsapp_evolution.py",
+        "assistant/app/runtime/registry.py",
+        "assistant/tests/integration/test_obsidian_e2e.py",
+        "assistant/tests/unit/test_aws_tools.py",
+        "assistant/tests/unit/test_capability_registry.py",
+        "assistant/tests/unit/test_communication_runtime.py",
+        "assistant/tests/unit/test_email_provider.py",
+        "assistant/tests/unit/test_plugin_sandbox.py",
+        "assistant/tests/unit/test_qdrant_hnsw.py",
+        "assistant/tests/unit/test_whatsapp_provider.py",
+        "assistant/tests/unit/test_wiki_pipeline.py",
+        "assistant/tests/unit/test_workspace_intelligence.py"
+      ],
+      "lastCommit": "6347772f8fff",
+      "createdAt": "2026-07-09T22:14:33-03:00",
+      "updatedAt": "2026-07-09T22:14:33-03:00"
+    },
+    {
+      "id": "frontend-fsd-architecture",
+      "name": "Arquitetura Frontend FSD — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/architecture/FRONTEND_FSD_ARCHITECTURE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.796435+00:00",
+      "updatedAt": "2026-07-11T12:55:28.796440+00:00"
+    },
+    {
+      "id": "functional-spec",
+      "name": "Functional Specification — [Nome da Feature]",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/functional-spec.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.787825+00:00",
+      "updatedAt": "2026-07-11T12:55:28.787828+00:00"
+    },
+    {
+      "id": "generate-icon-assets-skip",
+      "name": "Generate icon assets [skip ci]",
+      "phase": "Fase 1",
       "status": "done",
       "docs": [],
       "codeRefs": [],
+      "lastCommit": "c1ba6c6d4376",
+      "createdAt": "2026-06-19T01:44:34Z",
+      "updatedAt": "2026-06-19T01:44:34Z"
+    },
+    {
+      "id": "github-actions",
+      "name": "GitHub Actions — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/ci-cd/GITHUB_ACTIONS.md"
+      ],
+      "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T11:54:03.490303+00:00",
-      "updatedAt": "2026-07-11T11:54:03.490346+00:00"
+      "createdAt": "2026-07-11T12:55:28.798615+00:00",
+      "updatedAt": "2026-07-11T12:55:28.798621+00:00"
+    },
+    {
+      "id": "identidade-open-code",
+      "name": "Identidade Open Code",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Identidade Open Code.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.781741+00:00",
+      "updatedAt": "2026-07-11T12:55:28.781744+00:00"
+    },
+    {
+      "id": "implementa-deteccao-contradicoes-logicas",
+      "name": "Implementa deteccao de contradicoes logicas e cronologicas no analisador do vault",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/ai/vault_analyzer/evidence_engine.py",
+        "assistant/app/ai/vault_analyzer/vault_reader.py",
+        "assistant/tests/unit/test_evidence_engine.py"
+      ],
+      "lastCommit": "2dbbe4ac949f",
+      "createdAt": "2026-07-09T00:12:51-03:00",
+      "updatedAt": "2026-07-09T00:12:51-03:00"
+    },
+    {
+      "id": "implementa-handshake-criptografia-efemera",
+      "name": "Implementa handshake de criptografia efemera PyNaCl e setup seguro",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/auth.py",
+        "assistant/app/api/setup.py",
+        "assistant/app/auth/handshake.py",
+        "assistant/app/middleware/auth.py",
+        "assistant/pyproject.toml",
+        "assistant/tests/unit/test_handshake.py"
+      ],
+      "lastCommit": "0fa7c8902a51",
+      "createdAt": "2026-07-09T00:09:03-03:00",
+      "updatedAt": "2026-07-09T00:09:03-03:00"
+    },
+    {
+      "id": "implementa-interface-agnostica-airuntime",
+      "name": "Implementa interface agnostica AIRuntime e RuntimeSelector",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/runtime/runtime_layer.py",
+        "assistant/app/runtime/runtime_selector.py",
+        "assistant/tests/unit/test_runtime_selector.py"
+      ],
+      "lastCommit": "87d643357c99",
+      "createdAt": "2026-07-09T00:05:13-03:00",
+      "updatedAt": "2026-07-09T00:05:13-03:00"
+    },
+    {
+      "id": "implementa-nova-arquitetura-desacoplada",
+      "name": "Implementa nova arquitetura desacoplada do K.A.O.S (runtimes, capability registry, workspace intelligence e credentials)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/workspace_intelligence.py",
+        "assistant/app/capabilities/communication/manifest.yaml",
+        "assistant/app/capabilities/workspace_intelligence/manifest.yaml",
+        "assistant/app/capability/registry.py",
+        "assistant/app/capability/workspace_intelligence/service.py",
+        "assistant/app/core/credential_service.py",
+        "assistant/app/main.py",
+        "assistant/app/runtime/communication/base.py",
+        "assistant/app/runtime/communication/manager.py",
+        "assistant/app/runtime/communication/whatsapp_evolution.py",
+        "assistant/app/runtime/registry.py",
+        "assistant/tests/unit/test_capability_registry.py",
+        "assistant/tests/unit/test_communication_runtime.py",
+        "assistant/tests/unit/test_credential_service.py",
+        "assistant/tests/unit/test_workspace_intelligence.py",
+        "desktop/src/pages/dashboard/index.tsx",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "f0d37f9f326d",
+      "createdAt": "2026-07-09T18:51:20-03:00",
+      "updatedAt": "2026-07-09T18:51:20-03:00"
+    },
+    {
+      "id": "implementa-segregacao-usuario-por",
+      "name": "Implementa segregacao de usuario por contextvars e cache sqlite de embeddings",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/main.py",
+        "assistant/app/memory/memory_service.py",
+        "assistant/app/middleware/user_context.py",
+        "assistant/app/rag/embeddings/cache.py",
+        "assistant/app/rag/embeddings/embedder.py",
+        "assistant/tests/unit/rag/test_embeddings_cache.py"
+      ],
+      "lastCommit": "fc01f9cdc208",
+      "createdAt": "2026-07-09T00:03:37-03:00",
+      "updatedAt": "2026-07-09T00:03:37-03:00"
+    },
+    {
+      "id": "infra",
+      "name": "Adjust postgres and kaos-api healthchecks to prevent deploy and rollback timeouts",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md",
+        "docs/sdd/SDD-INFRA-001.md"
+      ],
+      "codeRefs": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/desktop-ci.yml",
+        ".github/workflows/release.yml",
+        "infra/docker/alertmanager.yml",
+        "infra/docker/alerts.yml",
+        "infra/docker/blackbox.yml",
+        "infra/docker/docker-compose.local.yml",
+        "infra/docker/docker-compose.prod.yml",
+        "infra/docker/docker-compose.yml",
+        "infra/docker/loki.yml",
+        "infra/docker/prometheus.yml",
+        "infra/docker/promtail.yml"
+      ],
+      "lastCommit": "8c07c27f3ed8",
+      "createdAt": "2026-06-11T12:51:35-03:00",
+      "updatedAt": "2026-07-10T21:04:53-03:00"
+    },
+    {
+      "id": "ingestion",
+      "name": "Pipeline completo de ingestao de fontes",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/graph.py",
+        "assistant/app/agent/nodes/ingest.py",
+        "assistant/app/agent/state.py",
+        "assistant/app/api/chat.py",
+        "assistant/app/router/intent_classifier.py",
+        "assistant/app/router/smart_router.py",
+        "assistant/app/service/agent_service.py"
+      ],
+      "lastCommit": "1f86b7cacaae",
+      "createdAt": "2026-06-18T14:31:35-03:00",
+      "updatedAt": "2026-06-18T14:31:35-03:00"
+    },
+    {
+      "id": "installation",
+      "name": "Guia de Instalação — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/INSTALLATION.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.800948+00:00",
+      "updatedAt": "2026-07-11T12:55:28.800952+00:00"
+    },
+    {
+      "id": "integra-agente-langgraph-nas",
+      "name": "Integra agente LangGraph nas APIs (chat + openai compat)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "app/api/chat.py",
+        "app/api/openai_compat.py",
+        "app/main.py",
+        "tests/test_chat.py",
+        "tests/test_openai.py"
+      ],
+      "lastCommit": "bf1b0bd66369",
+      "createdAt": "2026-06-10T19:55:46-03:00",
+      "updatedAt": "2026-06-10T19:55:46-03:00"
+    },
+    {
+      "id": "integra-k-a-o-s-storage-como-submodule",
+      "name": "Integra K.A.O.S-storage como submodule em docs/vault",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/functional-spec.md",
+        "docs/sdd/technical-spec.md",
+        "docs/vault"
+      ],
+      "codeRefs": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/desktop-ci.yml",
+        ".github/workflows/release.yml"
+      ],
+      "lastCommit": "2344ddc59071",
+      "createdAt": "2026-06-19T13:54:45-03:00",
+      "updatedAt": "2026-06-19T13:54:45-03:00"
+    },
+    {
+      "id": "intent",
+      "name": "Implementa IntentClassifier com keyword fast-path + LLM fallback",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/config/prompts.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/router/intent_classifier.py"
+      ],
+      "lastCommit": "882bfe4221fd",
+      "createdAt": "2026-06-11T10:32:54-03:00",
+      "updatedAt": "2026-06-11T10:32:54-03:00"
+    },
+    {
+      "id": "job-tauri-build-linux",
+      "name": "Job Tauri build no CI (Linux + Windows)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/ci.yml"
+      ],
+      "lastCommit": "e0360c298c0c",
+      "createdAt": "2026-06-18T22:56:34-03:00",
+      "updatedAt": "2026-06-18T22:56:34-03:00"
+    },
+    {
+      "id": "k-a-o-s-local-docker-ready",
+      "name": "K.A.O.S local + Docker ready + Open WebUI integration",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/openai.py",
+        "assistant/app/router/intent_classifier.py",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "2f7bc6b5d212",
+      "createdAt": "2026-06-12T18:21:47-03:00",
+      "updatedAt": "2026-06-12T18:21:47-03:00"
+    },
+    {
+      "id": "k-a-o-s-stabilization-and-real",
+      "name": "K.A.O.S stabilization and real backend integrations",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/drift-check.yml",
+        ".github/workflows/registry-sync.yml",
+        "assistant/app/ai/vault_analyzer/knowledge_graph.py",
+        "assistant/app/api/admin.py",
+        "assistant/app/api/agents_api.py",
+        "assistant/app/api/automation.py",
+        "assistant/app/api/integrations.py",
+        "assistant/app/api/mcp.py",
+        "assistant/app/api/observability.py",
+        "assistant/app/api/prompts.py",
+        "assistant/app/api/rag.py",
+        "assistant/app/api/settings_api.py",
+        "assistant/app/api/system.py",
+        "assistant/app/api/users.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/core/knowledge_graph_watcher.py",
+        "assistant/app/core/mcp_manager.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/app/main.py",
+        "assistant/app/memory/models.py",
+        "assistant/app/memory/postgres_repository.py",
+        "assistant/app/middleware/user_context.py",
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/prompt.py",
+        "assistant/app/repositories/conversation_repository.py",
+        "assistant/migrations/env.py",
+        "assistant/pyproject.toml",
+        "assistant/scripts/bootstrap_feature_registry.py",
+        "assistant/tests/unit/test_knowledge_graph.py",
+        "desktop/public/workflows/cost_tracker_workflow.json",
+        "desktop/public/workflows/devops_backup_workflow.json",
+        "desktop/public/workflows/github_review_workflow.json",
+        "desktop/public/workflows/mcp_health_workflow.json",
+        "desktop/public/workflows/vault_sync_workflow.json",
+        "desktop/public/workflows/whatsapp_chatbot_workflow.json",
+        "desktop/src-tauri/src/lib.rs",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/agents.tsx",
+        "desktop/src/app/routes/pages/architecture/index.tsx",
+        "desktop/src/app/routes/pages/automation-studio.tsx",
+        "desktop/src/app/routes/pages/chat.tsx",
+        "desktop/src/app/routes/pages/costs.tsx",
+        "desktop/src/app/routes/pages/dashboard.tsx",
+        "desktop/src/app/routes/pages/documentation/index.tsx",
+        "desktop/src/app/routes/pages/events.tsx",
+        "desktop/src/app/routes/pages/graphify.tsx",
+        "desktop/src/app/routes/pages/knowledge-graph.tsx",
+        "desktop/src/app/routes/pages/login.tsx",
+        "desktop/src/app/routes/pages/marketplace.tsx",
+        "desktop/src/app/routes/pages/observability.tsx",
+        "desktop/src/app/routes/pages/orchestration.tsx",
+        "desktop/src/app/routes/pages/pipelines.tsx",
+        "desktop/src/app/routes/pages/prompts.tsx",
+        "desktop/src/app/routes/pages/settings.tsx",
+        "desktop/src/app/routes/pages/setup.tsx",
+        "desktop/src/app/routes/pages/tools.tsx",
+        "desktop/src/app/routes/pages/users.tsx",
+        "desktop/src/app/routes/pages/vault.tsx",
+        "desktop/src/app/routes/pages/welcome.tsx",
+        "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/events/index.tsx",
+        "desktop/src/pages/graphify/index.tsx",
+        "desktop/src/pages/knowledge-graph/index.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/orchestration/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/prompts/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/tools/index.tsx",
+        "desktop/src/pages/users/index.tsx",
+        "desktop/src/shared/api/ipc-bridge.ts",
+        "desktop/src/shared/api/tauri-store-service.ts",
+        "desktop/src/shared/lib/stores/agent-store.ts",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/chat-store.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/lib/use-init.ts",
+        "desktop/src/widgets/sidebar/index.tsx"
+      ],
+      "lastCommit": "32ba21a5a2c3",
+      "createdAt": "2026-06-28T19:54:24-03:00",
+      "updatedAt": "2026-06-28T19:54:24-03:00"
+    },
+    {
+      "id": "kaos-api",
+      "name": "Move BootstrapManager.boot() to background task to pass container healthcheck on startup",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/deploy.yml",
+        "assistant/app/main.py",
+        "infra/docker/docker-compose.prod.yml"
+      ],
+      "lastCommit": "f2bad1b906d2",
+      "createdAt": "2026-07-10T00:08:16-03:00",
+      "updatedAt": "2026-07-10T07:41:53-03:00"
+    },
+    {
+      "id": "kirl-guide",
+      "name": "Guia KIRL — K.A.O.S Intelligence Runtime Layer",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/KIRL_GUIDE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.801785+00:00",
+      "updatedAt": "2026-07-11T12:55:28.801790+00:00"
+    },
+    {
+      "id": "knowledge-graph",
+      "name": "Implement incremental updates, watcher and frontend details view",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/registry-sync.yml",
+        "assistant/app/ai/vault_analyzer/knowledge_graph.py",
+        "assistant/app/core/knowledge_graph_watcher.py",
+        "assistant/app/main.py",
+        "assistant/tests/unit/test_knowledge_graph.py",
+        "desktop/src/pages/knowledge-graph/index.tsx"
+      ],
+      "lastCommit": "f86ae63d7452",
+      "createdAt": "2026-06-28T19:49:41-03:00",
+      "updatedAt": "2026-06-28T19:49:41-03:00"
+    },
+    {
+      "id": "linter",
+      "name": "Resolve all unused imports, variables and re-exports in backend assistant",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/workspace_intelligence.py",
+        "assistant/app/capability/registry.py",
+        "assistant/app/capability/workspace_intelligence/service.py",
+        "assistant/app/core/credential_service.py",
+        "assistant/app/core/plugin_registry.py",
+        "assistant/app/core/plugin_sandbox.py",
+        "assistant/app/obsidian/wiki_pipeline.py",
+        "assistant/app/providers/aws/__init__.py",
+        "assistant/app/providers/aws/aws_tool.py",
+        "assistant/app/providers/email/__init__.py",
+        "assistant/app/providers/email/email_reader.py",
+        "assistant/app/providers/whatsapp/__init__.py",
+        "assistant/tests/unit/test_aws_tools.py",
+        "assistant/tests/unit/test_credential_service.py",
+        "assistant/tests/unit/test_email_provider.py",
+        "assistant/tests/unit/test_plugin_sandbox.py",
+        "assistant/tests/unit/test_qdrant_hnsw.py",
+        "assistant/tests/unit/test_wiki_pipeline.py"
+      ],
+      "lastCommit": "ef8fad02ed9a",
+      "createdAt": "2026-07-09T22:08:40-03:00",
+      "updatedAt": "2026-07-09T22:08:40-03:00"
+    },
+    {
+      "id": "llm",
+      "name": "Implement active provider synchronization and smart dynamic fallback resolution",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md",
+        "docs/sdd/Provedor Hibrido de LLM.md",
+        "docs/sdd/sdd_llm_provider_hybrid.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/nodes/ingest.py",
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/api/openai.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/llm/__init__.py",
+        "assistant/app/llm/factory.py",
+        "assistant/app/llm/metrics.py",
+        "assistant/app/llm/provider.py",
+        "assistant/app/llm/providers/__init__.py",
+        "assistant/app/llm/providers/claude_provider.py",
+        "assistant/app/llm/providers/gemini_provider.py",
+        "assistant/app/llm/providers/ollama_provider.py",
+        "assistant/app/llm/providers/openai_provider.py",
+        "assistant/app/router/intent_classifier.py",
+        "assistant/app/router/memory_router.py",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/settings/index.tsx"
+      ],
+      "lastCommit": "494ad3a04831",
+      "createdAt": "2026-06-18T14:44:12-03:00",
+      "updatedAt": "2026-06-25T16:05:26-03:00"
+    },
+    {
+      "id": "logs",
+      "name": "Adiciona log de query e contagem de resultados no retrieve_context",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/anti-patterns.md",
+        "docs/backlog.md",
+        "docs/patterns.md",
+        "docs/project.md",
+        "docs/sdd/functional-spec.md",
+        "docs/sdd/technical-spec.md",
+        "docs/testing-strategy.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/graph.py",
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/agent/nodes/retrieve.py",
+        "assistant/app/api/chat.py",
+        "assistant/app/api/health.py",
+        "assistant/app/api/indexing.py",
+        "assistant/app/api/openai.py",
+        "assistant/app/api/rag.py",
+        "assistant/app/main.py",
+        "assistant/app/obsidian/services/obsidian_service.py",
+        "assistant/app/obsidian/tools/create_note_tool.py",
+        "assistant/app/obsidian/tools/delete_note_tool.py",
+        "assistant/app/obsidian/tools/read_note_tool.py",
+        "assistant/app/obsidian/tools/search_notes_tool.py",
+        "assistant/app/obsidian/tools/update_note_tool.py",
+        "assistant/app/obsidian/watcher/vault_watcher.py",
+        "assistant/app/rag/chunking/text_splitter.py",
+        "assistant/app/rag/embeddings/embedder.py",
+        "assistant/app/rag/indexer/vault_indexer.py",
+        "assistant/app/rag/retriever/semantic_retriever.py",
+        "assistant/app/service/agent_service.py",
+        "assistant/app/service/llm_service.py"
+      ],
+      "lastCommit": "dbfdeaea0c0a",
+      "createdAt": "2026-06-11T01:16:34-03:00",
+      "updatedAt": "2026-06-11T10:30:20-03:00"
+    },
+    {
+      "id": "m3m4m5-setup-state-access",
+      "name": "M3+M4+M5 - Setup State, Access Gate, Settings Refactor",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/system-store.ts"
+      ],
+      "lastCommit": "3fc59f9d8f9f",
+      "createdAt": "2026-06-23T12:23:11-03:00",
+      "updatedAt": "2026-06-23T12:23:11-03:00"
+    },
+    {
+      "id": "marketplace",
+      "name": "Add workflow templates API and dynamic frontend integration",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/automation.py",
+        "desktop/src/pages/automation/marketplace.tsx",
+        "desktop/src/widgets/sidebar/index.tsx"
+      ],
+      "lastCommit": "fece02e93eb4",
+      "createdAt": "2026-07-08T20:42:23-03:00",
+      "updatedAt": "2026-07-08T20:42:23-03:00"
+    },
+    {
+      "id": "memoria-do-obsidian",
+      "name": "MemÓria do Obsidian",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Memoria do Obsidian.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.790892+00:00",
+      "updatedAt": "2026-07-11T12:55:28.790898+00:00"
+    },
+    {
+      "id": "memory",
+      "name": "Add PostgreSQL persistent memory with dual-write",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/memory/__init__.py",
+        "assistant/app/memory/memory_service.py",
+        "assistant/app/memory/models.py",
+        "assistant/app/memory/postgres_repository.py",
+        "assistant/app/obsidian/tools/save_conversation_tool.py",
+        "assistant/pyproject.toml",
+        "assistant/tests/unit/memory/__init__.py",
+        "assistant/tests/unit/memory/test_memory_service.py"
+      ],
+      "lastCommit": "b8fc66fbf303",
+      "createdAt": "2026-06-11T01:31:40-03:00",
+      "updatedAt": "2026-06-11T23:31:28-03:00"
+    },
+    {
+      "id": "memory-workflow-save-conversation",
+      "name": "Memory Workflow - save conversation via WorkflowRouter + RequestContext + structured logs",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/chat.py",
+        "assistant/app/api/openai.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/desktop/__init__.py",
+        "assistant/app/desktop/workspace/__init__.py",
+        "assistant/app/desktop/workspace/manager.py",
+        "assistant/app/domain/command.py",
+        "assistant/app/domain/context.py",
+        "assistant/app/domain/event.py",
+        "assistant/app/domain/identity.py",
+        "assistant/app/domain/intent.py",
+        "assistant/app/domain/memory.py",
+        "assistant/app/domain/workflow.py",
+        "assistant/app/main.py",
+        "assistant/app/memory/memory_service.py",
+        "assistant/app/memory/models.py",
+        "assistant/app/memory/storage/__init__.py",
+        "assistant/app/memory/storage/postgres_storage.py",
+        "assistant/app/memory/storage/workspace_storage.py",
+        "assistant/app/memory/summarizer.py",
+        "assistant/app/middleware/auth.py",
+        "assistant/app/observability/event_bus.py",
+        "assistant/app/router/intent_classifier.py",
+        "assistant/app/router/memory_workflow.py",
+        "assistant/app/router/workflow_router.py",
+        "assistant/tests/test_chat.py",
+        "assistant/tests/test_openai.py",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "f5c47359469a",
+      "createdAt": "2026-06-21T22:43:25-03:00",
+      "updatedAt": "2026-06-21T22:43:25-03:00"
+    },
+    {
+      "id": "middleware",
+      "name": "Reorder middleware registration to run CORSMiddleware first and handle OPTIONS preflight properly",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/main.py"
+      ],
+      "lastCommit": "f5fef3b888c0",
+      "createdAt": "2026-06-24T13:48:13-03:00",
+      "updatedAt": "2026-06-24T13:48:13-03:00"
+    },
+    {
+      "id": "migra-para-monorepo-k-a-o-s",
+      "name": "Migra para monorepo K.A.O.S (kaos-platform)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd_open_code_identidade.md"
+      ],
+      "codeRefs": [
+        "app/__init__.py",
+        "app/api/__init__.py",
+        "app/api/chat.py",
+        "app/api/health.py",
+        "app/config/__init__.py",
+        "app/config/settings.py",
+        "app/domain/__init__.py",
+        "app/domain/chat.py",
+        "app/domain/document.py",
+        "app/main.py",
+        "app/obsidian/__init__.py",
+        "app/obsidian/services/__init__.py",
+        "app/obsidian/services/obsidian_service.py",
+        "app/obsidian/tools/__init__.py",
+        "app/obsidian/tools/create_note_tool.py",
+        "app/obsidian/tools/delete_note_tool.py",
+        "app/obsidian/tools/read_note_tool.py",
+        "app/obsidian/tools/search_notes_tool.py",
+        "app/obsidian/tools/update_note_tool.py",
+        "app/service/__init__.py",
+        "app/service/llm_service.py",
+        "assistant/app/__init__.py",
+        "assistant/app/api/__init__.py",
+        "assistant/app/api/chat.py",
+        "assistant/app/api/health.py",
+        "assistant/app/api/rag.py",
+        "assistant/app/config/__init__.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/domain/__init__.py",
+        "assistant/app/domain/chat.py",
+        "assistant/app/domain/document.py",
+        "assistant/app/main.py",
+        "assistant/app/obsidian/__init__.py",
+        "assistant/app/obsidian/services/__init__.py",
+        "assistant/app/obsidian/services/obsidian_service.py",
+        "assistant/app/obsidian/tools/__init__.py",
+        "assistant/app/obsidian/tools/create_note_tool.py",
+        "assistant/app/obsidian/tools/delete_note_tool.py",
+        "assistant/app/obsidian/tools/read_note_tool.py",
+        "assistant/app/obsidian/tools/search_notes_tool.py",
+        "assistant/app/obsidian/tools/update_note_tool.py",
+        "assistant/app/service/__init__.py",
+        "assistant/app/service/llm_service.py",
+        "assistant/pyproject.toml",
+        "assistant/tests/__init__.py",
+        "assistant/tests/test_chat.py",
+        "assistant/tests/test_health.py",
+        "assistant/tests/unit/__init__.py",
+        "assistant/tests/unit/obsidian/__init__.py",
+        "assistant/tests/unit/obsidian/test_obsidian_service.py",
+        "assistant/tests/unit/obsidian/test_obsidian_tools.py",
+        "docker/docker-compose.yml",
+        "infra/docker/docker-compose.yml",
+        "pyproject.toml",
+        "tests/__init__.py",
+        "tests/test_chat.py",
+        "tests/test_health.py",
+        "tests/unit/__init__.py",
+        "tests/unit/obsidian/__init__.py",
+        "tests/unit/obsidian/test_obsidian_service.py",
+        "tests/unit/obsidian/test_obsidian_tools.py"
+      ],
+      "lastCommit": "0c9399191691",
+      "createdAt": "2026-06-10T22:44:26-03:00",
+      "updatedAt": "2026-06-10T22:44:26-03:00"
+    },
+    {
+      "id": "model",
+      "name": "Add model routing for kaos, kaos-rag, kaos-fast",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/api/openai.py",
+        "assistant/app/router/memory_router.py",
+        "assistant/app/service/agent_service.py"
+      ],
+      "lastCommit": "d15ede67226c",
+      "createdAt": "2026-06-12T01:51:15-03:00",
+      "updatedAt": "2026-06-12T01:51:15-03:00"
+    },
+    {
+      "id": "multi-user-rbac",
+      "name": "Multi User + RBAC",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/multi-user-rbac.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.795441+00:00",
+      "updatedAt": "2026-07-11T12:55:28.795446+00:00"
+    },
+    {
+      "id": "observability-real",
+      "name": "Observability Real",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/observability-real.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.775610+00:00",
+      "updatedAt": "2026-07-11T12:55:28.775614+00:00"
+    },
+    {
+      "id": "obsidian-guide",
+      "name": "Guia Obsidian — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/OBSIDIAN_GUIDE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.800362+00:00",
+      "updatedAt": "2026-07-11T12:55:28.800367+00:00"
+    },
+    {
+      "id": "obsidian-watcher",
+      "name": "Obsidian Watcher",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Obsidian Watcher.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.781350+00:00",
+      "updatedAt": "2026-07-11T12:55:28.781355+00:00"
+    },
+    {
+      "id": "obsidianservice-tools-leitura-escrita-busca-vault",
+      "name": "ObsidianService e tools de leitura/escrita/busca no vault",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "app/domain/document.py",
+        "app/obsidian/__init__.py",
+        "app/obsidian/services/__init__.py",
+        "app/obsidian/services/obsidian_service.py",
+        "app/obsidian/tools/__init__.py",
+        "app/obsidian/tools/create_note_tool.py",
+        "app/obsidian/tools/delete_note_tool.py",
+        "app/obsidian/tools/read_note_tool.py",
+        "app/obsidian/tools/search_notes_tool.py",
+        "app/obsidian/tools/update_note_tool.py",
+        "pyproject.toml",
+        "tests/unit/__init__.py",
+        "tests/unit/obsidian/__init__.py",
+        "tests/unit/obsidian/test_obsidian_service.py",
+        "tests/unit/obsidian/test_obsidian_tools.py"
+      ],
+      "lastCommit": "49fb270b0d32",
+      "createdAt": "2026-06-10T16:00:55-03:00",
+      "updatedAt": "2026-06-10T16:00:55-03:00"
+    },
+    {
+      "id": "operations-runbook",
+      "name": "K.A.O.S — Manual de Operações (Runbook)",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/OPERATIONS.md",
+        "docs/guides/OPERATIONS_RUNBOOK.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.800555+00:00",
+      "updatedAt": "2026-07-11T12:55:28.800558+00:00"
+    },
+    {
+      "id": "ops",
+      "name": "Restore production api gateway, update deploy cleanup, and update docs submodule",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/SDD-Desktop-Stabilization-F1.md",
+        "docs/sdd/SDD-N8N-GITOPS-001.md",
+        "docs/sdd/SDD-OPS-001.md",
+        "docs/sdd/SDD-OPS-002.md"
+      ],
+      "codeRefs": [
+        ".github/workflows/deploy.yml"
+      ],
+      "lastCommit": "dd409dfc9267",
+      "createdAt": "2026-07-10T23:22:50-03:00",
+      "updatedAt": "2026-07-10T23:22:50-03:00"
+    },
+    {
+      "id": "orquestrador-langgraph",
+      "name": "Orquestrador LangGraph",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Orquestrador LangGraph.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.776176+00:00",
+      "updatedAt": "2026-07-11T12:55:28.776181+00:00"
+    },
+    {
+      "id": "otimiza-dockerfile-com-torch",
+      "name": "Otimiza Dockerfile com torch CPU-only e unifica healthcheck com fromJSON",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/release.yml"
+      ],
+      "lastCommit": "86241e581bfc",
+      "createdAt": "2026-06-18T23:32:02-03:00",
+      "updatedAt": "2026-06-18T23:32:02-03:00"
+    },
+    {
+      "id": "p1p2-unified-path-resolution",
+      "name": "P1+P2 - unified path resolution, registry sync, doc recovery engine, and desktop audit",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "workspace/kaos/vault/users/default/conversa_2026-06-23_134306_e8b764da.md",
+        "workspace/kaos/vault/users/default/conversa_2026-06-23_145646_e8b764da.md",
+        "workspace/kaos/vault/wiki/index.md",
+        "workspace/kaos/vault/wiki/log.md"
+      ],
+      "codeRefs": [
+        "assistant/app/audit/sdd_resolver.py",
+        "assistant/app/core/documentation/__init__.py",
+        "assistant/app/core/documentation/audit_engine.py",
+        "assistant/app/core/documentation/graph_validator.py",
+        "assistant/app/core/documentation/health_engine.py",
+        "assistant/app/core/documentation/recovery_engine.py",
+        "assistant/app/core/documentation/report_generator.py",
+        "assistant/scripts/audit_desktop.py",
+        "assistant/scripts/audit_docs.py",
+        "assistant/scripts/sync_github_registry.py"
+      ],
+      "lastCommit": "48495b43be5c",
+      "createdAt": "2026-06-23T14:57:36-03:00",
+      "updatedAt": "2026-06-23T14:57:36-03:00"
+    },
+    {
+      "id": "performance-optimizations-rag-diagnostics",
+      "name": "Performance optimizations + RAG diagnostics + OpenAI compat",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/openai.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/main.py",
+        "assistant/app/rag/embeddings/embedder.py",
+        "assistant/app/rag/indexer/vault_indexer.py",
+        "assistant/app/rag/retriever/semantic_retriever.py",
+        "assistant/app/router/intent_classifier.py",
+        "assistant/app/router/memory_router.py",
+        "assistant/pyproject.toml"
+      ],
+      "lastCommit": "2deb70e70c15",
+      "createdAt": "2026-06-11T18:24:56-03:00",
+      "updatedAt": "2026-06-11T18:24:56-03:00"
+    },
+    {
+      "id": "pipeline-desktop-separada-com",
+      "name": "Pipeline desktop separada com caching + healthcheck com retry",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md"
+      ],
+      "codeRefs": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/desktop-ci.yml",
+        ".github/workflows/release.yml"
+      ],
+      "lastCommit": "ea77db95045b",
+      "createdAt": "2026-06-18T23:50:53-03:00",
+      "updatedAt": "2026-06-18T23:50:53-03:00"
+    },
+    {
+      "id": "propagacao-de-contexto-de-usuario",
+      "name": "PropagaçÃo de Contexto de Usuário",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Propagacao de Contexto de Usuario.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.774493+00:00",
+      "updatedAt": "2026-07-11T12:55:28.774509+00:00"
+    },
+    {
+      "id": "provider-routing",
+      "name": "Provider Routing — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/architecture/PROVIDER_ROUTING.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.797276+00:00",
+      "updatedAt": "2026-07-11T12:55:28.797279+00:00"
+    },
+    {
+      "id": "proxy",
+      "name": "Connect OpenAI /v1/chat/completions to LangGraph AgentService",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/openai.py"
+      ],
+      "lastCommit": "c2e8f375383e",
+      "createdAt": "2026-06-11T01:25:45-03:00",
+      "updatedAt": "2026-06-11T01:25:45-03:00"
+    },
+    {
+      "id": "query",
+      "name": "Wiki-first retrieval + file_synthesis_page + wiki awareness",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/agent/nodes/retrieve.py",
+        "assistant/app/config/prompts.py",
+        "assistant/app/obsidian/tools/wiki/__init__.py",
+        "assistant/app/obsidian/tools/wiki/file_synthesis_tool.py",
+        "assistant/tests/unit/agent/test_executor.py"
+      ],
+      "lastCommit": "7312fb8c9388",
+      "createdAt": "2026-06-18T14:34:07-03:00",
+      "updatedAt": "2026-06-18T14:34:07-03:00"
+    },
+    {
+      "id": "rag",
+      "name": "Auditoria - diagnostics endpoint, score distribution, indexing metrics",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Busca Vetorial e RAG.md",
+        "docs/sdd/sdd_fase4_rag_pipeline.md",
+        "docs/sdd/sdd_obsidian_rag.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/nodes/retrieve.py",
+        "assistant/app/api/indexing.py",
+        "assistant/app/api/rag.py",
+        "assistant/app/rag/embeddings/embedder.py",
+        "assistant/app/rag/retriever/semantic_retriever.py",
+        "assistant/tests/integration/__init__.py",
+        "assistant/tests/integration/rag/__init__.py",
+        "assistant/tests/integration/rag/test_rag_pipeline.py"
+      ],
+      "lastCommit": "f027326c559d",
+      "createdAt": "2026-06-11T01:30:12-03:00",
+      "updatedAt": "2026-06-18T16:11:19-03:00"
+    },
+    {
+      "id": "recuperador-semantico",
+      "name": "Recuperador SemÃntico",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Recuperador Semantico.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.784573+00:00",
+      "updatedAt": "2026-07-11T12:55:28.784576+00:00"
+    },
+    {
+      "id": "refatoracao-frontend-fsd",
+      "name": "Refatoracao Frontend FSD",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Refatoracao Frontend FSD.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.775122+00:00",
+      "updatedAt": "2026-07-11T12:55:28.775129+00:00"
+    },
+    {
+      "id": "registry",
+      "name": "Update docs submodule pointer [skip ci]",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [],
+      "lastCommit": "2a1f34dd1bd6",
+      "createdAt": "2026-06-24T16:42:05Z",
+      "updatedAt": "2026-07-11T00:36:31Z"
+    },
+    {
+      "id": "release",
+      "name": "2.5.4 [skip ci]",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "CHANGELOG.md"
+      ],
+      "codeRefs": [
+        ".github/workflows/auto-release.yml",
+        ".github/workflows/desktop-ci.yml",
+        ".releaserc.json",
+        "desktop/package.json",
+        "desktop/src-tauri/Cargo.toml",
+        "desktop/src-tauri/tauri.conf.json",
+        "package.json"
+      ],
+      "lastCommit": "85cd7f9a5451",
+      "createdAt": "2026-06-24T13:06:19-03:00",
+      "updatedAt": "2026-07-11T00:36:19Z"
+    },
+    {
+      "id": "roadmap-geral",
+      "name": "Roadmap Geral",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Roadmap Geral.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.787448+00:00",
+      "updatedAt": "2026-07-11T12:55:28.787454+00:00"
+    },
+    {
+      "id": "roteamento-de-memoria",
+      "name": "Roteamento de MemÓria",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/Roteamento de Memoria.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.793766+00:00",
+      "updatedAt": "2026-07-11T12:55:28.793769+00:00"
+    },
+    {
+      "id": "router",
+      "name": "Implementa FastRouter, MemoryRouter e SmartRouter",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/router/fast_router.py",
+        "assistant/app/router/memory_router.py",
+        "assistant/app/router/smart_router.py"
+      ],
+      "lastCommit": "11bd97f1dff7",
+      "createdAt": "2026-06-11T10:34:07-03:00",
+      "updatedAt": "2026-06-11T10:34:07-03:00"
+    },
+    {
+      "id": "script-job-para-gerar",
+      "name": "Script e CI job para gerar icones do KAOS",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/ci.yml",
+        "scripts/generate_icons.py"
+      ],
+      "lastCommit": "e97d62ec99d3",
+      "createdAt": "2026-06-18T22:26:54-03:00",
+      "updatedAt": "2026-06-18T22:26:54-03:00"
+    },
+    {
+      "id": "scripts",
+      "name": "Add migration and reindex scripts",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/scripts/migrate_memory_to_postgres.py",
+        "assistant/scripts/reindex_with_cache.py"
+      ],
+      "lastCommit": "be9bb134a29a",
+      "createdAt": "2026-06-11T12:39:14-03:00",
+      "updatedAt": "2026-06-12T00:29:15-03:00"
+    },
+    {
+      "id": "scripts-setup-ollama-modelo",
+      "name": "Scripts de setup do Ollama e modelo qwen3:14b",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [],
+      "lastCommit": "76caf7969eb0",
+      "createdAt": "2026-06-10T15:13:05-03:00",
+      "updatedAt": "2026-06-10T15:13:05-03:00"
+    },
+    {
+      "id": "sdd",
+      "name": "Cria SDD de User Context Propagation",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        ".opencode/plans/SDD-040-completo.md",
+        "docs/governance/DOCUMENTATION_GOVERNANCE_SDD.md",
+        "docs/sdd/SDD-Commit-Governance.md",
+        "docs/sdd/SDD-F2-Readiness-Engine.md",
+        "docs/sdd/SDD-Implementation-Plan-v2.md",
+        "docs/sdd/SDD-KAOS-EVOLUTION-001.md",
+        "docs/sdd/SDD-MCP-Bridge.md",
+        "docs/sdd/SDD-OBS-001.md",
+        "docs/sdd/SDD-Roadmap-Expansion-v2-opencode-review.md",
+        "docs/sdd/SDD-Roadmap-Expansion-v2.md",
+        "docs/sdd/sdd_arquitetura_orquestracao.md",
+        "docs/sdd/sdd_desktop_build_optimization.md",
+        "docs/sdd/sdd_fase1_fundacao.md",
+        "docs/sdd/sdd_fase2_ia_local.md",
+        "docs/sdd/sdd_fase3_obsidian_service.md",
+        "docs/sdd/sdd_fase5_watcher_langgraph.md",
+        "docs/sdd/sdd_obsidian_memoria.md",
+        "docs/sdd/sdd_obsidian_tools.md",
+        "docs/sdd/sdd_obsidian_watcher.md",
+        "docs/sdd/sdd_open_code_identidade.md",
+        "docs/sdd/sdd_roadmap.md",
+        "docs/sdd_user_context_propagation.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "9ee8d6c104e8",
+      "createdAt": "2026-06-11T12:22:27-03:00",
+      "updatedAt": "2026-06-11T12:22:27-03:00"
+    },
+    {
+      "id": "sdd-040-01",
+      "name": "SDD040-01 core contracts and registry",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/domain/execution_plan.py",
+        "assistant/app/observability/__init__.py",
+        "assistant/app/observability/event_bus.py",
+        "assistant/app/observability/execution_context.py",
+        "assistant/app/providers/__init__.py",
+        "assistant/app/providers/base/__init__.py",
+        "assistant/app/providers/base/chat.py",
+        "assistant/app/providers/base/embedding.py",
+        "assistant/app/providers/base/memory.py",
+        "assistant/app/providers/base/vector_store.py",
+        "assistant/app/registry/__init__.py",
+        "assistant/app/registry/service_registry.py",
+        "assistant/app/workflows/__init__.py",
+        "assistant/app/workflows/base.py",
+        "assistant/tests/unit/test_contracts.py"
+      ],
+      "lastCommit": "cef7edc8da82",
+      "createdAt": "2026-06-21T17:48:33-03:00",
+      "updatedAt": "2026-06-21T17:48:33-03:00"
+    },
+    {
+      "id": "sdd-040-02",
+      "name": "SDD040-02 database schema and repositories",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/repositories/__init__.py",
+        "assistant/app/repositories/capability_policy_repository.py",
+        "assistant/app/repositories/failed_execution_repository.py",
+        "assistant/app/repositories/feature_flag_repository.py",
+        "assistant/app/repositories/model_repository.py",
+        "assistant/app/repositories/provider_config_repository.py",
+        "assistant/app/repositories/user_model_profile_repository.py",
+        "assistant/app/repositories/user_profile_repository.py",
+        "assistant/tests/unit/test_repositories.py"
+      ],
+      "lastCommit": "ffd0fc3d4674",
+      "createdAt": "2026-06-21T17:54:04-03:00",
+      "updatedAt": "2026-06-21T17:54:04-03:00"
+    },
+    {
+      "id": "sdd-kaos-desktop-update-001",
+      "name": "Atualizar referencia do submodulo docs ( v3.0)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/SDD-KAOS-DESKTOP-UPDATE-001.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "90fa3efb8ff0",
+      "createdAt": "2026-06-23T17:55:10-03:00",
+      "updatedAt": "2026-06-23T17:55:10-03:00"
+    },
+    {
+      "id": "sdd-kaos-uxui-001",
+      "name": "Update docs submodule reference with",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/SDD-KAOS-UXUI-001.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "64edbb524dfc",
+      "createdAt": "2026-06-25T18:43:06-03:00",
+      "updatedAt": "2026-06-25T18:43:06-03:00"
+    },
+    {
+      "id": "sdd-s",
+      "name": "Update docs submodule reference with new SDDs",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md",
+        "docs/index.md",
+        "docs/sdd/SDD-Session-History.md",
+        "docs/sdd_knowledge_wiki_layer.md",
+        "docs/sdd_llm_provider_hybrid.md"
+      ],
+      "codeRefs": [
+        "infra/docker/docker-compose.prod.yml"
+      ],
+      "lastCommit": "f753491ba59d",
+      "createdAt": "2026-06-18T13:41:22-03:00",
+      "updatedAt": "2026-07-10T19:53:51-03:00"
+    },
+    {
+      "id": "stabilization-real-backend-integrations",
+      "name": "Stabilization, real backend integrations, SSE streams, IpcBridge, and code cleaning",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/admin.py",
+        "assistant/app/api/agents_api.py",
+        "assistant/app/api/automation.py",
+        "assistant/app/api/integrations.py",
+        "assistant/app/api/mcp.py",
+        "assistant/app/api/observability.py",
+        "assistant/app/api/prompts.py",
+        "assistant/app/api/rag.py",
+        "assistant/app/api/settings_api.py",
+        "assistant/app/api/system.py",
+        "assistant/app/api/users.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/core/mcp_manager.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/app/main.py",
+        "assistant/app/memory/models.py",
+        "assistant/app/memory/postgres_repository.py",
+        "assistant/app/middleware/user_context.py",
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/prompt.py",
+        "assistant/app/repositories/conversation_repository.py",
+        "assistant/migrations/env.py",
+        "assistant/pyproject.toml",
+        "desktop/public/workflows/cost_tracker_workflow.json",
+        "desktop/public/workflows/devops_backup_workflow.json",
+        "desktop/public/workflows/github_review_workflow.json",
+        "desktop/public/workflows/mcp_health_workflow.json",
+        "desktop/public/workflows/vault_sync_workflow.json",
+        "desktop/public/workflows/whatsapp_chatbot_workflow.json",
+        "desktop/src-tauri/src/lib.rs",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/agents.tsx",
+        "desktop/src/app/routes/pages/architecture/index.tsx",
+        "desktop/src/app/routes/pages/automation-studio.tsx",
+        "desktop/src/app/routes/pages/chat.tsx",
+        "desktop/src/app/routes/pages/costs.tsx",
+        "desktop/src/app/routes/pages/dashboard.tsx",
+        "desktop/src/app/routes/pages/documentation/index.tsx",
+        "desktop/src/app/routes/pages/events.tsx",
+        "desktop/src/app/routes/pages/graphify.tsx",
+        "desktop/src/app/routes/pages/knowledge-graph.tsx",
+        "desktop/src/app/routes/pages/login.tsx",
+        "desktop/src/app/routes/pages/marketplace.tsx",
+        "desktop/src/app/routes/pages/observability.tsx",
+        "desktop/src/app/routes/pages/orchestration.tsx",
+        "desktop/src/app/routes/pages/pipelines.tsx",
+        "desktop/src/app/routes/pages/prompts.tsx",
+        "desktop/src/app/routes/pages/settings.tsx",
+        "desktop/src/app/routes/pages/setup.tsx",
+        "desktop/src/app/routes/pages/tools.tsx",
+        "desktop/src/app/routes/pages/users.tsx",
+        "desktop/src/app/routes/pages/vault.tsx",
+        "desktop/src/app/routes/pages/welcome.tsx",
+        "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/events/index.tsx",
+        "desktop/src/pages/graphify/index.tsx",
+        "desktop/src/pages/knowledge-graph/index.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/orchestration/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/prompts/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/tools/index.tsx",
+        "desktop/src/pages/users/index.tsx",
+        "desktop/src/shared/api/ipc-bridge.ts",
+        "desktop/src/shared/api/tauri-store-service.ts",
+        "desktop/src/shared/lib/stores/agent-store.ts",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/chat-store.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/lib/use-init.ts",
+        "desktop/src/widgets/sidebar/index.tsx"
+      ],
+      "lastCommit": "4a3d7d020665",
+      "createdAt": "2026-06-28T18:57:15-03:00",
+      "updatedAt": "2026-06-28T18:57:15-03:00"
+    },
+    {
+      "id": "streaming",
+      "name": "Replace fake streaming with real token-level streaming via astream_events",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/service/agent_service.py"
+      ],
+      "lastCommit": "f404337f8dc0",
+      "createdAt": "2026-06-11T01:27:40-03:00",
+      "updatedAt": "2026-06-11T01:27:40-03:00"
+    },
+    {
+      "id": "system-architecture",
+      "name": "Arquitetura do Sistema — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/architecture/SYSTEM_ARCHITECTURE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.796869+00:00",
+      "updatedAt": "2026-07-11T12:55:28.796872+00:00"
+    },
+    {
+      "id": "technical-spec",
+      "name": "Technical Specification — [Nome da Feature]",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/sdd/technical-spec.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.785781+00:00",
+      "updatedAt": "2026-07-11T12:55:28.785784+00:00"
+    },
+    {
+      "id": "tests",
+      "name": "Pipeline wiki test + fallback LLM test + fix ingest provider",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        ".opencode/plans/SDD-Estrategia-Testes-F6.md",
+        "assistant/tests/fixtures/raw/test-source.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/nodes/ingest.py",
+        "assistant/tests/test_openai.py",
+        "assistant/tests/unit/agent/test_ingest.py",
+        "assistant/tests/unit/llm/__init__.py",
+        "assistant/tests/unit/llm/test_factory.py"
+      ],
+      "lastCommit": "c99eb27d185a",
+      "createdAt": "2026-06-11T01:28:34-03:00",
+      "updatedAt": "2026-06-18T16:16:53-03:00"
+    },
+    {
+      "id": "tools",
+      "name": "Implementa ListProjectsTool e registra no TOOL_REGISTRY",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/obsidian/tools/list_notes_tool.py",
+        "assistant/app/obsidian/tools/list_projects_tool.py"
+      ],
+      "lastCommit": "d0fb570560cb",
+      "createdAt": "2026-06-11T01:24:55-03:00",
+      "updatedAt": "2026-06-11T10:36:21-03:00"
+    },
+    {
+      "id": "update-docs-submodule-with",
+      "name": "Update docs submodule with generated runtime artifacts",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [],
+      "lastCommit": "3a6849cb0ac1",
+      "createdAt": "2026-06-23T00:50:20-03:00",
+      "updatedAt": "2026-06-23T00:50:20-03:00"
+    },
+    {
+      "id": "updater",
+      "name": "Fix Windows msi artifact URL pattern in update-proxy generator",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/package.json",
+        "desktop/src-tauri/src/updater.rs",
+        "desktop/src-tauri/tauri.conf.json",
+        "scripts/gen_update_proxy.py"
+      ],
+      "lastCommit": "31582d45d9b6",
+      "createdAt": "2026-06-25T15:34:54-03:00",
+      "updatedAt": "2026-06-25T16:25:34-03:00"
+    },
+    {
+      "id": "user-guide",
+      "name": "Guia do Usuário — K.A.O.S",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/guides/USER_GUIDE.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.802810+00:00",
+      "updatedAt": "2026-07-11T12:55:28.802813+00:00"
+    },
+    {
+      "id": "ux",
+      "name": "Frontend modernization",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "desktop/src/features/generate-docs/ui/DocGeneratorModal.tsx",
+        "docs/sdd/provider-ux.md"
+      ],
+      "codeRefs": [
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/costs.tsx",
+        "desktop/src/app/routes/pages/events.tsx",
+        "desktop/src/app/routes/pages/prompts.tsx",
+        "desktop/src/app/routes/pages/welcome.tsx",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/costs/index.tsx",
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/events/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/prompts/index.tsx",
+        "desktop/src/pages/welcome/index.tsx",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/ui/empty-state.tsx",
+        "desktop/src/shared/ui/index.ts",
+        "desktop/src/shared/ui/tooltip.tsx",
+        "desktop/src/widgets/command-palette/index.tsx",
+        "desktop/src/widgets/sidebar/index.tsx"
+      ],
+      "lastCommit": "53ec294a2a1b",
+      "createdAt": "2026-06-25T18:40:46-03:00",
+      "updatedAt": "2026-06-25T18:40:46-03:00"
+    },
+    {
+      "id": "variaveis-de-ambiente",
+      "name": "Variáveis de Ambiente",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Variaveis de Ambiente.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-11T12:55:28.793377+00:00",
+      "updatedAt": "2026-07-11T12:55:28.793380+00:00"
+    },
+    {
+      "id": "vault",
+      "name": "Add vault folder structure initialization with API endpoint",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Indexador do Vault.md",
+        "docs/sdd/Monitoramento do Vault (Watcher).md"
+      ],
+      "codeRefs": [
+        "assistant/app/api/indexing.py",
+        "assistant/app/main.py",
+        "assistant/app/obsidian/vault_init.py"
+      ],
+      "lastCommit": "5e3c16cbd927",
+      "createdAt": "2026-06-11T01:29:26-03:00",
+      "updatedAt": "2026-06-11T01:29:26-03:00"
+    },
+    {
+      "id": "wiki",
+      "name": "Register wiki tools in TOOL_REGISTRY and update planner system prompt",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Camada Wiki de Conhecimento.md",
+        "docs/sdd/Estrutura da Wiki.md",
+        "docs/sdd/Pipeline de Consulta da Wiki.md",
+        "docs/sdd/sdd_knowledge_wiki_layer.md"
+      ],
+      "codeRefs": [
+        "assistant/app/agent/nodes/executor.py",
+        "assistant/app/agent/nodes/planner.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/obsidian/tools/wiki/__init__.py",
+        "assistant/app/obsidian/tools/wiki/append_log_tool.py",
+        "assistant/app/obsidian/tools/wiki/create_concept_tool.py",
+        "assistant/app/obsidian/tools/wiki/create_entity_tool.py",
+        "assistant/app/obsidian/tools/wiki/create_source_tool.py",
+        "assistant/app/obsidian/tools/wiki/create_synthesis_tool.py",
+        "assistant/app/obsidian/tools/wiki/draft_tools.py",
+        "assistant/app/obsidian/tools/wiki/lint_wiki_tool.py",
+        "assistant/app/obsidian/tools/wiki/read_wiki_tool.py",
+        "assistant/app/obsidian/tools/wiki/update_index_tool.py",
+        "assistant/app/obsidian/tools/wiki/wiki_utils.py",
+        "assistant/app/obsidian/vault_init.py"
+      ],
+      "lastCommit": "087d34fe0a35",
+      "createdAt": "2026-06-18T13:43:25-03:00",
+      "updatedAt": "2026-06-18T13:45:29-03:00"
+    },
+    {
+      "id": "workflow-para-gerar-chave",
+      "name": "Workflow para gerar chave de assinatura Tauri + signing no release",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/release.yml",
+        ".github/workflows/setup-signing-key.yml"
+      ],
+      "lastCommit": "2d8ed56ab27e",
+      "createdAt": "2026-06-18T22:36:17-03:00",
+      "updatedAt": "2026-06-18T22:36:17-03:00"
+    },
+    {
+      "id": "fase1-2-eliminate-all-remaining",
+      "name": "Fase 1.2 - eliminate all remaining mock data generators",
+      "phase": "Fase 1.2",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/vault/index.tsx"
+      ],
+      "lastCommit": "a32e2f01a594",
+      "createdAt": "2026-06-22T22:57:33-03:00",
+      "updatedAt": "2026-06-22T22:57:33-03:00"
+    },
+    {
+      "id": "fase1-3-readiness-engine-with",
+      "name": "Fase 1.3 - Readiness Engine with 12 normalized checks",
+      "phase": "Fase 1.3",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Fase 1 - Fundacao.md"
+      ],
+      "codeRefs": [
+        "assistant/app/ai/vault_analyzer/graph_builder.py",
+        "assistant/app/api/audit.py",
+        "assistant/app/audit/drl_snapshot.py",
+        "assistant/app/audit/readiness_engine.py"
+      ],
+      "lastCommit": "31475e9249f5",
+      "createdAt": "2026-06-22T23:54:15-03:00",
+      "updatedAt": "2026-06-22T23:54:15-03:00"
+    },
+    {
+      "id": "fase10-test-refactor-tests",
+      "name": "Fase 10 - Refactor + Tests + Docs",
+      "phase": "Fase 10",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/pyproject.toml",
+        "assistant/tests/unit/test_domain_user.py",
+        "assistant/tests/unit/test_model_registry.py",
+        "assistant/tests/unit/test_model_router.py"
+      ],
+      "lastCommit": "782015b4239e",
+      "createdAt": "2026-06-21T20:45:10-03:00",
+      "updatedAt": "2026-06-21T20:45:10-03:00"
+    },
+    {
+      "id": "fase11-k-a-o-s-visual-redesign",
+      "name": "Fase 11 - K.A.O.S Visual Redesign (SDD v2026.1)",
+      "phase": "Fase 11",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/package.json",
+        "desktop/src/App.tsx",
+        "desktop/src/app/layouts/AppLayout.tsx",
+        "desktop/src/app/providers/index.tsx",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/agents.tsx",
+        "desktop/src/app/routes/pages/chat.tsx",
+        "desktop/src/app/routes/pages/dashboard.tsx",
+        "desktop/src/app/routes/pages/observability.tsx",
+        "desktop/src/app/routes/pages/orchestration.tsx",
+        "desktop/src/app/routes/pages/pipelines.tsx",
+        "desktop/src/app/routes/pages/settings.tsx",
+        "desktop/src/app/routes/pages/vault.tsx",
+        "desktop/src/entities/message/types.ts",
+        "desktop/src/entities/message/ui/MessageBubble.tsx",
+        "desktop/src/entities/message/ui/ToolLogger.tsx",
+        "desktop/src/features/ask-ai/hooks/useChatStream.ts",
+        "desktop/src/features/ask-ai/ui/ChatInput.tsx",
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/main.tsx",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/orchestration/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/providers/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/vault/index.tsx",
+        "desktop/src/shared/lib/command-registry.ts",
+        "desktop/src/shared/lib/commands-init.ts",
+        "desktop/src/shared/lib/motion.ts",
+        "desktop/src/shared/lib/stores/app-store.ts",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/index.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/ui-store.ts",
+        "desktop/src/shared/lib/use-init.ts",
+        "desktop/src/shared/lib/use-websocket.ts",
+        "desktop/src/shared/styles/tokens.ts",
+        "desktop/src/shared/ui/badge.tsx",
+        "desktop/src/shared/ui/button.tsx",
+        "desktop/src/shared/ui/card.tsx",
+        "desktop/src/shared/ui/dialog.tsx",
+        "desktop/src/shared/ui/dropdown.tsx",
+        "desktop/src/shared/ui/index.ts",
+        "desktop/src/shared/ui/input.tsx",
+        "desktop/src/shared/ui/scroll-area.tsx",
+        "desktop/src/shared/ui/separator.tsx",
+        "desktop/src/shared/ui/skeleton.tsx",
+        "desktop/src/shared/ui/sparkline.tsx",
+        "desktop/src/shared/ui/status-dot.tsx",
+        "desktop/src/shared/ui/tabs.tsx",
+        "desktop/src/shared/ui/textarea.tsx",
+        "desktop/src/shared/ui/tooltip.tsx",
+        "desktop/src/widgets/command-palette/index.tsx",
+        "desktop/src/widgets/sidebar/index.tsx",
+        "desktop/src/widgets/topbar/index.tsx"
+      ],
+      "lastCommit": "31f197eba257",
+      "createdAt": "2026-06-22T00:03:06-03:00",
+      "updatedAt": "2026-06-22T00:03:06-03:00"
+    },
+    {
+      "id": "fase14-marca-como-concluidas",
+      "name": "Marca Fase 14 e 15 como concluidas no backlog",
+      "phase": "Fase 14",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "3f454f19e796",
+      "createdAt": "2026-06-19T11:30:30-03:00",
+      "updatedAt": "2026-06-19T11:30:30-03:00"
+    },
+    {
+      "id": "fase2-graphify-explorer-with",
+      "name": "Fase 2 - Graphify Explorer with React Flow",
+      "phase": "Fase 2",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/package.json",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/graphify.tsx",
+        "desktop/src/pages/graphify/index.tsx"
+      ],
+      "lastCommit": "bbba285c8b13",
+      "createdAt": "2026-06-23T00:52:24-03:00",
+      "updatedAt": "2026-06-23T00:52:24-03:00"
+    },
+    {
+      "id": "fase2-knowledge-graph-explorer",
+      "name": "Fase 2 - Knowledge Graph Explorer with React Flow",
+      "phase": "Fase 2",
+      "status": "done",
+      "docs": [
+        "docs/sdd/Fase 2 - IA Local.md"
+      ],
+      "codeRefs": [
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/knowledge-graph.tsx",
+        "desktop/src/pages/knowledge-graph/index.tsx"
+      ],
+      "lastCommit": "63c3432d3e52",
+      "createdAt": "2026-06-23T00:53:44-03:00",
+      "updatedAt": "2026-06-23T00:53:44-03:00"
+    },
+    {
+      "id": "production",
+      "name": "K.A.O.S production readiness — mock elimination, store consolidation, unified dashboard, offline gate, Windows fix",
+      "phase": "Fase 2",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/integrations.py",
+        "assistant/app/api/setup.py",
+        "assistant/app/api/system.py",
+        "assistant/app/llm/metrics.py",
+        "desktop/src-tauri/src/updater.rs",
+        "desktop/src/__tests__/integration/auth-chat-flow.test.ts",
+        "desktop/src/__tests__/integration/contract-validation.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/agent-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/auth-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/conversation-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/system-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/theme-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/ui-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/update-store.test.ts",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/application/hooks/index.ts",
+        "desktop/src/application/hooks/useSystemMetrics.ts",
+        "desktop/src/application/stores/system-store.ts",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/documentation/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/shared/lib/stores/agent-store.ts",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/chat-store.ts",
+        "desktop/src/shared/lib/stores/conversation-store.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/lib/stores/ui-store.ts",
+        "desktop/src/shared/lib/stores/update-store.ts",
+        "desktop/src/shared/lib/use-init.ts"
+      ],
+      "lastCommit": "77593e49a6fc",
+      "createdAt": "2026-07-11T09:54:45-03:00",
+      "updatedAt": "2026-07-11T09:54:45-03:00"
+    },
+    {
+      "id": "settings-integrations-provider-catalog",
+      "name": "Settings, integrations, provider catalog, admin APIs",
+      "phase": "Fase 3",
+      "status": "done",
+      "docs": [
+        "docs/sdd/provider-catalog.md"
+      ],
+      "codeRefs": [
+        "assistant/app/api/admin.py",
+        "assistant/app/api/integrations.py",
+        "assistant/app/api/observability.py",
+        "assistant/app/api/opencode.py",
+        "assistant/app/api/providers.py",
+        "assistant/app/api/settings_api.py",
+        "assistant/app/api/system.py",
+        "assistant/app/main.py"
+      ],
+      "lastCommit": "012ec498229e",
+      "createdAt": "2026-06-22T22:32:41-03:00",
+      "updatedAt": "2026-06-22T22:32:41-03:00"
+    },
+    {
+      "id": "fase4-implementa-rag-pipeline",
+      "name": "Implementa RAG pipeline (Fase 4) e watcher automático (Fase 5)",
+      "phase": "Fase 4",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "app/api/indexing.py",
+        "app/main.py",
+        "app/obsidian/watcher/__init__.py",
+        "app/obsidian/watcher/vault_watcher.py",
+        "app/rag/__init__.py",
+        "app/rag/chunking/__init__.py",
+        "app/rag/chunking/text_splitter.py",
+        "app/rag/embeddings/__init__.py",
+        "app/rag/embeddings/embedder.py",
+        "app/rag/indexer/__init__.py",
+        "app/rag/indexer/vault_indexer.py",
+        "app/rag/retriever/__init__.py",
+        "app/rag/retriever/semantic_retriever.py",
+        "pyproject.toml",
+        "tests/test_indexing.py",
+        "tests/unit/obsidian/test_vault_watcher.py",
+        "tests/unit/rag/__init__.py",
+        "tests/unit/rag/test_embedder.py",
+        "tests/unit/rag/test_semantic_retriever.py",
+        "tests/unit/rag/test_text_splitter.py",
+        "tests/unit/rag/test_vault_indexer.py"
+      ],
+      "lastCommit": "7253f79c159d",
+      "createdAt": "2026-06-10T17:39:26-03:00",
+      "updatedAt": "2026-06-10T17:39:26-03:00"
+    },
+    {
+      "id": "fase4-provider-adapters",
+      "name": "Fase 4: Provider Adapters",
+      "phase": "Fase 4",
+      "status": "done",
+      "docs": [
+        ".opencode/plans/SDD-040-completo.md"
+      ],
+      "codeRefs": [
+        "assistant/app/providers/chat/__init__.py",
+        "assistant/app/providers/chat/anthropic.py",
+        "assistant/app/providers/chat/gemini.py",
+        "assistant/app/providers/chat/ollama.py",
+        "assistant/app/providers/chat/openai.py",
+        "assistant/app/providers/chat/registry.py",
+        "assistant/app/providers/embedding/__init__.py",
+        "assistant/app/providers/embedding/bge.py",
+        "assistant/app/providers/embedding/openai.py",
+        "assistant/app/providers/embedding/registry.py",
+        "assistant/app/providers/memory/__init__.py",
+        "assistant/app/providers/memory/obsidian.py",
+        "assistant/app/providers/memory/postgres.py",
+        "assistant/app/providers/memory/registry.py",
+        "assistant/app/providers/register_all.py",
+        "assistant/app/providers/vector/__init__.py",
+        "assistant/app/providers/vector/qdrant.py",
+        "assistant/app/providers/vector/registry.py",
+        "assistant/tests/unit/test_provider_adapters.py"
+      ],
+      "lastCommit": "0afac6089818",
+      "createdAt": "2026-06-21T18:12:05-03:00",
+      "updatedAt": "2026-06-21T18:12:05-03:00"
+    },
+    {
+      "id": "fase4-update-sdd-rag",
+      "name": "Update SDD Fase 4-5 RAG pipeline with optimizations",
+      "phase": "Fase 4",
+      "status": "done",
+      "docs": [
+        "docs/sdd_fase4_rag_pipeline.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "4956e7902be8",
+      "createdAt": "2026-06-11T19:06:30-03:00",
+      "updatedAt": "2026-06-11T19:06:30-03:00"
+    },
+    {
+      "id": "monitoring",
+      "name": "Prometheus + Loki + Grafana stack",
+      "phase": "Fase 4",
+      "status": "done",
+      "docs": [
+        "docs/monitoring/MONITORING.md"
+      ],
+      "codeRefs": [
+        "assistant/app/main.py",
+        "assistant/pyproject.toml",
+        "infra/docker/docker-compose.yml",
+        "infra/docker/grafana-datasources.yml",
+        "infra/docker/loki.yml",
+        "infra/docker/prometheus.yml",
+        "infra/docker/promtail.yml"
+      ],
+      "lastCommit": "77341c7245ec",
+      "createdAt": "2026-06-19T16:25:01-03:00",
+      "updatedAt": "2026-06-19T16:25:01-03:00"
+    },
+    {
+      "id": "fase401-corrige-lint-python",
+      "name": "Corrige lint Python (E402/F401), coverage thresholds e templates de teste",
+      "phase": "Fase 401",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        ".github/workflows/desktop-ci.yml",
+        "assistant/app/api/opencode.py",
+        "assistant/app/api/setup.py",
+        "assistant/app/core/opencode_executor.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/app/main.py",
+        "assistant/app/runtime/runtime_selector.py",
+        "assistant/tests/test_automation.py",
+        "assistant/tests/unit/rag/test_embeddings_cache.py",
+        "assistant/tests/unit/test_bootstrap_manager.py",
+        "assistant/tests/unit/test_evidence_engine.py",
+        "assistant/tests/unit/test_github_mcp.py",
+        "assistant/tests/unit/test_opencode_executor.py",
+        "assistant/tests/unit/test_runtime_selector.py",
+        "desktop/vitest.config.ts"
+      ],
+      "lastCommit": "415725b4ff51",
+      "createdAt": "2026-07-09T00:43:12-03:00",
+      "updatedAt": "2026-07-09T00:43:12-03:00"
+    },
+    {
+      "id": "fase5-refatoracao-arquitetural-estrategia",
+      "name": "Fase 5 (Refatoracao Arquitetural) + Fase 6 (Estrategia de Testes)",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [
+        ".opencode/plans/SDD-Estrategia-Testes-F6.md",
+        "desktop/src/features/generate-docs/ui/DocGeneratorModal.tsx"
+      ],
+      "codeRefs": [
+        ".github/workflows/desktop-ci.yml",
+        "assistant/pyproject.toml",
+        "desktop/package.json",
+        "desktop/playwright.config.ts",
+        "desktop/src/__tests__/e2e/navigation.spec.ts",
+        "desktop/src/__tests__/features/ask-ai.test.ts",
+        "desktop/src/__tests__/features/code-introspector.test.ts",
+        "desktop/src/__tests__/features/doc-generator.test.ts",
+        "desktop/src/__tests__/features/drift-engine.test.ts",
+        "desktop/src/__tests__/features/drift-store.test.ts",
+        "desktop/src/__tests__/features/feature-extractor.test.ts",
+        "desktop/src/__tests__/features/feature-scanner.test.ts",
+        "desktop/src/__tests__/features/graph-builder.test.ts",
+        "desktop/src/__tests__/features/graph-export.test.ts",
+        "desktop/src/__tests__/features/heatmap-store.test.ts",
+        "desktop/src/__tests__/features/layout-engine.test.ts",
+        "desktop/src/__tests__/features/useSettings.test.ts",
+        "desktop/src/__tests__/integration/audit-graph-flow.test.ts",
+        "desktop/src/__tests__/integration/auth-chat-flow.test.ts",
+        "desktop/src/__tests__/setup.ts",
+        "desktop/src/__tests__/shared/api/ipc-bridge.test.ts",
+        "desktop/src/__tests__/shared/api/kaos-client.test.ts",
+        "desktop/src/__tests__/shared/api/tauri-store-service.test.ts",
+        "desktop/src/__tests__/shared/lib/command-registry.test.ts",
+        "desktop/src/__tests__/shared/lib/event-bus.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/agent-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/auth-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/chat-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/conversation-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/system-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/theme-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/ui-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/update-store.test.ts",
+        "desktop/src/__tests__/shared/ui/badge.test.tsx",
+        "desktop/src/__tests__/shared/ui/button.test.tsx",
+        "desktop/src/__tests__/shared/ui/card.test.tsx",
+        "desktop/src/__tests__/shared/ui/dropdown.test.tsx",
+        "desktop/src/__tests__/shared/ui/input.test.tsx",
+        "desktop/src/__tests__/shared/ui/tabs.test.tsx",
+        "desktop/src/app/layouts/AppLayout.tsx",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/application/hooks/index.ts",
+        "desktop/src/application/hooks/useSettings.ts",
+        "desktop/src/application/hooks/useSystemMetrics.ts",
+        "desktop/src/application/hooks/useUpdateCheck.ts",
+        "desktop/src/application/hooks/useUpdateScheduler.ts",
+        "desktop/src/application/hooks/useUpdaterService.ts",
+        "desktop/src/application/hooks/useVaultInit.ts",
+        "desktop/src/application/index.ts",
+        "desktop/src/application/stores/agent-store.ts",
+        "desktop/src/application/stores/auth-store.ts",
+        "desktop/src/application/stores/chat-store.ts",
+        "desktop/src/application/stores/conversation-store.ts",
+        "desktop/src/application/stores/index.ts",
+        "desktop/src/application/stores/system-store.ts",
+        "desktop/src/application/stores/theme-store.ts",
+        "desktop/src/application/stores/ui-store.ts",
+        "desktop/src/application/stores/update-store.ts",
+        "desktop/src/features/auto-update/hooks/useUpdateScheduler.ts",
+        "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
+        "desktop/src/features/auto-update/ui/UpdateCard.tsx",
+        "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+        "desktop/src/features/documentation-audit/auto-doc/code-introspector.ts",
+        "desktop/src/features/documentation-audit/auto-doc/doc-sync-engine.ts",
+        "desktop/src/features/documentation-audit/engine/commit-mapper.ts",
+        "desktop/src/features/documentation-audit/engine/feature-scanner.ts",
+        "desktop/src/features/documentation-audit/graph/graph-updater.ts",
+        "desktop/src/features/documentation-audit/heatmap/heatmap-store.ts",
+        "desktop/src/features/documentation-audit/store/drift-store.ts",
+        "desktop/src/features/index-vault/hooks/useVaultInit.ts",
+        "desktop/src/features/manage-settings/hooks/useSettings.ts",
+        "desktop/src/infrastructure/commands/command-registry.ts",
+        "desktop/src/infrastructure/commands/index.ts",
+        "desktop/src/infrastructure/event-bus/event-bus.ts",
+        "desktop/src/infrastructure/event-bus/index.ts",
+        "desktop/src/infrastructure/http/index.ts",
+        "desktop/src/infrastructure/http/kaos-client.ts",
+        "desktop/src/infrastructure/index.ts",
+        "desktop/src/infrastructure/ipc/index.ts",
+        "desktop/src/infrastructure/ipc/ipc-bridge.ts",
+        "desktop/src/infrastructure/storage/index.ts",
+        "desktop/src/infrastructure/storage/tauri-store-service.ts",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/automation/marketplace.tsx",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/costs/index.tsx",
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/documentation/index.tsx",
+        "desktop/src/pages/events/index.tsx",
+        "desktop/src/pages/graphify/index.tsx",
+        "desktop/src/pages/knowledge-graph/index.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/observability/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/prompts/index.tsx",
+        "desktop/src/pages/settings/index.tsx",
+        "desktop/src/pages/setup/index.tsx",
+        "desktop/src/pages/tools/index.tsx",
+        "desktop/src/pages/users/index.tsx",
+        "desktop/src/pages/vault/index.tsx",
+        "desktop/src/pages/welcome/index.tsx",
+        "desktop/src/presentation/components/index.ts",
+        "desktop/src/presentation/components/model-selector/CustomModelInput.tsx",
+        "desktop/src/presentation/components/model-selector/ModelDropdown.tsx",
+        "desktop/src/presentation/components/model-selector/ModelSelector.tsx",
+        "desktop/src/presentation/components/model-selector/ModelShortcuts.tsx",
+        "desktop/src/presentation/components/model-selector/ProviderDropdown.tsx",
+        "desktop/src/presentation/components/model-selector/index.ts",
+        "desktop/src/presentation/index.ts",
+        "desktop/src/shared/api/index.ts",
+        "desktop/src/shared/lib/command-registry.ts",
+        "desktop/src/shared/lib/event-bus.ts",
+        "desktop/src/shared/lib/stores/agent-store.ts",
+        "desktop/src/shared/lib/stores/auth-store.ts",
+        "desktop/src/shared/lib/stores/chat-store.ts",
+        "desktop/src/shared/lib/stores/conversation-store.ts",
+        "desktop/src/shared/lib/stores/index.ts",
+        "desktop/src/shared/lib/stores/system-store.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/shared/lib/use-init.ts",
+        "desktop/src/widgets/command-palette/index.tsx",
+        "desktop/src/widgets/sidebar/index.tsx",
+        "desktop/src/widgets/topbar/index.tsx",
+        "desktop/tsconfig.json",
+        "desktop/vitest.config.ts"
+      ],
+      "lastCommit": "00a80d93972b",
+      "createdAt": "2026-07-08T22:57:51-03:00",
+      "updatedAt": "2026-07-08T22:57:51-03:00"
+    },
+    {
+      "id": "fase5-test-corrige-imports",
+      "name": "Corrige imports e mocks apos refatoracao Fase 5",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [
+        "docs/sdd/test.md",
+        "wiki/index.md",
+        "wiki/log.md"
+      ],
+      "codeRefs": [
+        "desktop/src/__tests__/features/code-introspector.test.ts",
+        "desktop/src/__tests__/features/drift-engine.test.ts",
+        "desktop/src/__tests__/features/drift-store.test.ts",
+        "desktop/src/__tests__/features/feature-extractor.test.ts",
+        "desktop/src/__tests__/features/feature-scanner.test.ts",
+        "desktop/src/__tests__/features/graph-builder.test.ts",
+        "desktop/src/__tests__/features/graph-export.test.ts",
+        "desktop/src/__tests__/features/heatmap-store.test.ts",
+        "desktop/src/__tests__/features/layout-engine.test.ts",
+        "desktop/src/__tests__/features/useSettings.test.ts",
+        "desktop/src/__tests__/integration/audit-graph-flow.test.ts",
+        "desktop/src/__tests__/integration/auth-chat-flow.test.ts",
+        "desktop/src/__tests__/setup.ts",
+        "desktop/src/__tests__/shared/api/ipc-bridge.test.ts",
+        "desktop/src/__tests__/shared/api/kaos-client.test.ts",
+        "desktop/src/__tests__/shared/api/tauri-store-service.test.ts",
+        "desktop/src/__tests__/shared/lib/command-registry.test.ts",
+        "desktop/src/__tests__/shared/lib/event-bus.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/agent-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/auth-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/chat-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/conversation-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/system-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/theme-store.test.ts",
+        "desktop/src/__tests__/shared/lib/stores/update-store.test.ts",
+        "desktop/src/__tests__/shared/ui/badge.test.tsx",
+        "desktop/src/__tests__/shared/ui/dropdown.test.tsx",
+        "desktop/src/__tests__/shared/ui/tabs.test.tsx",
+        "desktop/src/infrastructure/commands/command-registry.ts",
+        "desktop/src/infrastructure/commands/index.ts",
+        "desktop/src/infrastructure/event-bus/event-bus.ts",
+        "desktop/src/infrastructure/event-bus/index.ts",
+        "desktop/src/infrastructure/storage/tauri-store-service.ts",
+        "desktop/src/shared/lib/event-bus.ts",
+        "desktop/tsconfig.json"
+      ],
+      "lastCommit": "5edc4ff250b6",
+      "createdAt": "2026-07-09T00:27:34-03:00",
+      "updatedAt": "2026-07-09T00:27:34-03:00"
+    },
+    {
+      "id": "fase5-workflow-registry",
+      "name": "Fase 5: Workflow Registry",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/providers/register_all.py",
+        "assistant/app/workflows/impl/__init__.py",
+        "assistant/app/workflows/impl/agent.py",
+        "assistant/app/workflows/impl/chat.py",
+        "assistant/app/workflows/impl/coding.py",
+        "assistant/app/workflows/impl/ingest.py",
+        "assistant/app/workflows/impl/memory.py",
+        "assistant/app/workflows/impl/rag.py",
+        "assistant/app/workflows/impl/registry.py",
+        "assistant/app/workflows/impl/research.py",
+        "assistant/tests/unit/test_workflows.py"
+      ],
+      "lastCommit": "e0fbe471e9c3",
+      "createdAt": "2026-06-21T18:14:20-03:00",
+      "updatedAt": "2026-06-21T18:14:20-03:00"
+    },
+    {
+      "id": "fix-health-checks-prevent",
+      "name": "Fix health checks, prevent event loop blocking, mount opencode and add vault preview",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [
+        "README.md"
+      ],
+      "codeRefs": [
+        "assistant/app/api/indexing.py",
+        "assistant/app/api/system.py",
+        "desktop/src/pages/vault/index.tsx",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "df96ea0886df",
+      "createdAt": "2026-06-25T13:45:52-03:00",
+      "updatedAt": "2026-06-25T13:45:52-03:00"
+    },
+    {
+      "id": "implementa-executor-opencodeexecutor-com",
+      "name": "Implementa executor OpenCodeExecutor com whitelist/blacklist e sandbox Docker",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/opencode.py",
+        "assistant/app/core/opencode_executor.py",
+        "assistant/tests/unit/test_opencode_executor.py"
+      ],
+      "lastCommit": "6a0fe4c2bb79",
+      "createdAt": "2026-07-09T00:17:02-03:00",
+      "updatedAt": "2026-07-09T00:17:02-03:00"
+    },
+    {
+      "id": "integrate-tools-and-registry",
+      "name": "Integrate tools and registry page for mcp and opencode features",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/audit.py",
+        "assistant/app/api/health.py",
+        "assistant/app/api/observability.py",
+        "assistant/app/api/opencode.py",
+        "assistant/app/api/system.py",
+        "assistant/app/service/llm_service.py",
+        "assistant/app/setup/provider_config.py",
+        "desktop/src-tauri/src/main.rs",
+        "desktop/src-tauri/src/updater.rs",
+        "desktop/src/app/layouts/AppLayout.tsx",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/tools.tsx",
+        "desktop/src/main.tsx",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/orchestration/index.tsx",
+        "desktop/src/pages/tools/index.tsx",
+        "desktop/src/shared/api/kaos-client.ts",
+        "desktop/src/shared/lib/stores/theme-store.ts",
+        "desktop/src/widgets/sidebar/index.tsx",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "4a2590379fef",
+      "createdAt": "2026-06-24T22:02:39-03:00",
+      "updatedAt": "2026-06-24T22:02:39-03:00"
+    },
+    {
+      "id": "opencode-configuration-layer-skills",
+      "name": "OpenCode Configuration Layer - Skills (10) + Tools (4) + Agents (8)",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [
+        ".opencode/README.md",
+        ".opencode/agents/kaos-architect.md",
+        ".opencode/agents/kaos-auditor.md",
+        ".opencode/agents/kaos-backend-engineer.md",
+        ".opencode/agents/kaos-devops-engineer.md",
+        ".opencode/agents/kaos-documentation-engineer.md",
+        ".opencode/agents/kaos-frontend-engineer.md",
+        ".opencode/agents/kaos-mcp-architect.md",
+        ".opencode/agents/kaos-security-auditor.md",
+        ".opencode/skills/ai-agent-engineer.md",
+        ".opencode/skills/code-reviewer.md",
+        ".opencode/skills/docker-expert.md",
+        ".opencode/skills/documentation-writer.md",
+        ".opencode/skills/mcp-engineer.md",
+        ".opencode/skills/n8n-architect.md",
+        ".opencode/skills/observability-engineer.md",
+        ".opencode/skills/python-developer.md",
+        ".opencode/skills/rag-engineer.md",
+        ".opencode/skills/react-developer.md",
+        ".opencode/tools/docker-tools.md",
+        ".opencode/tools/github-tools.md",
+        ".opencode/tools/kaos-tools.md",
+        ".opencode/tools/observability-tools.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "bfbca45386a0",
+      "createdAt": "2026-06-22T15:21:26-03:00",
+      "updatedAt": "2026-06-22T15:21:26-03:00"
+    },
+    {
+      "id": "opencode-references-6-rules",
+      "name": "OpenCode References (6) + Rules (10)",
+      "phase": "Fase 5",
+      "status": "done",
+      "docs": [
+        ".opencode/references/api-patterns.md",
+        ".opencode/references/architecture.md",
+        ".opencode/references/code-conventions.md",
+        ".opencode/references/directory-structure.md",
+        ".opencode/references/mcp-patterns.md",
+        ".opencode/references/testing-patterns.md",
+        ".opencode/rules/docker.md",
+        ".opencode/rules/github-actions.md",
+        ".opencode/rules/mcp.md",
+        ".opencode/rules/n8n.md",
+        ".opencode/rules/python.md",
+        ".opencode/rules/react.md",
+        ".opencode/rules/security.md",
+        ".opencode/rules/testing.md",
+        ".opencode/rules/typescript.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "705173b8af36",
+      "createdAt": "2026-06-22T15:17:51-03:00",
+      "updatedAt": "2026-06-22T15:17:51-03:00"
+    },
+    {
+      "id": "fase6-implementa-agente-langgraph",
+      "name": "Implementa agente LangGraph (Fase 6) com RAG, planner e executor",
+      "phase": "Fase 6",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "app/agent/__init__.py",
+        "app/agent/graph.py",
+        "app/agent/nodes/__init__.py",
+        "app/agent/nodes/executor.py",
+        "app/agent/nodes/planner.py",
+        "app/agent/nodes/retrieve.py",
+        "app/agent/state.py",
+        "app/service/agent_service.py",
+        "pyproject.toml",
+        "tests/unit/agent/test_executor.py",
+        "tests/unit/agent/test_state.py"
+      ],
+      "lastCommit": "68452cf59aea",
+      "createdAt": "2026-06-10T19:49:01-03:00",
+      "updatedAt": "2026-06-10T19:49:01-03:00"
+    },
+    {
+      "id": "fase6-orchestrator-api-dlq",
+      "name": "Fase 6: Orchestrator + API + DLQ",
+      "phase": "Fase 6",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/orchestrator.py",
+        "assistant/app/main.py",
+        "assistant/app/orchestrator/dead_letter_queue.py",
+        "assistant/app/orchestrator/plan_executor.py",
+        "assistant/app/orchestrator/universal_orchestrator.py",
+        "assistant/tests/unit/test_orchestrator.py",
+        "assistant/tests/unit/test_workflows.py"
+      ],
+      "lastCommit": "22c266b24773",
+      "createdAt": "2026-06-21T18:29:15-03:00",
+      "updatedAt": "2026-06-21T18:29:15-03:00"
+    },
+    {
+      "id": "fase6-update-sdd-langgraph",
+      "name": "Update SDD Fase 6-7 LangGraph + Memory with Phase 8 optimizations",
+      "phase": "Fase 6",
+      "status": "done",
+      "docs": [
+        "docs/sdd_fase5_watcher_langgraph.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "96b554175215",
+      "createdAt": "2026-06-11T19:07:14-03:00",
+      "updatedAt": "2026-06-11T19:07:14-03:00"
+    },
+    {
+      "id": "fase7-desktop-apis",
+      "name": "Fase 7: Desktop APIs",
+      "phase": "Fase 7",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/capabilities.py",
+        "assistant/app/api/feature_flags.py",
+        "assistant/app/api/models.py",
+        "assistant/app/api/provider_configs.py",
+        "assistant/app/api/user_model_profiles.py",
+        "assistant/app/api/users.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/database.py",
+        "assistant/app/main.py",
+        "assistant/tests/unit/test_desktop_apis.py"
+      ],
+      "lastCommit": "8af0ab0de10c",
+      "createdAt": "2026-06-21T19:40:39-03:00",
+      "updatedAt": "2026-06-21T19:40:39-03:00"
+    },
+    {
+      "id": "implementa-adaptador-github-tool-py-sob",
+      "name": "Implementa adaptador github_tool.py sob o protocolo mcp",
+      "phase": "Fase 7",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/tools/github_tool.py"
+      ],
+      "lastCommit": "2a08d9318238",
+      "createdAt": "2026-07-09T00:21:25-03:00",
+      "updatedAt": "2026-07-09T00:21:25-03:00"
+    },
+    {
+      "id": "sdd-kaos-mcp-001",
+      "name": "Desktop path resolution, config versioning & MCP layer ()",
+      "phase": "Fase 7",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/integrations.py",
+        "assistant/app/api/opencode.py",
+        "assistant/app/api/providers.py",
+        "assistant/app/api/settings_api.py",
+        "assistant/app/api/setup.py",
+        "assistant/app/audit/commit_mapper.py",
+        "assistant/app/audit/runtime_resolver.py",
+        "assistant/app/core/config_service.py",
+        "assistant/app/core/mcp_health.py",
+        "assistant/app/core/mcp_manager.py",
+        "assistant/app/core/mcp_registry.py",
+        "assistant/app/core/mcp_server_base.py",
+        "assistant/app/core/opencode_watcher.py",
+        "assistant/app/core/runtime_path_resolver.py",
+        "assistant/app/main.py",
+        "desktop/src/pages/settings/index.tsx"
+      ],
+      "lastCommit": "7147aa30b6d2",
+      "createdAt": "2026-06-24T00:25:08-03:00",
+      "updatedAt": "2026-06-24T00:25:08-03:00"
+    },
+    {
+      "id": "fase8-observability-event-bus",
+      "name": "Fase 8 - Observability + Event Bus subscribers",
+      "phase": "Fase 8",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/main.py",
+        "assistant/app/observability/__init__.py",
+        "assistant/app/observability/event_bus.py",
+        "assistant/app/observability/subscribers/__init__.py",
+        "assistant/app/observability/subscribers/audit_subscriber.py",
+        "assistant/app/observability/subscribers/logger_subscriber.py",
+        "assistant/app/observability/subscribers/metrics_subscriber.py",
+        "assistant/app/orchestrator/universal_orchestrator.py",
+        "assistant/tests/unit/test_observability_subscribers.py"
+      ],
+      "lastCommit": "0494aa3ad55a",
+      "createdAt": "2026-06-21T19:45:30-03:00",
+      "updatedAt": "2026-06-21T19:45:30-03:00"
+    },
+    {
+      "id": "integrate-enterprise-automation-orchestrator",
+      "name": "Integrate enterprise automation orchestrator with n8n and tauri studio",
+      "phase": "Fase 8",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/automation.py",
+        "assistant/app/api/webhooks.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/core/automation_bus.py",
+        "assistant/app/core/automation_sdk.py",
+        "assistant/app/core/secret_manager.py",
+        "assistant/app/main.py",
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/automation_registry.py",
+        "assistant/app/providers/automation/base_workflow_provider.py",
+        "assistant/app/providers/automation/n8n_workflow_provider.py",
+        "assistant/tests/test_automation.py",
+        "assistant/tests/unit/test_automation_bus.py",
+        "assistant/tests/unit/test_automation_providers.py",
+        "assistant/tests/unit/test_automation_sdk.py",
+        "assistant/tests/unit/test_secret_manager.py",
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/app/routes/pages/automation-studio.tsx",
+        "desktop/src/app/routes/pages/marketplace.tsx",
+        "desktop/src/pages/automation/automation-studio.tsx",
+        "desktop/src/pages/automation/marketplace.tsx"
+      ],
+      "lastCommit": "367106a5bb36",
+      "createdAt": "2026-06-25T19:14:03-03:00",
+      "updatedAt": "2026-06-25T19:14:03-03:00"
+    },
+    {
+      "id": "sdd-040-03",
+      "name": "SDD040-03 model router and circuit breaker",
+      "phase": "Fase 8",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/capability_policy.py",
+        "assistant/app/models/model_registry.py",
+        "assistant/app/models/model_router.py",
+        "assistant/app/orchestrator/__init__.py",
+        "assistant/app/orchestrator/circuit_breaker.py",
+        "assistant/app/orchestrator/health_cache.py",
+        "assistant/app/orchestrator/provider_selector.py",
+        "assistant/tests/unit/test_model_router.py"
+      ],
+      "lastCommit": "ffe94234ca16",
+      "createdAt": "2026-06-21T18:01:10-03:00",
+      "updatedAt": "2026-06-21T18:01:10-03:00"
+    },
+    {
+      "id": "user-context",
+      "name": "Middleware headers Open WebUI + Fase 8 completa",
+      "phase": "Fase 8",
+      "status": "done",
+      "docs": [
+        "docs/sdd/sdd_user_context_propagation.md"
+      ],
+      "codeRefs": [
+        "assistant/app/api/openai.py",
+        "assistant/app/main.py",
+        "assistant/app/middleware/user_context.py"
+      ],
+      "lastCommit": "6d5b82deb8a8",
+      "createdAt": "2026-06-18T16:20:51-03:00",
+      "updatedAt": "2026-06-18T16:20:51-03:00"
+    },
+    {
+      "id": "visual-polish-chatstore-migration",
+      "name": "Visual Polish - chatStore migration + ToolLogger upgrade + agent runtime",
+      "phase": "Fase 8",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/app/routes/index.tsx",
+        "desktop/src/entities/message/ui/ToolLogger.tsx",
+        "desktop/src/pages/agents/index.tsx",
+        "desktop/src/pages/chat/index.tsx"
+      ],
+      "lastCommit": "5a7be0ff9a58",
+      "createdAt": "2026-06-22T00:11:39-03:00",
+      "updatedAt": "2026-06-22T00:11:39-03:00"
+    },
+    {
+      "id": "fase8-5-production-observability",
+      "name": "Fase 8.5 - Production Observability",
+      "phase": "Fase 8.5",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/main.py",
+        "assistant/app/observability/__init__.py",
+        "assistant/app/observability/cost_tracker.py",
+        "assistant/app/observability/tracing.py",
+        "assistant/tests/unit/test_cost_tracker.py",
+        "infra/docker/docker-compose.yml",
+        "infra/grafana/dashboards/kaos-overview.json",
+        "infra/grafana/provisioning.yml"
+      ],
+      "lastCommit": "65781103085b",
+      "createdAt": "2026-06-21T20:56:41-03:00",
+      "updatedAt": "2026-06-21T20:56:41-03:00"
+    },
+    {
+      "id": "n8n-integration-custom-webhooks",
+      "name": "N8N integration, custom webhooks API, Desktop Platform (AppRegistry, BaseApp, NotificationCenter)",
+      "phase": "Fase 8.5",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/apps_api.py",
+        "assistant/app/api/notifications.py",
+        "assistant/app/api/webhooks.py",
+        "assistant/app/apps/__init__.py",
+        "assistant/app/apps/base.py",
+        "assistant/app/apps/registry.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/main.py",
+        "assistant/app/memory/models.py",
+        "assistant/app/notifications/__init__.py",
+        "assistant/app/notifications/models.py",
+        "assistant/app/notifications/service.py",
+        "assistant/app/observability/subscribers/n8n_subscriber.py"
+      ],
+      "lastCommit": "657c7c04fca1",
+      "createdAt": "2026-06-21T23:13:09-03:00",
+      "updatedAt": "2026-06-21T23:13:09-03:00"
+    },
+    {
+      "id": "fase841-suprime-f841-restantes",
+      "name": "Suprime F841 restantes (result1, client_box)",
+      "phase": "Fase 841",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/tests/integration/test_bootstrap_flow.py",
+        "assistant/tests/unit/test_handshake.py"
+      ],
+      "lastCommit": "0f81df76af61",
+      "createdAt": "2026-07-09T00:46:15-03:00",
+      "updatedAt": "2026-07-09T00:46:15-03:00"
+    },
+    {
+      "id": "ci-cd-desktop",
+      "name": "CI/CD pipelines + Tauri KAOS.exe launcher",
+      "phase": "Fase 9",
+      "status": "done",
+      "docs": [
+        "docs/backlog.md",
+        "docs/sdd-031-ci-cd-auto-update.md"
+      ],
+      "codeRefs": [
+        ".github/workflows/auto-update.yml",
+        ".github/workflows/ci.yml",
+        ".github/workflows/docker-publish.yml",
+        ".github/workflows/release.yml",
+        "desktop/package.json",
+        "desktop/src-tauri/Cargo.toml",
+        "desktop/src-tauri/build.rs",
+        "desktop/src-tauri/src/lib.rs",
+        "desktop/src-tauri/src/main.rs",
+        "desktop/src-tauri/tauri.conf.json",
+        "desktop/src-tauri/update-proxy.json",
+        "desktop/src/App.tsx",
+        "desktop/src/components/ChatScreen.tsx",
+        "desktop/src/components/ProviderScreen.tsx",
+        "desktop/src/components/VaultScreen.tsx",
+        "desktop/src/main.tsx",
+        "desktop/tsconfig.json",
+        "desktop/vite.config.ts"
+      ],
+      "lastCommit": "fa89a2c550a8",
+      "createdAt": "2026-06-18T17:28:40-03:00",
+      "updatedAt": "2026-06-18T17:28:40-03:00"
+    },
+    {
+      "id": "fase9-launcher-design-architecture",
+      "name": "Fase 9 - Launcher Design architecture document",
+      "phase": "Fase 9",
+      "status": "done",
+      "docs": [
+        "docs/vault"
+      ],
+      "codeRefs": [],
+      "lastCommit": "5dd3ab41ad61",
+      "createdAt": "2026-06-21T19:53:58-03:00",
+      "updatedAt": "2026-06-21T19:53:58-03:00"
+    },
+    {
+      "id": "integrations",
+      "name": "N8N, webhooks, GitHub tools + Fase 9 parcial",
+      "phase": "Fase 9",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/webhooks.py",
+        "assistant/app/main.py",
+        "assistant/app/tools/__init__.py",
+        "assistant/app/tools/github_tools.py",
+        "infra/docker/docker-compose.yml"
+      ],
+      "lastCommit": "ed15b595c976",
+      "createdAt": "2026-06-18T16:25:23-03:00",
+      "updatedAt": "2026-06-18T16:25:23-03:00"
+    },
+    {
+      "id": "sdd-kirl-adv-001",
+      "name": "Fase 9+10 - Knowledge Graph + Temporal History",
+      "phase": "Fase 9",
+      "status": "done",
+      "docs": [
+        "docs/sdd/SDD-KIRL.md"
+      ],
+      "codeRefs": [
+        "assistant/app/ai/vault_analyzer/__init__.py",
+        "assistant/app/ai/vault_analyzer/analyzer_engine.py",
+        "assistant/app/ai/vault_analyzer/drift_engine.py",
+        "assistant/app/ai/vault_analyzer/evidence_engine.py",
+        "assistant/app/ai/vault_analyzer/graph_builder.py",
+        "assistant/app/ai/vault_analyzer/knowledge_graph.py",
+        "assistant/app/ai/vault_analyzer/suggestion_engine.py",
+        "assistant/app/ai/vault_analyzer/vault_reader.py",
+        "assistant/app/api/architecture.py",
+        "assistant/app/main.py",
+        "desktop/src/features/documentation-audit/heatmap/architecture-health.tsx",
+        "desktop/src/features/documentation-audit/heatmap/heatmap-chart.tsx",
+        "desktop/src/features/documentation-audit/heatmap/heatmap-store.ts",
+        "desktop/src/pages/documentation/index.tsx"
+      ],
+      "lastCommit": "9c05de92db1c",
+      "createdAt": "2026-06-22T15:08:40-03:00",
+      "updatedAt": "2026-06-22T15:13:44-03:00"
+    },
+    {
+      "id": "k-a-o-s-roadmap-expansion-tasks",
+      "name": "K.A.O.S Roadmap Expansion v2 — 28 tasks completas",
+      "phase": "Fase 9+",
+      "status": "done",
+      "docs": [
+        ".github/PULL_REQUEST_TEMPLATE.md"
+      ],
+      "codeRefs": [
+        ".commitlintrc.json",
+        ".github/workflows/drift-check.yml",
+        "assistant/app/ai/vault_analyzer/analyzer_engine.py",
+        "assistant/app/api/architecture.py",
+        "assistant/app/api/chat.py",
+        "assistant/app/api/conversations.py",
+        "assistant/app/api/kirl.py",
+        "assistant/app/api/mcp.py",
+        "assistant/app/api/observability.py",
+        "assistant/app/audit/drift_subscriber.py",
+        "assistant/app/config/settings.py",
+        "assistant/app/main.py",
+        "assistant/app/models/__init__.py",
+        "assistant/app/models/conversation.py",
+        "assistant/app/models/cost_event.py",
+        "assistant/app/observability/cost_tracker.py",
+        "assistant/app/orchestrator/universal_orchestrator.py",
+        "assistant/app/repositories/conversation_repository.py",
+        "assistant/app/repositories/cost_repository.py",
+        "assistant/app/tools/mcp_adapter.py",
+        "assistant/app/tools/n8n_webhook_tool.py",
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/shared/lib/stores/conversation-store.ts",
+        "desktop/src/shared/lib/stores/index.ts",
+        "package.json"
+      ],
+      "lastCommit": "a0553a30c356",
+      "createdAt": "2026-06-24T12:46:31-03:00",
+      "updatedAt": "2026-06-24T12:46:31-03:00"
     }
   ]
 }
