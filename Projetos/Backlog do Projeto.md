@@ -1,18 +1,13 @@
 ---
-<<<<<<< HEAD
-=======
 id: backlog-do-projeto
 type: knowledge
-phase: Fase 1
+phase: Fase 12
 status: in-progress
 tags:
 - kaos
 - normalized
-reconstruction_confidence: medium
----
+reconstruction_confidence: high
 
-﻿---
->>>>>>> 4fd98071173c8ac29511af56b95057c14d455a04
 type: knowledge
 domain: projetos
 status: active
@@ -59,6 +54,8 @@ status: active
 | 9 | Integrações Online | 6 | ⬜ Aguardando |
 | 10 | Produção | 6 | ✅ Completa |
 | 11 | Otimização e Roteamento | 8 | 🔵 Pendente |
+| 12 | Production Readiness | 14 | ✅ Completa |
+| 13 | Production Audit & Evolution | 7 | 🔵 Pendente |
 
 ---
 
@@ -296,6 +293,77 @@ Pastas a criar:
 
 ---
 
+## Fase 12 — Production Readiness ✅ (2026-07-11)
+
+> Epic: Preparar K.A.O.S Desktop para modo produção — eliminar dados simulados, consolidar endpoints, unificar stores, criar gates de inicialização.
+
+### Backend
+- [x] **Consolidated Dashboard Endpoint**: Criado `GET /api/system/dashboard` com `asyncio.gather` para services, runtime, metrics, costs, DLQ e alerts
+- [x] **ProviderMetrics Global Tracking**: `ProviderMetrics` com `_global_entries` class-level + `global_summary()` e `global_token_rate()`
+- [x] **Eliminated Simulated VRAM**: Retorna `null` (used/total) quando `nvidia-smi` ausente; frontend mostra "CPU Mode"
+- [x] **Eliminated Mock CI Runs**: `integrations.py` retorna `{"runs": [], "source": "offline"}` em vez de 3 itens fabricados
+- [x] **Eliminated Simulated Trigger**: `POST /api/integrations/github/trigger` retorna erro 400 em vez de sucesso simulado
+- [x] **Model Installation Check**: `/api/setup/provider/active` verifica se modelo configurado está realmente instalado no Ollama
+
+### Frontend — Store Cleanup
+- [x] **Deleted Duplicate Stores**: Removidos 8 arquivos em `shared/lib/stores/` — canonical stores em `application/stores/`
+- [x] **Retargeted Imports**: `documentation/index.tsx` e 7 test files atualizados para `@/application/stores`
+- [x] **Deleted Dead Hook**: `application/hooks/useSystemMetrics.ts` removido (usado apenas `features/dashboard/hooks/`)
+
+### Frontend — Mock Elimination
+- [x] **Dashboard**: `fallbackAlerts`, `sysLogs` seed, `agents` seed, `SIMULATED` badge — todos removidos
+- [x] **Observability**: `simulatedLogs` → `liveLogs` (SSE-only), alerts estáticos removidos, polling de `/api/notifications`
+- [x] **Agents**: `DEFAULT_AGENTS` removido — sem fallback para dados fabricados
+- [x] **Automation Studio**: `INITIAL_NODES`/`INITIAL_EDGES` removidos — canvas vazio quando sem workflow
+
+### Frontend — Architecture
+- [x] **Single Dashboard Call**: `system-store.ts` `fetchAll()` consolida 5 chamadas em 1 (`/api/system/dashboard`) com TTL de 3s
+- [x] **Offline Gate**: `AuthGate` bloqueia páginas protegidas com overlay "Servidor K.A.O.S Offline" + botão retry
+- [x] **Boot Pipeline Timing**: `use-init.ts` rastreia duração de cada estágio do bootstrap
+- [x] **Error Handling**: Backend inacessível após 30s → `useSystemStore.status = "offline"` → não prossegue para "done"
+- [x] **VRAM CPU Mode**: Dashboard exibe "CPU Mode" quando `vramTotal` é 0 (GPU ausente)
+
+### Infrastructure
+- [x] **Windows Terminal Fix**: `check_docker()` e `check_docker_engine()` agora usam `CREATE_NO_WINDOW` (0x08000000)
+- [x] **CI Mock Audit Script**: `scripts/verify-no-mocks.ps1` — varre código por padrões de mock, falha CI se encontrados
+- [x] **Contract Validation Test**: `__tests__/integration/contract-validation.test.ts` valida contrato `/api/system/dashboard`
+
+### ADRs (Architecture Decision Records)
+- Ver `docs/adr/` — decisões arquiteturais documentadas para esta fase
+
+---
+
+## Fase 13 — Production Readiness Audit & Platform Evolution 🔵
+
+> Epic: Auditoria completa da plataforma K.A.O.S (Backend, Desktop, Frontend, Integrações) para qualidade de produção.
+
+### Story 1 — Complete Backend Audit
+- [ ] Auditar todos os módulos: APIs, Services, Providers, Auth, Database, RAG, LangGraph, Qdrant, Vault, Observability
+- [ ] Revisar: performance, error handling, logging, configuração, segurança, débito técnico
+- [ ] Identificar: código morto, lógica duplicada, serviços não utilizados, inconsistências arquiteturais
+
+### Story 2 — Complete Frontend Audit
+- [ ] Auditar todas as páginas, componentes, hooks, stores, roteamento, estado
+- [ ] Revisar: loading states, responsividade, acessibilidade, UX, performance, uso de memória
+
+### Story 3 — Integration Audit
+- [ ] Auditar cada integração: Desktop ↔ Backend, Backend ↔ PostgreSQL/Qdrant/Ollama/OpenAI/Anthropic/N8N/GitHub/Docker
+- [ ] Verificar: contratos, latência, retries, health checks, resiliência, comportamento offline
+
+### Story 4 — Feature Enhancement Audit
+- [ ] Revisar cada feature existente para melhorias de UX, automação, performance, usabilidade
+
+### Story 5 — Architecture Evolution
+- [ ] Avaliar: escalabilidade, modularização, plugin architecture, event-driven, caching, concurrency
+
+### Story 6 — Technical Debt Elimination
+- [ ] Classificar débito como Critical/High/Medium/Low com impacto, esforço, proposta
+
+### Story 7 — Production Readiness Certification
+- [ ] Gerar Production Readiness Report: maturity score, riscos, milestones, roadmap
+
+---
+
 ## Divida Tecnica (DEBT)
 
 - [x] Corrigir patch target em `tests/test_openai.py` (mira `app.api.openai_compat` ao inves de `app.api.openai`)
@@ -319,7 +387,7 @@ Pastas a criar:
 
 ---
 
-*Atualizado em 2026-06-11.*
+*Atualizado em 2026-07-11.*
 
 ## Resumo
 - Informações pendentes de validação ou auto-geração.

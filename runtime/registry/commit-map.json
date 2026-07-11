@@ -1,8 +1,116 @@
 {
   "version": "1.0",
-  "generated_at": "2026-07-11T00:34:54.023541+00:00",
+  "generated_at": "2026-07-11T11:54:51.549866+00:00",
   "total_commits": 200,
   "commits": [
+    {
+      "hash": "df0d98f3",
+      "message": "fix(deploy): use --ignore-buildable flag on docker compose pull",
+      "type": "fix",
+      "impact": "low",
+      "scope": "deploy",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-11T00:02:19-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "a17619cb",
+      "message": "fix(cargo): remove unused net.timeout key and update docs submodule",
+      "type": "fix",
+      "impact": "low",
+      "scope": "cargo",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T23:41:26-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "57646c0d",
+      "message": "fix(desktop): resolve duplicate kaos-client module state causing localhost fallback",
+      "type": "fix",
+      "impact": "low",
+      "scope": "desktop",
+      "breaking": false,
+      "features": [
+        "circuit-breaker",
+        "desktop-apis"
+      ],
+      "timestamp": "2026-07-10T23:38:02-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "dd409dfc",
+      "message": "fix(ops): restore production api gateway, update deploy cleanup, and update docs submodule",
+      "type": "fix",
+      "impact": "medium",
+      "scope": "ops",
+      "breaking": false,
+      "features": [
+        "observability-production"
+      ],
+      "timestamp": "2026-07-10T23:22:50-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "2a1f34dd",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-11T00:36:31Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "85cd7f9a",
+      "message": "chore(release): 2.5.4 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-11T00:36:19Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "8e419aa8",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-11T00:36:12Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "dd668264",
+      "message": "fix(backend): initialize VaultWatcher in the background to prevent lifespan startup block",
+      "type": "fix",
+      "impact": "low",
+      "scope": "backend",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T21:35:29-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "c1eeddc0",
+      "message": "chore(release): 2.5.3 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-11T00:20:02Z",
+      "author": "semantic-release-bot"
+    },
     {
       "hash": "b6e57292",
       "message": "fix(ci): run workspace permissions cleanup unconditionally and stop containers first",
@@ -13,6 +121,17 @@
       "features": [],
       "timestamp": "2026-07-10T21:19:09-03:00",
       "author": "Brian"
+    },
+    {
+      "hash": "02e25670",
+      "message": "chore(release): 2.5.2 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-11T00:16:57Z",
+      "author": "semantic-release-bot"
     },
     {
       "hash": "e60ed4f4",
@@ -26,6 +145,17 @@
       "author": "Brian"
     },
     {
+      "hash": "a4bc6738",
+      "message": "chore(release): 2.5.1 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-11T00:11:40Z",
+      "author": "semantic-release-bot"
+    },
+    {
       "hash": "8c07c27f",
       "message": "fix(infra): adjust postgres and kaos-api healthchecks to prevent deploy and rollback timeouts",
       "type": "fix",
@@ -35,6 +165,17 @@
       "features": [],
       "timestamp": "2026-07-10T21:04:53-03:00",
       "author": "Brian"
+    },
+    {
+      "hash": "af0b1496",
+      "message": "chore(release): 2.5.0 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T23:16:21Z",
+      "author": "semantic-release-bot"
     },
     {
       "hash": "f753491b",
@@ -57,6 +198,19 @@
       "features": [],
       "timestamp": "2026-07-10T19:53:34-03:00",
       "author": "Brian"
+    },
+    {
+      "hash": "8f6623bf",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T22:09:20Z",
+      "author": "kaos-bot"
     },
     {
       "hash": "b9ed882a",
@@ -83,6 +237,30 @@
       "author": "Brian"
     },
     {
+      "hash": "1af469a4",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T21:19:52Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "9e34480b",
+      "message": "chore(release): 2.4.0 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T21:19:44Z",
+      "author": "semantic-release-bot"
+    },
+    {
       "hash": "faa9e2ff",
       "message": "chore(registry): update docs submodule pointer [skip ci]",
       "type": "chore",
@@ -107,6 +285,17 @@
       "author": "Brian"
     },
     {
+      "hash": "b1b8645d",
+      "message": "chore(release): 2.3.9 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T15:50:02Z",
+      "author": "semantic-release-bot"
+    },
+    {
       "hash": "cb4e1f1f",
       "message": "fix(deploy): update healthcheck verification port to 1010 to match docker compose external mapping",
       "type": "fix",
@@ -129,6 +318,30 @@
       ],
       "timestamp": "2026-07-10T10:43:06Z",
       "author": "kaos-bot"
+    },
+    {
+      "hash": "d301ad5e",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T10:42:39Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "11012f6a",
+      "message": "chore(release): 2.3.8 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T10:42:25Z",
+      "author": "semantic-release-bot"
     },
     {
       "hash": "f2bad1b9",
@@ -1054,9 +1267,9 @@
       "scope": "desktop",
       "breaking": false,
       "features": [
-        "desktop-apis",
+        "observability",
         "sse-layer",
-        "observability"
+        "desktop-apis"
       ],
       "timestamp": "2026-07-08T16:51:15-03:00",
       "author": "Brian"
@@ -1285,8 +1498,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "workflow-engine",
-        "n8n-integration"
+        "n8n-integration",
+        "workflow-engine"
       ],
       "timestamp": "2026-06-25T19:14:03-03:00",
       "author": "Brian"
@@ -1358,8 +1571,8 @@
       "scope": "llm",
       "breaking": false,
       "features": [
-        "circuit-breaker",
-        "provider-adapters"
+        "provider-adapters",
+        "circuit-breaker"
       ],
       "timestamp": "2026-06-25T16:05:26-03:00",
       "author": "Brian"
@@ -1431,8 +1644,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "workflow-engine",
-        "service-registry"
+        "service-registry",
+        "workflow-engine"
       ],
       "timestamp": "2026-06-25T13:54:11-03:00",
       "author": "Brian"
@@ -1655,8 +1868,8 @@
       "scope": "ci",
       "breaking": false,
       "features": [
-        "workflow-engine",
-        "service-registry"
+        "service-registry",
+        "workflow-engine"
       ],
       "timestamp": "2026-06-24T13:41:30-03:00",
       "author": "Brian"
@@ -1706,8 +1919,8 @@
       "scope": "ci",
       "breaking": false,
       "features": [
-        "workflow-engine",
-        "service-registry"
+        "service-registry",
+        "workflow-engine"
       ],
       "timestamp": "2026-06-24T13:04:49-03:00",
       "author": "Brian"
@@ -1812,10 +2025,10 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "desktop-apis",
-        "auto-update",
+        "provider-adapters",
         "circuit-breaker",
-        "provider-adapters"
+        "auto-update",
+        "desktop-apis"
       ],
       "timestamp": "2026-06-23T19:21:12-03:00",
       "author": "Brian"
@@ -1885,8 +2098,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "desktop-apis",
-        "service-registry"
+        "service-registry",
+        "desktop-apis"
       ],
       "timestamp": "2026-06-23T14:57:36-03:00",
       "author": "Brian"
@@ -1998,8 +2211,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "circuit-breaker",
         "service-registry",
+        "circuit-breaker",
         "database-schema"
       ],
       "timestamp": "2026-06-23T00:48:50-03:00",
@@ -2068,8 +2281,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "desktop-apis",
-        "provider-adapters"
+        "provider-adapters",
+        "desktop-apis"
       ],
       "timestamp": "2026-06-22T23:24:56-03:00",
       "author": "Brian Smith Dev"
@@ -2150,229 +2363,6 @@
       "features": [],
       "timestamp": "2026-06-22T22:33:10-03:00",
       "author": "Brian"
-    },
-    {
-      "hash": "b99b0159",
-      "message": "feat: Dashboard Honesto (4-state protocol) + Theme Engine",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T22:32:50-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "012ec498",
-      "message": "feat: settings, integrations, provider catalog, admin APIs",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-22T22:32:41-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "a891a3a0",
-      "message": "fix: migrate DRL runtime to docs submodule via RuntimePathResolver",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T22:32:31-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "c5c8263a",
-      "message": "docs: update submodule reference + add grafana dashboard",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "observability"
-      ],
-      "timestamp": "2026-06-22T21:59:17-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "a3cf7f18",
-      "message": "Dev (#75)",
-      "type": "unknown",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T15:28:56-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "bfbca453",
-      "message": "feat: OpenCode Configuration Layer - Skills (10) + Tools (4) + Agents (8)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "agent-runtime",
-        "tool-layer"
-      ],
-      "timestamp": "2026-06-22T15:21:26-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "705173b8",
-      "message": "feat: OpenCode References (6) + Rules (10)",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T15:17:51-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "b5c7a2b1",
-      "message": "style: auto-format with ruff [skip ci]",
-      "type": "style",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T18:15:51Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "9c05de92",
-      "message": "feat: SDD-KIRL-ADV-001 Fase 9+10 - Knowledge Graph + Temporal History",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T15:13:44-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "963e8f65",
-      "message": "feat: SDD-KIRL-ADV-001 Fase 8 - Heatmap Frontend",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T15:11:53-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "4b2842ee",
-      "message": "feat: SDD-KIRL-ADV-001 - AI Vault Analyzer + Drift Heatmap",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T15:08:40-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "7b7f8f28",
-      "message": "feat: KIRL - Documentation Runtime Layer + Audit System + Graphify (#76)",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T15:03:21-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "5a7be0ff",
-      "message": "feat: Visual Polish - chatStore migration + ToolLogger upgrade + agent runtime",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "agent-runtime",
-        "tool-layer",
-        "database-schema",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-22T00:11:39-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "1cf3a02c",
-      "message": "feat: Hardening Fase 1 - Tool Schema + Event Bus + chatStore + agentStore",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "agent-runtime",
-        "tool-layer",
-        "database-schema",
-        "event-bus",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-22T00:08:09-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "31f197eb",
-      "message": "feat: Fase 11 - K.A.O.S Visual Redesign (SDD v2026.1)",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T00:03:06-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "248c6a22",
-      "message": "fix: normalize docs as single K.A.O.S-storage submodule",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T23:20:13-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "657c7c04",
-      "message": "feat: N8N integration, custom webhooks API, Desktop Platform (AppRegistry, BaseApp, NotificationCenter) (#73)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "n8n-integration",
-        "desktop-apis",
-        "service-registry"
-      ],
-      "timestamp": "2026-06-21T23:13:09-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "fa778067",
-      "message": "fix: 3 production errors - model validation, Ollama streaming retry, vault_indexer OSError",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "sse-layer",
-        "observability-production"
-      ],
-      "timestamp": "2026-06-21T22:48:42-03:00",
-      "author": "Brian Smith Dev"
     }
   ]
 }

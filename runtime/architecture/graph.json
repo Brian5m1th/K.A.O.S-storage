@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-07-11T00:34:53.653952+00:00",
+  "generated_at": "2026-07-11T11:54:51.332347+00:00",
   "nodes": [
     {
       "id": "SDD-TEST-STRATEGY-F6",
@@ -120,27 +120,9 @@
       "phase": "Fase 1.3"
     },
     {
-      "id": "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
-      "label": "useUpdaterService.ts",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
       "id": "desktop/src/features/documentation-audit/heatmap/heatmap-store.ts",
       "label": "heatmap-store.ts",
       "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/features/documentation-audit/engine/drift-engine.ts",
-      "label": "drift-engine.ts",
-      "type": "unknown",
       "owner": "shared",
       "status": "unknown",
       "source": "code",
@@ -156,17 +138,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/shared/lib/stores/update-store.ts",
-      "label": "update-store.ts",
-      "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/features/auto-update/hooks/useUpdateScheduler.ts",
-      "label": "useUpdateScheduler.ts",
+      "id": "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
+      "label": "useSystemMetrics.ts",
       "type": "unknown",
       "owner": "shared",
       "status": "unknown",
@@ -174,8 +147,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
-      "label": "useSystemMetrics.ts",
+      "id": "desktop/src/features/documentation-audit/engine/drift-engine.ts",
+      "label": "drift-engine.ts",
       "type": "unknown",
       "owner": "shared",
       "status": "unknown",
@@ -192,6 +165,24 @@
       "phase": ""
     },
     {
+      "id": "desktop/src/features/auto-update/hooks/useUpdateScheduler.ts",
+      "label": "useUpdateScheduler.ts",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
+      "label": "useUpdaterService.ts",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
       "id": "desktop/src/features/documentation-audit/store/drift-store.ts",
       "label": "drift-store.ts",
       "type": "store",
@@ -201,61 +192,7 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/pages/dashboard/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/settings/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/prompts/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/knowledge-graph/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/graphify/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/chat/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/app/routes/index.tsx",
+      "id": "desktop/src/pages/welcome/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -273,7 +210,16 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/pages/pipelines/index.tsx",
+      "id": "desktop/src/pages/events/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/knowledge-graph/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -291,7 +237,52 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/pages/vault/index.tsx",
+      "id": "desktop/src/pages/settings/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/graphify/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/pipelines/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/observability/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/app/routes/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/agents/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -301,6 +292,33 @@
     },
     {
       "id": "desktop/src/pages/login/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/vault/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/prompts/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/chat/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -327,8 +345,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/pages/observability/index.tsx",
-      "label": "index.tsx",
+      "id": "desktop/src/pages/automation/marketplace.tsx",
+      "label": "marketplace.tsx",
       "type": "page",
       "owner": "shared",
       "status": "unknown",
@@ -345,34 +363,7 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/pages/welcome/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/agents/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/automation/marketplace.tsx",
-      "label": "marketplace.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/events/index.tsx",
+      "id": "desktop/src/pages/dashboard/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -399,107 +390,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/shared/lib/stores/chat-store.ts",
-      "label": "chat-store.ts",
-      "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/event_bus.py",
-      "label": "event_bus.py",
-      "type": "event",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/shared/lib/stores/system-store.ts",
-      "label": "system-store.ts",
-      "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/cost_tracker.py",
-      "label": "cost_tracker.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/shared/lib/stores/conversation-store.ts",
-      "label": "conversation-store.ts",
-      "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/shared/lib/stores/auth-store.ts",
-      "label": "auth-store.ts",
-      "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/tracing.py",
-      "label": "tracing.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/subscribers/audit_subscriber.py",
-      "label": "audit_subscriber.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/shared/lib/use-init.ts",
-      "label": "use-init.ts",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/shared/lib/stores/theme-store.ts",
-      "label": "theme-store.ts",
-      "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
       "id": "assistant/app/observability/__init__.py",
       "label": "__init__.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/subscribers/logger_subscriber.py",
-      "label": "logger_subscriber.py",
       "type": "unknown",
       "owner": "shared",
       "status": "unknown",
@@ -516,8 +408,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/observability/subscribers/n8n_subscriber.py",
-      "label": "n8n_subscriber.py",
+      "id": "assistant/app/observability/subscribers/logger_subscriber.py",
+      "label": "logger_subscriber.py",
       "type": "unknown",
       "owner": "shared",
       "status": "unknown",
@@ -534,9 +426,54 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/agent/graph.py",
-      "label": "graph.py",
-      "type": "agent",
+      "id": "assistant/app/observability/event_bus.py",
+      "label": "event_bus.py",
+      "type": "event",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/shared/lib/use-init.ts",
+      "label": "use-init.ts",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/subscribers/audit_subscriber.py",
+      "label": "audit_subscriber.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/cost_tracker.py",
+      "label": "cost_tracker.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/subscribers/n8n_subscriber.py",
+      "label": "n8n_subscriber.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/tracing.py",
+      "label": "tracing.py",
+      "type": "unknown",
       "owner": "shared",
       "status": "unknown",
       "source": "code",
@@ -545,24 +482,6 @@
     {
       "id": "assistant/app/workflows/impl/agent.py",
       "label": "agent.py",
-      "type": "agent",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/workflows/impl/registry.py",
-      "label": "registry.py",
-      "type": "agent",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/agent/nodes/executor.py",
-      "label": "executor.py",
       "type": "agent",
       "owner": "shared",
       "status": "unknown",
@@ -588,8 +507,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/agent/state.py",
-      "label": "state.py",
+      "id": "assistant/app/agent/graph.py",
+      "label": "graph.py",
       "type": "agent",
       "owner": "shared",
       "status": "unknown",
@@ -606,8 +525,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/workflows/impl/rag.py",
-      "label": "rag.py",
+      "id": "assistant/app/agent/state.py",
+      "label": "state.py",
       "type": "agent",
       "owner": "shared",
       "status": "unknown",
@@ -615,8 +534,35 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/workflows/impl/chat.py",
-      "label": "chat.py",
+      "id": "assistant/app/workflows/impl/registry.py",
+      "label": "registry.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/agent/nodes/executor.py",
+      "label": "executor.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/workflows/impl/memory.py",
+      "label": "memory.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/workflows/impl/rag.py",
+      "label": "rag.py",
       "type": "agent",
       "owner": "shared",
       "status": "unknown",
@@ -642,6 +588,15 @@
       "phase": ""
     },
     {
+      "id": "assistant/app/workflows/impl/chat.py",
+      "label": "chat.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
       "id": "assistant/app/workflows/impl/research.py",
       "label": "research.py",
       "type": "agent",
@@ -651,17 +606,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/workflows/impl/memory.py",
-      "label": "memory.py",
-      "type": "agent",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/providers/embedding/bge.py",
-      "label": "bge.py",
+      "id": "assistant/app/providers/chat/ollama.py",
+      "label": "ollama.py",
       "type": "provider",
       "owner": "shared",
       "status": "unknown",
@@ -670,6 +616,24 @@
     },
     {
       "id": "assistant/app/providers/chat/openai.py",
+      "label": "openai.py",
+      "type": "provider",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/providers/memory/postgres.py",
+      "label": "postgres.py",
+      "type": "provider",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/providers/embedding/openai.py",
       "label": "openai.py",
       "type": "provider",
       "owner": "shared",
@@ -687,8 +651,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/providers/embedding/openai.py",
-      "label": "openai.py",
+      "id": "assistant/app/providers/embedding/bge.py",
+      "label": "bge.py",
       "type": "provider",
       "owner": "shared",
       "status": "unknown",
@@ -714,26 +678,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/providers/memory/postgres.py",
-      "label": "postgres.py",
-      "type": "provider",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
       "id": "assistant/app/providers/chat/gemini.py",
       "label": "gemini.py",
-      "type": "provider",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/providers/chat/ollama.py",
-      "label": "ollama.py",
       "type": "provider",
       "owner": "shared",
       "status": "unknown",

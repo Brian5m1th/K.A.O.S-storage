@@ -174,12 +174,12 @@
   "missingCount": 8,
   "outdatedCount": 0,
   "graphSummary": {
-    "totalNodes": 82,
+    "totalNodes": 76,
     "totalEdges": 19,
     "nodeTypes": {
       "unknown": 14,
       "feature": 12,
-      "store": 9,
+      "store": 3,
       "page": 20,
       "tool": 2,
       "event": 2,
@@ -190,8 +190,8 @@
       "documents": 4,
       "implements": 15
     },
-    "sourceHash": "4829eb0fcfb32007a75f6f409e6ef6bb39a87fc5d2e24c98adbf8092fad49801",
+    "sourceHash": "41731ddeca9681803ff3937077d4ea81c9cf59472fd309646b3c43e0d00e9f5d",
     "graphVersion": "1.0",
-    "generatedAt": "2026-07-11T00:34:53.674182+00:00"
+    "generatedAt": "2026-07-11T11:54:51.348750+00:00"
   }
 }
