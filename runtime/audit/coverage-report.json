@@ -1,11 +1,11 @@
 {
-  "coverage": 0.0,
-  "totalFeatures": 1,
-  "documented": 0,
-  "missingDocs": 0,
-  "staleDocs": 0,
-  "orphanedSDDs": 40,
-  "inconsistentPhases": 1,
-  "undocumentedCode": 110,
-  "generatedAt": "2026-06-25T01:09:51.624292+00:00"
+  "coverage": 52.2,
+  "totalFeatures": 159,
+  "documented": 83,
+  "missingDocs": 74,
+  "staleDocs": 47,
+  "orphanedSDDs": 1,
+  "inconsistentPhases": 76,
+  "undocumentedCode": 2,
+  "generatedAt": "2026-07-11T00:34:55.894706+00:00"
 }

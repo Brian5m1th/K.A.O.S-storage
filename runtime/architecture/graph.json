@@ -1,697 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-06-23T17:55:36.970813+00:00",
+  "generated_at": "2026-07-11T00:34:53.653952+00:00",
   "nodes": [
     {
-      "id": "agente-de-ingestao-de-conhecimento",
-      "label": "Agente de Ingestao de Conhecimento",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "arquitetura-de-orquestracao",
-      "label": "Arquitetura de Orquestracao",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "auth-wizard",
-      "label": "auth-wizard",
-      "type": "stub",
-      "owner": "shared",
-      "status": "missing-information",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "busca-vetorial-e-rag",
-      "label": "Busca Vetorial e RAG",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "camada-wiki-de-conhecimento",
-      "label": "Camada Wiki de Conhecimento",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "active",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "classificador-de-intencoes",
-      "label": "Classificador de Intencoes",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "configuração-de-provedores",
-      "label": "Configuração de Provedores",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "active",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "divisao-de-texto-(chunking)",
-      "label": "Divisao de Texto (Chunking)",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "docs-source-refactor",
-      "label": "docs-source-refactor",
-      "type": "stub",
-      "owner": "shared",
-      "status": "missing-information",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "especificacao-funcional",
-      "label": "Especificacao Funcional",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "especificacao-tecnica",
-      "label": "Especificacao Tecnica",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "estado-do-agente",
-      "label": "Estado do Agente",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "active",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "estrutura-da-wiki",
-      "label": "Estrutura da Wiki",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "fase-1---fundacao",
-      "label": "Fase 1 - Fundacao",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "fase-2---ia-local",
-      "label": "Fase 2 - IA Local",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "fase-3---servico-obsidian",
-      "label": "Fase 3 - Servico Obsidian",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "fases-4-5---pipeline-rag-e-watcher",
-      "label": "Fases 4-5 - Pipeline RAG e Watcher",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "fases-6-7---watcher-langgraph-e-memoria",
-      "label": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "active",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "ferramentas-do-langgraph",
-      "label": "Ferramentas do LangGraph",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "functional-spec",
-      "label": "functional-spec",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "gerador-de-embeddings",
-      "label": "Gerador de Embeddings",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "identidade-open-code",
-      "label": "Identidade Open Code",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "indexador-do-vault",
-      "label": "Indexador do Vault",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "memoria-do-obsidian",
-      "label": "Memoria do Obsidian",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "monitoramento-do-vault-(watcher)",
-      "label": "Monitoramento do Vault (Watcher)",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "multi-user-rbac",
-      "label": "multi-user-rbac",
-      "type": "stub",
-      "owner": "shared",
-      "status": "missing-information",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "observability-real",
-      "label": "observability-real",
-      "type": "stub",
-      "owner": "shared",
-      "status": "missing-information",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "obsidian-watcher",
-      "label": "Obsidian Watcher",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "orquestrador-langgraph",
-      "label": "Orquestrador LangGraph",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "pipeline-de-consulta-da-wiki",
-      "label": "Pipeline de Consulta da Wiki",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "propagacao-de-contexto-de-usuario",
-      "label": "Propagacao de Contexto de Usuario",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "provedor-hibrido-de-llm",
-      "label": "Provedor Hibrido de LLM",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "provider-catalog",
-      "label": "provider-catalog",
-      "type": "stub",
-      "owner": "shared",
-      "status": "missing-information",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "provider-ux",
-      "label": "provider-ux",
-      "type": "stub",
-      "owner": "shared",
-      "status": "missing-information",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "recuperador-semantico",
-      "label": "Recuperador Semantico",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "refatoracao-frontend-fsd",
-      "label": "Refatoracao Frontend FSD",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "implemented",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "roadmap-geral",
-      "label": "Roadmap Geral",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "roteamento-de-memoria",
-      "label": "Roteamento de Memoria",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd-desktop-stabilization-f1",
-      "label": "SDD-Desktop-Stabilization-F1",
-      "type": "sdd",
+      "id": "SDD-TEST-STRATEGY-F6",
+      "label": "Estratégia Completa de Testes e Garantia de Qualidade (Fase 6) + Refatoração Arquitetural (Fase 5)",
+      "type": "unknown",
       "owner": "shared",
       "status": "approved",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd-f2-readiness-engine",
-      "label": "SDD-F2-Readiness-Engine",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "approved",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd-kirl",
-      "label": "SDD-KIRL",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_arquitetura_orquestracao",
-      "label": "sdd_arquitetura_orquestracao",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_desktop_build_optimization",
-      "label": "sdd_desktop_build_optimization",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_fase1_fundacao",
-      "label": "sdd_fase1_fundacao",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_fase2_ia_local",
-      "label": "sdd_fase2_ia_local",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_fase3_obsidian_service",
-      "label": "sdd_fase3_obsidian_service",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_fase4_rag_pipeline",
-      "label": "sdd_fase4_rag_pipeline",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_fase5_watcher_langgraph",
-      "label": "sdd_fase5_watcher_langgraph",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_knowledge_wiki_layer",
-      "label": "sdd_knowledge_wiki_layer",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_llm_provider_hybrid",
-      "label": "sdd_llm_provider_hybrid",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_obsidian_memoria",
-      "label": "sdd_obsidian_memoria",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_obsidian_rag",
-      "label": "sdd_obsidian_rag",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_obsidian_tools",
-      "label": "sdd_obsidian_tools",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_obsidian_watcher",
-      "label": "sdd_obsidian_watcher",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_open_code_identidade",
-      "label": "sdd_open_code_identidade",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_roadmap",
-      "label": "sdd_roadmap",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "sdd_user_context_propagation",
-      "label": "sdd_user_context_propagation",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "technical-spec",
-      "label": "technical-spec",
-      "type": "sdd",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "test",
-      "label": "test",
-      "type": "stub",
-      "owner": "shared",
-      "status": "missing-information",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "validation-audit",
-      "label": "validation-audit",
-      "type": "stub",
-      "owner": "shared",
-      "status": "missing-information",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "variaveis-de-ambiente",
-      "label": "Variaveis de Ambiente",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "active",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "desktop_architecture",
-      "label": "DESKTOP_ARCHITECTURE",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "frontend_fsd_architecture",
-      "label": "FRONTEND_FSD_ARCHITECTURE",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "provider_routing",
-      "label": "PROVIDER_ROUTING",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "system_architecture",
-      "label": "SYSTEM_ARCHITECTURE",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "developer_guide",
-      "label": "DEVELOPER_GUIDE",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "first_run",
-      "label": "FIRST_RUN",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "installation",
-      "label": "INSTALLATION",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "kirl_guide",
-      "label": "KIRL_GUIDE",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "obsidian_guide",
-      "label": "OBSIDIAN_GUIDE",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "operations",
-      "label": "OPERATIONS",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "user_guide",
-      "label": "USER_GUIDE",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "api_reference",
-      "label": "API_REFERENCE",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "agents",
-      "label": "AGENTS",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "agents.pt-br",
-      "label": "AGENTS.pt-BR",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "index",
-      "label": "index",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
-      "source": "vault",
-      "phase": ""
-    },
-    {
-      "id": "log",
-      "label": "log",
-      "type": "knowledge",
-      "owner": "shared",
-      "status": "in-progress",
       "source": "vault",
       "phase": ""
     },
@@ -804,8 +120,26 @@
       "phase": "Fase 1.3"
     },
     {
-      "id": "desktop/src/features/documentation-audit/graph/graph-updater.ts",
-      "label": "graph-updater.ts",
+      "id": "desktop/src/features/auto-update/hooks/useUpdaterService.ts",
+      "label": "useUpdaterService.ts",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/features/documentation-audit/heatmap/heatmap-store.ts",
+      "label": "heatmap-store.ts",
+      "type": "store",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/features/documentation-audit/engine/drift-engine.ts",
+      "label": "drift-engine.ts",
       "type": "unknown",
       "owner": "shared",
       "status": "unknown",
@@ -822,8 +156,35 @@
       "phase": ""
     },
     {
+      "id": "desktop/src/shared/lib/stores/update-store.ts",
+      "label": "update-store.ts",
+      "type": "store",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/features/auto-update/hooks/useUpdateScheduler.ts",
+      "label": "useUpdateScheduler.ts",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
       "id": "desktop/src/features/dashboard/hooks/useSystemMetrics.ts",
       "label": "useSystemMetrics.ts",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/features/documentation-audit/graph/graph-updater.ts",
+      "label": "graph-updater.ts",
       "type": "unknown",
       "owner": "shared",
       "status": "unknown",
@@ -840,115 +201,7 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/features/documentation-audit/heatmap/heatmap-store.ts",
-      "label": "heatmap-store.ts",
-      "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/features/ask-ai/hooks/useChatStream.ts",
-      "label": "useChatStream.ts",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/features/documentation-audit/engine/drift-engine.ts",
-      "label": "drift-engine.ts",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/knowledge-graph/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/app/routes/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
       "id": "desktop/src/pages/dashboard/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/app/routes/pages/dashboard.tsx",
-      "label": "dashboard.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/app/routes/pages/pipelines.tsx",
-      "label": "pipelines.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/users/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/app/routes/pages/documentation/index.tsx",
-      "label": "index.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/app/routes/pages/setup.tsx",
-      "label": "setup.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/app/routes/pages/chat.tsx",
-      "label": "chat.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/setup/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -966,8 +219,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/graphify.tsx",
-      "label": "graphify.tsx",
+      "id": "desktop/src/pages/prompts/index.tsx",
+      "label": "index.tsx",
       "type": "page",
       "owner": "shared",
       "status": "unknown",
@@ -975,16 +228,7 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/observability.tsx",
-      "label": "observability.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/chat/index.tsx",
+      "id": "desktop/src/pages/knowledge-graph/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -1002,16 +246,7 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/login.tsx",
-      "label": "login.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/observability/index.tsx",
+      "id": "desktop/src/pages/chat/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -1020,7 +255,34 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/pages/orchestration/index.tsx",
+      "id": "desktop/src/app/routes/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/users/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/pipelines/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/setup/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -1038,7 +300,7 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/architecture/index.tsx",
+      "id": "desktop/src/pages/login/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -1047,8 +309,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/vault.tsx",
-      "label": "vault.tsx",
+      "id": "desktop/src/pages/automation/automation-studio.tsx",
+      "label": "automation-studio.tsx",
       "type": "page",
       "owner": "shared",
       "status": "unknown",
@@ -1056,8 +318,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/users.tsx",
-      "label": "users.tsx",
+      "id": "desktop/src/pages/costs/index.tsx",
+      "label": "index.tsx",
       "type": "page",
       "owner": "shared",
       "status": "unknown",
@@ -1065,8 +327,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/orchestration.tsx",
-      "label": "orchestration.tsx",
+      "id": "desktop/src/pages/observability/index.tsx",
+      "label": "index.tsx",
       "type": "page",
       "owner": "shared",
       "status": "unknown",
@@ -1074,8 +336,17 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/settings.tsx",
-      "label": "settings.tsx",
+      "id": "desktop/src/pages/tools/index.tsx",
+      "label": "index.tsx",
+      "type": "page",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/pages/welcome/index.tsx",
+      "label": "index.tsx",
       "type": "page",
       "owner": "shared",
       "status": "unknown",
@@ -1092,8 +363,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/pages/login/index.tsx",
-      "label": "index.tsx",
+      "id": "desktop/src/pages/automation/marketplace.tsx",
+      "label": "marketplace.tsx",
       "type": "page",
       "owner": "shared",
       "status": "unknown",
@@ -1101,25 +372,7 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/app/routes/pages/knowledge-graph.tsx",
-      "label": "knowledge-graph.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/app/routes/pages/agents.tsx",
-      "label": "agents.tsx",
-      "type": "page",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/pages/pipelines/index.tsx",
+      "id": "desktop/src/pages/events/index.tsx",
       "label": "index.tsx",
       "type": "page",
       "owner": "shared",
@@ -1137,9 +390,9 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/shared/lib/event-bus.ts",
-      "label": "event-bus.ts",
-      "type": "event",
+      "id": "assistant/app/tools/mcp_adapter.py",
+      "label": "mcp_adapter.py",
+      "type": "tool",
       "owner": "shared",
       "status": "unknown",
       "source": "code",
@@ -1155,60 +408,6 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/observability/subscribers/n8n_subscriber.py",
-      "label": "n8n_subscriber.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/tracing.py",
-      "label": "tracing.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/shared/lib/stores/auth-store.ts",
-      "label": "auth-store.ts",
-      "type": "store",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/subscribers/metrics_subscriber.py",
-      "label": "metrics_subscriber.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/subscribers/logger_subscriber.py",
-      "label": "logger_subscriber.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/observability/subscribers/audit_subscriber.py",
-      "label": "audit_subscriber.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
       "id": "assistant/app/observability/event_bus.py",
       "label": "event_bus.py",
       "type": "event",
@@ -1218,17 +417,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/observability/__init__.py",
-      "label": "__init__.py",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/shared/lib/stores/theme-store.ts",
-      "label": "theme-store.ts",
+      "id": "desktop/src/shared/lib/stores/system-store.ts",
+      "label": "system-store.ts",
       "type": "store",
       "owner": "shared",
       "status": "unknown",
@@ -1245,17 +435,8 @@
       "phase": ""
     },
     {
-      "id": "desktop/src/shared/lib/command-registry.ts",
-      "label": "command-registry.ts",
-      "type": "unknown",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "desktop/src/shared/lib/stores/system-store.ts",
-      "label": "system-store.ts",
+      "id": "desktop/src/shared/lib/stores/conversation-store.ts",
+      "label": "conversation-store.ts",
       "type": "store",
       "owner": "shared",
       "status": "unknown",
@@ -1263,9 +444,90 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/agent/nodes/retrieve.py",
-      "label": "retrieve.py",
-      "type": "agent",
+      "id": "desktop/src/shared/lib/stores/auth-store.ts",
+      "label": "auth-store.ts",
+      "type": "store",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/tracing.py",
+      "label": "tracing.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/subscribers/audit_subscriber.py",
+      "label": "audit_subscriber.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/shared/lib/use-init.ts",
+      "label": "use-init.ts",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/shared/lib/stores/theme-store.ts",
+      "label": "theme-store.ts",
+      "type": "store",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/__init__.py",
+      "label": "__init__.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/subscribers/logger_subscriber.py",
+      "label": "logger_subscriber.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/subscribers/metrics_subscriber.py",
+      "label": "metrics_subscriber.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/observability/subscribers/n8n_subscriber.py",
+      "label": "n8n_subscriber.py",
+      "type": "unknown",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "desktop/src/shared/lib/event-bus.ts",
+      "label": "event-bus.ts",
+      "type": "event",
       "owner": "shared",
       "status": "unknown",
       "source": "code",
@@ -1274,6 +536,15 @@
     {
       "id": "assistant/app/agent/graph.py",
       "label": "graph.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/workflows/impl/agent.py",
+      "label": "agent.py",
       "type": "agent",
       "owner": "shared",
       "status": "unknown",
@@ -1299,26 +570,17 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/agent/nodes/planner.py",
-      "label": "planner.py",
-      "type": "agent",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/workflows/impl/agent.py",
-      "label": "agent.py",
-      "type": "agent",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
       "id": "assistant/app/agent/nodes/ingest.py",
       "label": "ingest.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/agent/nodes/retrieve.py",
+      "label": "retrieve.py",
       "type": "agent",
       "owner": "shared",
       "status": "unknown",
@@ -1335,35 +597,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/workflows/impl/ingest.py",
-      "label": "ingest.py",
-      "type": "agent",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/workflows/impl/coding.py",
-      "label": "coding.py",
-      "type": "agent",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/workflows/impl/research.py",
-      "label": "research.py",
-      "type": "agent",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/workflows/impl/memory.py",
-      "label": "memory.py",
+      "id": "assistant/app/agent/nodes/planner.py",
+      "label": "planner.py",
       "type": "agent",
       "owner": "shared",
       "status": "unknown",
@@ -1389,6 +624,96 @@
       "phase": ""
     },
     {
+      "id": "assistant/app/workflows/impl/coding.py",
+      "label": "coding.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/workflows/impl/ingest.py",
+      "label": "ingest.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/workflows/impl/research.py",
+      "label": "research.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/workflows/impl/memory.py",
+      "label": "memory.py",
+      "type": "agent",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/providers/embedding/bge.py",
+      "label": "bge.py",
+      "type": "provider",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/providers/chat/openai.py",
+      "label": "openai.py",
+      "type": "provider",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/providers/chat/anthropic.py",
+      "label": "anthropic.py",
+      "type": "provider",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/providers/embedding/openai.py",
+      "label": "openai.py",
+      "type": "provider",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/providers/vector/qdrant.py",
+      "label": "qdrant.py",
+      "type": "provider",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
+      "id": "assistant/app/providers/memory/obsidian.py",
+      "label": "obsidian.py",
+      "type": "provider",
+      "owner": "shared",
+      "status": "unknown",
+      "source": "code",
+      "phase": ""
+    },
+    {
       "id": "assistant/app/providers/memory/postgres.py",
       "label": "postgres.py",
       "type": "provider",
@@ -1407,62 +732,8 @@
       "phase": ""
     },
     {
-      "id": "assistant/app/providers/vector/qdrant.py",
-      "label": "qdrant.py",
-      "type": "provider",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/providers/chat/openai.py",
-      "label": "openai.py",
-      "type": "provider",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/providers/memory/obsidian.py",
-      "label": "obsidian.py",
-      "type": "provider",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/providers/embedding/openai.py",
-      "label": "openai.py",
-      "type": "provider",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/providers/chat/anthropic.py",
-      "label": "anthropic.py",
-      "type": "provider",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
       "id": "assistant/app/providers/chat/ollama.py",
       "label": "ollama.py",
-      "type": "provider",
-      "owner": "shared",
-      "status": "unknown",
-      "source": "code",
-      "phase": ""
-    },
-    {
-      "id": "assistant/app/providers/embedding/bge.py",
-      "label": "bge.py",
       "type": "provider",
       "owner": "shared",
       "status": "unknown",
@@ -1471,1351 +742,6 @@
     }
   ],
   "edges": [
-    {
-      "source": "agente-de-ingestao-de-conhecimento",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "agente-de-ingestao-de-conhecimento",
-      "target": "Estrutura da Wiki",
-      "relation": "documents"
-    },
-    {
-      "source": "agente-de-ingestao-de-conhecimento",
-      "target": "Camada Wiki de Conhecimento",
-      "relation": "documents"
-    },
-    {
-      "source": "agente-de-ingestao-de-conhecimento",
-      "target": "Pipeline de Consulta da Wiki",
-      "relation": "documents"
-    },
-    {
-      "source": "arquitetura-de-orquestracao",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "arquitetura-de-orquestracao",
-      "target": "Fase 2 - IA Local",
-      "relation": "documents"
-    },
-    {
-      "source": "arquitetura-de-orquestracao",
-      "target": "Propagacao de Contexto de Usuario",
-      "relation": "documents"
-    },
-    {
-      "source": "arquitetura-de-orquestracao",
-      "target": "Orquestrador LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "arquitetura-de-orquestracao",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "arquitetura-de-orquestracao",
-      "target": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "arquitetura-de-orquestracao",
-      "target": "Estado do Agente",
-      "relation": "documents"
-    },
-    {
-      "source": "busca-vetorial-e-rag",
-      "target": "Recuperador Semantico",
-      "relation": "documents"
-    },
-    {
-      "source": "busca-vetorial-e-rag",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "busca-vetorial-e-rag",
-      "target": "Obsidian Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "busca-vetorial-e-rag",
-      "target": "Divisao de Texto (Chunking)",
-      "relation": "documents"
-    },
-    {
-      "source": "busca-vetorial-e-rag",
-      "target": "Gerador de Embeddings",
-      "relation": "documents"
-    },
-    {
-      "source": "busca-vetorial-e-rag",
-      "target": "Provedor Hibrido de LLM",
-      "relation": "documents"
-    },
-    {
-      "source": "busca-vetorial-e-rag",
-      "target": "Indexador do Vault",
-      "relation": "documents"
-    },
-    {
-      "source": "busca-vetorial-e-rag",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Estrutura da Wiki",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Pipeline de Consulta da Wiki",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Gerador de Embeddings",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Orquestrador LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Arquitetura Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Visao Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Provedor Hibrido de LLM",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Agente de Ingestao de Conhecimento",
-      "relation": "documents"
-    },
-    {
-      "source": "camada-wiki-de-conhecimento",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "classificador-de-intencoes",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "classificador-de-intencoes",
-      "target": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "classificador-de-intencoes",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "classificador-de-intencoes",
-      "target": "Roteamento de Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "configuração-de-provedores",
-      "target": "Provedor Hibrido de LLM",
-      "relation": "documents"
-    },
-    {
-      "source": "configuração-de-provedores",
-      "target": "Variaveis de Ambiente",
-      "relation": "documents"
-    },
-    {
-      "source": "configuração-de-provedores",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "configuração-de-provedores",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "divisao-de-texto-(chunking)",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "divisao-de-texto-(chunking)",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "divisao-de-texto-(chunking)",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "especificacao-funcional",
-      "target": "Especificacao Tecnica",
-      "relation": "documents"
-    },
-    {
-      "source": "especificacao-funcional",
-      "target": "Arquitetura Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "especificacao-tecnica",
-      "target": "Especificacao Funcional",
-      "relation": "documents"
-    },
-    {
-      "source": "especificacao-tecnica",
-      "target": "Arquitetura Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "estado-do-agente",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "estado-do-agente",
-      "target": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "estado-do-agente",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "estado-do-agente",
-      "target": "Orquestrador LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "estrutura-da-wiki",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "estrutura-da-wiki",
-      "target": "Camada Wiki de Conhecimento",
-      "relation": "documents"
-    },
-    {
-      "source": "estrutura-da-wiki",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "estrutura-da-wiki",
-      "target": "AGENTS",
-      "relation": "documents"
-    },
-    {
-      "source": "estrutura-da-wiki",
-      "target": "AGENTS.pt-BR",
-      "relation": "documents"
-    },
-    {
-      "source": "estrutura-da-wiki",
-      "target": "Agente de Ingestao de Conhecimento",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-1---fundacao",
-      "target": "Estrutura de Pastas",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-1---fundacao",
-      "target": "Fase 2 - IA Local",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-1---fundacao",
-      "target": "Roadmap Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-1---fundacao",
-      "target": "Fase 3 - Servico Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-1---fundacao",
-      "target": "Infraestrutura Docker",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-2---ia-local",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-2---ia-local",
-      "target": "Fase 1 - Fundacao",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-2---ia-local",
-      "target": "Roadmap Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-2---ia-local",
-      "target": "Fase 3 - Servico Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-2---ia-local",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-2---ia-local",
-      "target": "Provedor Hibrido de LLM",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-3---servico-obsidian",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-3---servico-obsidian",
-      "target": "Fase 1 - Fundacao",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-3---servico-obsidian",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-3---servico-obsidian",
-      "target": "Fase 2 - IA Local",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-3---servico-obsidian",
-      "target": "Roadmap Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-3---servico-obsidian",
-      "target": "Guia de Testes e Uso",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-3---servico-obsidian",
-      "target": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "fase-3---servico-obsidian",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Recuperador Semantico",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Obsidian Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Divisao de Texto (Chunking)",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Roadmap Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Monitoramento do Vault (Watcher)",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Gerador de Embeddings",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Fase 3 - Servico Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Indexador do Vault",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-4-5---pipeline-rag-e-watcher",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Classificador de Intencoes",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Roadmap Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Fase 3 - Servico Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Orquestrador LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Estado do Agente",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "fases-6-7---watcher-langgraph-e-memoria",
-      "target": "Roteamento de Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Recuperador Semantico",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Configuração de Provedores",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Obsidian Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Fase 3 - Servico Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Orquestrador LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "ferramentas-do-langgraph",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "gerador-de-embeddings",
-      "target": "Provedor Hibrido de LLM",
-      "relation": "documents"
-    },
-    {
-      "source": "gerador-de-embeddings",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "gerador-de-embeddings",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "gerador-de-embeddings",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "identidade-open-code",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "identidade-open-code",
-      "target": "Padroes de Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "identidade-open-code",
-      "target": "Visao Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "indexador-do-vault",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "indexador-do-vault",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "indexador-do-vault",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "indexador-do-vault",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "memoria-do-obsidian",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "memoria-do-obsidian",
-      "target": "Estrutura da Wiki",
-      "relation": "documents"
-    },
-    {
-      "source": "memoria-do-obsidian",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "memoria-do-obsidian",
-      "target": "Obsidian Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "memoria-do-obsidian",
-      "target": "Propagacao de Contexto de Usuario",
-      "relation": "documents"
-    },
-    {
-      "source": "memoria-do-obsidian",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "memoria-do-obsidian",
-      "target": "Roteamento de Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "monitoramento-do-vault-(watcher)",
-      "target": "Obsidian Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "monitoramento-do-vault-(watcher)",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "monitoramento-do-vault-(watcher)",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "monitoramento-do-vault-(watcher)",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "obsidian-watcher",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "obsidian-watcher",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "obsidian-watcher",
-      "target": "Monitoramento do Vault (Watcher)",
-      "relation": "documents"
-    },
-    {
-      "source": "orquestrador-langgraph",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "orquestrador-langgraph",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "orquestrador-langgraph",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "orquestrador-langgraph",
-      "target": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "orquestrador-langgraph",
-      "target": "Estado do Agente",
-      "relation": "documents"
-    },
-    {
-      "source": "pipeline-de-consulta-da-wiki",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "pipeline-de-consulta-da-wiki",
-      "target": "Agente de Ingestao de Conhecimento",
-      "relation": "documents"
-    },
-    {
-      "source": "pipeline-de-consulta-da-wiki",
-      "target": "Camada Wiki de Conhecimento",
-      "relation": "documents"
-    },
-    {
-      "source": "pipeline-de-consulta-da-wiki",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "propagacao-de-contexto-de-usuario",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "propagacao-de-contexto-de-usuario",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "propagacao-de-contexto-de-usuario",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "propagacao-de-contexto-de-usuario",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "propagacao-de-contexto-de-usuario",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "provedor-hibrido-de-llm",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "provedor-hibrido-de-llm",
-      "target": "Camada Wiki de Conhecimento",
-      "relation": "documents"
-    },
-    {
-      "source": "provedor-hibrido-de-llm",
-      "target": "Configuração de Provedores",
-      "relation": "documents"
-    },
-    {
-      "source": "provedor-hibrido-de-llm",
-      "target": "Fase 2 - IA Local",
-      "relation": "documents"
-    },
-    {
-      "source": "provedor-hibrido-de-llm",
-      "target": "Gerador de Embeddings",
-      "relation": "documents"
-    },
-    {
-      "source": "provedor-hibrido-de-llm",
-      "target": "Visao Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "recuperador-semantico",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "recuperador-semantico",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "recuperador-semantico",
-      "target": "Busca Vetorial e RAG",
-      "relation": "documents"
-    },
-    {
-      "source": "recuperador-semantico",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "refatoracao-frontend-fsd",
-      "target": "FRONTEND_FSD_ARCHITECTURE",
-      "relation": "documents"
-    },
-    {
-      "source": "refatoracao-frontend-fsd",
-      "target": "DESKTOP_ARCHITECTURE",
-      "relation": "documents"
-    },
-    {
-      "source": "refatoracao-frontend-fsd",
-      "target": "architecture",
-      "relation": "documents"
-    },
-    {
-      "source": "refatoracao-frontend-fsd",
-      "target": "DOCUMENTATION_GOVERNANCE_SDD",
-      "relation": "documents"
-    },
-    {
-      "source": "roadmap-geral",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "roadmap-geral",
-      "target": "Fase 1 - Fundacao",
-      "relation": "documents"
-    },
-    {
-      "source": "roadmap-geral",
-      "target": "Fase 2 - IA Local",
-      "relation": "documents"
-    },
-    {
-      "source": "roadmap-geral",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "roadmap-geral",
-      "target": "Fase 3 - Servico Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "roadmap-geral",
-      "target": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "roadmap-geral",
-      "target": "Fases 4-5 - Pipeline RAG e Watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "roteamento-de-memoria",
-      "target": "Classificador de Intencoes",
-      "relation": "documents"
-    },
-    {
-      "source": "roteamento-de-memoria",
-      "target": "Fases 6-7 - Watcher LangGraph e Memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "roteamento-de-memoria",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "roteamento-de-memoria",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-desktop-stabilization-f1",
-      "target": "INSTALLATION",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-desktop-stabilization-f1",
-      "target": "sdd_desktop_build_optimization",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-desktop-stabilization-f1",
-      "target": "Configuração de Provedores",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-desktop-stabilization-f1",
-      "target": "SDD-KIRL",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-desktop-stabilization-f1",
-      "target": "Roadmap Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-desktop-stabilization-f1",
-      "target": "architecture",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-desktop-stabilization-f1",
-      "target": "Arquitetura de Orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-desktop-stabilization-f1",
-      "target": "FIRST_RUN",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-f2-readiness-engine",
-      "target": "SDD-Graphify",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-f2-readiness-engine",
-      "target": "SDD-AI-Vault-Analyzer",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-f2-readiness-engine",
-      "target": "SDD-Desktop-Stabilization-F1",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-f2-readiness-engine",
-      "target": "SDD-KIRL",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-f2-readiness-engine",
-      "target": "Roadmap Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd-f2-readiness-engine",
-      "target": "Feature Registry",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_arquitetura_orquestracao",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_arquitetura_orquestracao",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_arquitetura_orquestracao",
-      "target": "sdd_fase2_ia_local",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_arquitetura_orquestracao",
-      "target": "Visao Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_arquitetura_orquestracao",
-      "target": "sdd_user_context_propagation",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase1_fundacao",
-      "target": "Estrutura de Pastas",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase1_fundacao",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase1_fundacao",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase1_fundacao",
-      "target": "sdd_fase2_ia_local",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase1_fundacao",
-      "target": "sdd_fase3_obsidian_service",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase2_ia_local",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase2_ia_local",
-      "target": "sdd_arquitetura_orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase2_ia_local",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase2_ia_local",
-      "target": "sdd_fase3_obsidian_service",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase2_ia_local",
-      "target": "sdd_fase1_fundacao",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase3_obsidian_service",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase3_obsidian_service",
-      "target": "sdd_obsidian_memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase3_obsidian_service",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase3_obsidian_service",
-      "target": "sdd_fase5_watcher_langgraph",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase3_obsidian_service",
-      "target": "sdd_fase2_ia_local",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase3_obsidian_service",
-      "target": "sdd_obsidian_tools",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase3_obsidian_service",
-      "target": "sdd_fase4_rag_pipeline",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase3_obsidian_service",
-      "target": "sdd_fase1_fundacao",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase4_rag_pipeline",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase4_rag_pipeline",
-      "target": "sdd_obsidian_rag",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase4_rag_pipeline",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase4_rag_pipeline",
-      "target": "sdd_fase5_watcher_langgraph",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase4_rag_pipeline",
-      "target": "sdd_fase3_obsidian_service",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase4_rag_pipeline",
-      "target": "sdd_obsidian_watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase5_watcher_langgraph",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase5_watcher_langgraph",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase5_watcher_langgraph",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase5_watcher_langgraph",
-      "target": "sdd_obsidian_tools",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase5_watcher_langgraph",
-      "target": "sdd_fase3_obsidian_service",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_fase5_watcher_langgraph",
-      "target": "sdd_fase4_rag_pipeline",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_knowledge_wiki_layer",
-      "target": "sdd_llm_provider_hybrid",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_knowledge_wiki_layer",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_knowledge_wiki_layer",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_knowledge_wiki_layer",
-      "target": "Visao Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_llm_provider_hybrid",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_llm_provider_hybrid",
-      "target": "sdd_arquitetura_orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_llm_provider_hybrid",
-      "target": "sdd_knowledge_wiki_layer",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_llm_provider_hybrid",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_llm_provider_hybrid",
-      "target": "Visao Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_memoria",
-      "target": "sdd_obsidian_watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_memoria",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_memoria",
-      "target": "sdd_obsidian_rag",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_memoria",
-      "target": "sdd_obsidian_tools",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_rag",
-      "target": "sdd_obsidian_memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_rag",
-      "target": "sdd_obsidian_watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_rag",
-      "target": "sdd_obsidian_tools",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_tools",
-      "target": "sdd_obsidian_memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_tools",
-      "target": "sdd_obsidian_watcher",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_tools",
-      "target": "sdd_obsidian_rag",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_tools",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_watcher",
-      "target": "sdd_obsidian_memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_watcher",
-      "target": "sdd_obsidian_rag",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_obsidian_watcher",
-      "target": "sdd_obsidian_tools",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_roadmap",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_roadmap",
-      "target": "Visao Geral",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_roadmap",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_user_context_propagation",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_user_context_propagation",
-      "target": "sdd_obsidian_memoria",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_user_context_propagation",
-      "target": "Backlog do Projeto",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_user_context_propagation",
-      "target": "sdd_arquitetura_orquestracao",
-      "relation": "documents"
-    },
-    {
-      "source": "sdd_user_context_propagation",
-      "target": "Fluxo de Dados",
-      "relation": "documents"
-    },
-    {
-      "source": "variaveis-de-ambiente",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "variaveis-de-ambiente",
-      "target": "SETUP",
-      "relation": "documents"
-    },
-    {
-      "source": "variaveis-de-ambiente",
-      "target": "Infraestrutura Docker",
-      "relation": "documents"
-    },
-    {
-      "source": "obsidian_guide",
-      "target": "SDD-Desktop-Stabilization-F1",
-      "relation": "documents"
-    },
-    {
-      "source": "obsidian_guide",
-      "target": "SDD-KIRL",
-      "relation": "documents"
-    },
-    {
-      "source": "obsidian_guide",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "obsidian_guide",
-      "target": "Ferramentas do LangGraph",
-      "relation": "documents"
-    },
-    {
-      "source": "agents",
-      "target": "Estrutura da Wiki",
-      "relation": "documents"
-    },
-    {
-      "source": "agents",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "agents",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "agents",
-      "target": "AGENTS",
-      "relation": "documents"
-    },
-    {
-      "source": "agents.pt-br",
-      "target": "Estrutura da Wiki",
-      "relation": "documents"
-    },
-    {
-      "source": "agents.pt-br",
-      "target": "index",
-      "relation": "documents"
-    },
-    {
-      "source": "agents.pt-br",
-      "target": "Memoria do Obsidian",
-      "relation": "documents"
-    },
-    {
-      "source": "agents.pt-br",
-      "target": "AGENTS",
-      "relation": "documents"
-    },
     {
       "source": "feature:kirl",
       "target": "sdd/SDD-KIRL.md",

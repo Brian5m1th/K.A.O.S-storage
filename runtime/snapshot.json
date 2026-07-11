@@ -174,27 +174,24 @@
   "missingCount": 8,
   "outdatedCount": 0,
   "graphSummary": {
-    "totalNodes": 163,
-    "totalEdges": 288,
+    "totalNodes": 82,
+    "totalEdges": 19,
     "nodeTypes": {
-      "sdd": 47,
-      "stub": 8,
-      "knowledge": 22,
+      "unknown": 14,
       "feature": 12,
-      "unknown": 12,
-      "store": 7,
-      "page": 29,
-      "tool": 1,
+      "store": 9,
+      "page": 20,
+      "tool": 2,
       "event": 2,
       "agent": 14,
       "provider": 9
     },
     "edgeTypes": {
-      "documents": 273,
+      "documents": 4,
       "implements": 15
     },
-    "sourceHash": "6a22430ed395cac1012297bafd3cf780ac46b3126ed1d15ee9333b76165a0451",
+    "sourceHash": "4829eb0fcfb32007a75f6f409e6ef6bb39a87fc5d2e24c98adbf8092fad49801",
     "graphVersion": "1.0",
-    "generatedAt": "2026-06-23T17:55:36.976641+00:00"
+    "generatedAt": "2026-07-11T00:34:53.674182+00:00"
   }
 }

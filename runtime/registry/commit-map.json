@@ -1,8 +1,1514 @@
 {
   "version": "1.0",
-  "generated_at": "2026-06-25T01:09:51.184452+00:00",
+  "generated_at": "2026-07-11T00:34:54.023541+00:00",
   "total_commits": 200,
   "commits": [
+    {
+      "hash": "b6e57292",
+      "message": "fix(ci): run workspace permissions cleanup unconditionally and stop containers first",
+      "type": "fix",
+      "impact": "low",
+      "scope": "ci",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T21:19:09-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "e60ed4f4",
+      "message": "fix(ci): add workspace permissions cleanup step before checkout on self-hosted runner",
+      "type": "fix",
+      "impact": "low",
+      "scope": "ci",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T21:16:12-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "8c07c27f",
+      "message": "fix(infra): adjust postgres and kaos-api healthchecks to prevent deploy and rollback timeouts",
+      "type": "fix",
+      "impact": "medium",
+      "scope": "infra",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T21:04:53-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "f753491b",
+      "message": "docs: update docs submodule reference with new SDDs",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T19:53:51-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "2988362f",
+      "message": "feat(infra): update prod docker stack with logging limits, alertmanager, and blackbox monitoring",
+      "type": "feat",
+      "impact": "low",
+      "scope": "infra",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T19:53:34-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "b9ed882a",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T22:07:46Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "0cc8846e",
+      "message": "style: format system.py and main.py with ruff",
+      "type": "style",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T19:06:57-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "faa9e2ff",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T21:18:48Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "5d2498cf",
+      "message": "feat(deploy): implement runtime version endpoint and add --build with tag interpolation to CD",
+      "type": "feat",
+      "impact": "medium",
+      "scope": "deploy",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T18:18:06-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "cb4e1f1f",
+      "message": "fix(deploy): update healthcheck verification port to 1010 to match docker compose external mapping",
+      "type": "fix",
+      "impact": "low",
+      "scope": "deploy",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T12:48:59-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "53fefe51",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T10:43:06Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "f2bad1b9",
+      "message": "fix(kaos-api): move BootstrapManager.boot() to background task to pass container healthcheck on startup",
+      "type": "fix",
+      "impact": "medium",
+      "scope": "kaos-api",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T07:41:53-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "4024955e",
+      "message": "chore(release): 2.3.7 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T10:36:36Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "d4d355db",
+      "message": "fix(cd): remover --build do deploy e ampliar janela de health do kaos-api",
+      "type": "fix",
+      "impact": "medium",
+      "scope": "cd",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T07:36:14-03:00",
+      "author": "KAOS Architect"
+    },
+    {
+      "hash": "7ef72c47",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T03:08:53Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "6f19893b",
+      "message": "chore(release): 2.3.6 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T03:08:40Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "4887ce0c",
+      "message": "fix(kaos-api): warmup do embedder nao-bloqueante + rebuild no deploy",
+      "type": "fix",
+      "impact": "medium",
+      "scope": "kaos-api",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T00:08:16-03:00",
+      "author": "KAOS Architect"
+    },
+    {
+      "hash": "199f7692",
+      "message": "chore(release): 2.3.5 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T02:58:09Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "b7ecc168",
+      "message": "fix(infra): relaxar dependencia do ollama para service_started (imagem sem curl)",
+      "type": "fix",
+      "impact": "low",
+      "scope": "infra",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T23:57:42-03:00",
+      "author": "KAOS Architect"
+    },
+    {
+      "hash": "c87fe28e",
+      "message": "chore(release): 2.3.4 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T02:47:14Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "2ded9637",
+      "message": "fix(cd): tornar prepare do .env.prod anterior ao login e tolerar falhas de ghcr",
+      "type": "fix",
+      "impact": "low",
+      "scope": "cd",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T23:46:23-03:00",
+      "author": "KAOS Architect"
+    },
+    {
+      "hash": "8f9fbec4",
+      "message": "chore(release): 2.3.3 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T02:38:27Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "0edb1831",
+      "message": "fix(cd): resolve .env.prod via secret and fix qdrant/ollama healthchecks",
+      "type": "fix",
+      "impact": "low",
+      "scope": "cd",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T23:34:50-03:00",
+      "author": "KAOS Architect"
+    },
+    {
+      "hash": "da29d525",
+      "message": "update env",
+      "type": "unknown",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T23:26:27-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "e37f8aa1",
+      "message": "chore(release): 2.3.2 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T02:24:53Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "cda358d8",
+      "message": "fix(cd): gerar .env.prod a partir do secret ENV_PROD (#94)",
+      "type": "fix",
+      "impact": "low",
+      "scope": "cd",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T23:24:32-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "5bd21c56",
+      "message": "fix(cd): gerar .env.prod a partir do secret ENV_PROD",
+      "type": "fix",
+      "impact": "low",
+      "scope": "cd",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T23:23:01-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "0e3e40b8",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T02:12:35Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "63cb1b91",
+      "message": "chore(release): 2.3.1 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T02:12:20Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "e0d1d3d8",
+      "message": "fix(cors): include tauri v2 origins (http/https://tauri.localhost) in default CORS_ORIGINS",
+      "type": "fix",
+      "impact": "low",
+      "scope": "cors",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T23:11:45-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "063f5437",
+      "message": "chore(release): 2.3.0 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T01:46:57Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "857142e9",
+      "message": "fix(deploy): prepare environment file by copying persistent .env.prod from host to runner workspace",
+      "type": "fix",
+      "impact": "low",
+      "scope": "deploy",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T22:41:24-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "c7d6d53e",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T01:34:50Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "83b430e2",
+      "message": "chore(release): 2.2.2 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-10T01:34:45Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "383e65dd",
+      "message": "fix(ci): grant issues write permission and guard PR comment against forks",
+      "type": "fix",
+      "impact": "low",
+      "scope": "ci",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T22:33:57-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "1ca05de3",
+      "message": "Dev (#93)",
+      "type": "unknown",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T22:26:19-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "2f3a591d",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T01:26:10Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "61683f17",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T01:15:24Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "6347772f",
+      "message": "fix(formatting): apply ruff formatting across assistant backend and test files",
+      "type": "fix",
+      "impact": "low",
+      "scope": "formatting",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T22:14:33-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "9afd5321",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T01:09:24Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "ef8fad02",
+      "message": "fix(linter): resolve all unused imports, variables and re-exports in backend assistant",
+      "type": "fix",
+      "impact": "low",
+      "scope": "linter",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T22:08:40-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "fa74b211",
+      "message": "docs: update docs submodule pointer to latest",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T22:05:16-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "ec9393f1",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-10T01:04:43Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "5f52e787",
+      "message": "feat(devops): consolidate CI/CD pipelines, integrate cloudflared, enforce healthchecks & update desktop API default url",
+      "type": "feat",
+      "impact": "medium",
+      "scope": "devops",
+      "breaking": false,
+      "features": [
+        "desktop-apis"
+      ],
+      "timestamp": "2026-07-09T21:56:02-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "f0d37f9f",
+      "message": "feat: implementa nova arquitetura desacoplada do K.A.O.S (runtimes, capability registry, workspace intelligence e credentials)",
+      "type": "feat",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "service-registry",
+        "model-router"
+      ],
+      "timestamp": "2026-07-09T18:51:20-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "a2763cce",
+      "message": "feat: finaliza implementacoes pendentes de RAG, sandbox Wasm, Wiki-First, integracoes (email/whatsapp/aws) e correcoes de heatmap",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T14:23:22-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "d91b1a4c",
+      "message": "Dev (#92)",
+      "type": "unknown",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T00:52:56-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "f311ef69",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-09T03:51:52Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "af93355a",
+      "message": "fix: ruff format 19 arquivos e ajusta drift threshold para 50%",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T00:51:05-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "d84f11db",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-09T03:47:01Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "0f81df76",
+      "message": "fix: suprime F841 restantes (result1, client_box)",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T00:46:15-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "f25de73d",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-09T03:43:48Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "415725b4",
+      "message": "fix: corrige lint Python (E402/F401), coverage thresholds e templates de teste",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T00:43:12-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "5edc4ff2",
+      "message": "test: corrige imports e mocks apos refatoracao Fase 5",
+      "type": "test",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T00:27:34-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "2a08d931",
+      "message": "feat: implementa adaptador github_tool.py sob o protocolo mcp",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "tool-layer"
+      ],
+      "timestamp": "2026-07-09T00:21:25-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "41f55619",
+      "message": "test: corrige assercoes e assinaturas de chamadas no teste de integracao do github mcp",
+      "type": "test",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "sse-layer"
+      ],
+      "timestamp": "2026-07-09T00:20:49-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "6a0fe4c2",
+      "message": "feat: implementa executor OpenCodeExecutor com whitelist/blacklist e sandbox Docker",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T00:17:02-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "2dbbe4ac",
+      "message": "feat: implementa deteccao de contradicoes logicas e cronologicas no analisador do vault",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T00:12:51-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "0fa7c890",
+      "message": "feat: implementa handshake de criptografia efemera PyNaCl e setup seguro",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-09T00:09:03-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "c09789ec",
+      "message": "test: corrige teste unitario do RuntimeSelector para usar mocks isolados",
+      "type": "test",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "model-router"
+      ],
+      "timestamp": "2026-07-09T00:05:51-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "87d64335",
+      "message": "feat: implementa interface agnostica AIRuntime e RuntimeSelector",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "model-router"
+      ],
+      "timestamp": "2026-07-09T00:05:13-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "fc01f9cd",
+      "message": "feat: implementa segregacao de usuario por contextvars e cache sqlite de embeddings",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "provider-adapters"
+      ],
+      "timestamp": "2026-07-09T00:03:37-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "68d759ce",
+      "message": "docs: atualiza referencia do submodulo docs com especificacoes de runtime agnostico de IA",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T23:44:44-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "898e475e",
+      "message": "docs: atualiza referencia do submodulo docs com especificacao de evolucao estrategica",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T23:39:22-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "fdf17a5b",
+      "message": "docs: atualiza referencia do submodulo docs com backlog e roadmap sincronizados",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T23:29:20-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "ad9e69e4",
+      "message": "docs: atualiza referencia do submodulo docs com manual geral contendo o living blueprint definitivo",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T23:17:04-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "60484df6",
+      "message": "docs: atualiza referencia do submodulo docs com especificacoes completas de Living Architecture",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T23:14:45-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "624229d3",
+      "message": "docs: atualiza referencia do submodulo docs com manual geral contendo novos requisitos e melhorias",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T23:08:58-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "32908ac3",
+      "message": "docs: atualiza referencia do submodulo docs com manual geral refinado",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T23:04:31-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "00a80d93",
+      "message": "feat: Fase 5 (Refatoracao Arquitetural) + Fase 6 (Estrategia de Testes)",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T22:57:51-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "699f489f",
+      "message": "docs: atualiza referencia do submodulo docs com fluxogramas e arvore",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T22:55:05-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "f4460fe0",
+      "message": "docs: atualiza referencia do submodulo docs com endpoints e componentes",
+      "type": "docs",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T22:50:18-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "8ca6ccfc",
+      "message": "docs: atualiza referencia do submodulo docs com manual de onboarding expandido",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T22:47:57-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "68c56543",
+      "message": "docs: atualiza referencia do submodulo docs com manual geral",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T22:45:34-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "272eac2d",
+      "message": "docs: normalizacao de metadados, tags e scripts de auditoria",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T22:42:01-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "35ed37c1",
+      "message": "test(automation): add template listing tests using real workflow files",
+      "type": "test",
+      "impact": "high",
+      "scope": "automation",
+      "breaking": false,
+      "features": [
+        "workflow-engine"
+      ],
+      "timestamp": "2026-07-08T20:43:00-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "fece02e9",
+      "message": "feat(marketplace): add workflow templates API and dynamic frontend integration",
+      "type": "feat",
+      "impact": "high",
+      "scope": "marketplace",
+      "breaking": false,
+      "features": [
+        "workflow-engine"
+      ],
+      "timestamp": "2026-07-08T20:42:23-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "96f3dcd7",
+      "message": "feat(desktop): add bootstrap state machine with Tauri commands for health check",
+      "type": "feat",
+      "impact": "low",
+      "scope": "desktop",
+      "breaking": false,
+      "features": [
+        "desktop-apis"
+      ],
+      "timestamp": "2026-07-08T20:42:18-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "c9c44b56",
+      "message": "fix(docker): add code source volumes and healthcheck for dev reliability",
+      "type": "fix",
+      "impact": "low",
+      "scope": "docker",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T20:42:12-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "0943c9ec",
+      "message": "feat(bootstrap): implement BootstrapManager with 8-stage async startup pipeline",
+      "type": "feat",
+      "impact": "low",
+      "scope": "bootstrap",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T20:42:06-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "5c8eb85e",
+      "message": "feat(env): implement EnvironmentService with multi-strategy path resolution and KIRL integration",
+      "type": "feat",
+      "impact": "low",
+      "scope": "env",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T20:41:58-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "d369d945",
+      "message": "chore(release): 2.2.1 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T20:43:59Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "258c8a0f",
+      "message": "fix(ci): allow release.yml to trigger on semantic-release published events",
+      "type": "fix",
+      "impact": "low",
+      "scope": "ci",
+      "breaking": false,
+      "features": [
+        "event-bus"
+      ],
+      "timestamp": "2026-07-08T17:43:04-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "bfc143f7",
+      "message": "chore(release): 2.2.0 [skip ci]",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T20:17:31Z",
+      "author": "semantic-release-bot"
+    },
+    {
+      "hash": "be0fef34",
+      "message": "feat(release): implement SDD-RELEASE-001 automatic versioning & release pipeline",
+      "type": "feat",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T17:14:29-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "a540c6bd",
+      "message": "chore(release): bump version to v2.1.0",
+      "type": "chore",
+      "impact": "low",
+      "scope": "release",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T17:02:07-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "2fd5e076",
+      "message": "Refactoring, Graph Fixes, Real API Integration & CI pipeline updates (#91)",
+      "type": "unknown",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T17:00:17-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "7a2742b9",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-08T19:52:31Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "15a5df59",
+      "message": "chore(registry): sync docs submodule pointer",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-07-08T16:51:37-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "d877c9b7",
+      "message": "fix(ci): solve healthcheck container crashes, lower image tag and secure Tauri CSP",
+      "type": "fix",
+      "impact": "low",
+      "scope": "ci",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-07-08T16:51:26-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "38af876d",
+      "message": "feat(desktop): fetch real financial costs, live logs SSE, and integrate welcome setup config",
+      "type": "feat",
+      "impact": "high",
+      "scope": "desktop",
+      "breaking": false,
+      "features": [
+        "desktop-apis",
+        "sse-layer",
+        "observability"
+      ],
+      "timestamp": "2026-07-08T16:51:15-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "7aa6b4bd",
+      "message": "refactor(desktop): reactively schedule DocSyncEngine start and wrap login redirects in useEffect",
+      "type": "refactor",
+      "impact": "low",
+      "scope": "desktop",
+      "breaking": false,
+      "features": [
+        "desktop-apis"
+      ],
+      "timestamp": "2026-07-08T16:51:05-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "588fcda7",
+      "message": "fix(desktop): resolve graph rebuilding errors and inject features in layout updater",
+      "type": "fix",
+      "impact": "low",
+      "scope": "desktop",
+      "breaking": false,
+      "features": [
+        "desktop-apis"
+      ],
+      "timestamp": "2026-07-08T16:50:52-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "a1ecddb7",
+      "message": "chore(desktop): clean up dead code and apply theme styles on DocumentationPage",
+      "type": "chore",
+      "impact": "low",
+      "scope": "desktop",
+      "breaking": false,
+      "features": [
+        "desktop-apis"
+      ],
+      "timestamp": "2026-07-08T16:50:41-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "bad6ec01",
+      "message": "chore: bump version to 2.0.9",
+      "type": "chore",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-28T19:56:13-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "32ba21a5",
+      "message": "feat: K.A.O.S stabilization and real backend integrations (#90)",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-28T19:54:24-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "91ec73d5",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-28T22:50:14Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "f86ae63d",
+      "message": "feat(knowledge-graph): implement incremental updates, watcher and frontend details view (#89)",
+      "type": "feat",
+      "impact": "low",
+      "scope": "knowledge-graph",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-28T19:49:41-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "2926d262",
+      "message": "chore: align docs submodule pointer to latest commit",
+      "type": "chore",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-28T19:39:38-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "d98420a0",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-28T22:33:10Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "ae830919",
+      "message": "fix: use dynamic branch name and HEAD for parent repo push to prevent refspec error",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-28T19:32:32-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "14851996",
+      "message": "fix: move generated registry file outside submodule before branch checkout to prevent conflict",
+      "type": "fix",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-28T19:17:21-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "579e8717",
+      "message": "fix: adjust GHA drift check thresholds to 45% and skip registry updates on PR validation runs",
+      "type": "fix",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-28T19:13:52-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "4c2062ca",
+      "message": "fix: registry-sync GHA submodule rebase conflict with generated file",
+      "type": "fix",
+      "impact": "medium",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-28T19:08:59-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "91f42704",
+      "message": "fix: clean ruff lint, formatting, and unicode print error in bootstrap script",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-28T19:06:15-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "4a3d7d02",
+      "message": "feat: stabilization, real backend integrations, SSE streams, IpcBridge, and code cleaning",
+      "type": "feat",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "sse-layer"
+      ],
+      "timestamp": "2026-06-28T18:57:15-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "091127d9",
+      "message": "chore: bump version to 2.0.8 for release",
+      "type": "chore",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T22:04:07-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "6edf4bd5",
+      "message": "fix: resolve dev pipeline lint issues and update-proxy signature extraction",
+      "type": "fix",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T22:03:10-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "019bf561",
+      "message": "chore: bump version to 2.0.7 for release",
+      "type": "chore",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T19:18:05-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "367106a5",
+      "message": "feat: integrate enterprise automation orchestrator with n8n and tauri studio",
+      "type": "feat",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "workflow-engine",
+        "n8n-integration"
+      ],
+      "timestamp": "2026-06-25T19:14:03-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "64edbb52",
+      "message": "docs: update docs submodule reference with SDD-KAOS-UXUI-001",
+      "type": "docs",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T18:43:06-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "53ec294a",
+      "message": "feat(ux): SDD-KAOS-UXUI-001 frontend modernization",
+      "type": "feat",
+      "impact": "low",
+      "scope": "ux",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T18:40:46-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "50fc6b95",
+      "message": "feat(docs): SDD-DOCS-001 â€” auto-documentation from conversation history",
+      "type": "feat",
+      "impact": "low",
+      "scope": "docs",
+      "breaking": false,
+      "features": [
+        "memory-system"
+      ],
+      "timestamp": "2026-06-25T18:17:24-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "31582d45",
+      "message": "fix(updater): fix Windows msi artifact URL pattern in update-proxy generator",
+      "type": "fix",
+      "impact": "low",
+      "scope": "updater",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T16:25:34-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "de0fa79e",
+      "message": "chore: bump version to 2.0.5 for provider bugfix release",
+      "type": "chore",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "provider-adapters"
+      ],
+      "timestamp": "2026-06-25T16:06:24-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "494ad3a0",
+      "message": "fix(llm): implement active provider synchronization and smart dynamic fallback resolution",
+      "type": "fix",
+      "impact": "high",
+      "scope": "llm",
+      "breaking": false,
+      "features": [
+        "circuit-breaker",
+        "provider-adapters"
+      ],
+      "timestamp": "2026-06-25T16:05:26-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "cb9fcd6b",
+      "message": "fix(updater): suppress unreachable code warning and bump version to 2.0.4",
+      "type": "fix",
+      "impact": "low",
+      "scope": "updater",
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T15:34:54-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "2f0b5ff9",
+      "message": "chore: bump version to 2.0.3 for new release",
+      "type": "chore",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T15:26:32-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "e093185b",
+      "message": "chore(registry): fix broken submodule pointer to ca866de",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-25T15:18:49-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "706229c8",
+      "message": "feat(desktop): implement updater relaunch, dynamic version init, auto-environment setup, new themes, and docker autostart",
+      "type": "feat",
+      "impact": "low",
+      "scope": "desktop",
+      "breaking": false,
+      "features": [
+        "desktop-apis"
+      ],
+      "timestamp": "2026-06-25T15:16:23-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "28f50ff1",
+      "message": "chore: bump version to 2.0.2 for final release",
+      "type": "chore",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T14:00:10-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "0f52f38d",
+      "message": "ci: make registry-sync workflow git pushes robust",
+      "type": "ci",
+      "impact": "high",
+      "scope": null,
+      "breaking": false,
+      "features": [
+        "workflow-engine",
+        "service-registry"
+      ],
+      "timestamp": "2026-06-25T13:54:11-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "ac3d740c",
+      "message": "Dev (#87)",
+      "type": "unknown",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T13:53:13-03:00",
+      "author": "Brian Smith Dev"
+    },
+    {
+      "hash": "5008d834",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-25T16:47:22Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "df96ea08",
+      "message": "feat: fix health checks, prevent event loop blocking, mount opencode and add vault preview",
+      "type": "feat",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-25T13:45:52-03:00",
+      "author": "Brian"
+    },
+    {
+      "hash": "02808ae4",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-25T01:11:07Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "e66db7d3",
+      "message": "chore(registry): update docs submodule pointer [skip ci]",
+      "type": "chore",
+      "impact": "medium",
+      "scope": "registry",
+      "breaking": false,
+      "features": [
+        "service-registry"
+      ],
+      "timestamp": "2026-06-25T01:10:57Z",
+      "author": "kaos-bot"
+    },
+    {
+      "hash": "df0bf913",
+      "message": "style: format files and remove unused imports",
+      "type": "style",
+      "impact": "low",
+      "scope": null,
+      "breaking": false,
+      "features": [],
+      "timestamp": "2026-06-24T22:10:13-03:00",
+      "author": "Brian"
+    },
     {
       "hash": "9f3cf22a",
       "message": "chore: bump version to 2.0.1 for new release",
@@ -307,9 +1813,9 @@
       "breaking": false,
       "features": [
         "desktop-apis",
-        "provider-adapters",
+        "auto-update",
         "circuit-breaker",
-        "auto-update"
+        "provider-adapters"
       ],
       "timestamp": "2026-06-23T19:21:12-03:00",
       "author": "Brian"
@@ -379,8 +1885,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "service-registry",
-        "desktop-apis"
+        "desktop-apis",
+        "service-registry"
       ],
       "timestamp": "2026-06-23T14:57:36-03:00",
       "author": "Brian"
@@ -492,8 +1998,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "service-registry",
         "circuit-breaker",
+        "service-registry",
         "database-schema"
       ],
       "timestamp": "2026-06-23T00:48:50-03:00",
@@ -562,8 +2068,8 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "provider-adapters",
-        "desktop-apis"
+        "desktop-apis",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-22T23:24:56-03:00",
       "author": "Brian Smith Dev"
@@ -794,8 +2300,8 @@
       "features": [
         "agent-runtime",
         "tool-layer",
-        "provider-adapters",
-        "database-schema"
+        "database-schema",
+        "provider-adapters"
       ],
       "timestamp": "2026-06-22T00:11:39-03:00",
       "author": "Brian"
@@ -808,11 +2314,11 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "tool-layer",
         "agent-runtime",
-        "provider-adapters",
+        "tool-layer",
+        "database-schema",
         "event-bus",
-        "database-schema"
+        "provider-adapters"
       ],
       "timestamp": "2026-06-22T00:08:09-03:00",
       "author": "Brian"
@@ -847,9 +2353,9 @@
       "scope": null,
       "breaking": false,
       "features": [
+        "n8n-integration",
         "desktop-apis",
-        "service-registry",
-        "n8n-integration"
+        "service-registry"
       ],
       "timestamp": "2026-06-21T23:13:09-03:00",
       "author": "Brian Smith Dev"
@@ -862,1541 +2368,11 @@
       "scope": null,
       "breaking": false,
       "features": [
-        "observability-production",
-        "sse-layer"
+        "sse-layer",
+        "observability-production"
       ],
       "timestamp": "2026-06-21T22:48:42-03:00",
       "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "f5c47359",
-      "message": "feat: Memory Workflow - save conversation via WorkflowRouter + RequestContext + structured logs (#70)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "workflow-engine",
-        "provider-adapters",
-        "memory-system"
-      ],
-      "timestamp": "2026-06-21T22:43:25-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "53c536d2",
-      "message": "fix: auto-update workflow - add missing tag output and checkout step",
-      "type": "fix",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "workflow-engine",
-        "auto-update"
-      ],
-      "timestamp": "2026-06-21T21:10:18-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "76f497fe",
-      "message": "style: auto-format with ruff [skip ci]",
-      "type": "style",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-22T00:06:54Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "e3d691de",
-      "message": "Dev (#68)",
-      "type": "unknown",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T21:01:40-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "5506bbde",
-      "message": "style: auto-format with ruff [skip ci]",
-      "type": "style",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T23:57:15Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "65781103",
-      "message": "feat: Fase 8.5 - Production Observability (#69)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "observability-production",
-        "observability"
-      ],
-      "timestamp": "2026-06-21T20:56:41-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "810e4928",
-      "message": "style: auto-format with ruff [skip ci]",
-      "type": "style",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T23:50:24Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "1cb67cc5",
-      "message": "style: auto-format with ruff [skip ci]",
-      "type": "style",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T23:45:42Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "782015b4",
-      "message": "test: Fase 10 - Refactor + Tests + Docs (#67)",
-      "type": "test",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T20:45:10-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "5dd3ab41",
-      "message": "feat: Fase 9 - Launcher Design architecture document (#66)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "launcher"
-      ],
-      "timestamp": "2026-06-21T19:53:58-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "fbcecb23",
-      "message": "style: auto-format with ruff [skip ci]",
-      "type": "style",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T22:45:59Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "0494aa3a",
-      "message": "feat: Fase 8 - Observability + Event Bus subscribers (#65)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "observability-production",
-        "observability",
-        "event-bus"
-      ],
-      "timestamp": "2026-06-21T19:45:30-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "8af0ab0d",
-      "message": "Fase 7: Desktop APIs (#64)",
-      "type": "unknown",
-      "impact": "medium",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "desktop-apis"
-      ],
-      "timestamp": "2026-06-21T19:40:39-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "22c266b2",
-      "message": "Fase 6: Orchestrator + API + DLQ (#63)",
-      "type": "unknown",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "workflow-engine",
-        "dead-letter-queue"
-      ],
-      "timestamp": "2026-06-21T18:29:15-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "e0fbe471",
-      "message": "Fase 5: Workflow Registry (#62)",
-      "type": "unknown",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "workflow-engine",
-        "service-registry"
-      ],
-      "timestamp": "2026-06-21T18:14:20-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "86338407",
-      "message": "style: auto-format with ruff [skip ci]",
-      "type": "style",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T21:12:35Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "0afac608",
-      "message": "Fase 4: Provider Adapters (#61)",
-      "type": "unknown",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-21T18:12:05-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "ffe94234",
-      "message": "feat: SDD040-03 model router and circuit breaker (#60)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "model-router",
-        "circuit-breaker"
-      ],
-      "timestamp": "2026-06-21T18:01:10-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "ffd0fc3d",
-      "message": "feat: SDD040-02 database schema and repositories (#59)",
-      "type": "feat",
-      "impact": "medium",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "database-schema"
-      ],
-      "timestamp": "2026-06-21T17:54:04-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "cef7edc8",
-      "message": "feat: SDD040-01 core contracts and registry (#58)",
-      "type": "feat",
-      "impact": "medium",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "service-registry"
-      ],
-      "timestamp": "2026-06-21T17:48:33-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "7c13b34c",
-      "message": "fix: bind mount vault instead of empty named volume",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-21T14:41:48-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "c8d47da2",
-      "message": "fix: add workflow_dispatch trigger to Release workflow",
-      "type": "fix",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "workflow-engine"
-      ],
-      "timestamp": "2026-06-20T14:51:46-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "612f2a17",
-      "message": "feat: dynamic provider switching + phase 2 refactoring + Open WebUI compatibility (#56) (#57)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-20T14:39:02-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "eb2be4e5",
-      "message": "feat: dynamic provider switching + phase 2 refactoring + Open WebUI compatibility (#56)",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-20T14:38:31-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "479b2c8d",
-      "message": "Feat/refactor frontend sdd (#55)",
-      "type": "unknown",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-20T00:55:59-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "919b8f2f",
-      "message": "Feat/desktop auth settings (#52)",
-      "type": "unknown",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "desktop-apis"
-      ],
-      "timestamp": "2026-06-20T00:22:39-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "40670617",
-      "message": "fix: drop linux/arm64 from release workflow to avoid OOM",
-      "type": "fix",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "workflow-engine"
-      ],
-      "timestamp": "2026-06-19T21:42:30-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "a6ae7439",
-      "message": "fix: drop linux/arm64 from docker build to avoid OOM on GH runners",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T21:31:02-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "ed4e44ae",
-      "message": "fix: cap fastapi <0.137 to avoid _IncludedRouter crash with prometheus instrumentator",
-      "type": "fix",
-      "impact": "medium",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "observability"
-      ],
-      "timestamp": "2026-06-19T21:21:35-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "658d8d2b",
-      "message": "fix: remove should_group arg from Instrumentator (not supported in installed version)",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T21:06:10-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "e84deb8f",
-      "message": "fix: Prometheus instrumentator order + Cargo retry config",
-      "type": "fix",
-      "impact": "medium",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "observability"
-      ],
-      "timestamp": "2026-06-19T20:11:30-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "63ddb8cf",
-      "message": "chore: SDD dedup (16 files to vault) + documentaÃ§Ã£o v0.1.1",
-      "type": "chore",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T19:43:46-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "77341c72",
-      "message": "feat(monitoring): Prometheus + Loki + Grafana stack (#49)",
-      "type": "feat",
-      "impact": "low",
-      "scope": "monitoring",
-      "breaking": false,
-      "features": [
-        "observability"
-      ],
-      "timestamp": "2026-06-19T16:25:01-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "3b347bc4",
-      "message": "feat(auth): API Key authentication via X-API-Key header",
-      "type": "feat",
-      "impact": "medium",
-      "scope": "auth",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T15:53:23-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "91c8f95e",
-      "message": "feat(infra): otimiza Desktop CI com Vite cache + negation patterns + mÃ©tricas",
-      "type": "feat",
-      "impact": "low",
-      "scope": "infra",
-      "breaking": false,
-      "features": [
-        "desktop-apis"
-      ],
-      "timestamp": "2026-06-19T15:01:22-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "b8eee42f",
-      "message": "fix: converte repo para lowercase no cosign sign",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T15:01:11-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "2c903df6",
-      "message": "feat(infra): Cosign keyless signing para imagens Docker (#45)",
-      "type": "feat",
-      "impact": "low",
-      "scope": "infra",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T14:01:46-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "988b9475",
-      "message": "feat(desktop): multi-provider UI com API keys + tauri-plugin-store",
-      "type": "feat",
-      "impact": "high",
-      "scope": "desktop",
-      "breaking": false,
-      "features": [
-        "provider-adapters",
-        "desktop-apis"
-      ],
-      "timestamp": "2026-06-19T13:56:17-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "73faae0f",
-      "message": "feat(backend): ProviderConfigService + endpoints /api/setup/provider",
-      "type": "feat",
-      "impact": "high",
-      "scope": "backend",
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-19T13:54:53-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "2344ddc5",
-      "message": "feat: integra K.A.O.S-storage como submodule em docs/vault",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T13:54:45-03:00",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "081443e2",
-      "message": "fix: corrige docker-compose (bind mount que escondia .venv) + atualiza docs (SETUP, index, infra, visao geral)",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T11:51:34-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "c1ae2434",
-      "message": "fix: teste de conexao por provider (Ollama /api/tags, OpenAI /models, etc)",
-      "type": "fix",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-19T11:35:56-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "3f454f19",
-      "message": "chore: marca Fase 14 e 15 como concluidas no backlog",
-      "type": "chore",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T11:30:30-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "6a4c2868",
-      "message": "fix: seleciona apenas instaladores finais (.deb, .rpm, .AppImage, .msi, .exe, .dmg) na release",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T10:54:59-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "a85c5e5b",
-      "message": "fix: baixa artefatos Tauri e anexa na release",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T10:34:09-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "367be92e",
-      "message": "chore: atualiza chave publica do Tauri updater",
-      "type": "chore",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "auto-update"
-      ],
-      "timestamp": "2026-06-19T04:33:58Z",
-      "author": "Brian Smith Dev"
-    },
-    {
-      "hash": "fa8fcdd1",
-      "message": "fix: VaultWatcher nao crasha quando OBSIDIAN_VAULT_PATH esta vazio ou nao existe",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T00:23:12-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "79819ba1",
-      "message": "fix: healthcheck sem --rm para capturar crash log",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T00:12:56-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "a708e9bb",
-      "message": "fix: healthcheck timeout 120s + container logs on failure",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T00:05:10-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "ea77db95",
-      "message": "feat: pipeline desktop separada com caching + healthcheck com retry",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "desktop-apis"
-      ],
-      "timestamp": "2026-06-18T23:50:53-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "243d9616",
-      "message": "fix: usa UV_EXTRA_INDEX_URL + unsafe-best-match para torch CPU-only",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T23:38:39-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "86241e58",
-      "message": "feat: otimiza Dockerfile com torch CPU-only e unifica healthcheck com fromJSON",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T23:32:02-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "37dfc6c2",
-      "message": "fix: healthcheck usa apenas primeira tag do metadata",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T23:18:36-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "06eb54ad",
-      "message": "chore: update package-lock.json [skip ci]",
-      "type": "chore",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T02:09:02Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "d2ac541d",
-      "message": "fix: remove app.title (Tauri v2) e add permissions: write no job tauri",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T23:08:06-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "3f6a190b",
-      "message": "fix: gera package-lock.json via --package-lock-only antes do build",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T23:05:47-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "ccdd0d79",
-      "message": "fix: npm ci -> npm install; tauri job apenas Linux no CI",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T23:05:07-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "e0360c29",
-      "message": "feat: job Tauri build no CI (Linux + Windows)",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T22:56:34-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "4f9e4028",
-      "message": "chore: update Tauri signing public key [skip ci]",
-      "type": "chore",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T01:50:55Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "eb2ff1f6",
-      "message": "fix: extrai chave publica do arquivo .pub em vez de comando CLI",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T22:47:20-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "c1ba6c6d",
-      "message": "feat: generate icon assets [skip ci]",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "sse-layer"
-      ],
-      "timestamp": "2026-06-19T01:44:34Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "2d8ed56a",
-      "message": "feat: workflow para gerar chave de assinatura Tauri + signing no release",
-      "type": "feat",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "workflow-engine"
-      ],
-      "timestamp": "2026-06-18T22:36:17-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "f6cd5073",
-      "message": "fix: remove COPY .env do Dockerfile; unifica pipelines CI/CD",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T22:30:50-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "e97d62ec",
-      "message": "feat: script e CI job para gerar icones do KAOS",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T22:26:54-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "aa27986d",
-      "message": "fix: corrige _estimate_cost para taxa escalar e usage_metadata como None nos testes",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "observability"
-      ],
-      "timestamp": "2026-06-18T22:20:37-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "edfcb7f6",
-      "message": "style: auto-format with ruff [skip ci]",
-      "type": "style",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-19T01:20:26Z",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "226cdd54",
-      "message": "fix: add contents:write permission para git-auto-commit-action",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T22:19:37-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "0d989568",
-      "message": "fix: ultimas 2 falhas - AsyncMock para provider.ainvoke em test_factory",
-      "type": "fix",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-18T22:17:40-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "d267b3eb",
-      "message": "fix: restantes 7 falhas - query_points mock, get_collection mock, loguru level error",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T22:14:30-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "6d11e897",
-      "message": "fix: corrige 21 falhas nos testes (Embedderâ†’get_embedder, **kwargs, imports lazy, fallback chain parser)",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "circuit-breaker"
-      ],
-      "timestamp": "2026-06-18T22:10:22-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "22804861",
-      "message": "ci: add auto-commit step after ruff format",
-      "type": "ci",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T18:16:11-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "ce29a19d",
-      "message": "fix: corrige CI e testes para destravar PR #40",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T18:11:40-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "fc9868a5",
-      "message": "fix: remove unused imports get_embedder and MarkdownSplitter from ingest.py",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T17:55:58-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "1a690886",
-      "message": "fix: ruff lint errors + remove --timeout from CI",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T17:51:53-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "165894e9",
-      "message": "fix: .python-version had corrupted content (3.13 instead of garbage string)",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T17:45:38-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "fa89a2c5",
-      "message": "feat(ci-cd-desktop): CI/CD pipelines + Tauri KAOS.exe launcher",
-      "type": "feat",
-      "impact": "high",
-      "scope": "ci-cd-desktop",
-      "breaking": false,
-      "features": [
-        "desktop-apis",
-        "launcher"
-      ],
-      "timestamp": "2026-06-18T17:28:40-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "ed15b595",
-      "message": "feat(integrations): N8N, webhooks, GitHub tools + Fase 9 parcial",
-      "type": "feat",
-      "impact": "high",
-      "scope": "integrations",
-      "breaking": false,
-      "features": [
-        "tool-layer",
-        "n8n-integration"
-      ],
-      "timestamp": "2026-06-18T16:25:23-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "8be93b23",
-      "message": "docs: backlog atualizado + SETUP.md (guia de execucao)",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T16:23:11-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "6d5b82de",
-      "message": "feat(user-context): middleware headers Open WebUI + Fase 8 completa",
-      "type": "feat",
-      "impact": "low",
-      "scope": "user-context",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T16:20:51-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "69ed939b",
-      "message": "docs: backlog atualizado + SETUP.md (guia de execucao)",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T16:23:11-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "9567b2f4",
-      "message": "feat(docker): vault volume persistente + init automatico na startup",
-      "type": "feat",
-      "impact": "low",
-      "scope": "docker",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T16:18:16-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "c99eb27d",
-      "message": "feat(tests): pipeline wiki test + fallback LLM test + fix ingest provider",
-      "type": "feat",
-      "impact": "high",
-      "scope": "tests",
-      "breaking": false,
-      "features": [
-        "provider-adapters",
-        "circuit-breaker"
-      ],
-      "timestamp": "2026-06-18T16:16:53-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "f027326c",
-      "message": "feat(rag): auditoria - diagnostics endpoint, score distribution, indexing metrics",
-      "type": "feat",
-      "impact": "medium",
-      "scope": "rag",
-      "breaking": false,
-      "features": [
-        "observability"
-      ],
-      "timestamp": "2026-06-18T16:11:19-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "9cd10b83",
-      "message": "docs: finalizacao do backlog apos Fases 11-13",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T14:51:44-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "f3cfdc9b",
-      "message": "feat(llm): provedor hibrido com LLMFactory + fallback + metricas",
-      "type": "feat",
-      "impact": "low",
-      "scope": "llm",
-      "breaking": false,
-      "features": [
-        "circuit-breaker"
-      ],
-      "timestamp": "2026-06-18T14:44:12-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "7312fb8c",
-      "message": "feat(query): wiki-first retrieval + file_synthesis_page + wiki awareness",
-      "type": "feat",
-      "impact": "low",
-      "scope": "query",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T14:34:07-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "1f86b7ca",
-      "message": "feat(ingestion): pipeline completo de ingestao de fontes",
-      "type": "feat",
-      "impact": "low",
-      "scope": "ingestion",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T14:31:35-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "087d34fe",
-      "message": "feat(wiki): register wiki tools in TOOL_REGISTRY and update planner system prompt",
-      "type": "feat",
-      "impact": "medium",
-      "scope": "wiki",
-      "breaking": false,
-      "features": [
-        "tool-layer",
-        "service-registry"
-      ],
-      "timestamp": "2026-06-18T13:45:29-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "dae3964e",
-      "message": "feat(wiki): add maintenance tools (append_log, update_index, read_wiki_page, lint_wiki)",
-      "type": "feat",
-      "impact": "low",
-      "scope": "wiki",
-      "breaking": false,
-      "features": [
-        "tool-layer"
-      ],
-      "timestamp": "2026-06-18T13:45:23-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "a81b8af6",
-      "message": "feat(wiki): add draft management (approve, reject, list_drafts)",
-      "type": "feat",
-      "impact": "low",
-      "scope": "wiki",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T13:45:23-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "5964238a",
-      "message": "feat(wiki): add create_source and create_synthesis tools with draft mode",
-      "type": "feat",
-      "impact": "low",
-      "scope": "wiki",
-      "breaking": false,
-      "features": [
-        "tool-layer"
-      ],
-      "timestamp": "2026-06-18T13:45:22-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "0139a3f4",
-      "message": "feat(wiki): add create/update concept tools with draft mode",
-      "type": "feat",
-      "impact": "low",
-      "scope": "wiki",
-      "breaking": false,
-      "features": [
-        "tool-layer"
-      ],
-      "timestamp": "2026-06-18T13:45:21-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "801fb97a",
-      "message": "feat(wiki): add wiki_utils and create/update entity tools with draft mode",
-      "type": "feat",
-      "impact": "low",
-      "scope": "wiki",
-      "breaking": false,
-      "features": [
-        "tool-layer"
-      ],
-      "timestamp": "2026-06-18T13:45:20-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "01e8a0dd",
-      "message": "feat(wiki): add wiki/raw directory structure and settings",
-      "type": "feat",
-      "impact": "low",
-      "scope": "wiki",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-18T13:43:25-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "66a9b3d2",
-      "message": "docs: add SDDs for Knowledge Wiki Layer and LLM Provider Hybrid",
-      "type": "docs",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-18T13:41:22-03:00",
-      "author": "Brian"
-    },
-    {
-      "hash": "a8b9f99e",
-      "message": "fix(docker): use python -m uvicorn to avoid PATH issues",
-      "type": "fix",
-      "impact": "low",
-      "scope": "docker",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-12T19:48:11-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "72dfac8b",
-      "message": "fix(docker): use full path to uvicorn in venv",
-      "type": "fix",
-      "impact": "low",
-      "scope": "docker",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-12T19:16:50-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "f77d3570",
-      "message": "fix(docker): add venv to PATH in Dockerfile for uvicorn",
-      "type": "fix",
-      "impact": "low",
-      "scope": "docker",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-12T19:07:16-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "2f7bc6b5",
-      "message": "feat: K.A.O.S local + Docker ready + Open WebUI integration",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-12T18:21:47-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "d15ede67",
-      "message": "feat(model): add model routing for kaos, kaos-rag, kaos-fast",
-      "type": "feat",
-      "impact": "low",
-      "scope": "model",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-12T01:51:15-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "40cbab28",
-      "message": "chore(config): update model config - qwen3:14b for main, qwen3:4b for fast",
-      "type": "chore",
-      "impact": "medium",
-      "scope": "config",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-12T01:28:44-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "cc2887e1",
-      "message": "fix: resolve collection dimension mismatch and sync async issues",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-12T01:12:59-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "be9bb134",
-      "message": "feat(scripts): add migration and reindex scripts",
-      "type": "feat",
-      "impact": "medium",
-      "scope": "scripts",
-      "breaking": false,
-      "features": [
-        "database-schema"
-      ],
-      "timestamp": "2026-06-12T00:29:15-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "2c4a8878",
-      "message": "feat(audit): add structured audit logs for retrieve, planner, generation",
-      "type": "feat",
-      "impact": "low",
-      "scope": "audit",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-12T00:13:05-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "bcfae867",
-      "message": "feat(embeddings): add batch embeddings + document embedding cache",
-      "type": "feat",
-      "impact": "low",
-      "scope": "embeddings",
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-12T00:03:52-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "ac607dd4",
-      "message": "feat(config): add Dev/Prod embedding model strategy + GPU auto-detection",
-      "type": "feat",
-      "impact": "medium",
-      "scope": "config",
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T23:35:18-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "b8fc66fb",
-      "message": "feat(memory): add PostgreSQL persistent memory with dual-write",
-      "type": "feat",
-      "impact": "high",
-      "scope": "memory",
-      "breaking": false,
-      "features": [
-        "memory-system",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T23:31:28-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "4d59c2bc",
-      "message": "infra: update docker-compose.yml and .env.example",
-      "type": "unknown",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T19:07:58-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "96bbc99e",
-      "message": "docs: update SDD User Context Propagation - mark implemented",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T19:07:37-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "541bbc74",
-      "message": "docs: update SDD Proxy OpenAI & Orchestration with Triple-Router",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T19:07:28-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "96b55417",
-      "message": "docs: update SDD Fase 6-7 LangGraph + Memory with Phase 8 optimizations",
-      "type": "docs",
-      "impact": "high",
-      "scope": null,
-      "breaking": false,
-      "features": [
-        "memory-system",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T19:07:14-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "4956e790",
-      "message": "docs: update SDD Fase 4-5 RAG pipeline with optimizations",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T19:06:30-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "3153b7dc",
-      "message": "docs: update index.md navigation and roadmap phases",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T19:05:55-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "2deb70e7",
-      "message": "feat: Performance optimizations + RAG diagnostics + OpenAI compat",
-      "type": "feat",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T18:24:56-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "7a1b5bd2",
-      "message": "fix(infra): adiciona HF_TOKEN ao open-webui via env_file",
-      "type": "fix",
-      "impact": "low",
-      "scope": "infra",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:53:09-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "92881e53",
-      "message": "fix(infra): corrige porta do Open WebUI de 8001 para 8000",
-      "type": "fix",
-      "impact": "low",
-      "scope": "infra",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:51:35-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "d35a45d8",
-      "message": "fix(scripts): corrige run.ps1 para usar uv run --directory",
-      "type": "fix",
-      "impact": "low",
-      "scope": "scripts",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:39:14-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "80e3e61f",
-      "message": "chore: atualiza .env.example e cria run.ps1 para iniciar com uv run",
-      "type": "chore",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:37:21-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "c3cb722c",
-      "message": "fix: torna VaultIndexer resiliente quando Qdrant nao esta rodando",
-      "type": "fix",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:29:50-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "1d528c6f",
-      "message": "fix(rag): configura HF_TOKEN no Embedder via huggingface_hub.login()",
-      "type": "fix",
-      "impact": "medium",
-      "scope": "rag",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:28:22-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "2a8f16c1",
-      "message": "feat(api): propaga UserContext nos endpoints, routers e agent service",
-      "type": "feat",
-      "impact": "high",
-      "scope": "api",
-      "breaking": false,
-      "features": [
-        "agent-runtime"
-      ],
-      "timestamp": "2026-06-11T12:23:02-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "d2692a48",
-      "message": "feat(memory): escopa MemoryService e save_conversation por usuario",
-      "type": "feat",
-      "impact": "high",
-      "scope": "memory",
-      "breaking": false,
-      "features": [
-        "memory-system",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T12:22:58-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "01f09827",
-      "message": "feat(agent): adiciona user context ao AgentState, planner e executor",
-      "type": "feat",
-      "impact": "high",
-      "scope": "agent",
-      "breaking": false,
-      "features": [
-        "agent-runtime"
-      ],
-      "timestamp": "2026-06-11T12:22:54-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "04f8e14e",
-      "message": "feat(domain): adiciona user_id aos request models (ChatRequest e ChatCompletionRequest)",
-      "type": "feat",
-      "impact": "low",
-      "scope": "domain",
-      "breaking": false,
-      "features": [
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T12:22:49-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "af8d3be1",
-      "message": "feat(domain): cria UserContext model e MemoryRepository protocol",
-      "type": "feat",
-      "impact": "high",
-      "scope": "domain",
-      "breaking": false,
-      "features": [
-        "memory-system",
-        "provider-adapters"
-      ],
-      "timestamp": "2026-06-11T12:22:44-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "533d81c4",
-      "message": "chore: atualiza dependencias, configuracoes e docker-compose",
-      "type": "chore",
-      "impact": "medium",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:22:40-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "3e728db2",
-      "message": "fix(rag): adapta SemanticRetriever para nova API do Qdrant client",
-      "type": "fix",
-      "impact": "medium",
-      "scope": "rag",
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:22:36-03:00",
-      "author": "Brian5m1th"
-    },
-    {
-      "hash": "3d235ed6",
-      "message": "docs: atualiza documentacao existente com referencia ao User Context",
-      "type": "docs",
-      "impact": "low",
-      "scope": null,
-      "breaking": false,
-      "features": [],
-      "timestamp": "2026-06-11T12:22:32-03:00",
-      "author": "Brian5m1th"
     }
   ]
 }
