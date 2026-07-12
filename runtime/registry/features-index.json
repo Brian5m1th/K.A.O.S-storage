@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "generated_at": "2026-07-11T12:58:12.667989+00:00",
+  "generated_at": "2026-07-12T01:36:36.770879+00:00",
   "generated_by": "bootstrap_feature_registry.py (git-history strategy)",
   "source": "git-log + filesystem-sdds",
-  "total_features": 162,
+  "total_features": 174,
   "features": [
     {
       "id": "env",
@@ -105,6 +105,32 @@
       "updatedAt": "2026-06-11T00:21:47-03:00"
     },
     {
+      "id": "adr-governance",
+      "name": "ADR Governance Rules",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/governance/adr-governance.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-12T01:36:36.453712+00:00",
+      "updatedAt": "2026-07-12T01:36:36.453715+00:00"
+    },
+    {
+      "id": "adr-template",
+      "name": "ADR Template — K.A.O.S Architecture Decision Record",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/governance/ADR-template.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-12T01:36:36.453827+00:00",
+      "updatedAt": "2026-07-12T01:36:36.453830+00:00"
+    },
+    {
       "id": "agent",
       "name": "Adiciona user context ao AgentState, planner e executor",
       "phase": "Fase 1",
@@ -151,8 +177,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.340790+00:00",
-      "updatedAt": "2026-07-11T12:58:12.340794+00:00"
+      "createdAt": "2026-07-12T01:36:36.437040+00:00",
+      "updatedAt": "2026-07-12T01:36:36.437044+00:00"
     },
     {
       "id": "audit",
@@ -239,6 +265,26 @@
       "updatedAt": "2026-06-11T10:31:55-03:00"
     },
     {
+      "id": "capability-services-graph-memory",
+      "name": "7 capability services — Graph, Memory, Retrieval, Inference, Planner, Evidence, Knowledge",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/core/services/__init__.py",
+        "assistant/app/core/services/evidence_service.py",
+        "assistant/app/core/services/graph_service.py",
+        "assistant/app/core/services/inference_service.py",
+        "assistant/app/core/services/knowledge_service.py",
+        "assistant/app/core/services/memory_service.py",
+        "assistant/app/core/services/planner_service.py",
+        "assistant/app/core/services/retrieval_service.py"
+      ],
+      "lastCommit": "580668420623",
+      "createdAt": "2026-07-11T20:51:00-03:00",
+      "updatedAt": "2026-07-11T20:51:00-03:00"
+    },
+    {
       "id": "cargo",
       "name": "Remove unused net.timeout key and update docs submodule",
       "phase": "Fase 1",
@@ -277,8 +323,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.340150+00:00",
-      "updatedAt": "2026-07-11T12:58:12.340155+00:00"
+      "createdAt": "2026-07-12T01:36:36.436426+00:00",
+      "updatedAt": "2026-07-12T01:36:36.436431+00:00"
     },
     {
       "id": "config",
@@ -334,8 +380,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.358744+00:00",
-      "updatedAt": "2026-07-11T12:58:12.358750+00:00"
+      "createdAt": "2026-07-12T01:36:36.455730+00:00",
+      "updatedAt": "2026-07-12T01:36:36.455735+00:00"
     },
     {
       "id": "dashboard-honesto-4-state-protocol",
@@ -351,6 +397,26 @@
       "lastCommit": "b99b0159ada6",
       "createdAt": "2026-06-22T22:32:50-03:00",
       "updatedAt": "2026-06-22T22:32:50-03:00"
+    },
+    {
+      "id": "define-domain-ports-for",
+      "name": "Define 6 domain ports for capability-first architecture",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/domain/__init__.py",
+        "assistant/app/domain/ports/__init__.py",
+        "assistant/app/domain/ports/evidence_port.py",
+        "assistant/app/domain/ports/graph_port.py",
+        "assistant/app/domain/ports/inference_port.py",
+        "assistant/app/domain/ports/memory_port.py",
+        "assistant/app/domain/ports/planner_port.py",
+        "assistant/app/domain/ports/retrieval_port.py"
+      ],
+      "lastCommit": "dd6003d2931c",
+      "createdAt": "2026-07-11T20:50:42-03:00",
+      "updatedAt": "2026-07-11T20:50:42-03:00"
     },
     {
       "id": "deploy",
@@ -379,8 +445,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.356675+00:00",
-      "updatedAt": "2026-07-11T12:58:12.356679+00:00"
+      "createdAt": "2026-07-12T01:36:36.453189+00:00",
+      "updatedAt": "2026-07-12T01:36:36.453193+00:00"
     },
     {
       "id": "developer-guide",
@@ -392,8 +458,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.362996+00:00",
-      "updatedAt": "2026-07-11T12:58:12.363000+00:00"
+      "createdAt": "2026-07-12T01:36:36.460161+00:00",
+      "updatedAt": "2026-07-12T01:36:36.460165+00:00"
     },
     {
       "id": "devops",
@@ -429,8 +495,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.354621+00:00",
-      "updatedAt": "2026-07-11T12:58:12.354625+00:00"
+      "createdAt": "2026-07-12T01:36:36.451087+00:00",
+      "updatedAt": "2026-07-12T01:36:36.451091+00:00"
     },
     {
       "id": "docker",
@@ -547,8 +613,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.340610+00:00",
-      "updatedAt": "2026-07-11T12:58:12.340613+00:00"
+      "createdAt": "2026-07-12T01:36:36.436863+00:00",
+      "updatedAt": "2026-07-12T01:36:36.436867+00:00"
     },
     {
       "id": "especificacao-tecnica",
@@ -560,8 +626,21 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.351402+00:00",
-      "updatedAt": "2026-07-11T12:58:12.351407+00:00"
+      "createdAt": "2026-07-12T01:36:36.447811+00:00",
+      "updatedAt": "2026-07-12T01:36:36.447817+00:00"
+    },
+    {
+      "id": "evidence-driven-decisions",
+      "name": "Evidence-Driven Decisions — K.A.O.S Process",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/governance/evidence-driven-decisions.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-12T01:36:36.453449+00:00",
+      "updatedAt": "2026-07-12T01:36:36.453453+00:00"
     },
     {
       "id": "fase-3",
@@ -573,8 +652,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.346214+00:00",
-      "updatedAt": "2026-07-11T12:58:12.346219+00:00"
+      "createdAt": "2026-07-12T01:36:36.442644+00:00",
+      "updatedAt": "2026-07-12T01:36:36.442649+00:00"
     },
     {
       "id": "fase1-desktop-stabilization-honest",
@@ -696,8 +775,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.336497+00:00",
-      "updatedAt": "2026-07-11T12:58:12.336502+00:00"
+      "createdAt": "2026-07-12T01:36:36.432729+00:00",
+      "updatedAt": "2026-07-12T01:36:36.432733+00:00"
     },
     {
       "id": "fases-6-7-watcher-langgraph-e-memoria",
@@ -709,8 +788,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.335224+00:00",
-      "updatedAt": "2026-07-11T12:58:12.335229+00:00"
+      "createdAt": "2026-07-12T01:36:36.431436+00:00",
+      "updatedAt": "2026-07-12T01:36:36.431441+00:00"
     },
     {
       "id": "ferramentas-do-langgraph",
@@ -722,8 +801,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.333204+00:00",
-      "updatedAt": "2026-07-11T12:58:12.333209+00:00"
+      "createdAt": "2026-07-12T01:36:36.429407+00:00",
+      "updatedAt": "2026-07-12T01:36:36.429412+00:00"
     },
     {
       "id": "finaliza-implementacoes-pendentes-rag",
@@ -777,8 +856,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.362075+00:00",
-      "updatedAt": "2026-07-11T12:58:12.362079+00:00"
+      "createdAt": "2026-07-12T01:36:36.459202+00:00",
+      "updatedAt": "2026-07-12T01:36:36.459207+00:00"
     },
     {
       "id": "formatting",
@@ -836,8 +915,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.355268+00:00",
-      "updatedAt": "2026-07-11T12:58:12.355272+00:00"
+      "createdAt": "2026-07-12T01:36:36.451749+00:00",
+      "updatedAt": "2026-07-12T01:36:36.451754+00:00"
     },
     {
       "id": "functional-spec",
@@ -849,8 +928,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.345151+00:00",
-      "updatedAt": "2026-07-11T12:58:12.345155+00:00"
+      "createdAt": "2026-07-12T01:36:36.441577+00:00",
+      "updatedAt": "2026-07-12T01:36:36.441583+00:00"
     },
     {
       "id": "generate-icon-assets-skip",
@@ -864,17 +943,18 @@
       "updatedAt": "2026-06-19T01:44:34Z"
     },
     {
-      "id": "github-actions",
-      "name": "GitHub Actions — K.A.O.S",
+      "id": "generic-providerregistry-for-runtime",
+      "name": "Generic ProviderRegistry for runtime provider swapping",
       "phase": "Fase 1",
-      "status": "in-progress",
-      "docs": [
-        "docs/ci-cd/GITHUB_ACTIONS.md"
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/core/__init__.py",
+        "assistant/app/core/provider_registry.py"
       ],
-      "codeRefs": [],
-      "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.357743+00:00",
-      "updatedAt": "2026-07-11T12:58:12.357748+00:00"
+      "lastCommit": "bc1c6a4bfe8e",
+      "createdAt": "2026-07-11T20:50:42-03:00",
+      "updatedAt": "2026-07-11T20:50:42-03:00"
     },
     {
       "id": "identidade-open-code",
@@ -886,8 +966,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.337894+00:00",
-      "updatedAt": "2026-07-11T12:58:12.337898+00:00"
+      "createdAt": "2026-07-12T01:36:36.434190+00:00",
+      "updatedAt": "2026-07-12T01:36:36.434194+00:00"
     },
     {
       "id": "implementa-deteccao-contradicoes-logicas",
@@ -1042,8 +1122,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.360513+00:00",
-      "updatedAt": "2026-07-11T12:58:12.360517+00:00"
+      "createdAt": "2026-07-12T01:36:36.457498+00:00",
+      "updatedAt": "2026-07-12T01:36:36.457502+00:00"
     },
     {
       "id": "integra-agente-langgraph-nas",
@@ -1236,6 +1316,34 @@
       "updatedAt": "2026-07-10T07:41:53-03:00"
     },
     {
+      "id": "kaos-research-laboratory-evidence-driven-framework",
+      "name": "Kaos-research laboratory — evidence-driven framework evaluation",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "kaos-research/README.md",
+        "kaos-research/adrs/001-evidence-engine.md",
+        "kaos-research/adrs/002-capability-ports.md",
+        "kaos-research/adrs/003-technology-observatory.md",
+        "kaos-research/benchmarks/results/graphify-benchmark.md",
+        "kaos-research/evidence/capability-matrix.md",
+        "kaos-research/evidence/hypotheses.md",
+        "kaos-research/evidence/state-audit-report.md",
+        "kaos-research/reports/architectural-research.md"
+      ],
+      "codeRefs": [
+        "kaos-research/benchmarks/datasets/kaos_questions.json",
+        "kaos-research/catalog/framework-catalog.json",
+        "kaos-research/experiments/airllm/experiment.py",
+        "kaos-research/experiments/graphrag/experiment.py",
+        "kaos-research/experiments/mem0/experiment.py",
+        "kaos-research/technology-observatory/observatory.py"
+      ],
+      "lastCommit": "16b14d0c53cd",
+      "createdAt": "2026-07-11T20:52:34-03:00",
+      "updatedAt": "2026-07-11T20:52:34-03:00"
+    },
+    {
       "id": "kirl-guide",
       "name": "Guia KIRL — K.A.O.S Intelligence Runtime Layer",
       "phase": "Fase 1",
@@ -1245,8 +1353,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.361419+00:00",
-      "updatedAt": "2026-07-11T12:58:12.361424+00:00"
+      "createdAt": "2026-07-12T01:36:36.458423+00:00",
+      "updatedAt": "2026-07-12T01:36:36.458427+00:00"
     },
     {
       "id": "knowledge-graph",
@@ -1412,8 +1520,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.348772+00:00",
-      "updatedAt": "2026-07-11T12:58:12.348777+00:00"
+      "createdAt": "2026-07-12T01:36:36.445181+00:00",
+      "updatedAt": "2026-07-12T01:36:36.445185+00:00"
     },
     {
       "id": "memory",
@@ -1591,8 +1699,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.354167+00:00",
-      "updatedAt": "2026-07-11T12:58:12.354171+00:00"
+      "createdAt": "2026-07-12T01:36:36.450627+00:00",
+      "updatedAt": "2026-07-12T01:36:36.450632+00:00"
     },
     {
       "id": "observability-real",
@@ -1604,8 +1712,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.330719+00:00",
-      "updatedAt": "2026-07-11T12:58:12.330724+00:00"
+      "createdAt": "2026-07-12T01:36:36.426910+00:00",
+      "updatedAt": "2026-07-12T01:36:36.426915+00:00"
     },
     {
       "id": "obsidian-guide",
@@ -1617,8 +1725,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.359819+00:00",
-      "updatedAt": "2026-07-11T12:58:12.359823+00:00"
+      "createdAt": "2026-07-12T01:36:36.456793+00:00",
+      "updatedAt": "2026-07-12T01:36:36.456799+00:00"
     },
     {
       "id": "obsidian-watcher",
@@ -1630,8 +1738,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.337441+00:00",
-      "updatedAt": "2026-07-11T12:58:12.337446+00:00"
+      "createdAt": "2026-07-12T01:36:36.433733+00:00",
+      "updatedAt": "2026-07-12T01:36:36.433738+00:00"
     },
     {
       "id": "obsidianservice-tools-leitura-escrita-busca-vault",
@@ -1671,8 +1779,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.360041+00:00",
-      "updatedAt": "2026-07-11T12:58:12.360044+00:00"
+      "createdAt": "2026-07-12T01:36:36.457016+00:00",
+      "updatedAt": "2026-07-12T01:36:36.457020+00:00"
     },
     {
       "id": "ops",
@@ -1702,8 +1810,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.331361+00:00",
-      "updatedAt": "2026-07-11T12:58:12.331365+00:00"
+      "createdAt": "2026-07-12T01:36:36.427579+00:00",
+      "updatedAt": "2026-07-12T01:36:36.427584+00:00"
     },
     {
       "id": "otimiza-dockerfile-com-torch",
@@ -1793,8 +1901,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.329462+00:00",
-      "updatedAt": "2026-07-11T12:58:12.329472+00:00"
+      "createdAt": "2026-07-12T01:36:36.425676+00:00",
+      "updatedAt": "2026-07-12T01:36:36.425686+00:00"
     },
     {
       "id": "provider-routing",
@@ -1806,8 +1914,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.356222+00:00",
-      "updatedAt": "2026-07-11T12:58:12.356226+00:00"
+      "createdAt": "2026-07-12T01:36:36.452709+00:00",
+      "updatedAt": "2026-07-12T01:36:36.452713+00:00"
     },
     {
       "id": "proxy",
@@ -1821,6 +1929,19 @@
       "lastCommit": "c2e8f375383e",
       "createdAt": "2026-06-11T01:25:45-03:00",
       "updatedAt": "2026-06-11T01:25:45-03:00"
+    },
+    {
+      "id": "quality-gates",
+      "name": "Quality Gates — K.A.O.S CI Pipeline",
+      "phase": "Fase 1",
+      "status": "in-progress",
+      "docs": [
+        "docs/governance/quality-gates.md"
+      ],
+      "codeRefs": [],
+      "lastCommit": "",
+      "createdAt": "2026-07-12T01:36:36.453592+00:00",
+      "updatedAt": "2026-07-12T01:36:36.453595+00:00"
     },
     {
       "id": "query",
@@ -1877,8 +1998,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.341259+00:00",
-      "updatedAt": "2026-07-11T12:58:12.341263+00:00"
+      "createdAt": "2026-07-12T01:36:36.437528+00:00",
+      "updatedAt": "2026-07-12T01:36:36.437534+00:00"
     },
     {
       "id": "refatoracao-frontend-fsd",
@@ -1890,8 +2011,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.330113+00:00",
-      "updatedAt": "2026-07-11T12:58:12.330118+00:00"
+      "createdAt": "2026-07-12T01:36:36.426356+00:00",
+      "updatedAt": "2026-07-12T01:36:36.426361+00:00"
     },
     {
       "id": "registry",
@@ -1900,9 +2021,9 @@
       "status": "done",
       "docs": [],
       "codeRefs": [],
-      "lastCommit": "c61a4540d272",
+      "lastCommit": "233b8564fa39",
       "createdAt": "2026-06-24T16:42:05Z",
-      "updatedAt": "2026-07-11T12:55:31Z"
+      "updatedAt": "2026-07-11T12:58:13Z"
     },
     {
       "id": "release",
@@ -1926,6 +2047,27 @@
       "updatedAt": "2026-07-11T00:36:19Z"
     },
     {
+      "id": "rest-apis-endpoints-fastapi",
+      "name": "6 REST APIs, 24 endpoints, FastAPI dependency injection",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/api/evidence_api.py",
+        "assistant/app/api/graph_api.py",
+        "assistant/app/api/inference_api.py",
+        "assistant/app/api/knowledge_api.py",
+        "assistant/app/api/memory_api.py",
+        "assistant/app/api/planner_api.py",
+        "assistant/app/dependencies/__init__.py",
+        "assistant/app/dependencies/services.py",
+        "assistant/app/main.py"
+      ],
+      "lastCommit": "d1fe5b8ec140",
+      "createdAt": "2026-07-11T20:51:00-03:00",
+      "updatedAt": "2026-07-11T20:51:00-03:00"
+    },
+    {
       "id": "roadmap-geral",
       "name": "Roadmap Geral",
       "phase": "Fase 1",
@@ -1935,8 +2077,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.344689+00:00",
-      "updatedAt": "2026-07-11T12:58:12.344693+00:00"
+      "createdAt": "2026-07-12T01:36:36.441081+00:00",
+      "updatedAt": "2026-07-12T01:36:36.441086+00:00"
     },
     {
       "id": "roteamento-de-memoria",
@@ -1948,8 +2090,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.352172+00:00",
-      "updatedAt": "2026-07-11T12:58:12.352176+00:00"
+      "createdAt": "2026-07-12T01:36:36.448581+00:00",
+      "updatedAt": "2026-07-12T01:36:36.448587+00:00"
     },
     {
       "id": "router",
@@ -2245,8 +2387,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.355748+00:00",
-      "updatedAt": "2026-07-11T12:58:12.355752+00:00"
+      "createdAt": "2026-07-12T01:36:36.452233+00:00",
+      "updatedAt": "2026-07-12T01:36:36.452237+00:00"
     },
     {
       "id": "technical-spec",
@@ -2258,8 +2400,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.342757+00:00",
-      "updatedAt": "2026-07-11T12:58:12.342762+00:00"
+      "createdAt": "2026-07-12T01:36:36.439058+00:00",
+      "updatedAt": "2026-07-12T01:36:36.439063+00:00"
     },
     {
       "id": "tests",
@@ -2334,8 +2476,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.362547+00:00",
-      "updatedAt": "2026-07-11T12:58:12.362551+00:00"
+      "createdAt": "2026-07-12T01:36:36.459697+00:00",
+      "updatedAt": "2026-07-12T01:36:36.459702+00:00"
     },
     {
       "id": "ux",
@@ -2380,8 +2522,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-11T12:58:12.351701+00:00",
-      "updatedAt": "2026-07-11T12:58:12.351705+00:00"
+      "createdAt": "2026-07-12T01:36:36.448114+00:00",
+      "updatedAt": "2026-07-12T01:36:36.448118+00:00"
     },
     {
       "id": "vault",
@@ -2581,6 +2723,24 @@
       "updatedAt": "2026-06-19T11:30:30-03:00"
     },
     {
+      "id": "desktop-stores-graphify-inspector",
+      "name": "5 Desktop stores + Graphify Inspector — zero framework imports",
+      "phase": "Fase 2",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/application/stores/evidence-store.ts",
+        "desktop/src/application/stores/graph-store.ts",
+        "desktop/src/application/stores/inference-store.ts",
+        "desktop/src/application/stores/knowledge-store.ts",
+        "desktop/src/application/stores/memory-store.ts",
+        "desktop/src/pages/graphify-inspector/index.tsx"
+      ],
+      "lastCommit": "5c5234b24b6a",
+      "createdAt": "2026-07-11T20:51:00-03:00",
+      "updatedAt": "2026-07-11T20:51:00-03:00"
+    },
+    {
       "id": "fase2-graphify-explorer-with",
       "name": "Fase 2 - Graphify Explorer with React Flow",
       "phase": "Fase 2",
@@ -2612,6 +2772,67 @@
       "lastCommit": "63c3432d3e52",
       "createdAt": "2026-06-23T00:53:44-03:00",
       "updatedAt": "2026-06-23T00:53:44-03:00"
+    },
+    {
+      "id": "framework-adapters-graphify-qdrant",
+      "name": "11 framework adapters — Graphify, Qdrant, Ollama, AirLLM, OpenAI, Gemini, Claude, LangGraph, PostgreSQL, NetworkX, EvidenceEngine",
+      "phase": "Fase 2",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/providers/__init__.py",
+        "assistant/app/providers/evidence/__init__.py",
+        "assistant/app/providers/evidence/engine.py",
+        "assistant/app/providers/graph/__init__.py",
+        "assistant/app/providers/graph/graphify_adapter.py",
+        "assistant/app/providers/graph/networkx_fallback.py",
+        "assistant/app/providers/inference/__init__.py",
+        "assistant/app/providers/inference/airllm_adapter.py",
+        "assistant/app/providers/inference/ollama_adapter.py",
+        "assistant/app/providers/inference/openai_adapter.py",
+        "assistant/app/providers/memory/postgres_memory_adapter.py",
+        "assistant/app/providers/planner/__init__.py",
+        "assistant/app/providers/planner/langgraph_adapter.py",
+        "assistant/app/providers/retrieval/__init__.py",
+        "assistant/app/providers/retrieval/qdrant_adapter.py"
+      ],
+      "lastCommit": "2c3683f14cda",
+      "createdAt": "2026-07-11T20:51:00-03:00",
+      "updatedAt": "2026-07-11T20:51:00-03:00"
+    },
+    {
+      "id": "github-actions-graphify-update-secrets",
+      "name": "GitHub Actions graphify-update, secrets API/desktop store, graphify obsidian export scripts",
+      "phase": "Fase 2",
+      "status": "done",
+      "docs": [
+        "docs/ci-cd/GITHUB_ACTIONS.md"
+      ],
+      "codeRefs": [
+        ".github/workflows/graphify-update.yml",
+        "assistant/app/api/secrets.py",
+        "desktop/src/application/stores/secrets-store.ts",
+        "scripts/daily-graphify-update.py",
+        "scripts/export-graphify-obsidian.py",
+        "scripts/export-graphify-to-obsidian.py"
+      ],
+      "lastCommit": "11ac7163f1e3",
+      "createdAt": "2026-07-11T22:17:01-03:00",
+      "updatedAt": "2026-07-11T22:17:01-03:00"
+    },
+    {
+      "id": "integrate-graphify-graph-json-code",
+      "name": "Integrate Graphify graph.json as code intelligence source",
+      "phase": "Fase 2",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/ai/vault_analyzer/graph_builder.py",
+        "assistant/app/ai/vault_analyzer/knowledge_graph.py"
+      ],
+      "lastCommit": "39216a8fb79b",
+      "createdAt": "2026-07-11T20:50:42-03:00",
+      "updatedAt": "2026-07-11T20:50:42-03:00"
     },
     {
       "id": "production",
