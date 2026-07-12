@@ -1,0 +1,638 @@
+# MCP Server Registry — Personal AI Engineering Platform
+# Version: 1.0
+# Use this as the single source of truth for all MCP servers.
+
+registry_version: "1.0"
+updated: "2026-07-12"
+servers:
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 1 — Must Have (Install First)
+  # ═══════════════════════════════════════════════════════════════
+
+  # ── Context7: Live documentation for frameworks and libraries ──
+  - id: context7
+    name: "Context7"
+    version: "1.2.0"
+    category: documentation
+    description: "Live documentation for frameworks and libraries. Eliminates outdated examples and reduces hallucinations."
+    maintainer:
+      name: "Context7 Inc."
+      url: "https://context7.com"
+      github: "context7/mcp-server"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@context7/mcp-server"]
+          env: {}
+    permissions:
+      filesystem: none
+      network: https-outbound
+      shell: false
+      secrets: []
+      risks:
+        - level: low
+          description: "Network egress to context7.com for documentation fetching"
+    requirements:
+      node: ">=18"
+      npm: true
+    agents: [claude-code, opencode, antigravity, cursor, vscode]
+    platforms: [linux, macos, windows, wsl]
+    tags: [docs, api, frameworks, hallucination-reduction]
+    install:
+      method: npx
+      command: "npx @context7/mcp-server"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 8000
+      expected_latency_ms: 500
+      expected_ram_mb: 100
+    benchmark:
+      startup_ms: 800
+      ram_mb: 45
+      latency_ms: 120
+      stability: 0.99
+
+  # ── Serena: Semantic code understanding ──
+  - id: serena
+    name: "Serena"
+    version: "0.9.0"
+    category: code-understanding
+    description: "Semantic understanding of large codebases. Symbol navigation, reference tracking, architecture understanding, intelligent refactoring."
+    maintainer:
+      name: "Serena AI"
+      url: "https://serena.ai"
+      github: "serena-ai/serena-mcp"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "uvx"
+          args: ["serena-mcp"]
+          env: {}
+    permissions:
+      filesystem: read
+      network: none
+      shell: false
+      secrets: []
+      risks:
+        - level: low
+          description: "Reads project files for code analysis"
+    requirements:
+      python: ">=3.10"
+      uv: true
+    agents: [claude-code, opencode, antigravity, cursor, vscode]
+    platforms: [linux, macos, windows, wsl]
+    tags: [code, navigation, symbols, refactoring]
+    install:
+      method: uvx
+      command: "uvx serena-mcp"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 5000
+      expected_latency_ms: 1000
+      expected_ram_mb: 200
+    benchmark:
+      startup_ms: 3000
+      ram_mb: 150
+      latency_ms: 500
+      stability: 0.95
+
+  # ── GitHub: Issues, PRs, commits, code search ──
+  - id: github
+    name: "GitHub MCP"
+    version: "1.5.2"
+    category: source-control
+    description: "GitHub integration: Issues, Pull Requests, Commits, Branches, Reviews, Repository search, Actions."
+    maintainer:
+      name: "GitHub / ModelContextProtocol"
+      url: "https://github.com/modelcontextprotocol/server-github"
+      github: "modelcontextprotocol/server-github"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@modelcontextprotocol/server-github"]
+          env:
+            GITHUB_TOKEN: "${secrets.github.token}"
+    permissions:
+      filesystem: none
+      network: https-outbound
+      shell: false
+      secrets: [GITHUB_TOKEN]
+      risks:
+        - level: medium
+          description: "GitHub API access. Token with write scope can modify repos."
+    requirements:
+      node: ">=18"
+      npm: true
+      secrets:
+        GITHUB_TOKEN:
+          description: "GitHub personal access token with repo scope"
+          required: true
+          source: environment
+    agents: [claude-code, opencode, antigravity, cursor, vscode]
+    platforms: [linux, macos, windows, wsl]
+    tags: [github, git, pr, issues, code-review]
+    install:
+      method: npx
+      command: "npx @modelcontextprotocol/server-github"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 5000
+      expected_latency_ms: 1000
+      expected_ram_mb: 80
+    benchmark:
+      startup_ms: 2000
+      ram_mb: 50
+      latency_ms: 800
+      stability: 0.98
+
+  # ── Playwright: Browser automation ──
+  - id: playwright
+    name: "Playwright MCP"
+    version: "1.0.0"
+    category: browser-automation
+    description: "Browser automation: navigate, click, type, screenshot, network intercept, E2E testing."
+    maintainer:
+      name: "Microsoft / ModelContextProtocol"
+      url: "https://github.com/microsoft/playwright-mcp"
+      github: "microsoft/playwright-mcp"
+    license: "Apache-2.0"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@playwright/mcp"]
+          env: {}
+    permissions:
+      filesystem: none
+      network: full
+      shell: false
+      secrets: []
+      risks:
+        - level: high
+          description: "Full network access for browser automation. Can visit arbitrary URLs."
+    requirements:
+      node: ">=18"
+      npm: true
+    agents: [claude-code, opencode, antigravity, cursor, vscode]
+    platforms: [linux, macos, windows, wsl]
+    tags: [browser, testing, e2e, ui, screenshots]
+    install:
+      method: npx
+      command: "npx @playwright/mcp"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 10000
+      expected_latency_ms: 2000
+      expected_ram_mb: 300
+    benchmark:
+      startup_ms: 5000
+      ram_mb: 250
+      latency_ms: 1500
+      stability: 0.95
+
+  # ── Filesystem: Safe file operations ──
+  - id: filesystem
+    name: "Filesystem MCP"
+    version: "0.1.0"
+    category: filesystem
+    description: "Safe file read/write/search within workspace boundaries."
+    maintainer:
+      name: "ModelContextProtocol"
+      url: "https://github.com/modelcontextprotocol/server-filesystem"
+      github: "modelcontextprotocol/server-filesystem"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args:
+            - "-y"
+            - "@modelcontextprotocol/server-filesystem"
+            - "{{workspace}}"
+          env: {}
+    permissions:
+      filesystem: read-write-with-boundaries
+      network: none
+      shell: false
+      secrets: []
+      risks:
+        - level: high
+          description: "Read/write access within workspace boundaries. Misconfiguration could expose sensitive files."
+        - level: low
+          description: "Path traversal if boundaries are not correctly enforced."
+    requirements:
+      node: ">=18"
+      npm: true
+      workspace_bound: true
+    agents: [claude-code, opencode, antigravity, cursor, vscode]
+    platforms: [linux, macos, windows, wsl]
+    tags: [filesystem, files, read, write, search]
+    install:
+      method: npx
+      command: "npx @modelcontextprotocol/server-filesystem <workspace>"
+      auto_update: false
+      update_policy: manual
+    health:
+      check_method: tools/list
+      expected_startup_ms: 3000
+      expected_latency_ms: 100
+      expected_ram_mb: 50
+    benchmark:
+      startup_ms: 1000
+      ram_mb: 30
+      latency_ms: 50
+      stability: 0.99
+
+  # ── Sequential Thinking: Structured reasoning ──
+  - id: sequential-thinking
+    name: "Sequential Thinking MCP"
+    version: "0.2.0"
+    category: reasoning
+    description: "Structured reasoning, debugging, planning, architectural decomposition."
+    maintainer:
+      name: "ModelContextProtocol"
+      url: "https://github.com/modelcontextprotocol/server-sequential-thinking"
+      github: "modelcontextprotocol/server-sequential-thinking"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+          env: {}
+    permissions:
+      filesystem: none
+      network: none
+      shell: false
+      secrets: []
+      risks: []
+    requirements:
+      node: ">=18"
+      npm: true
+    agents: [claude-code, opencode, antigravity, cursor, vscode]
+    platforms: [linux, macos, windows, wsl]
+    tags: [reasoning, planning, debugging, architecture]
+    install:
+      method: npx
+      command: "npx @modelcontextprotocol/server-sequential-thinking"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 3000
+      expected_latency_ms: 50
+      expected_ram_mb: 40
+    benchmark:
+      startup_ms: 800
+      ram_mb: 25
+      latency_ms: 10
+      stability: 0.99
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 2 — High Value (Install Second)
+  # ═══════════════════════════════════════════════════════════════
+
+  # ── PostgreSQL: Database schema, queries, migrations ──
+  - id: postgres
+    name: "PostgreSQL MCP"
+    version: "0.6.0"
+    category: database
+    description: "PostgreSQL schema inspection, migrations, query analysis, optimization, index review."
+    maintainer:
+      name: "ModelContextProtocol"
+      url: "https://github.com/modelcontextprotocol/server-postgres"
+      github: "modelcontextprotocol/server-postgres"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@modelcontextprotocol/server-postgres"]
+          env:
+            DATABASE_URL: "${secrets.postgres.dsn}"
+    permissions:
+      filesystem: none
+      network: database-port
+      shell: false
+      secrets: [DATABASE_URL]
+      risks:
+        - level: high
+          description: "Full database access via DSN. Can execute DDL and DML."
+    requirements:
+      node: ">=18"
+      npm: true
+      database: true
+    agents: [claude-code, opencode, antigravity]
+    platforms: [linux, macos, windows, wsl]
+    tags: [database, postgresql, sql, schema, migrations]
+    install:
+      method: npx
+      command: "npx @modelcontextprotocol/server-postgres"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 5000
+      expected_latency_ms: 500
+      expected_ram_mb: 60
+    benchmark:
+      startup_ms: 2000
+      ram_mb: 40
+      latency_ms: 200
+      stability: 0.98
+
+  # ── Docker: Container management ──
+  - id: docker
+    name: "Docker MCP"
+    version: "0.1.0"
+    category: container
+    description: "Docker container management: inspect, logs, compose, restart, images, networks."
+    maintainer:
+      name: "ModelContextProtocol"
+      url: "https://github.com/modelcontextprotocol/server-docker"
+      github: "modelcontextprotocol/server-docker"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@modelcontextprotocol/server-docker"]
+          env: {}
+    permissions:
+      filesystem: none
+      network: docker-socket
+      shell: false
+      secrets: []
+      risks:
+        - level: critical
+          description: "Docker socket access. Can create/delete containers, images, volumes."
+    requirements:
+      node: ">=18"
+      npm: true
+      docker: true
+    agents: [claude-code, opencode, antigravity]
+    platforms: [linux, macos, windows, wsl]
+    tags: [docker, containers, compose, devops]
+    install:
+      method: npx
+      command: "npx @modelcontextprotocol/server-docker"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 5000
+      expected_latency_ms: 500
+      expected_ram_mb: 50
+    benchmark:
+      startup_ms: 1500
+      ram_mb: 30
+      latency_ms: 200
+      stability: 0.98
+
+  # ── Fetch: Web research ──
+  - id: fetch
+    name: "Fetch MCP"
+    version: "0.1.0"
+    category: web-research
+    description: "Web fetching and content extraction for documentation lookup, API references, and technical research."
+    maintainer:
+      name: "ModelContextProtocol"
+      url: "https://github.com/modelcontextprotocol/server-fetch"
+      github: "modelcontextprotocol/server-fetch"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@modelcontextprotocol/server-fetch"]
+          env: {}
+    permissions:
+      filesystem: none
+      network: https-outbound
+      shell: false
+      secrets: []
+      risks:
+        - level: low
+          description: "Network requests to arbitrary URLs for content fetching"
+    requirements:
+      node: ">=18"
+      npm: true
+    agents: [claude-code, opencode, antigravity, cursor, vscode]
+    platforms: [linux, macos, windows, wsl]
+    tags: [web, fetch, research, docs]
+    install:
+      method: npx
+      command: "npx @modelcontextprotocol/server-fetch"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 3000
+      expected_latency_ms: 1000
+      expected_ram_mb: 50
+    benchmark:
+      startup_ms: 1000
+      ram_mb: 30
+      latency_ms: 500
+      stability: 0.98
+
+  # ── Memory: Persistent agent memory ──
+  - id: memory
+    name: "Memory MCP"
+    version: "0.1.0"
+    category: memory
+    description: "Persistent engineering memory: architecture decisions, coding conventions, project knowledge across sessions."
+    maintainer:
+      name: "ModelContextProtocol"
+      url: "https://github.com/modelcontextprotocol/server-memory"
+      github: "modelcontextprotocol/server-memory"
+    license: "MIT"
+    maturity: stable
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args:
+            - "-y"
+            - "@modelcontextprotocol/server-memory"
+          env: {}
+    permissions:
+      filesystem: read-write
+      network: none
+      shell: false
+      secrets: []
+      risks:
+        - level: low
+          description: "Local file read/write for persistence of knowledge base"
+    requirements:
+      node: ">=18"
+      npm: true
+    agents: [claude-code, opencode, antigravity]
+    platforms: [linux, macos, windows, wsl]
+    tags: [memory, knowledge, persistence, conventions]
+    install:
+      method: npx
+      command: "npx @modelcontextprotocol/server-memory"
+      auto_update: true
+      update_policy: minor
+    health:
+      check_method: tools/list
+      expected_startup_ms: 3000
+      expected_latency_ms: 100
+      expected_ram_mb: 50
+    benchmark:
+      startup_ms: 1000
+      ram_mb: 35
+      latency_ms: 50
+      stability: 0.99
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 3 — K.A.O.S Specific (Phase 2)
+  # ═══════════════════════════════════════════════════════════════
+
+  - id: qdrant
+    name: "Qdrant MCP"
+    version: "0.1.0"
+    category: knowledge-management
+    description: "Vector search and collection management for Qdrant vector database."
+    maintainer:
+      name: "Community"
+      url: "https://github.com/qdrant/mcp-server-qdrant"
+      github: "qdrant/mcp-server-qdrant"
+    license: "Apache-2.0"
+    maturity: experimental
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@qdrant/mcp-server"]
+          env:
+            QDRANT_URL: "${secrets.qdrant.url}"
+    permissions:
+      filesystem: none
+      network: database-port
+      shell: false
+      secrets: [QDRANT_URL]
+    requirements:
+      node: ">=18"
+      npm: true
+    tags: [vector, search, embeddings, qdrant]
+    plan: phase-2
+
+  - id: obsidian
+    name: "Obsidian MCP"
+    version: "0.1.0"
+    category: knowledge-management
+    description: "Obsidian vault access: note CRUD, graph navigation, search."
+    maintainer:
+      name: "Community"
+      url: "https://github.com/MarkusPfundstein/mcp-obsidian"
+      github: "MarkusPfundstein/mcp-obsidian"
+    license: "MIT"
+    maturity: experimental
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "mcp-obsidian"]
+          env: {}
+    permissions:
+      filesystem: read-write
+      network: none
+    requirements:
+      node: ">=18"
+      npm: true
+    tags: [obsidian, notes, knowledge, vault]
+    plan: phase-2
+
+  - id: n8n
+    name: "n8n MCP"
+    version: "0.1.0"
+    category: automation
+    description: "n8n workflow management: CRUD, execution, webhook management."
+    maintainer:
+      name: "Community"
+      url: "https://github.com/n8n-io/n8n-mcp"
+      github: "n8n-io/n8n-mcp"
+    license: "Sustainable Use License"
+    maturity: experimental
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "n8n-mcp"]
+          env:
+            N8N_URL: "${secrets.n8n.url}"
+            N8N_API_KEY: "${secrets.n8n.api_key}"
+    permissions:
+      filesystem: none
+      network: https-outbound
+      shell: false
+    requirements:
+      node: ">=18"
+      npm: true
+    tags: [automation, workflows, n8n]
+    plan: phase-2
+
+  - id: cloudflare
+    name: "Cloudflare MCP"
+    version: "0.1.0"
+    category: cloud-infrastructure
+    description: "Cloudflare API: DNS, Workers, Pages, R2, KV."
+    maintainer:
+      name: "Community"
+      url: "https://github.com/cloudflare/mcp-server-cloudflare"
+      github: "cloudflare/mcp-server-cloudflare"
+    license: "MIT"
+    maturity: experimental
+    protocol:
+      default: stdio
+      transports:
+        - type: stdio
+          command: "npx"
+          args: ["-y", "@cloudflare/mcp-server"]
+          env:
+            CLOUDFLARE_API_TOKEN: "${secrets.cloudflare.api_token}"
+    permissions:
+      filesystem: none
+      network: https-outbound
+    requirements:
+      node: ">=18"
+      npm: true
+    tags: [cloudflare, dns, workers, cdn]
+    plan: phase-2

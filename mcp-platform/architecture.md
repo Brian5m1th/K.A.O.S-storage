@@ -1,0 +1,737 @@
+# Personal AI Engineering Platform — System Architecture
+
+- **Status:** Proposed
+- **Phase:** 0
+- **Date:** 2026-07-12
+
+---
+
+## 1. System Context (C4 Level 1)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         PERSONAL AI ENGINEERING PLATFORM                      │
+│                                                                               │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌────────────┐  │
+│  │  Claude Code  │    │   OpenCode   │    │  Antigravity │    │  VS Code   │  │
+│  │    (Agent)    │    │   (Agent)    │    │   (Agent)    │    │  AI (Agent)│  │
+│  └──────┬───────┘    └──────┬───────┘    └──────┬───────┘    └─────┬──────┘  │
+│         │                   │                   │                   │          │
+│         └───────────────────┼───────────────────┼───────────────────┘          │
+│                             │                   │                               │
+│                    ┌────────▼───────────────────▼────────┐                      │
+│                    │         MCP PLATFORM CLI / API        │                      │
+│                    │  (mcp command / HTTP API / SSE)      │                      │
+│                    └────────────────┬────────────────────┘                      │
+│                                     │                                            │
+│                    ┌────────────────▼────────────────────┐                      │
+│                    │          MCP SERVER MANAGER           │                      │
+│                    │  (Lifecycle, Health, Permissions)     │                      │
+│                    └────────────────┬────────────────────┘                      │
+│                                     │                                            │
+│         ┌───────────────────────────┼───────────────────────────┐                │
+│         │                           │                           │                │
+│         ▼                           ▼                           ▼                │
+│  ┌──────────────┐          ┌──────────────┐          ┌──────────────┐          │
+│  │  STDIO MCP   │          │  HTTP/SSE MCP │         │  Docker MCP  │          │
+│  │   Servers    │          │   Servers     │         │   Servers    │          │
+│  │ (local proc) │          │  (remote/gw)  │         │ (container)  │          │
+│  └──────────────┘          └──────────────┘          └──────────────┘          │
+│                                                                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### External Systems
+
+| System | Description | Interaction |
+|--------|-------------|-------------|
+| **Claude Code** | Anthropic's AI coding agent | STDIO or HTTP/SSE to platform |
+| **OpenCode** | AI coding agent (opencode.dev) | STDIO or HTTP/SSE to platform |
+| **Antigravity** | AI coding agent | STDIO or HTTP/SSE to platform |
+| **VS Code AI** | Visual Studio Code AI extensions | STDIO or HTTP/SSE to platform |
+| **Cursor** | AI-first code editor | STDIO or HTTP/SSE to platform |
+| **GitHub** | Source control platform | HTTP API (via GitHub MCP) |
+| **Package Registries** | npm, PyPI, Docker Hub | Version checking for updates |
+| **OS Keychain** | OS-level secret storage | Secret resolution |
+| **Docker** | Container runtime | STDIO or socket (via Docker MCP) |
+| **PostgreSQL** | Database | TCP (via PostgreSQL MCP) |
+
+---
+
+## 2. Container Diagram (C4 Level 2)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│                          PERSONAL AI ENGINEERING PLATFORM                             │
+│                                                                                      │
+│  ┌──────────────────────────────────────────────────────────────────────────┐       │
+│  │                        MCP PLATFORM CLI (mcp)                            │       │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────────────┐ │       │
+│  │  │  install  │ │   start  │ │  update  │ │  profile │ │    generate    │ │       │
+│  │  │  uninstall│ │   stop   │ │ rollback │ │  config  │ │  agent-config  │ │       │
+│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘ └────────────────┘ │       │
+│  └──────────────────────────────────┬───────────────────────────────────────┘       │
+│                                     │                                                │
+│  ┌──────────────────────────────────▼───────────────────────────────────────┐       │
+│  │                      CORE LIBRARY (libmcp)                                │       │
+│  │                                                                           │       │
+│  │  ┌──────────────────┐  ┌──────────────────┐  ┌────────────────────────┐ │       │
+│  │  │  Server Manager   │  │  Transport Layer  │  │   Authorization       │ │       │
+│  │  │  (Lifecycle)      │  │  (STDIO/HTTP/SSE) │  │   Engine              │ │       │
+│  │  └──────────────────┘  └──────────────────┘  └────────────────────────┘ │       │
+│  │                                                                           │       │
+│  │  ┌──────────────────┐  ┌──────────────────┐  ┌────────────────────────┐ │       │
+│  │  │  Registry Manager │  │  Profile Manager  │  │   Update Manager      │ │       │
+│  │  │  (servers.yaml)   │  │  (profiles/*.yaml)│  │   (version checks)    │ │       │
+│  │  └──────────────────┘  └──────────────────┘  └────────────────────────┘ │       │
+│  │                                                                           │       │
+│  │  ┌──────────────────┐  ┌──────────────────┐  ┌────────────────────────┐ │       │
+│  │  │  Secrets Manager  │  │  Health Monitor  │  │   Audit Logger         │ │       │
+│  │  │  (encrypted)      │  │  (metrics/cache) │  │   (events)             │ │       │
+│  │  └──────────────────┘  └──────────────────┘  └────────────────────────┘ │       │
+│  └──────────────────────────────────────────────────────────────────────────┘       │
+│                                                                                      │
+│  ┌──────────────────────────────────────────────────────────────────────────┐       │
+│  │                     CONFIGURATION STORE ($MCP_HOME/)                      │       │
+│  │                                                                           │       │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────────────┐ │       │
+│  │  │registry  │ │ config   │ │ profiles/│ │ servers/ │ │ secrets/ (enc)  │ │       │
+│  │  │ .yaml    │ │ .yaml    │ │          │ │          │ │                │ │       │
+│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘ └────────────────┘ │       │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────────────┐ │       │
+│  │  │ cache/   │ │ logs/    │ │downloads/│ │templates/│ │  backups/      │ │       │
+│  │  │          │ │          │ │          │ │          │ │                │ │       │
+│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘ └────────────────┘ │       │
+│  └──────────────────────────────────────────────────────────────────────────┘       │
+│                                                                                      │
+│  ┌──────────────────────────────────────────────────────────────────────────┐       │
+│  │                         MCP SERVER PROCESSES                              │       │
+│  │                                                                           │       │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │       │
+│  │  │  Context7    │  │   Serena     │  │    GitHub    │  │  Playwright  │ │       │
+│  │  │  (stdio)     │  │  (stdio)     │  │  (stdio)     │  │  (stdio)     │ │       │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘  └──────────────┘ │       │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │       │
+│  │  │  Filesystem  │  │  PostgreSQL  │  │    Docker    │  │  SeqThink    │ │       │
+│  │  │  (stdio)     │  │  (stdio)     │  │  (stdio/sock)│  │  (stdio)     │ │       │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘  └──────────────┘ │       │
+│  └──────────────────────────────────────────────────────────────────────────┘       │
+└─────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 3. Component Diagram (C4 Level 3) — Core Library
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────┐
+│                              CORELIB (libmcp)                                       │
+│                                                                                     │
+│  ┌──────────────────────────────────────────────────────────────────────────┐      │
+│  │  ServerManager                                                           │      │
+│  │  ┌──────────────────────────────────────────────────────────────────┐    │      │
+│  │  │  StateMachine: REGISTERED → INSTALLED → STARTING → HEALTHY → ... │    │      │
+│  │  │  restart_policy: exponential_backoff(max_attempts=3)             │    │      │
+│  │  │  dependency_manager: topo_sort(server_dependencies)              │    │      │
+│  │  └──────────────────────────────────────────────────────────────────┘    │      │
+│  └──────────────────────────────────────────────────────────────────────────┘      │
+│                                                                                     │
+│  ┌──────────────────────────────┐  ┌──────────────────────────────────────────┐     │
+│  │  TransportLayer              │  │  AuthorizationEngine                     │     │
+│  │  ┌────────────────────────┐  │  │  ┌──────────────────────────────────┐    │     │
+│  │  │  StdioTransport        │  │  │  │  evaluate(agent, server, tool,   │    │     │
+│  │  │  - subprocess.Popen    │  │  │  │    args, workspace) → Decision   │    │     │
+│  │  │  - stdin/stdout JSON   │  │  │  │  - Profile lookup               │    │     │
+│  │  └────────────────────────┘  │  │  │  - Trust evaluation              │    │     │
+│  │  ┌────────────────────────┐  │  │  │  - Risk classification           │    │     │
+│  │  │  SseTransport          │  │  │  │  - Workspace boundary check      │    │     │
+│  │  │  - aiohttp SSE client  │  │  │  │  - Approval policy               │    │     │
+│  │  │  - event stream parser │  │  │  └──────────────────────────────────┘    │     │
+│  │  └────────────────────────┘  │  └──────────────────────────────────────────┘     │
+│  │  ┌────────────────────────┐  │                                                  │
+│  │  │  HttpTransport         │  │  ┌──────────────────────────────────────────┐     │
+│  │  │  - httpx.AsyncClient   │  │  │  RegistryManager                         │     │
+│  │  │  - direct HTTP JSON    │  │  │  ┌──────────────────────────────────┐    │     │
+│  │  └────────────────────────┘  │  │  │  load() / save()                │    │     │
+│  │  ┌────────────────────────┐  │  │  │  get_server(id)                 │    │     │
+│  │  │  TransportFactory      │  │  │  │  search(category, tag)          │    │     │
+│  │  │  create(config)→Transport│  │  │  │  validate(schema)             │    │     │
+│  │  └────────────────────────┘  │  │  │  update_version(id, version)    │    │     │
+│  └──────────────────────────────┘  │  └──────────────────────────────────┘    │     │
+│                                     └──────────────────────────────────────────┘     │
+│  ┌──────────────────────────────┐  ┌──────────────────────────────────────────┐     │
+│  │  ProfileManager              │  │  SecretsManager                          │     │
+│  │  ┌────────────────────────┐  │  │  ┌──────────────────────────────────┐    │     │
+│  │  │  list_profiles()       │  │  │  │  resolve(name) → str            │    │     │
+│  │  │  activate(name)        │  │  │  │  - env var (highest priority)   │    │     │
+│  │  │  detect_workspace(path)│  │  │  │  - encrypted file               │    │     │
+│  │  │  get_enabled_servers() │  │  │  │  - OS keychain (future)         │    │     │
+│  │  └────────────────────────┘  │  │  │  - interactive prompt           │    │     │
+│  └──────────────────────────────┘  │  └──────────────────────────────────┘    │     │
+│                                     └──────────────────────────────────────────┘     │
+│  ┌──────────────────────────────┐  ┌──────────────────────────────────────────┐     │
+│  │  UpdateManager               │  │  HealthMonitor                           │     │
+│  │  ┌────────────────────────┐  │  │  ┌──────────────────────────────────┐    │     │
+│  │  │  check(server)→version │  │  │  │  check_all() → list[HealthReport]│    │     │
+│  │  │  validate_compat()     │  │  │  │  check_one(id) → HealthReport     │    │     │
+│  │  │  backup()              │  │  │  │  metrics: latency, cpu, ram       │    │     │
+│  │  │  apply()               │  │  │  │  threshold_alerts()              │    │     │
+│  │  │  rollback(version)     │  │  │  └──────────────────────────────────┘    │     │
+│  │  └────────────────────────┘  │  └──────────────────────────────────────────┘     │
+│  └──────────────────────────────┘                                                    │
+│                                                                                     │
+│  ┌──────────────────────────────┐  ┌──────────────────────────────────────────┐     │
+│  │  AgentConfigGenerator        │  │  AuditLogger                             │     │
+│  │  ┌────────────────────────┐  │  │  ┌──────────────────────────────────┐    │     │
+│  │  │  generate_claude()     │  │  │  │  log(event, data)                │    │     │
+│  │  │  generate_opencode()   │  │  │  │  query(filters) → list[Event]    │    │     │
+│  │  │  generate_vscode()     │  │  │  │  rotate(max_size)                │    │     │
+│  │  │  generate_all()        │  │  │  └──────────────────────────────────┘    │     │
+│  │  └────────────────────────┘  │  └──────────────────────────────────────────┘     │
+│  └──────────────────────────────┘                                                    │
+└────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 4. Sequence Diagrams
+
+### 4.1 MCP Server Discovery Flow
+
+```
+Agent                    MCP CLI                   Registry               Server Process
+  │                         │                         │                        │
+  │  mcp list servers       │                         │                        │
+  │────────────────────────►│                         │                        │
+  │                         │  get_enabled_servers()  │                        │
+  │                         │────────────────────────►│                        │
+  │                         │◄────────────────────────│                        │
+  │                         │                         │                        │
+  │                         │  for each server:       │                        │
+  │                         │    check cache          │                        │
+  │                         │    if cached & fresh:   │                        │
+  │                         │      use cached tools   │                        │
+  │                         │    else:                │                        │
+  │                         │      start (or connect) │                        │
+  │                         │────────────────────────────────────────────────►│
+  │                         │                         │    handshake           │
+  │                         │◄────────────────────────────────────────────────│
+  │                         │                         │                        │
+  │                         │      tools/list         │                        │
+  │                         │────────────────────────────────────────────────►│
+  │                         │◄────────────────────────────────────────────────│
+  │                         │                         │                        │
+  │  tool list (JSON)       │                         │                        │
+  │◄────────────────────────│                         │                        │
+  │                         │                         │                        │
+```
+
+### 4.2 Tool Call Flow (Agent → Transport → Server)
+
+```
+Agent                  MCP Client              Transport             MCP Server
+  │                        │                       │                      │
+  │  call_tool(name, args) │                       │                      │
+  │───────────────────────►│                       │                      │
+  │                        │  TransportFactory     │                      │
+  │                        │  .create(config)      │                      │
+  │                        │───────┬──────────────►│                      │
+  │                        │       │               │                      │
+  │                        │  authorize(agent,     │                      │
+  │                        │    server, tool, args)│                      │
+  │                        │◄──────┘               │                      │
+  │                        │                       │                      │
+  │                        │  if DECISION == ALLOW:│                      │
+  │                        │                       │                      │
+  │                        │  send_request(        │                      │
+  │                        │   "tools/call",       │  JSON-RPC over       │
+  │                        │   {name, arguments})  │  stdio/http/sse      │
+  │                        │─────────────────────────────────────────────►│
+  │                        │                       │                      │
+  │                        │                       │    execute tool      │
+  │                        │                       │                      │
+  │                        │◄─────────────────────────────────────────────│
+  │                        │                       │                      │
+  │                        │  log audit event      │                      │
+  │                        │                       │                      │
+  │  tool_result           │                       │                      │
+  │◄───────────────────────│                       │                      │
+  │                        │                       │                      │
+  │  if DECISION ==        │                       │                      │
+  │    PENDING_APPROVAL:   │                       │                      │
+  │    show approval UI    │                       │                      │
+  │                        │                       │                      │
+```
+
+### 4.3 Permission Evaluation Flow
+
+```
+Agent               AuthorizationEngine        ProfileRepo        TrustRegistry
+  │                        │                       │                    │
+  │  authorize(agent,      │                       │                    │
+  │   server, tool, args)  │                       │                    │
+  │───────────────────────►│                       │                    │
+  │                        │                       │                    │
+  │                        │  1. Load agent profile│                    │
+  │                        │──────────────────────►│                    │
+  │                        │◄──────────────────────│                    │
+  │                        │                       │                    │
+  │                        │  2. Evaluate server   │                    │
+  │                        │     trust level       │                    │
+  │                        │───────────────────────────────────────────►│
+  │                        │◄───────────────────────────────────────────│
+  │                        │                       │                    │
+  │                        │  3. Classify tool risk│                    │
+  │                        │     (from tool name)  │                    │
+  │                        │                       │                    │
+  │                        │  4. Check workspace   │                    │
+  │                        │     boundaries        │                    │
+  │                        │                       │                    │
+  │                        │  5. Apply policy:     │                    │
+  │                        │                      │                    │
+  │                        │  ┌─────────────────┐  │                    │
+  │                        │  │ HIGH trust  +   │  │                    │
+  │                        │  │ LOW risk   = ALLOW│  │                    │
+  │                        │  │ HIGH trust  +   │  │                    │
+  │                        │  │ HIGH risk  = APPROVE│ │                    │
+  │                        │  │ LOW trust +    │  │                    │
+  │                        │  │ any risk = DENY │  │                    │
+  │                        │  └─────────────────┘  │                    │
+  │                        │                       │                    │
+  │  DECISION (Allow/Deny/ │                       │                    │
+  │   PendingApproval)     │                       │                    │
+  │◄───────────────────────│                       │                    │
+  │                        │                       │                    │
+```
+
+### 4.4 Update/Rollback Flow
+
+```
+User                 MCP CLI               Registry             Backup Store         Server
+  │                     │                      │                      │                 │
+  │  mcp update apply   │                      │                      │                 │
+  │────────────────────►│                      │                      │                 │
+  │                     │                      │                      │                 │
+  │                     │  1. Check versions   │                      │                 │
+  │                     │─────────────────────►│                      │                 │
+  │                     │◄─────────────────────│                      │                 │
+  │                     │                      │                      │                 │
+  │                     │  2. Backup current   │                      │                 │
+  │                     │────────────────────────────────────────────►│                 │
+  │                     │◄────────────────────────────────────────────│                 │
+  │                     │                      │                      │                 │
+  │                     │  3. Stop server      │                      │                 │
+  │                     │─────────────────────────────────────────────────────────────►│
+  │                     │◄─────────────────────────────────────────────────────────────│
+  │                     │                      │                      │                 │
+  │                     │  4. Install new      │                      │                 │
+  │                     │     version          │                      │                 │
+  │                     │  (download, verify,  │                      │                 │
+  │                     │   extract)           │                      │                 │
+  │                     │                      │                      │                 │
+  │                     │  5. Validate         │                      │                 │
+  │                     │  - tools/list works  │                      │                 │
+  │                     │  - health check OK   │                      │                 │
+  │                     │  - benchmark pass    │                      │                 │
+  │                     │                      │                      │                 │
+  │                     │  6. Update registry  │                      │                 │
+  │                     │─────────────────────►│                      │                 │
+  │                     │  version: "1.2.0"    │                      │                 │
+  │                     │◄─────────────────────│                      │                 │
+  │                     │                      │                      │                 │
+  │                     │  7. Generate agent   │                      │                 │
+  │                     │     configs          │                      │                 │
+  │                     │                      │                      │                 │
+  │  Update complete    │                      │                      │                 │
+  │◄────────────────────│                      │                      │                 │
+  │                     │                      │                      │                 │
+  │  mcp update rollback│                      │                      │                 │
+  │────────────────────►│                      │                      │                 │
+  │                     │  1. Load backup      │                      │                 │
+  │                     │────────────────────────────────────────────►│                 │
+  │                     │◄────────────────────────────────────────────│                 │
+  │                     │  2. Stop new version │                      │                 │
+  │                     │  3. Restore old files│                      │                 │
+  │                     │  4. Start old version│                      │                 │
+  │                     │  5. Verify health    │                      │                 │
+  │                     │                      │                      │                 │
+  │  Rollback complete  │                      │                      │                 │
+  │◄────────────────────│                      │                      │                 │
+```
+
+---
+
+## 5. Deployment Diagrams
+
+### 5.1 Standalone Deployment (Local Development)
+
+```
+┌─────────────────────────────────────────────────────┐
+│                    Developer Machine                  │
+│                                                       │
+│  ┌───────────────────────────────────────────────┐   │
+│  │           AI Coding Agents                      │   │
+│  │  ┌──────────┐  ┌──────────┐  ┌────────────┐   │   │
+│  │  │Claude    │  │ OpenCode │  │ Antigravity│   │   │
+│  │  │Code      │  │          │  │            │   │   │
+│  │  └────┬─────┘  └────┬─────┘  └─────┬──────┘   │   │
+│  └───────┼─────────────┼──────────────┼───────────┘   │
+│          │             │              │                │
+│  ┌───────▼─────────────▼──────────────▼───────────┐   │
+│  │               MCP Platform CLI (mcp)            │   │
+│  │  ┌─────────────────────────────────────────┐    │   │
+│  │  │           Core Library (libmcp)          │    │   │
+│  │  │  ServerManager · TransportLayer · Auth   │    │   │
+│  │  │  Registry · Profiles · Updates · Audit   │    │   │
+│  │  └─────────────────────────────────────────┘    │   │
+│  └─────────────────────────────────────────────────┘   │
+│                                                       │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │           Local MCP Server Processes             │   │
+│  │                                                   │   │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────┐ │   │
+│  │  │ Context7 │ │  Serena  │ │  GitHub  │ │Filesys│ │   │
+│  │  │ (STDIO)  │ │ (STDIO)  │ │ (STDIO)  │ │(STDIO)│ │   │
+│  │  └──────────┘ └──────────┘ └──────────┘ └──────┘ │   │
+│  │                                                   │   │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────┐ │   │
+│  │  │ Postgres │ │  Docker  │ │Playwright│ │Memory │ │   │
+│  │  │ (STDIO)  │ │ (STDIO)  │ │ (STDIO)  │ │(STDIO)│ │   │
+│  │  └──────────┘ └──────────┘ └──────────┘ └──────┘ │   │
+│  └─────────────────────────────────────────────────┘   │
+│                                                       │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │            $MCP_HOME (Configuration)             │   │
+│  │  registry.yaml · config.yaml · profiles/        │   │
+│  │  servers/ · secrets/ · cache/ · logs/           │   │
+│  └─────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────┘
+```
+
+### 5.2 Docker Deployment (Containerized Servers)
+
+```
+┌───────────────────────────────────────────────────────────────┐
+│                      Docker Host                               │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │                   Docker Network (mcp-net)               │   │
+│  │                                                           │   │
+│  │  ┌────────────────┐  ┌────────────────┐  ┌────────────┐  │   │
+│  │  │  MCP Proxy      │  │  PostgreSQL    │  │  Qdrant    │  │   │
+│  │  │  (HTTP/SSE GW)  │  │  (Database)    │  │  (Vector)  │  │   │
+│  │  │  Port 8080      │  │  Port 5432     │  │  Port 6333 │  │   │
+│  │  └────────┬───────┘  └────────────────┘  └────────────┘  │   │
+│  │           │                                                │   │
+│  │  ┌────────▼───────┐  ┌────────────────┐  ┌────────────┐  │   │
+│  │  │  Context7       │  │  Serena        │  │  n8n       │  │   │
+│  │  │  (Docs)         │  │  (Code)        │  │  (Workflow)│  │   │
+│  │  └────────────────┘  └────────────────┘  └────────────┘  │   │
+│  │                                                           │   │
+│  │  ┌────────────────┐  ┌────────────────┐  ┌────────────┐  │   │
+│  │  │  GitHub         │  │  Playwright    │  │  Obsidian  │  │   │
+│  │  │  (Git)          │  │  (Browser)     │  │  (Notes)   │  │   │
+│  │  └────────────────┘  └────────────────┘  └────────────┘  │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │                Volume Mounts                              │   │
+│  │  mcp_config:/home/mcp/.config/mcp   (Configuration)     │   │
+│  │  mcp_data:/home/mcp/data            (Persistent data)    │   │
+│  │  workspace:/workspace               (Developer projects) │   │
+│  └─────────────────────────────────────────────────────────┘   │
+└───────────────────────────────────────────────────────────────┘
+```
+
+### 5.3 K.A.O.S Integrated Deployment (Phase 2)
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                     K.A.O.S Platform                              │
+│                                                                    │
+│  ┌──────────────────────────────────────────────────────────┐    │
+│  │              Desktop (Tauri)                               │    │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌────────────────┐  │    │
+│  │  │  MCP Registry │  │  MCP Health  │  │  MCP Config    │  │    │
+│  │  │  UI           │  │  Dashboard   │  │  Editor        │  │    │
+│  │  └──────┬───────┘  └──────┬───────┘  └───────┬────────┘  │    │
+│  │         │                 │                    │           │    │
+│  │  ┌──────▼─────────────────▼────────────────────▼────────┐  │    │
+│  │  │           Desktop MCP Host (Tauri Sidecar)            │  │    │
+│  │  │  Playwright · Context7 · Serena · Filesystem (local) │  │    │
+│  │  └────────────────────────┬─────────────────────────────┘  │    │
+│  └───────────────────────────┼────────────────────────────────┘    │
+│                              │ HTTP/SSE                             │
+│  ┌───────────────────────────▼────────────────────────────────┐    │
+│  │                     K.A.O.S Backend (FastAPI)                 │    │
+│  │                                                               │    │
+│  │  ┌──────────────────────────────────────────────────────┐    │    │
+│  │  │              MCP Gateway                              │    │    │
+│  │  │  ┌────────────┐ ┌────────────┐ ┌──────────────────┐  │    │    │
+│  │  │  │  Router    │ │  Circuit   │ │  Rate Limiter    │  │    │    │
+│  │  │  │           │ │  Breaker   │ │                  │  │    │    │
+│  │  │  └────────────┘ └────────────┘ └──────────────────┘  │    │    │
+│  │  └──────────────────────────────────────────────────────┘    │    │
+│  │                                                               │    │
+│  │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌────────┐  │    │
+│  │  │ Permission  │ │ Capability  │ │  SSE        │ │ Audit  │  │    │
+│  │  │ Engine      │ │ Registry    │ │  Transport  │ │ Logger │  │    │
+│  │  └─────────────┘ └─────────────┘ └─────────────┘ └────────┘  │    │
+│  │                                                               │    │
+│  │  ┌──────────────────────────────────────────────────────┐    │    │
+│  │  │              K.A.O.S Custom MCP Servers               │    │    │
+│  │  │  Graphify · KIRL · kaos-n8n · kaos-obsidian          │    │    │
+│  │  │  Workflows · Qdrant · GitHub Actions                 │    │    │
+│  │  └──────────────────────────────────────────────────────┘    │    │
+│  │                                                               │    │
+│  │  ┌──────────────────────────────────────────────────────┐    │    │
+│  │  │              Agent Integration                        │    │    │
+│  │  │  LangGraph · ToolRegistry · mcp_adapter.py (v2)     │    │    │
+│  │  └──────────────────────────────────────────────────────┘    │    │
+│  └───────────────────────────────────────────────────────────────┘    │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 6. Configuration Hierarchy
+
+```
+                     ┌──────────────────────────────────┐
+                     │     Environment Variables          │
+                     │  MCP_HOME, MCP_PROFILE, MCP_DEBUG │
+                     │  GITHUB_TOKEN, OPENAI_API_KEY, ... │
+                     └──────────────┬───────────────────┘
+                                    │ 1 (highest priority)
+                     ┌──────────────▼───────────────────┐
+                     │     Per-Project Local Config      │
+                     │  $PROJECT/.mcp/config.yaml       │
+                     │  (overrides for specific project) │
+                     └──────────────┬───────────────────┘
+                                    │ 2
+                     ┌──────────────▼───────────────────┐
+                     │     Active Profile(s)              │
+                     │  $MCP_HOME/profiles/<name>.yaml  │
+                     │  (backend, frontend, devops, ...) │
+                     └──────────────┬───────────────────┘
+                                    │ 3
+                     ┌──────────────▼───────────────────┐
+                     │     Global User Config             │
+                     │  $MCP_HOME/config.yaml            │
+                     │  (user preferences, overrides)    │
+                     └──────────────┬───────────────────┘
+                                    │ 4
+                     ┌──────────────▼───────────────────┐
+                     │     Platform Defaults              │
+                     │  (compiled into the tool)          │
+                     │  (sensible defaults for all fields)│
+                     └──────────────────────────────────┘
+                                    │ 5 (lowest priority)
+```
+
+---
+
+## 7. Directory Structure (Final)
+
+```
+$MCP_HOME/                              # Platform root (configurable via MCP_HOME)
+│
+├── registry.yaml                       # Master server catalog (versioned)
+├── config.yaml                         # User configuration
+│
+├── profiles/                           # Engineering profiles
+│   ├── backend.yaml
+│   ├── frontend.yaml
+│   ├── devops.yaml
+│   ├── ai-llm.yaml
+│   ├── security.yaml
+│   ├── documentation.yaml
+│   ├── data-engineering.yaml
+│   ├── full-stack.yaml
+│   └── minimal.yaml
+│
+├── active_profile.yaml                 # Current active profile set
+│
+├── servers/                            # Per-server runtime configuration
+│   ├── context7.yaml
+│   ├── serena.yaml
+│   ├── github.yaml
+│   ├── filesystem.yaml
+│   ├── sequential-thinking.yaml
+│   ├── postgres.yaml
+│   ├── docker.yaml
+│   ├── playwright.yaml
+│   ├── fetch.yaml
+│   └── memory.yaml
+│
+├── secrets/                            # Encrypted secret storage
+│   ├── key.age                         # Encryption key
+│   ├── github.enc                      # Encrypted secrets file
+│   ├── postgres.enc
+│   └── ...
+│
+├── cache/                              # Runtime caches
+│   ├── tools/                          # Cached tool lists
+│   ├── schemas/                        # Cached input schemas
+│   └── health/                         # Cached health data
+│       └── metrics.db                  # SQLite metrics database
+│
+├── logs/                               # Log storage
+│   ├── platform.log                    # Platform operations
+│   ├── audit.log                       # Authorization events
+│   └── servers/                        # Per-server logs
+│       ├── context7.log
+│       ├── github.log
+│       └── ...
+│
+├── downloads/                          # Downloaded binaries
+│   ├── context7-v1.2.0/
+│   ├── serena-v0.9.0/
+│   └── ...
+│
+├── templates/                          # Agent config templates
+│   ├── claude.json.tmpl
+│   ├── opencode.json.tmpl
+│   ├── vscode.json.tmpl
+│   └── antigravity.json.tmpl
+│
+├── backups/                            # Update snapshots
+│   ├── manifest.yaml
+│   ├── bk_20260712_143000/
+│   └── ...
+│
+├── installers/                         # Installation scripts
+│   ├── install.ps1
+│   └── install.sh
+│
+├── security/                           # Security configuration
+│   ├── incident-response.yaml
+│   └── trusted-keys.gpg               # GPG keys for registry verification
+│
+└── disaster-recovery.yaml             # Recovery procedures
+```
+
+---
+
+## 8. Technology Stack
+
+| Component | Technology | Justification |
+|-----------|------------|---------------|
+| **CLI** | Python (Click/Typer) | Consistent with K.A.O.S backend; cross-platform; rich ecosystem |
+| **Core Library** | Python (asyncio) | Async is essential for concurrent server management; existing codebase is Python |
+| **Configuration** | YAML | Human-readable; diffable; widely supported; used by MCP ecosystem |
+| **Secret Encryption** | Age (age-n ago) | Simple, modern, cross-platform encryption; single binary dependency |
+| **HTTP Transport** | httpx / aiohttp | Async HTTP client/server for SSE support |
+| **Docker** | docker-compose | Containerized MCP servers; consistent environment |
+| **CLI Distribution** | pip / uv / standalone binary | Flexible distribution options |
+| **Health Database** | SQLite (via aiosqlite) | Lightweight metrics storage; zero configuration |
+| **Agent Config Templates** | Jinja2 | Flexible template rendering; Python-native |
+
+---
+
+## 9. Key Interfaces
+
+### Platform → Agent (Generated Config)
+
+```json
+// ~/.claude.json (generated by `mcp generate claude-code`)
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"],
+      "env": {}
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "env": {}
+    }
+  }
+}
+```
+
+```json
+// .opencode.json (generated by `mcp generate opencode`)
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"]
+    }
+  }
+}
+```
+
+### Platform → MCP Server (Registry Entry)
+
+```yaml
+# $MCP_HOME/servers/context7.yaml
+id: context7
+config:
+  command: "npx"
+  args: ["-y", "@context7/mcp-server@1.2.0"]
+  env: {}
+  transport: stdio
+  auto_update: true
+  update_policy: minor
+```
+
+### Platform → Storage (Secrets)
+
+```yaml
+# $MCP_HOME/secrets/github.yaml (encrypted as github.enc)
+version: "1.0"
+secrets:
+  GITHUB_TOKEN: "ghp_xxxxxxxxxxxxxxxxxxxx"    # Encrypted at rest
+---                                                                     # GPG signature
+-----BEGIN PGP SIGNATURE-----
+...
+-----END PGP SIGNATURE-----
+```
+
+---
+
+## 10. Evolution Roadmap
+
+```
+Phase 0     Phase 1              Phase 2                 Future
+───────     ────────             ────────                 ──────
+                                   
+ADRs      mcp CLI               K.A.O.S Gateway          OPA/Rego policies
+Diagrams  registry.yaml         Permission Engine        Web UI dashboard
+Schema    Installers            SSE Transport            VS Code extension
+Design    Docker stack          Custom MCP servers        Plugin system
+Threat    Health Monitor        Desktop MCP host         Remote sync (multi-machine)
+Model     Update Manager        Observability            Mobile access
+          Agent config gen      Agent integration        CI/CD pipeline support
+          Benchmark suite                                Public server marketplace
+```
+
+---
+
+## Appendix: Glossary
+
+| Term | Definition |
+|------|------------|
+| **MCP** | Model Context Protocol — standard for LLM tool interaction |
+| **STDIO Transport** | MCP over subprocess stdin/stdout |
+| **HTTP/SSE Transport** | MCP over HTTP with Server-Sent Events |
+| **Server** | MCP server process exposing tools |
+| **Tool** | A function exposed by an MCP server |
+| **Agent** | AI coding assistant consuming MCP tools |
+| **Profile** | Named set of enabled servers for a workflow |
+| **Registry** | Versioned catalog of all known servers |
+| **Gateway** | Centralized MCP traffic controller (Phase 2) |
+| **Transport** | Communication protocol between client and server |
