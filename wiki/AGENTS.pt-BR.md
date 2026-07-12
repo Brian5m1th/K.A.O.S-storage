@@ -1,179 +1,62 @@
----
-id: agents.pt-br
-type: knowledge
-phase: Fase 1
-status: in-progress
-tags:
-- kaos
-- normalized
-reconstruction_confidence: medium
----
+# docs\wiki\AGENTS.pt-BR.md
 
-﻿---
-type: knowledge
-domain: obsidian
-status: active
----
+## Símbolos
 
-# ConfiguraçÃes de Agente pt-BR
-*K.A.O.S Knowledge Wiki - Agent Schema pt-BR*
+- [[docs_wiki_agents_pt_br]] — code: AGENTS.pt-BR.md
+- [[docs_wiki_agents_pt_br_configuraçães_de_agente_pt_br]] — code: ConfiguraçÃes de Agente pt-BR
+- [[docs_wiki_agents_pt_br_parent]] — code: Parent
+- [[docs_wiki_agents_pt_br_children]] — code: Children
+- [[docs_wiki_agents_pt_br_related]] — code: Related
+- [[docs_wiki_agents_pt_br_tags]] — code: Tags
+- [[docs_wiki_agents_pt_br_conteudo]] — code: Conteudo
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] — code: K.A.O.S Knowledge Wiki — Schema do Agente
+- [[docs_wiki_agents_pt_br_estrutura_de_diretórios]] — code: Estrutura de Diretórios
+- [[docs_wiki_agents_pt_br_frontmatter_obrigatório]] — code: Frontmatter (Obrigatório)
+- [[docs_wiki_agents_pt_br_convenções_de_nomenclatura]] — code: Convenções de Nomenclatura
+- [[docs_wiki_agents_pt_br_fluxos_de_trabalho]] — code: Fluxos de Trabalho
+- [[docs_wiki_agents_pt_br_ingestão]] — code: Ingestão
+- [[docs_wiki_agents_pt_br_consulta]] — code: Consulta
+- [[docs_wiki_agents_pt_br_aprovação_de_draft]] — code: Aprovação de Draft
+- [[docs_wiki_agents_pt_br_regras_de_cross_reference]] — code: Regras de Cross-Reference
+- [[docs_wiki_agents_pt_br_modo_draft]] — code: Modo Draft
+- [[docs_wiki_agents_pt_br_verificações_de_lint]] — code: Verificações de Lint
+- [[docs_wiki_agents_pt_br_resumo]] — code: Resumo
+- [[docs_wiki_agents_pt_br_objetivo]] — code: Objetivo
+- [[docs_wiki_agents_pt_br_responsabilidades]] — code: Responsabilidades
+- [[docs_wiki_agents_pt_br_dependencias]] — code: Dependencias
+- [[docs_wiki_agents_pt_br_integracoes]] — code: Integracoes
+- [[docs_wiki_agents_pt_br_arquivos_relacionados]] — code: Arquivos Relacionados
+- [[docs_wiki_agents_pt_br_referencias_kirl]] — code: Referencias KIRL
+- [[docs_wiki_agents_pt_br_status]] — code: Status
+- [[docs_wiki_agents_pt_br_ultima_atualizacao]] — code: Ultima Atualizacao
 
-> Versao em portugues do contrato de regras e diretrizes agentivas de escrita/leitura no vault.
+## Dependências
 
-## Parent
-- [[Memoria do Obsidian]]
-
-## Children
-- [[index]]
-
-## Related
-- [[Estrutura da Wiki]]
-
-## Tags
-#kaos #obsidian #agent #schema
-
----
-
-## Conteudo
-# K.A.O.S Knowledge Wiki — Schema do Agente
-
-Este arquivo define as convenções, fluxos de trabalho e regras que você deve seguir ao manter a wiki. Consulte-o antes de toda ingestão, consulta ou operação de manutenção.
-
----
-
-## Estrutura de Diretórios
-
-```
-wiki/
-├── AGENTS.md              # Versão em inglês — schema e convenções
-├── AGENTS.pt-BR.md        # Este arquivo — versão em português
-├── index.md               # Catálogo vivo de todas as páginas wiki
-├── log.md                 # Timeline append-only de alterações
-│
-├── entities/              # Objetos concretos: pessoas, projetos, tecnologias
-├── concepts/              # Abstrações: RAG, embeddings, LangGraph
-├── sources/               # Resumos de cada fonte ingerida
-└── synthesis/             # Conhecimento derivado: análises, comparações, teses
-```
-
----
-
-## Frontmatter (Obrigatório)
-
-Toda página wiki DEVE ter frontmatter YAML:
-
-```yaml
----
-title: Nome da Página
-type: entity | concept | source | synthesis
-  - tag1
-  - tag2
-sources:
-  - nome_do_arquivo_fonte
-created: 2026-06-18
-updated: 2026-06-18
----
-```
-
-- `type` deve corresponder ao subdiretório (entities → entity, concepts → concept)
-- `sources` lista as páginas de origem das quais o conteúdo é derivado
-- `updated` é sempre a data atual ao modificar
-
----
-
-## Convenções de Nomenclatura
-
-| Tipo      | Padrão de nome                    | Exemplo                              |
-|-----------|-----------------------------------|--------------------------------------|
-| entity    | `entities/{kebab-case}.md`       | `entities/brian-smith.md`           |
-| concept   | `concepts/{kebab-case}.md`       | `concepts/retrieval-augmented-generation.md` |
-| source    | `sources/YYYY-MM-DD_slug.md`     | `sources/2026-06-18_llm-wiki.md`    |
-| synthesis | `synthesis/{kebab-case}.md`      | `synthesis/comparacao-mamba-vs-rwkv.md` |
-
----
-
-## Fluxos de Trabalho
-
-### Ingestão
-
-1. Usuário fornece uma fonte ou diz "ingira esta fonte"
-2. Leia a fonte completamente de `raw/`
-3. Discuta os principais pontos com o usuário (peça orientação sobre ênfase)
-4. Crie/atualize páginas **como drafts** (`.draft.md`):
-   - Uma página de source em `sources/`
-   - Páginas de entidade em `entities/` (nova ou atualizada)
-   - Páginas de conceito em `concepts/` (nova ou atualizada)
-5. Apresente os drafts para aprovação do usuário
-6. Após aprovação: renomeie `.draft.md` → `.md`, atualize `index.md`, adicione ao `log.md`
-7. Opcionalmente, reindexe no Qdrant
-
-### Consulta
-
-1. Leia `index.md` para encontrar páginas relevantes
-2. Leia as páginas de entidade, conceito e síntese correspondentes
-3. Se o contexto for insuficiente, busque no Qdrant como fallback
-4. Sintetize a resposta com citações para as páginas wiki
-5. Se a resposta for substantiva, sugira criar uma página de síntese
-
-### Aprovação de Draft
-
-- `approve_draft(path)`: renomeia `.draft.md` → `.md`, atualiza index e log
-- `reject_draft(path)`: deleta `.draft.md`
-- `list_drafts()`: mostra todos os drafts pendentes
-
----
-
-## Regras de Cross-Reference
-
-- Toda entidade ou conceito mencionado em uma página deve usar o formato `[[AGENTS|Nome]]`
-- Ao criar uma página, verifique se páginas relacionadas precisam de atualização (backlinks)
-- Se um conceito for mencionado 3+ vezes na wiki mas não tiver página, sinalize
-- Se duas páginas se contradizerem, anote a contradição explicitamente
-
----
-
-## Modo Draft
-
-**Nenhuma alteração estrutural é feita sem aprovação explícita do usuário.**
-
-Todas as operações de criação e atualização primeiro criam um arquivo `.draft.md`. O usuário revisa e aprova (que finaliza) ou rejeita (que deleta). Apenas após a aprovação o `index.md` e `log.md` são atualizados.
-
-Exceção: `append_log` pode ser chamado diretamente (é append-only e não destrutivo).
-
----
-
-## Verificações de Lint
-
-Periodicamente (ou sob demanda) execute `lint_wiki()` para verificar:
-- **Contradições**: páginas com afirmações conflitantes
-- **Órfãos**: páginas sem links de entrada
-- **Conceitos ausentes**: conceitos mencionados frequentemente mas sem documentação
-- **Links quebrados**: `[[index]]` para páginas inexistentes
-- **Páginas desatualizadas**: data `updated` muito antiga relativa à última ingestão
-
-## Resumo
-- Informações pendentes de validação ou auto-geração.
-
-## Objetivo
-- Informações pendentes de validação ou auto-geração.
-
-## Responsabilidades
-- Informações pendentes de validação ou auto-geração.
-
-## Dependencias
-- Informações pendentes de validação ou auto-geração.
-
-## Integracoes
-- Informações pendentes de validação ou auto-geração.
-
-## Arquivos Relacionados
-- Informações pendentes de validação ou auto-geração.
-
-## Referencias KIRL
-- Informações pendentes de validação ou auto-geração.
-
-## Status
-- Informações pendentes de validação ou auto-geração.
-
-## Ultima Atualizacao
-- Informações pendentes de validação ou auto-geração.
+- [[docs_wiki_agents_pt_br]] → `references` → [[docs_wiki_agents]]
+- [[docs_wiki_agents_pt_br]] → `contains` → [[docs_wiki_agents_pt_br_configuraçães_de_agente_pt_br]]
+- [[docs_wiki_agents_pt_br]] → `contains` → [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]]
+- [[docs_wiki_agents_pt_br]] → `references` → [[docs_wiki_index]]
+- [[docs_wiki_agents_pt_br_configuraçães_de_agente_pt_br]] → `contains` → [[docs_wiki_agents_pt_br_children]]
+- [[docs_wiki_agents_pt_br_configuraçães_de_agente_pt_br]] → `contains` → [[docs_wiki_agents_pt_br_conteudo]]
+- [[docs_wiki_agents_pt_br_configuraçães_de_agente_pt_br]] → `contains` → [[docs_wiki_agents_pt_br_parent]]
+- [[docs_wiki_agents_pt_br_configuraçães_de_agente_pt_br]] → `contains` → [[docs_wiki_agents_pt_br_related]]
+- [[docs_wiki_agents_pt_br_configuraçães_de_agente_pt_br]] → `contains` → [[docs_wiki_agents_pt_br_tags]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_arquivos_relacionados]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_convenções_de_nomenclatura]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_dependencias]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_estrutura_de_diretórios]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_fluxos_de_trabalho]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_frontmatter_obrigatório]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_integracoes]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_modo_draft]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_objetivo]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_referencias_kirl]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_regras_de_cross_reference]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_responsabilidades]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_resumo]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_status]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_ultima_atualizacao]]
+- [[docs_wiki_agents_pt_br_k_a_o_s_knowledge_wiki_schema_do_agente]] → `contains` → [[docs_wiki_agents_pt_br_verificações_de_lint]]
+- [[docs_wiki_agents_pt_br_fluxos_de_trabalho]] → `contains` → [[docs_wiki_agents_pt_br_aprovação_de_draft]]
+- [[docs_wiki_agents_pt_br_fluxos_de_trabalho]] → `contains` → [[docs_wiki_agents_pt_br_consulta]]
+- [[docs_wiki_agents_pt_br_fluxos_de_trabalho]] → `contains` → [[docs_wiki_agents_pt_br_ingestão]]
