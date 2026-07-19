@@ -1,18 +1,17 @@
-# kaos-research\README.md
+# Wiki — K.A.O.S
 
-## Símbolos
+Bem-vindo à wiki do K.A.O.S.
 
-- [[kaos_research_readme]] — code: README.md
-- [[kaos_research_readme_k_a_o_s_architectural_evolution_laboratory]] — code: K.A.O.S Architectural Evolution Laboratory
-- [[kaos_research_readme_rules]] — code: Rules
-- [[kaos_research_readme_scientific_method_10_steps]] — code: Scientific Method (10 Steps)
-- [[kaos_research_readme_directory_structure]] — code: Directory Structure
-- [[kaos_research_readme_current_phase_state_audit_hypothesis_formulation]] — code: Current Phase: State Audit + Hypothesis Formulation
+## ADRs (Architecture Decision Records)
 
-## Dependências
+Os ADRs oficiais do projeto estão em [`docs/adr/`](../adr/).
 
-- [[kaos_research_readme]] → `contains` → [[kaos_research_readme_k_a_o_s_architectural_evolution_laboratory]]
-- [[kaos_research_readme_k_a_o_s_architectural_evolution_laboratory]] → `contains` → [[kaos_research_readme_current_phase_state_audit_hypothesis_formulation]]
-- [[kaos_research_readme_k_a_o_s_architectural_evolution_laboratory]] → `contains` → [[kaos_research_readme_directory_structure]]
-- [[kaos_research_readme_k_a_o_s_architectural_evolution_laboratory]] → `contains` → [[kaos_research_readme_rules]]
-- [[kaos_research_readme_k_a_o_s_architectural_evolution_laboratory]] → `contains` → [[kaos_research_readme_scientific_method_10_steps]]
+- [ADR-001: Consolidated Dashboard Endpoint](../adr/ADR-001-consolidated-dashboard-endpoint.md)
+- [ADR-002: Elimination of Mock Data](../adr/ADR-002-elimination-of-mock-data.md)
+- [ADR-003: Store Consolidation](../adr/ADR-003-store-consolidation.md)
+- [ADR-004: Offline Boot Gate](../adr/ADR-004-offline-boot-gate.md)
+- [ADR-005: DRL Snapshot Architecture](../adr/ADR-005-drl-snapshot-architecture.md)
+
+> ADRs específicos de subprojetos:
+> - **mcp-platform**: [`docs/mcp-platform/adr/`](../mcp-platform/adr/)
+> - **kaos-research**: [`kaos-research/adrs/`](../../kaos-research/adrs/)
