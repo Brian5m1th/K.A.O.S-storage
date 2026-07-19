@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "generated_at": "2026-07-12T13:07:36.182248+00:00",
+  "generated_at": "2026-07-19T23:26:49.226563+00:00",
   "generated_by": "bootstrap_feature_registry.py (git-history strategy)",
   "source": "git-log + filesystem-sdds",
-  "total_features": 179,
+  "total_features": 192,
   "features": [
     {
       "id": "autonomous",
@@ -125,6 +125,17 @@
       "updatedAt": "2026-06-11T00:21:47-03:00"
     },
     {
+      "id": "adr-005-wiki-dedup-remove",
+      "name": "W6 — ADR-005, wiki dedup, remove noisy dirs",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [],
+      "lastCommit": "e7e78c649a02",
+      "createdAt": "2026-07-19T18:37:34-03:00",
+      "updatedAt": "2026-07-19T18:37:34-03:00"
+    },
+    {
       "id": "adr-governance",
       "name": "ADR Governance Rules",
       "phase": "Fase 1",
@@ -134,8 +145,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.851803+00:00",
-      "updatedAt": "2026-07-12T13:07:35.851806+00:00"
+      "createdAt": "2026-07-19T23:26:48.901875+00:00",
+      "updatedAt": "2026-07-19T23:26:48.901878+00:00"
     },
     {
       "id": "adr-template",
@@ -147,8 +158,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.851926+00:00",
-      "updatedAt": "2026-07-12T13:07:35.851929+00:00"
+      "createdAt": "2026-07-19T23:26:48.901743+00:00",
+      "updatedAt": "2026-07-19T23:26:48.901747+00:00"
     },
     {
       "id": "agent",
@@ -198,8 +209,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.833581+00:00",
-      "updatedAt": "2026-07-12T13:07:35.833585+00:00"
+      "createdAt": "2026-07-19T23:26:48.887399+00:00",
+      "updatedAt": "2026-07-19T23:26:48.887404+00:00"
     },
     {
       "id": "audit",
@@ -344,8 +355,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.832944+00:00",
-      "updatedAt": "2026-07-12T13:07:35.832949+00:00"
+      "createdAt": "2026-07-19T23:26:48.882185+00:00",
+      "updatedAt": "2026-07-19T23:26:48.882191+00:00"
     },
     {
       "id": "config",
@@ -401,8 +412,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.853816+00:00",
-      "updatedAt": "2026-07-12T13:07:35.853822+00:00"
+      "createdAt": "2026-07-19T23:26:48.904111+00:00",
+      "updatedAt": "2026-07-19T23:26:48.904116+00:00"
     },
     {
       "id": "dashboard-honesto-4-state-protocol",
@@ -466,8 +477,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.851271+00:00",
-      "updatedAt": "2026-07-12T13:07:35.851275+00:00"
+      "createdAt": "2026-07-19T23:26:48.900111+00:00",
+      "updatedAt": "2026-07-19T23:26:48.900114+00:00"
     },
     {
       "id": "desktop-compatibility-report",
@@ -479,8 +490,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.848747+00:00",
-      "updatedAt": "2026-07-12T13:07:35.848751+00:00"
+      "createdAt": "2026-07-19T23:26:48.901516+00:00",
+      "updatedAt": "2026-07-19T23:26:48.901520+00:00"
     },
     {
       "id": "desktop-refactor-plan",
@@ -492,8 +503,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.848285+00:00",
-      "updatedAt": "2026-07-12T13:07:35.848289+00:00"
+      "createdAt": "2026-07-19T23:26:48.901038+00:00",
+      "updatedAt": "2026-07-19T23:26:48.901042+00:00"
     },
     {
       "id": "developer-guide",
@@ -505,8 +516,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.858221+00:00",
-      "updatedAt": "2026-07-12T13:07:35.858225+00:00"
+      "createdAt": "2026-07-19T23:26:48.907240+00:00",
+      "updatedAt": "2026-07-19T23:26:48.907244+00:00"
     },
     {
       "id": "devops",
@@ -542,8 +553,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.847606+00:00",
-      "updatedAt": "2026-07-12T13:07:35.847610+00:00"
+      "createdAt": "2026-07-19T23:26:48.886226+00:00",
+      "updatedAt": "2026-07-19T23:26:48.886231+00:00"
     },
     {
       "id": "docker",
@@ -660,8 +671,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.833399+00:00",
-      "updatedAt": "2026-07-12T13:07:35.833403+00:00"
+      "createdAt": "2026-07-19T23:26:48.895291+00:00",
+      "updatedAt": "2026-07-19T23:26:48.895296+00:00"
     },
     {
       "id": "especificacao-tecnica",
@@ -673,8 +684,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.844388+00:00",
-      "updatedAt": "2026-07-12T13:07:35.844393+00:00"
+      "createdAt": "2026-07-19T23:26:48.895775+00:00",
+      "updatedAt": "2026-07-19T23:26:48.895780+00:00"
     },
     {
       "id": "evidence-driven-decisions",
@@ -686,8 +697,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.851519+00:00",
-      "updatedAt": "2026-07-12T13:07:35.851523+00:00"
+      "createdAt": "2026-07-19T23:26:48.902036+00:00",
+      "updatedAt": "2026-07-19T23:26:48.902039+00:00"
     },
     {
       "id": "fase-3",
@@ -699,8 +710,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.839117+00:00",
-      "updatedAt": "2026-07-12T13:07:35.839125+00:00"
+      "createdAt": "2026-07-19T23:26:48.888344+00:00",
+      "updatedAt": "2026-07-19T23:26:48.888348+00:00"
     },
     {
       "id": "fase1-desktop-stabilization-honest",
@@ -822,8 +833,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.829197+00:00",
-      "updatedAt": "2026-07-12T13:07:35.829203+00:00"
+      "createdAt": "2026-07-19T23:26:48.884290+00:00",
+      "updatedAt": "2026-07-19T23:26:48.884294+00:00"
     },
     {
       "id": "finaliza-implementacoes-pendentes-rag",
@@ -877,8 +888,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.857274+00:00",
-      "updatedAt": "2026-07-12T13:07:35.857278+00:00"
+      "createdAt": "2026-07-19T23:26:48.907813+00:00",
+      "updatedAt": "2026-07-19T23:26:48.907818+00:00"
     },
     {
       "id": "formatting",
@@ -956,8 +967,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.838039+00:00",
-      "updatedAt": "2026-07-12T13:07:35.838044+00:00"
+      "createdAt": "2026-07-19T23:26:48.878224+00:00",
+      "updatedAt": "2026-07-19T23:26:48.878229+00:00"
     },
     {
       "id": "generate-icon-assets-skip",
@@ -994,8 +1005,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.830637+00:00",
-      "updatedAt": "2026-07-12T13:07:35.830641+00:00"
+      "createdAt": "2026-07-19T23:26:48.882659+00:00",
+      "updatedAt": "2026-07-19T23:26:48.882664+00:00"
     },
     {
       "id": "implementa-deteccao-contradicoes-logicas",
@@ -1150,8 +1161,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.855613+00:00",
-      "updatedAt": "2026-07-12T13:07:35.855617+00:00"
+      "createdAt": "2026-07-19T23:26:48.906773+00:00",
+      "updatedAt": "2026-07-19T23:26:48.906777+00:00"
     },
     {
       "id": "integra-agente-langgraph-nas",
@@ -1381,8 +1392,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.856543+00:00",
-      "updatedAt": "2026-07-12T13:07:35.856548+00:00"
+      "createdAt": "2026-07-19T23:26:48.905845+00:00",
+      "updatedAt": "2026-07-19T23:26:48.905850+00:00"
     },
     {
       "id": "knowledge-graph",
@@ -1548,8 +1559,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.841736+00:00",
-      "updatedAt": "2026-07-12T13:07:35.841741+00:00"
+      "createdAt": "2026-07-19T23:26:48.894286+00:00",
+      "updatedAt": "2026-07-19T23:26:48.894290+00:00"
     },
     {
       "id": "memory",
@@ -1711,8 +1722,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.850361+00:00",
-      "updatedAt": "2026-07-12T13:07:35.850365+00:00"
+      "createdAt": "2026-07-19T23:26:48.899653+00:00",
+      "updatedAt": "2026-07-19T23:26:48.899656+00:00"
     },
     {
       "id": "model",
@@ -1740,8 +1751,24 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.847157+00:00",
-      "updatedAt": "2026-07-12T13:07:35.847162+00:00"
+      "createdAt": "2026-07-19T23:26:48.875886+00:00",
+      "updatedAt": "2026-07-19T23:26:48.875891+00:00"
+    },
+    {
+      "id": "observabilidade-avanada",
+      "name": "W7 — Observabilidade Avançada",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "infra/docker/alerts.yml",
+        "infra/docker/docker-compose.yml",
+        "infra/docker/loki.yml",
+        "infra/grafana/dashboards/kaos-overview.json"
+      ],
+      "lastCommit": "a01ad0bac37c",
+      "createdAt": "2026-07-19T18:40:20-03:00",
+      "updatedAt": "2026-07-19T18:40:20-03:00"
     },
     {
       "id": "observability-real",
@@ -1753,8 +1780,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.823596+00:00",
-      "updatedAt": "2026-07-12T13:07:35.823602+00:00"
+      "createdAt": "2026-07-19T23:26:48.879937+00:00",
+      "updatedAt": "2026-07-19T23:26:48.879943+00:00"
     },
     {
       "id": "obsidian-guide",
@@ -1766,8 +1793,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.854925+00:00",
-      "updatedAt": "2026-07-12T13:07:35.854931+00:00"
+      "createdAt": "2026-07-19T23:26:48.908372+00:00",
+      "updatedAt": "2026-07-19T23:26:48.908376+00:00"
     },
     {
       "id": "obsidian-watcher",
@@ -1779,8 +1806,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.830182+00:00",
-      "updatedAt": "2026-07-12T13:07:35.830187+00:00"
+      "createdAt": "2026-07-19T23:26:48.896558+00:00",
+      "updatedAt": "2026-07-19T23:26:48.896562+00:00"
     },
     {
       "id": "obsidianservice-tools-leitura-escrita-busca-vault",
@@ -1810,8 +1837,8 @@
       "updatedAt": "2026-06-10T16:00:55-03:00"
     },
     {
-      "id": "operations-runbook",
-      "name": "K.A.O.S — Manual de Operações (Runbook)",
+      "id": "operations",
+      "name": "Guia de Operações — K.A.O.S",
       "phase": "Fase 1",
       "status": "in-progress",
       "docs": [
@@ -1820,8 +1847,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.855155+00:00",
-      "updatedAt": "2026-07-12T13:07:35.855159+00:00"
+      "createdAt": "2026-07-19T23:26:48.905354+00:00",
+      "updatedAt": "2026-07-19T23:26:48.905359+00:00"
     },
     {
       "id": "ops",
@@ -1943,8 +1970,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.822410+00:00",
-      "updatedAt": "2026-07-12T13:07:35.822422+00:00"
+      "createdAt": "2026-07-19T23:26:48.893835+00:00",
+      "updatedAt": "2026-07-19T23:26:48.893839+00:00"
     },
     {
       "id": "provider-routing",
@@ -1956,8 +1983,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.850225+00:00",
-      "updatedAt": "2026-07-12T13:07:35.850230+00:00"
+      "createdAt": "2026-07-19T23:26:48.900581+00:00",
+      "updatedAt": "2026-07-19T23:26:48.900585+00:00"
     },
     {
       "id": "proxy",
@@ -1982,8 +2009,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.851661+00:00",
-      "updatedAt": "2026-07-12T13:07:35.851664+00:00"
+      "createdAt": "2026-07-19T23:26:48.902647+00:00",
+      "updatedAt": "2026-07-19T23:26:48.902651+00:00"
     },
     {
       "id": "query",
@@ -2053,8 +2080,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.834068+00:00",
-      "updatedAt": "2026-07-12T13:07:35.834072+00:00"
+      "createdAt": "2026-07-19T23:26:48.876859+00:00",
+      "updatedAt": "2026-07-19T23:26:48.876864+00:00"
     },
     {
       "id": "registry",
@@ -2063,13 +2090,13 @@
       "status": "done",
       "docs": [],
       "codeRefs": [],
-      "lastCommit": "891895fdca56",
+      "lastCommit": "e40d4c779ed0",
       "createdAt": "2026-06-24T16:42:05Z",
-      "updatedAt": "2026-07-12T02:14:37Z"
+      "updatedAt": "2026-07-12T12:57:24Z"
     },
     {
       "id": "release",
-      "name": "2.5.4 [skip ci]",
+      "name": "2.8.0 [skip ci]",
       "phase": "Fase 1",
       "status": "done",
       "docs": [
@@ -2084,9 +2111,9 @@
         "desktop/src-tauri/tauri.conf.json",
         "package.json"
       ],
-      "lastCommit": "85cd7f9a5451",
+      "lastCommit": "8d03dd3b283f",
       "createdAt": "2026-06-24T13:06:19-03:00",
-      "updatedAt": "2026-07-11T00:36:19Z"
+      "updatedAt": "2026-07-19T23:22:25Z"
     },
     {
       "id": "rest-apis-endpoints-fastapi",
@@ -2119,8 +2146,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.837554+00:00",
-      "updatedAt": "2026-07-12T13:07:35.837559+00:00"
+      "createdAt": "2026-07-19T23:26:48.874816+00:00",
+      "updatedAt": "2026-07-19T23:26:48.874824+00:00"
     },
     {
       "id": "roteamento-de-memoria",
@@ -2132,8 +2159,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.845155+00:00",
-      "updatedAt": "2026-07-12T13:07:35.845159+00:00"
+      "createdAt": "2026-07-19T23:26:48.892142+00:00",
+      "updatedAt": "2026-07-19T23:26:48.892148+00:00"
     },
     {
       "id": "router",
@@ -2298,7 +2325,7 @@
     },
     {
       "id": "sdd-s",
-      "name": "Update docs submodule reference with new SDDs",
+      "name": "Ignore root SDD/ directory (generated, real SDDs at docs/sdd/)",
       "phase": "Fase 1",
       "status": "done",
       "docs": [
@@ -2311,9 +2338,9 @@
       "codeRefs": [
         "infra/docker/docker-compose.prod.yml"
       ],
-      "lastCommit": "f753491ba59d",
+      "lastCommit": "40a0dfaac23d",
       "createdAt": "2026-06-18T13:41:22-03:00",
-      "updatedAt": "2026-07-10T19:53:51-03:00"
+      "updatedAt": "2026-07-12T00:27:03-03:00"
     },
     {
       "id": "sprint7",
@@ -2446,8 +2473,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.849709+00:00",
-      "updatedAt": "2026-07-12T13:07:35.849714+00:00"
+      "createdAt": "2026-07-19T23:26:48.899513+00:00",
+      "updatedAt": "2026-07-19T23:26:48.899518+00:00"
     },
     {
       "id": "technical-spec",
@@ -2459,8 +2486,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.835579+00:00",
-      "updatedAt": "2026-07-12T13:07:35.835584+00:00"
+      "createdAt": "2026-07-19T23:26:48.875298+00:00",
+      "updatedAt": "2026-07-19T23:26:48.875302+00:00"
     },
     {
       "id": "tests",
@@ -2535,8 +2562,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.857734+00:00",
-      "updatedAt": "2026-07-12T13:07:35.857738+00:00"
+      "createdAt": "2026-07-19T23:26:48.906300+00:00",
+      "updatedAt": "2026-07-19T23:26:48.906304+00:00"
     },
     {
       "id": "ux",
@@ -2581,8 +2608,8 @@
       ],
       "codeRefs": [],
       "lastCommit": "",
-      "createdAt": "2026-07-12T13:07:35.844682+00:00",
-      "updatedAt": "2026-07-12T13:07:35.844686+00:00"
+      "createdAt": "2026-07-19T23:26:48.871061+00:00",
+      "updatedAt": "2026-07-19T23:26:48.871072+00:00"
     },
     {
       "id": "vault",
@@ -2600,6 +2627,175 @@
       "lastCommit": "5e3c16cbd927",
       "createdAt": "2026-06-11T01:29:26-03:00",
       "updatedAt": "2026-06-11T01:29:26-03:00"
+    },
+    {
+      "id": "w1-2-w1-5-alertmanager-receiver",
+      "name": "W1.2 + W1.5 — Alertmanager receiver + Grafana provisioning YAML",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "infra/docker/alertmanager.yml",
+        "infra/grafana/dashboards/kaos.yaml"
+      ],
+      "lastCommit": "9d1daa01d37f",
+      "createdAt": "2026-07-19T16:54:43-03:00",
+      "updatedAt": "2026-07-19T16:54:43-03:00"
+    },
+    {
+      "id": "w3-2-w3-3-abstractmethod-replace-print",
+      "name": "W3.2-W3.3 — abstractmethod + replace print() with logger",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/audit/commit_classifier.py",
+        "assistant/app/audit/commit_mapper.py",
+        "assistant/app/core/provider_registry.py"
+      ],
+      "lastCommit": "f96f8d979830",
+      "createdAt": "2026-07-19T17:10:19-03:00",
+      "updatedAt": "2026-07-19T17:10:19-03:00"
+    },
+    {
+      "id": "w4-1-deduplicate-file-pairs",
+      "name": "W4.1 — deduplicate 7 file pairs in frontend",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/application/hooks/useSettings.ts",
+        "desktop/src/application/hooks/useUpdateCheck.ts",
+        "desktop/src/application/hooks/useUpdateScheduler.ts",
+        "desktop/src/application/hooks/useUpdaterService.ts",
+        "desktop/src/application/hooks/useVaultInit.ts",
+        "desktop/src/shared/api/ipc-bridge.ts",
+        "desktop/src/shared/api/tauri-store-service.ts"
+      ],
+      "lastCommit": "5f82f4f24dc6",
+      "createdAt": "2026-07-19T17:14:54-03:00",
+      "updatedAt": "2026-07-19T17:14:54-03:00"
+    },
+    {
+      "id": "w4-3-w4-5-console-logdebug-todosfsd-markers",
+      "name": "W4.3-W4.5 — console.log→debug, TODOs→FSD markers, G-XX tags removed",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/application/services/index.ts",
+        "desktop/src/application/stores/update-store.ts",
+        "desktop/src/domain/entities/index.ts",
+        "desktop/src/domain/events/index.ts",
+        "desktop/src/presentation/layouts/index.ts",
+        "desktop/src/shared/lib/use-init.ts",
+        "desktop/src/shared/ui/empty-state.tsx"
+      ],
+      "lastCommit": "63efa5044984",
+      "createdAt": "2026-07-19T18:06:06-03:00",
+      "updatedAt": "2026-07-19T18:06:06-03:00"
+    },
+    {
+      "id": "w4-4-tipar-any-types",
+      "name": "W4.4 — tipar any types em pages (8/8 tracked)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/pages/chat/index.tsx",
+        "desktop/src/pages/costs/index.tsx",
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/graphify/index.tsx",
+        "desktop/src/pages/login/index.tsx",
+        "desktop/src/pages/pipelines/index.tsx",
+        "desktop/src/pages/vault/index.tsx"
+      ],
+      "lastCommit": "b781c287b150",
+      "createdAt": "2026-07-19T18:23:44-03:00",
+      "updatedAt": "2026-07-19T18:23:44-03:00"
+    },
+    {
+      "id": "w4-6-replace-stub-tests",
+      "name": "W4.6 — replace 6 stub tests with real tests",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/tests/unit/agent/test_executor.py",
+        "assistant/tests/unit/agent/test_state.py",
+        "desktop/src/__tests__/features/code-introspector.test.ts",
+        "desktop/src/__tests__/features/drift-engine.test.ts",
+        "desktop/src/__tests__/features/feature-scanner.test.ts",
+        "desktop/src/__tests__/shared/ui/dropdown.test.tsx"
+      ],
+      "lastCommit": "c3640c0a93df",
+      "createdAt": "2026-07-19T18:17:13-03:00",
+      "updatedAt": "2026-07-19T18:17:13-03:00"
+    },
+    {
+      "id": "w4-7-fix-catcheany-catcheunknown",
+      "name": "W4.7 — fix catch(e:any) → catch(e:unknown)",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/infrastructure/ipc/ipc-bridge.ts"
+      ],
+      "lastCommit": "3c4bdce6c24a",
+      "createdAt": "2026-07-19T18:07:36-03:00",
+      "updatedAt": "2026-07-19T18:07:36-03:00"
+    },
+    {
+      "id": "wave-0-1-security-template",
+      "name": "Wave 0-1 — security template, fix 18 except:pass, add _error to return paths",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [
+        "graphify-out/2026-07-19/GRAPH_REPORT.md",
+        "graphify-out/GRAPH_REPORT.md"
+      ],
+      "codeRefs": [
+        "assistant/app/api/observability.py",
+        "assistant/app/api/system.py",
+        "assistant/app/core/credential_service.py",
+        "assistant/app/core/environment_service.py",
+        "graphify-out/.graphify_labels.json",
+        "graphify-out/2026-07-19/.graphify_analysis.json",
+        "graphify-out/2026-07-19/.graphify_labels.json",
+        "graphify-out/2026-07-19/graph.json",
+        "graphify-out/2026-07-19/manifest.json",
+        "graphify-out/cache/stat-index.json",
+        "graphify-out/graph.json",
+        "graphify-out/manifest.json"
+      ],
+      "lastCommit": "f5b7e702fb6f",
+      "createdAt": "2026-07-19T16:52:39-03:00",
+      "updatedAt": "2026-07-19T16:52:39-03:00"
+    },
+    {
+      "id": "wave-fix-remaining-exceptpass",
+      "name": "Wave 3 — fix 17 remaining except:pass across 13 files",
+      "phase": "Fase 1",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "assistant/app/ai/architecture_review/reviewer.py",
+        "assistant/app/ai/vault_analyzer/vault_reader.py",
+        "assistant/app/api/auth.py",
+        "assistant/app/api/rag.py",
+        "assistant/app/audit/drl_snapshot.py",
+        "assistant/app/audit/readiness_engine.py",
+        "assistant/app/audit/sdd_resolver.py",
+        "assistant/app/core/automation_bus.py",
+        "assistant/app/core/mcp_manager.py",
+        "assistant/app/main.py",
+        "assistant/app/obsidian/tools/wiki/file_synthesis_tool.py",
+        "assistant/app/providers/inference/ollama_adapter.py",
+        "assistant/app/rag/embeddings/cache.py"
+      ],
+      "lastCommit": "c1c18bfd05db",
+      "createdAt": "2026-07-19T17:07:05-03:00",
+      "updatedAt": "2026-07-19T17:07:05-03:00"
     },
     {
       "id": "wiki",
@@ -3075,6 +3271,20 @@
       "updatedAt": "2026-06-19T16:25:01-03:00"
     },
     {
+      "id": "w4-2-fix-empty-catch",
+      "name": "W4.2 — fix empty catch blocks in observability and dashboard pages",
+      "phase": "Fase 4",
+      "status": "done",
+      "docs": [],
+      "codeRefs": [
+        "desktop/src/pages/dashboard/index.tsx",
+        "desktop/src/pages/observability/index.tsx"
+      ],
+      "lastCommit": "124f01852294",
+      "createdAt": "2026-07-19T17:19:50-03:00",
+      "updatedAt": "2026-07-19T17:19:50-03:00"
+    },
+    {
       "id": "fase401-corrige-lint-python",
       "name": "Corrige lint Python (E402/F401), coverage thresholds e templates de teste",
       "phase": "Fase 401",
@@ -3248,7 +3458,6 @@
       "phase": "Fase 5",
       "status": "done",
       "docs": [
-        "docs/sdd/test.md",
         "wiki/index.md",
         "wiki/log.md"
       ],
@@ -3683,6 +3892,29 @@
       "lastCommit": "7147aa30b6d2",
       "createdAt": "2026-06-24T00:25:08-03:00",
       "updatedAt": "2026-06-24T00:25:08-03:00"
+    },
+    {
+      "id": "test-coverage-for-mcp-platform",
+      "name": "W5 — test coverage for mcp-platform + kaos-research",
+      "phase": "Fase 7",
+      "status": "done",
+      "docs": [
+        "docs/sdd/test.md"
+      ],
+      "codeRefs": [
+        "kaos-research/tests/__init__.py",
+        "kaos-research/tests/conftest.py",
+        "kaos-research/tests/test_experiments.py",
+        "kaos-research/tests/test_observatory.py",
+        "mcp-platform/tests/__init__.py",
+        "mcp-platform/tests/conftest.py",
+        "mcp-platform/tests/test_commands.py",
+        "mcp-platform/tests/test_config.py",
+        "mcp-platform/tests/test_server_manager.py"
+      ],
+      "lastCommit": "9d0b59b7f6cc",
+      "createdAt": "2026-07-19T18:33:37-03:00",
+      "updatedAt": "2026-07-19T18:33:37-03:00"
     },
     {
       "id": "fase8-observability-event-bus",
